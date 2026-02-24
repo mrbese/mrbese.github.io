@@ -166,7 +166,7 @@
             min-height: 700px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             overflow: hidden;
             background: #000;
@@ -183,24 +183,24 @@
         .hero-name {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
-            font-size: clamp(6rem, 15vw, 16rem);
+            font-size: clamp(8rem, 20vw, 24rem);
             letter-spacing: -0.03em;
             color: #fff;
             text-transform: uppercase;
             white-space: nowrap;
             position: relative;
             z-index: 2;
-            margin-top: -8vh;
+            margin-top: clamp(-4rem, -7vw, -9rem);
         }
 
         .hero-portrait {
             position: absolute;
-            width: clamp(120px, 14vw, 220px);
-            height: clamp(120px, 14vw, 220px);
+            width: clamp(140px, 16vw, 260px);
+            height: clamp(140px, 16vw, 260px);
             border-radius: 50%;
             object-fit: cover;
             z-index: 3;
-            left: clamp(5%, 12vw, 18%);
+            left: clamp(5%, 10vw, 15%);
             top: 50%;
             transform: translateY(-50%);
             border: 3px solid #1a1a1a;
@@ -209,9 +209,8 @@
 
         #torus-canvas {
             position: absolute;
-            right: -5%;
-            top: 50%;
-            transform: translateY(-55%);
+            right: 5%;
+            bottom: 15%;
             width: clamp(300px, 35vw, 550px);
             height: clamp(300px, 35vw, 550px);
             z-index: 1;
@@ -225,7 +224,8 @@
             letter-spacing: 0.15em;
             color: rgba(255, 255, 255, 0.45);
             text-transform: uppercase;
-            margin-top: 1.5rem;
+            margin-top: auto;
+            margin-bottom: 5rem;
             position: relative;
             z-index: 2;
             text-align: center;
@@ -1001,7 +1001,8 @@
             #torus-canvas {
                 width: 250px;
                 height: 250px;
-                right: -10%;
+                right: -5%;
+                bottom: 20%;
                 opacity: 0.5;
             }
         }
@@ -1016,7 +1017,8 @@
             }
 
             .hero-name {
-                font-size: clamp(3.5rem, 14vw, 6rem);
+                font-size: clamp(4.5rem, 18vw, 8rem);
+                margin-top: clamp(-2rem, -4vw, -5rem);
             }
 
             .hero-portrait {
