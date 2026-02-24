@@ -65,8 +65,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Bernoru Font -->
-    <link href="https://fonts.cdnfonts.com/css/bernoru" rel="stylesheet">
 
     <style>
         /* ========================================
@@ -164,66 +162,14 @@
            ======================================== */
         #hero {
             position: relative;
-            height: 100vh;
-            min-height: 700px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            overflow: hidden;
             background: #000;
+            overflow: hidden;
         }
 
-        .hero-layers {
-            position: relative;
+        .hero-banner {
+            display: block;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
-
-        .hero-layer-text {
-            font-family: 'Bernoru', sans-serif;
-            font-weight: 900;
-            font-size: clamp(8rem, 18vw, 22rem);
-            letter-spacing: -0.02em;
-            color: #fff;
-            text-transform: uppercase;
-            white-space: nowrap;
-            position: relative;
-            z-index: 2;
-            margin-top: clamp(-3rem, -5vw, -8rem);
-            line-height: 0.85;
-            user-select: none;
-        }
-
-        .hero-layer-back,
-        .hero-layer-front {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-45%);
-            left: clamp(3%, 8vw, 13%);
-            height: clamp(160px, 18vw, 320px);
-            width: auto;
-            pointer-events: none;
-        }
-
-        .hero-layer-back {
-            z-index: 1;
-        }
-
-        .hero-layer-front {
-            z-index: 3;
-        }
-
-        #torus-canvas {
-            position: absolute;
-            right: 5%;
-            bottom: 18%;
-            width: clamp(280px, 30vw, 480px);
-            height: clamp(280px, 30vw, 480px);
-            z-index: 4;
-            pointer-events: none;
+            height: auto;
         }
 
         .hero-subtitle {
@@ -233,24 +179,16 @@
             letter-spacing: 0.15em;
             color: rgba(255, 255, 255, 0.45);
             text-transform: uppercase;
-            margin-top: auto;
-            margin-bottom: 5rem;
-            position: relative;
-            z-index: 5;
             text-align: center;
-            padding: 0 1rem;
+            padding: 2rem 1rem 0;
         }
 
         .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
-            z-index: 5;
+            padding: 2rem 0;
         }
 
         .scroll-indicator span {
@@ -1001,19 +939,6 @@
                 gap: 2rem;
             }
 
-            .hero-layer-back,
-            .hero-layer-front {
-                height: clamp(120px, 22vw, 200px);
-                left: 2%;
-            }
-
-            #torus-canvas {
-                width: 200px;
-                height: 200px;
-                right: -5%;
-                bottom: 20%;
-                opacity: 0.4;
-            }
         }
 
         @media (max-width: 600px) {
@@ -1025,16 +950,6 @@
                 padding: 5rem 1.25rem;
             }
 
-            .hero-layer-text {
-                font-size: clamp(4rem, 16vw, 8rem);
-                margin-top: clamp(-1.5rem, -3vw, -4rem);
-            }
-
-            .hero-layer-back,
-            .hero-layer-front {
-                height: clamp(80px, 20vw, 140px);
-                left: 1%;
-            }
 
             .highlights-grid {
                 grid-template-columns: 1fr;
@@ -1082,12 +997,7 @@
          Back: circle portrait | Middle: text | Front: cutout portrait
          ========================================== -->
     <section id="hero">
-        <div class="hero-layers">
-            <img src="img/portrait-circle.png" alt="" class="hero-layer-back" loading="eager">
-            <h1 class="hero-layer-text">OMER BESE</h1>
-            <img src="img/portrait-cutout.png" alt="Omer Bese" class="hero-layer-front" loading="eager">
-        </div>
-        <canvas id="torus-canvas"></canvas>
+        <img src="img/hero-banner-dark.png" alt="Omer Bese" class="hero-banner" loading="eager">
         <p class="hero-subtitle">Energy Systems Engineer &nbsp;.&nbsp; Founder turned Operator &nbsp;.&nbsp; Open Source Builder</p>
         <div class="scroll-indicator">
             <span>scroll</span>
@@ -1460,54 +1370,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         THREE.JS TORUS KNOT
-         ========================================== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script>
-        (function() {
-            var canvas = document.getElementById('torus-canvas');
-            if (!canvas) return;
-
-            var renderer = new THREE.WebGLRenderer({
-                canvas: canvas,
-                alpha: true,
-                antialias: true
-            });
-
-            var size = canvas.clientWidth || 450;
-            renderer.setSize(size, size);
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-            var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-            camera.position.z = 5;
-
-            var geometry = new THREE.TorusKnotGeometry(1.2, 0.4, 128, 32, 2, 3);
-            var material = new THREE.MeshBasicMaterial({
-                color: 0xFF0055,
-                wireframe: true,
-                transparent: true,
-                opacity: 0.3
-            });
-
-            var torusKnot = new THREE.Mesh(geometry, material);
-            scene.add(torusKnot);
-
-            function animate() {
-                requestAnimationFrame(animate);
-                torusKnot.rotation.x += 0.002;
-                torusKnot.rotation.y += 0.004;
-                renderer.render(scene, camera);
-            }
-            animate();
-
-            window.addEventListener('resize', function() {
-                var newSize = canvas.clientWidth || 450;
-                renderer.setSize(newSize, newSize);
-            });
-        })();
-    </script>
 
     <!-- ==========================================
          INTERSECTION OBSERVER (REVEAL ON SCROLL)
