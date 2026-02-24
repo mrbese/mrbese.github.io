@@ -169,50 +169,23 @@
             justify-content: flex-start;
             align-items: center;
             overflow: hidden;
-            background: #000;
+            background: #222;
         }
 
-        .hero-name-container {
-            position: relative;
+        .hero-banner {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-name {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            font-size: clamp(8rem, 20vw, 24rem);
-            letter-spacing: -0.03em;
-            color: #fff;
-            text-transform: uppercase;
-            white-space: nowrap;
-            position: relative;
-            z-index: 2;
-            margin-top: clamp(-4rem, -7vw, -9rem);
-        }
-
-        .hero-portrait {
-            position: absolute;
-            width: clamp(140px, 16vw, 260px);
-            height: clamp(140px, 16vw, 260px);
-            border-radius: 50%;
-            object-fit: cover;
-            z-index: 3;
-            left: clamp(5%, 10vw, 15%);
-            top: 50%;
-            transform: translateY(-50%);
-            border: 3px solid #1a1a1a;
-            filter: grayscale(20%);
+            height: auto;
+            display: block;
+            pointer-events: none;
+            user-select: none;
         }
 
         #torus-canvas {
             position: absolute;
             right: 5%;
-            bottom: 15%;
-            width: clamp(300px, 35vw, 550px);
-            height: clamp(300px, 35vw, 550px);
+            bottom: 18%;
+            width: clamp(280px, 30vw, 480px);
+            height: clamp(280px, 30vw, 480px);
             z-index: 1;
             pointer-events: none;
         }
@@ -992,15 +965,14 @@
                 gap: 2rem;
             }
 
-            .hero-portrait {
-                width: 100px;
-                height: 100px;
-                left: 5%;
+            .hero-banner {
+                width: 150%;
+                margin-left: -25%;
             }
 
             #torus-canvas {
-                width: 250px;
-                height: 250px;
+                width: 220px;
+                height: 220px;
                 right: -5%;
                 bottom: 20%;
                 opacity: 0.5;
@@ -1016,15 +988,9 @@
                 padding: 5rem 1.25rem;
             }
 
-            .hero-name {
-                font-size: clamp(4.5rem, 18vw, 8rem);
-                margin-top: clamp(-2rem, -4vw, -5rem);
-            }
-
-            .hero-portrait {
-                width: 70px;
-                height: 70px;
-                left: 2%;
+            .hero-banner {
+                width: 200%;
+                margin-left: -50%;
             }
 
             .highlights-grid {
@@ -1072,11 +1038,8 @@
          HERO SECTION
          ========================================== -->
     <section id="hero">
-        <div class="hero-name-container">
-            <img src="img/portrait.jpg" alt="Omer Bese portrait" class="hero-portrait" loading="eager">
-            <h1 class="hero-name">OMER BESE</h1>
-            <canvas id="torus-canvas"></canvas>
-        </div>
+        <img src="img/nameandphoto.png" alt="Omer Bese" class="hero-banner" loading="eager">
+        <canvas id="torus-canvas"></canvas>
         <p class="hero-subtitle">Energy Systems Engineer &nbsp;.&nbsp; Founder turned Operator &nbsp;.&nbsp; Open Source Builder</p>
         <div class="scroll-indicator">
             <span>scroll</span>
