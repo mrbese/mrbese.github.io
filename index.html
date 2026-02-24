@@ -65,6 +65,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bernoru Font -->
+    <link href="https://fonts.cdnfonts.com/css/bernoru" rel="stylesheet">
 
     <style>
         /* ========================================
@@ -169,15 +171,49 @@
             justify-content: flex-start;
             align-items: center;
             overflow: hidden;
-            background: #222;
+            background: #000;
         }
 
-        .hero-banner {
+        .hero-layers {
+            position: relative;
             width: 100%;
-            height: auto;
-            display: block;
-            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero-layer-text {
+            font-family: 'Bernoru', sans-serif;
+            font-weight: 900;
+            font-size: clamp(8rem, 18vw, 22rem);
+            letter-spacing: -0.02em;
+            color: #fff;
+            text-transform: uppercase;
+            white-space: nowrap;
+            position: relative;
+            z-index: 2;
+            margin-top: clamp(-3rem, -5vw, -8rem);
+            line-height: 0.85;
             user-select: none;
+        }
+
+        .hero-layer-back,
+        .hero-layer-front {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-45%);
+            left: clamp(3%, 8vw, 13%);
+            height: clamp(160px, 18vw, 320px);
+            width: auto;
+            pointer-events: none;
+        }
+
+        .hero-layer-back {
+            z-index: 1;
+        }
+
+        .hero-layer-front {
+            z-index: 3;
         }
 
         #torus-canvas {
@@ -186,7 +222,7 @@
             bottom: 18%;
             width: clamp(280px, 30vw, 480px);
             height: clamp(280px, 30vw, 480px);
-            z-index: 1;
+            z-index: 4;
             pointer-events: none;
         }
 
@@ -200,7 +236,7 @@
             margin-top: auto;
             margin-bottom: 5rem;
             position: relative;
-            z-index: 2;
+            z-index: 5;
             text-align: center;
             padding: 0 1rem;
         }
@@ -965,17 +1001,18 @@
                 gap: 2rem;
             }
 
-            .hero-banner {
-                width: 150%;
-                margin-left: -25%;
+            .hero-layer-back,
+            .hero-layer-front {
+                height: clamp(120px, 22vw, 200px);
+                left: 2%;
             }
 
             #torus-canvas {
-                width: 220px;
-                height: 220px;
+                width: 200px;
+                height: 200px;
                 right: -5%;
                 bottom: 20%;
-                opacity: 0.5;
+                opacity: 0.4;
             }
         }
 
@@ -988,9 +1025,15 @@
                 padding: 5rem 1.25rem;
             }
 
-            .hero-banner {
-                width: 200%;
-                margin-left: -50%;
+            .hero-layer-text {
+                font-size: clamp(4rem, 16vw, 8rem);
+                margin-top: clamp(-1.5rem, -3vw, -4rem);
+            }
+
+            .hero-layer-back,
+            .hero-layer-front {
+                height: clamp(80px, 20vw, 140px);
+                left: 1%;
             }
 
             .highlights-grid {
@@ -1035,10 +1078,15 @@
     </nav>
 
     <!-- ==========================================
-         HERO SECTION
+         HERO SECTION — 3-layer depth effect
+         Back: circle portrait | Middle: text | Front: cutout portrait
          ========================================== -->
     <section id="hero">
-        <img src="img/nameandphoto.png" alt="Omer Bese" class="hero-banner" loading="eager">
+        <div class="hero-layers">
+            <img src="img/portrait-circle.png" alt="" class="hero-layer-back" loading="eager">
+            <h1 class="hero-layer-text">OMER BESE</h1>
+            <img src="img/portrait-cutout.png" alt="Omer Bese" class="hero-layer-front" loading="eager">
+        </div>
         <canvas id="torus-canvas"></canvas>
         <p class="hero-subtitle">Energy Systems Engineer &nbsp;.&nbsp; Founder turned Operator &nbsp;.&nbsp; Open Source Builder</p>
         <div class="scroll-indicator">
