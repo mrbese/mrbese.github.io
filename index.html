@@ -1,529 +1,1406 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omer Bese | Energy Systems Engineer, Founder, Operator</title>
-  <meta name="description" content="Energy Systems Engineer with Columbia M.S., founder turned operator building open source energy tools. LiDAR home audits, battery ROI analysis, ERCOT market research, VPP dispatch, DER aggregation.">
-  <meta name="keywords" content="Omer Bese, energy systems engineer, Columbia University, home energy audit, LiDAR, ERCOT, VPP, DER, battery storage, ManorOS, CellSense, HazShip, Base Power, Pila Energy, ACCA Manual J, demand response, 4CP, resource adequacy, NEM 3.0, energy efficiency, distributed energy resources">
-  <meta name="author" content="Omer Bese">
-  <link rel="canonical" href="https://mrbese.com/">
-  <meta property="og:title" content="Omer Bese | Energy Systems Engineer, Founder, Operator">
-  <meta property="og:description" content="Building tools at the intersection of energy efficiency, distributed energy resources, and spatial computing. #ApplyingInPublic">
-  <meta property="og:url" content="https://mrbese.com/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@mrbese">
-  <meta name="twitter:title" content="Omer Bese | Energy Systems Engineer, Founder, Operator">
-  <meta name="twitter:description" content="Building tools at the intersection of energy efficiency, distributed energy resources, and spatial computing.">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Omer Bese",
-    "url": "https://mrbese.com",
-    "email": "omerbese@gmail.com",
-    "jobTitle": "Energy Systems Engineer",
-    "alumniOf": [
-      {"@type": "CollegeOrUniversity", "name": "Columbia University"},
-      {"@type": "CollegeOrUniversity", "name": "Istanbul Bilgi University"}
-    ],
-    "sameAs": [
-      "https://linkedin.com/in/omerbese",
-      "https://x.com/mrbese",
-      "https://github.com/mrbese"
-    ],
-    "knowsAbout": ["ERCOT", "VPP", "DER", "battery storage", "energy efficiency", "LiDAR", "iOS development", "ACCA Manual J", "4CP peak billing", "resource adequacy", "NEM 3.0", "demand response", "FERC Order 2222"]
-  }
-  </script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omer Bese | Energy Systems Engineer, Founder, Operator</title>
+    <meta name="description" content="Energy Systems Engineer with Columbia M.S., founder turned operator building open source energy tools. LiDAR home audits, battery ROI analysis, ERCOT market research, VPP dispatch, DER aggregation.">
+    <meta name="keywords" content="Omer Bese, energy systems engineer, Columbia University, ERCOT, VPP, DER, battery storage, ManorOS, CellSense, HazShip, Base Power, Pila Energy, ACCA Manual J, demand response, 4CP, resource adequacy, NEM 3.0">
+    <link rel="canonical" href="https://mrbese.com/">
 
-    :root {
-      --accent: #1A7A4C;
-      --accent-light: #e8f5ee;
-      --bg: #fafafa;
-      --surface: #ffffff;
-      --text: #1a1a1a;
-      --text-secondary: #555;
-      --border: #e0e0e0;
-      --highlight-bg: #fef9e7;
-      --highlight-border: #f0d060;
-      --blue-bg: #eef4fb;
-      --blue-border: #a0c4e8;
-      --gray-bg: #f3f3f3;
-      --gray-border: #d0d0d0;
-      --code-bg: #f5f5f5;
+    <!-- Open Graph -->
+    <meta property="og:title" content="Omer Bese | Energy Systems Engineer, Founder, Operator">
+    <meta property="og:description" content="Energy Systems Engineer with Columbia M.S., founder turned operator building open source energy tools. LiDAR home audits, battery ROI analysis, ERCOT market research, VPP dispatch, DER aggregation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mrbese.com/">
+    <meta property="og:image" content="https://mrbese.com/img/portrait.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mrbese">
+    <meta name="twitter:title" content="Omer Bese | Energy Systems Engineer, Founder, Operator">
+    <meta name="twitter:description" content="Energy Systems Engineer with Columbia M.S., founder turned operator building open source energy tools.">
+    <meta name="twitter:image" content="https://mrbese.com/img/portrait.jpg">
+
+    <!-- Schema.org Person -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Omer Bese",
+        "url": "https://mrbese.com",
+        "image": "https://mrbese.com/img/portrait.jpg",
+        "jobTitle": "Energy Systems Engineer",
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Columbia University"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Istanbul Bilgi University"
+            }
+        ],
+        "sameAs": [
+            "https://linkedin.com/in/omerbese",
+            "https://x.com/mrbese",
+            "https://github.com/mrbese"
+        ],
+        "knowsAbout": ["Energy Systems", "Battery Storage", "ERCOT", "VPP", "DER", "Demand Response", "Home Energy Auditing"],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "West Hollywood",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+        },
+        "email": "omerbese@gmail.com",
+        "telephone": "+16502509984"
     }
+    </script>
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      font-size: 16px;
-    }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
+    <style>
+        /* ========================================
+           RESET & BASE
+           ======================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    h1 { font-size: 1.8rem; margin: 2rem 0 0.75rem; line-height: 1.3; }
-    h2 { font-size: 1.4rem; margin: 1.5rem 0 0.5rem; }
-    h3 { font-size: 1.15rem; margin: 1.25rem 0 0.5rem; }
-    h3 a { color: var(--accent); text-decoration: none; }
-    h3 a:hover { text-decoration: underline; }
+        html {
+            scroll-behavior: smooth;
+            scrollbar-width: thin;
+            scrollbar-color: #333 #000;
+        }
 
-    p { margin: 0.5rem 0; }
-    a { color: var(--accent); }
-    strong { font-weight: 600; }
-    hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-    blockquote {
-      border-left: 3px solid var(--accent);
-      padding: 0.75rem 1rem;
-      margin: 1rem 0;
-      color: var(--text-secondary);
-      font-style: italic;
-      background: var(--gray-bg);
-      border-radius: 0 6px 6px 0;
-    }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF0055;
+        }
 
-    .social-links { margin: 0.5rem 0 1rem; font-size: 0.95rem; }
-    .social-links a { margin-right: 0.5rem; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    /* Callout boxes */
-    .callout {
-      border-radius: 6px;
-      padding: 1rem 1.25rem;
-      margin: 0.75rem 0;
-      display: flex;
-      gap: 0.75rem;
-      align-items: flex-start;
-    }
-    .callout .icon { font-size: 1.2rem; flex-shrink: 0; line-height: 1.6; }
-    .callout .content { flex: 1; }
-    .callout.accent { background: var(--accent-light); border-left: 3px solid var(--accent); }
-    .callout.yellow { background: var(--highlight-bg); border-left: 3px solid var(--highlight-border); }
-    .callout.blue { background: var(--blue-bg); border-left: 3px solid var(--blue-border); }
-    .callout.gray { background: var(--gray-bg); border-left: 3px solid var(--gray-border); }
+        /* ========================================
+           TYPOGRAPHY
+           ======================================== */
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
 
-    /* Navigation */
-    .nav-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem 1rem;
-      justify-content: center;
-    }
-    .nav-bar a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-size: 0.9rem;
-      padding: 0.25rem 0;
-    }
-    .nav-bar a:hover { color: var(--accent); }
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #FF0055;
+        }
 
-    /* Highlight cards */
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1rem 0; }
-    @media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+        /* ========================================
+           REVEAL ANIMATIONS
+           ======================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-children > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-children.revealed > *:nth-child(1) { transition-delay: 0s; }
+        .reveal-children.revealed > *:nth-child(2) { transition-delay: 0.1s; }
+        .reveal-children.revealed > *:nth-child(3) { transition-delay: 0.15s; }
+        .reveal-children.revealed > *:nth-child(4) { transition-delay: 0.2s; }
+        .reveal-children.revealed > *:nth-child(5) { transition-delay: 0.25s; }
+        .reveal-children.revealed > *:nth-child(6) { transition-delay: 0.3s; }
+        .reveal-children.revealed > *:nth-child(7) { transition-delay: 0.35s; }
+        .reveal-children.revealed > *:nth-child(8) { transition-delay: 0.4s; }
+        .reveal-children.revealed > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    /* Details/toggles */
-    details {
-      margin: 0.5rem 0;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    details summary {
-      padding: 0.75rem 1rem;
-      cursor: pointer;
-      font-weight: 600;
-      background: var(--surface);
-      list-style: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    details summary::before {
-      content: '▸';
-      font-size: 0.8rem;
-      transition: transform 0.2s;
-      flex-shrink: 0;
-    }
-    details[open] summary::before { transform: rotate(90deg); }
-    details summary::-webkit-details-marker { display: none; }
-    details .detail-content {
-      padding: 1rem 1.25rem;
-      border-top: 1px solid var(--border);
-      background: var(--bg);
-      line-height: 1.8;
-    }
+        /* ========================================
+           HERO SECTION
+           ======================================== */
+        #hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: #000;
+        }
 
-    /* Contact grid */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      margin: 1rem 0;
-    }
-    @media (max-width: 600px) { .contact-grid { grid-template-columns: 1fr; } }
+        .hero-name-container {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* Hero */
-    .hero-subtitle { color: var(--text-secondary); margin: 0.25rem 0; }
-    .headline { line-height: 1.3; }
-    .headline .underline { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+        .hero-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: clamp(6rem, 15vw, 16rem);
+            letter-spacing: -0.03em;
+            color: #fff;
+            text-transform: uppercase;
+            white-space: nowrap;
+            position: relative;
+            z-index: 2;
+            margin-top: -8vh;
+        }
 
-    .section-intro { font-size: 0.95rem; }
+        .hero-portrait {
+            position: absolute;
+            width: clamp(120px, 14vw, 220px);
+            height: clamp(120px, 14vw, 220px);
+            border-radius: 50%;
+            object-fit: cover;
+            z-index: 3;
+            left: clamp(5%, 12vw, 18%);
+            top: 50%;
+            transform: translateY(-50%);
+            border: 3px solid #1a1a1a;
+            filter: grayscale(20%);
+        }
 
-    .stack-label { font-size: 0.9rem; color: var(--text-secondary); }
-  </style>
+        #torus-canvas {
+            position: absolute;
+            right: -5%;
+            top: 50%;
+            transform: translateY(-55%);
+            width: clamp(300px, 35vw, 550px);
+            height: clamp(300px, 35vw, 550px);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .hero-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(0.8rem, 1.3vw, 1.1rem);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.45);
+            text-transform: uppercase;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 5;
+        }
+
+        .scroll-indicator span {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: #FF0055;
+            font-weight: 400;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, #FF0055, transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+            50% { opacity: 1; transform: scaleY(1); }
+        }
+
+        /* ========================================
+           SECTION COMMON
+           ======================================== */
+        .section {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-wide {
+            padding: 8rem 2rem;
+            max-width: 100%;
+        }
+
+        .section-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #FF0055;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 2rem;
+            color: #fff;
+        }
+
+        .section-bg-dark {
+            background: #0a0a0a;
+        }
+
+        .section-bg-darker {
+            background: #111;
+        }
+
+        .section-bg-darkest {
+            background: #1a1a1a;
+        }
+
+        .accent-line {
+            width: 60px;
+            height: 1px;
+            background: #FF0055;
+            margin-bottom: 2rem;
+        }
+
+        /* ========================================
+           SVG LINE DRAW
+           ======================================== */
+        .svg-divider {
+            width: 100%;
+            height: 120px;
+            overflow: visible;
+            display: block;
+        }
+
+        .svg-divider path {
+            fill: none;
+            stroke: #FF0055;
+            stroke-width: 1;
+            stroke-dasharray: 2000;
+            stroke-dashoffset: 2000;
+            transition: stroke-dashoffset 2.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .svg-divider.drawn path {
+            stroke-dashoffset: 0;
+        }
+
+        /* ========================================
+           #APPLYINGINPUBLIC
+           ======================================== */
+        #applying {
+            background: #0a0a0a;
+        }
+
+        .applying-hero-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+        }
+
+        .applying-hero-text .highlight {
+            color: #FF0055;
+        }
+
+        .applying-body {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 720px;
+            margin-bottom: 2.5rem;
+            line-height: 1.85;
+        }
+
+        .applying-quote {
+            border-left: 2px solid #FF0055;
+            padding-left: 1.5rem;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1rem;
+            max-width: 720px;
+            line-height: 1.85;
+        }
+
+        /* ========================================
+           HIGHLIGHT CARDS
+           ======================================== */
+        #highlights {
+            background: #000;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .highlight-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.4s ease, transform 0.4s ease;
+        }
+
+        .highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #FF0055;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .highlight-card:hover {
+            border-color: #333;
+            transform: translateY(-4px);
+        }
+
+        .highlight-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .highlight-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.75;
+        }
+
+        /* ========================================
+           THE HUMAN (STICKY SCROLL)
+           ======================================== */
+        #human {
+            background: #0a0a0a;
+        }
+
+        .human-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .human-left {
+            position: sticky;
+            top: 4rem;
+            height: fit-content;
+            align-self: start;
+        }
+
+        .human-why {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(4rem, 8vw, 8rem);
+            font-weight: 700;
+            -webkit-text-stroke: 2px #FF0055;
+            color: transparent;
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
+
+        .human-portrait {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 16px;
+            filter: grayscale(30%);
+            border: 1px solid #1a1a1a;
+        }
+
+        .human-right p {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+        }
+
+        /* ========================================
+           POLYGLOT TOGGLES
+           ======================================== */
+        #polyglot {
+            background: #111;
+        }
+
+        .toggle-item {
+            border: 1px solid #222;
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        .toggle-item:hover {
+            border-color: #333;
+        }
+
+        .toggle-item[open] {
+            border-color: #FF0055;
+        }
+
+        .toggle-item summary {
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.3s ease;
+            user-select: none;
+        }
+
+        .toggle-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .toggle-item summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #FF0055;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .toggle-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .toggle-content {
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            line-height: 1.85;
+        }
+
+        .polyglot-intro,
+        .polyglot-closing {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.85;
+            margin-bottom: 2rem;
+        }
+
+        .polyglot-closing {
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+
+        /* ========================================
+           BACKGROUND / CAREER
+           ======================================== */
+        #background {
+            background: #0a0a0a;
+        }
+
+        .background-intro {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.85;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .subsection-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .education-item {
+            background: #111;
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-item h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .education-meta {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.35);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .education-item p {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item .highlight-story {
+            color: rgba(255, 255, 255, 0.75);
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .career-section {
+            margin-top: 3rem;
+        }
+
+        .career-toggle .toggle-content {
+            padding-bottom: 1.25rem;
+        }
+
+        .career-meta {
+            font-size: 0.78rem;
+            color: #FF0055;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .fellowships {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            background: #111;
+        }
+
+        .fellowships h4 {
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.35);
+            margin-bottom: 0.75rem;
+        }
+
+        .fellowships p {
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           HORIZONTAL SCROLL PROJECTS
+           ======================================== */
+        #projects {
+            background: #111;
+        }
+
+        .projects-scroll-container {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 1rem 0 2rem 0;
+            scrollbar-width: thin;
+            scrollbar-color: #333 transparent;
+        }
+
+        .projects-scroll-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .projects-scroll-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .projects-scroll-container::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 2px;
+        }
+
+        .project-card {
+            flex: 0 0 min(400px, 85vw);
+            scroll-snap-align: start;
+            background: #1a1a1a;
+            border: 1px solid #222;
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: border-color 0.4s ease, transform 0.4s ease;
+        }
+
+        .project-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #FF0055;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .project-card:hover {
+            border-color: #444;
+            transform: translateY(-4px);
+        }
+
+        .project-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .project-card .project-tagline {
+            font-size: 0.85rem;
+            color: #FF0055;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .project-card .project-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-card .project-stack {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 0.05em;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .project-card .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #fff;
+            border: 1px solid #333;
+            padding: 0.5rem 1.25rem;
+            border-radius: 6px;
+            transition: border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .project-card .project-link:hover {
+            border-color: #FF0055;
+            color: #FF0055;
+        }
+
+        /* ========================================
+           DEEP DIVES
+           ======================================== */
+        #deepdives {
+            background: #0a0a0a;
+        }
+
+        .deepdive-intro {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .deepdive-group-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #fff;
+            margin-top: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .deepdive-group-intro {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        /* ========================================
+           CONTACT FOOTER
+           ======================================== */
+        #contact {
+            background: #000;
+            border-top: 1px solid #FF0055;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .contact-left h2 {
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .contact-left p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .contact-right {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .contact-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #1a1a1a;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.65);
+            transition: color 0.3s ease, padding-left 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: #FF0055;
+            padding-left: 0.5rem;
+        }
+
+        .contact-link .label {
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.15);
+            letter-spacing: 0.1em;
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+        @media (max-width: 900px) {
+            .human-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .human-left {
+                position: relative;
+                top: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .human-portrait {
+                max-width: 150px;
+            }
+
+            .human-why {
+                font-size: clamp(3rem, 6vw, 5rem);
+                margin-bottom: 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-portrait {
+                width: 100px;
+                height: 100px;
+                left: 5%;
+            }
+
+            #torus-canvas {
+                width: 250px;
+                height: 250px;
+                right: -10%;
+                opacity: 0.5;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .section {
+                padding: 5rem 1.25rem;
+            }
+
+            .section-wide {
+                padding: 5rem 1.25rem;
+            }
+
+            .hero-name {
+                font-size: clamp(3.5rem, 14vw, 6rem);
+            }
+
+            .hero-portrait {
+                width: 70px;
+                height: 70px;
+                left: 2%;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .human-left {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .project-card {
+                flex: 0 0 88vw;
+                padding: 1.5rem;
+            }
+
+            .toggle-item summary {
+                font-size: 0.95rem;
+                padding: 1rem 1.25rem;
+            }
+
+            .toggle-content {
+                padding: 0 1.25rem 1.25rem 1.25rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main class="container" itemscope itemtype="https://schema.org/Person">
-    <meta itemprop="name" content="Omer Bese">
-    <meta itemprop="url" content="https://mrbese.com">
 
-    <!-- HERO -->
-    <div class="callout accent">
-      <span class="icon">&#9889;</span>
-      <div class="content">
-        <strong>Energy Systems Engineer | Columbia University M.S.</strong><br>
-        <span class="hero-subtitle">Founder turned Operator | Open Source Builder</span><br>
-        <span class="hero-subtitle">Building tools at the intersection of energy efficiency, distributed energy resources, and spatial computing.</span>
-      </div>
-    </div>
-
-    <div class="social-links">
-      <a href="https://linkedin.com/in/omerbese" itemprop="sameAs">LinkedIn</a> |
-      <a href="https://x.com/mrbese" itemprop="sameAs">X / Twitter</a> |
-      <a href="https://github.com/mrbese" itemprop="sameAs">GitHub</a> |
-      <a href="mailto:omerbese@gmail.com" itemprop="email">omerbese@gmail.com</a>
-    </div>
-
-    <hr>
-
-    <!-- #APPLYINGINPUBLIC -->
-    <h1 class="headline">While everyone is building in public,<br>I am <span class="underline">JOB HUNTING</span> in public.</h1>
-    <p>I share the companies and positions I've applied to, what I learned while researching them, and what I would do if I got the role. <strong>#ApplyingInPublic</strong></p>
-    <blockquote>I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren't working and build the things that do.</blockquote>
-
-    <hr>
-
-    <!-- NAVIGATION -->
-    <nav class="callout gray">
-      <span class="icon">&#128450;</span>
-      <div class="content nav-bar">
-        <a href="#the-human">The Human</a>
-        <a href="#i-am-a-polyglot">Polyglot</a>
-        <a href="#background">Background</a>
-        <a href="#open-source-energy-tools">Open Source Tools</a>
-        <a href="#deep-dives">Deep Dives</a>
-        <a href="#lets-talk">Let's Talk</a>
-      </div>
-    </nav>
-
-    <hr>
-
-    <!-- HIGHLIGHT CARDS -->
-    <div class="cards">
-      <div class="callout yellow">
-        <span class="icon">&#127919;</span>
-        <div class="content"><strong>Jason Calacanis</strong> broke both his "No Solo Founders" and "No Service Businesses" rules to write the first check.</div>
-      </div>
-      <div class="callout yellow">
-        <span class="icon">&#9889;</span>
-        <div class="content"><strong>Amazon Medical Device Launch in 3 Months.</strong> Category avg: 10-16 months. 90% rejection rate. Got called back 6 months later asking how.</div>
-      </div>
-      <div class="callout yellow">
-        <span class="icon">&#128161;</span>
-        <div class="content"><strong>30% Electricity Bill Drop</strong> at the Jonathan Club after a 2-day LED upgrade.</div>
-      </div>
-      <div class="callout yellow">
-        <span class="icon">&#128203;</span>
-        <div class="content"><strong>180-Person Waitlist at Bonjuur.</strong> Built by cleaning houses myself for 6 months, mapping every bottleneck, and redesigning workflows from the ground up.</div>
-      </div>
-    </div>
-
-    <hr>
-
-    <!-- THE HUMAN -->
-    <section id="the-human">
-      <h1>The Human</h1>
-      <p>I built my life around a simple question: <strong>"Why?"</strong></p>
-      <p>That pursuit led me to become an unapologetic vitalist with just enough audacity to paint a giant mural of my own face in my living room, yet somehow still not "too good" to clean houses myself every weekday for six months for my startup.</p>
-      <p>I have a relentless curiosity and often find inspiration in obscurity, like the fact that we invented four-wheeled luggage after stepping on the moon. However, frustration often follows as we fail to evolve the status quo alongside inventions just like keeping the vertical design even though it creates significant instability with the added wheels.</p>
-      <p>I am equally baffled by things that make no sense at all as simple as pedal trash cans next to toilets, placed as if your foot can reach the lever while you are seated.</p>
-      <p>I usually don't like revolution, as it proves a lack of evolution. But looking at the current energy landscape, I am irritated by how stagnant the industry is. I am frustrated with incompetent incentive programs. I am appalled by asset-based delivery charges. I am tired of policies protecting monopolies, and mostly, of policymakers who act only when the lights go out.</p>
-      <p>I have worked in our family business, a small company, an NGO, and a startup, and finally, as a full-time founder. I can easily say I thrive in a startup environment, though I am not naive enough to do it solo anymore. I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren't working and build the things that do.</p>
-      <p>The curse of monopolies is that technology has evolved so fast that the laws protecting them are finally crumbling, and indeed lights did go out. This gives me the thrill of being part of rewriting the game and driving that much-needed revolution.</p>
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section id="hero">
+        <div class="hero-name-container">
+            <img src="img/portrait.jpg" alt="Omer Bese portrait" class="hero-portrait" loading="eager">
+            <h1 class="hero-name">OMER BESE</h1>
+            <canvas id="torus-canvas"></canvas>
+        </div>
+        <p class="hero-subtitle">Energy Systems Engineer &nbsp;.&nbsp; Founder turned Operator &nbsp;.&nbsp; Open Source Builder</p>
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
     </section>
 
-    <hr>
+    <!-- SVG DIVIDER -->
+    <svg class="svg-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60" />
+    </svg>
 
-    <!-- MID-PAGE CTA -->
-    <div class="callout blue">
-      <span class="icon">&#128075;</span>
-      <div class="content"><strong>Interested?</strong> Reach out at <a href="mailto:omerbese@gmail.com">omerbese@gmail.com</a> or connect on <a href="https://linkedin.com/in/omerbese">LinkedIn</a>.</div>
-    </div>
-
-    <hr>
-
-    <!-- POLYGLOT -->
-    <section id="i-am-a-polyglot">
-      <h1>I am a Polyglot</h1>
-      <div class="callout gray section-intro">
-        <span class="icon">&#127760;</span>
-        <div class="content">I am not proficient in all of these languages. But with closed captions, I am fluent enough to communicate with the native speakers.</div>
-      </div>
-
-      <details>
-        <summary>&#128295; I speak engineering;</summary>
-        <div class="detail-content">So I wonder why we accept "defaults" without questioning them. Every "standard" spec was once someone's best guess that got frozen into practice. When I look at any system (electrical, mechanical, software) my first question is; what constraint set this default, and has that constraint changed? Breaking the status quo is much easier when you question assumptions nobody revisits.</div>
-      </details>
-      <details>
-        <summary>&#9881; I speak operations;</summary>
-        <div class="detail-content">So I wonder why so many field service industries still send their most expensive, licensed specialist to handle the full job when 70% of the work requires no license at all.<br><br><em>Henry Ford didn't invent the assembly line. He stole it from slaughterhouses in Chicago</em><br><br>that decoupled the master butcher from volume labor. Splitting skilled from unskilled work is the oldest throughput hack in the book, and it's hiding in plain sight across energy, construction, and HVAC.</div>
-      </details>
-      <details>
-        <summary>&#128293; I speak thermodynamics;</summary>
-        <div class="detail-content">So I wonder from first principles; Should we aim to consume less before we store or generate more? The most valuable kilowatt-hour is the one you never have to produce. Reducing a building's peak demand by even 2-3 kW through passive upgrades can actually make your home <em>"Thermal Battery"</em> at a fraction of the cost of new hardware.</div>
-      </details>
-      <details>
-        <summary>&#128176; I speak finance;</summary>
-        <div class="detail-content">So I wonder why more infrastructure companies don't hedge volatile market revenue with bankable long-term contracts in adjacent markets. High-beta volatility is exciting on a spreadsheet but terrifying to a lender. Pairing it with fixed, multi-year capacity agreements in regulated markets is how you get the cost of capital down and the deployment velocity up. The two structures are natural complements that most companies treat as<br><br><em>"either/or" while the stable answer is "and".</em></div>
-      </details>
-      <details>
-        <summary>&#128220; I speak policy;</summary>
-        <div class="detail-content">So I wonder why the split incentive problem (where the person who pays for an upgrade isn't the person who benefits) still paralyzes entire sectors. Renters, tenants, landlords, utilities: everyone points at someone else. And since none of the individuals are gaining, whole society loses. But when you look at the world you can find tried and done answers to your problems for example Sweden solved it with "Warm Rent." The U.S. hasn't even tried.<br><br><em>The policy fix often exists; the political will doesn't.</em></div>
-      </details>
-      <details>
-        <summary>&#9878; I speak legal;</summary>
-        <div class="detail-content">So I wonder why companies building vertically don't structure their corporate entities to match the stack. Manufacturing, installation, retail, and software each carry fundamentally different liability profiles. Isolating them into separate LLCs doesn't just lower insurance premiums. It unlocks R&amp;D tax credits and grant eligibility that a monolithic structure would miss entirely.</div>
-      </details>
-      <p>In a nutshell, I speak lots of languages. While I am not proficient in all of them, with closed captions I am fluent enough to communicate with the native speakers. I am simply looking for a place where this "unnecessary" curiosity is actually a prerequisite.</p>
+    <!-- ==========================================
+         #APPLYINGINPUBLIC
+         ========================================== -->
+    <section id="applying" class="section-bg-dark">
+        <div class="section">
+            <div class="section-label reveal">#ApplyingInPublic</div>
+            <div class="accent-line reveal"></div>
+            <p class="applying-hero-text reveal">While everyone is building in public, I am <span class="highlight">JOB HUNTING</span> in public.</p>
+            <p class="applying-body reveal">I share the companies and positions I've applied to, what I learned while researching them, and what I would do if I got the role. #ApplyingInPublic</p>
+            <blockquote class="applying-quote reveal">
+                "I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren't working and build the things that do."
+            </blockquote>
+        </div>
     </section>
 
-    <hr>
-
-    <!-- BACKGROUND -->
-    <section id="background">
-      <h1>Background</h1>
-      <div class="callout gray section-intro">
-        <span class="icon">&#128203;</span>
-        <div class="content">Columbia to startups to energy. The thread connecting all of it: an obsession with building systems from scratch and making them efficient, whether in buildings, supply chains, or business models.</div>
-      </div>
-
-      <h2>Education</h2>
-      <div class="callout blue">
-        <span class="icon">&#127891;</span>
-        <div class="content">
-          <strong>Columbia University,</strong> M.S. Sustainability Management (2015-2016, New York)<br>
-          Solar Project Development, Smart Cities, Energy Markets &amp; Innovation, GHG Emissions &amp; Carbon Footprint.<br>
-          Capstone: Reducing Milk Waste in NYC with WWF. My solution was rejected by all 9 teammates, then selected for implementation.
+    <!-- ==========================================
+         HIGHLIGHT CARDS
+         ========================================== -->
+    <section id="highlights">
+        <div class="section">
+            <div class="highlights-grid reveal-children reveal">
+                <div class="highlight-card">
+                    <p>Jason Calacanis broke both his "No Solo Founders" and "No Service Businesses" rules to write the first check.</p>
+                </div>
+                <div class="highlight-card">
+                    <p>Amazon Medical Device Launch in 3 Months. Category avg: 10-16 months. 90% rejection rate. Got called back 6 months later asking how.</p>
+                </div>
+                <div class="highlight-card">
+                    <p>30% Electricity Bill Drop at the Jonathan Club after a 2-day LED upgrade.</p>
+                </div>
+                <div class="highlight-card">
+                    <p>180-Person Waitlist at Bonjuur. Built by cleaning houses myself for 6 months, mapping every bottleneck, and redesigning workflows from the ground up.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="callout blue">
-        <span class="icon">&#127891;</span>
-        <div class="content">
-          <strong>Istanbul Bilgi University,</strong> B.S. Energy Systems Engineering (2010-2014)<br>
-          Energy Efficient Building Design, Solar Energy, Wind Energy, Nuclear Energy, Geothermal Energy.<br>
-          Thesis on Geothermal Power Systems. Flew to the <strong>Stanford Geothermal Workshop</strong> and persuaded Ormat Technologies to share proprietary data our government didn't have.
-        </div>
-      </div>
-
-      <h2>Career</h2>
-      <details>
-        <summary>Bonjuur, Founder &amp; Janitor (2022-Present, NY &gt; LA)</summary>
-        <div class="detail-content">Timeshare subscription of a full-time housekeeper for daily micro-visits. Built a <strong>180-person waitlist</strong> by cleaning houses myself 6 months every weekday, mapping bottlenecks, redesigning workflows, and building systems from the ground up. Secured first investment check <strong>from Jason Calacanis.</strong> He broke both his "No Solo Founders" and "No Service Businesses" rules. Raised $90K total. First customer: <strong>Jordan Fliegel, MD of Techstars NYC,</strong> right after rejecting me. Pivoted to AI House Manager (bodycams + Vision AI). Navigated the Trough of Sorrow. Returned to energy.</div>
-      </details>
-      <details>
-        <summary>Tulip Haus, Co-Founder (2020-2025, New York)</summary>
-        <div class="detail-content">Artisan home decor from Turkey. Days from signing NYC retail lease when COVID hit. Pivoted to e-commerce. First container hit by crane in Spain, marine law shipping insurance doesn't cover shipyard faults. B2C failed. Survived via B2B.</div>
-      </details>
-      <details>
-        <summary>SpiroHome, Business Developer (2019, Ankara)</summary>
-        <div class="detail-content">Medical IoT. Oversaw <strong>FDA clearance</strong>. Launched Amazon UK/EU in "Medical Device II" category in <strong>3 months</strong> (usually 10-16 months, 90% rejection rate). Got called 6 months later asking how I managed Amazon.</div>
-      </details>
-      <details>
-        <summary>Istanbul Chamber of Industry, Energy &amp; Environment (2018-2019)</summary>
-        <div class="detail-content">Initiated program supplying industrial measurement devices to university students for energy efficiency analyses on member factories. Learned bureaucracy takes a full year to launch a basic program.</div>
-      </details>
-      <details>
-        <summary>NULARIS, Energy Efficiency Engineer (2016-2017, Los Angeles)</summary>
-        <div class="detail-content">Audited buildings for the <strong>LADWP CLIP incentive program</strong>. Replaced half the lightbulbs at the Jonathan Club. <strong>30% electricity bill drop</strong> after a 2-day LED upgrade.</div>
-      </details>
-      <p><strong>Fellowships:</strong> On Deck #ODF17 (2023) | All-In Summit Volunteer (2023) | Angel Squad / Hustle Fund (2021) | Camp Lightbulb nonprofit (2024-Present)</p>
     </section>
 
-    <hr>
+    <!-- SVG DIVIDER -->
+    <svg class="svg-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 Q360,0 720,60 T1440,60" />
+    </svg>
 
-    <!-- OPEN SOURCE TOOLS -->
-    <section id="open-source-energy-tools">
-      <h1>Open Source Energy Tools</h1>
-      <div class="callout gray section-intro">
-        <span class="icon">&#128736;</span>
-        <div class="content">Weekend builds. Real problems. Zero dependencies.</div>
-      </div>
-
-      <h3><a href="https://github.com/mrbese/ManorOS">ManorOS: iOS Home Energy Auditor</a></h3>
-      <p>An open-source home energy assessment tool that uses <strong>LiDAR room scanning</strong> via Apple RoomPlan, <strong>HVAC equipment logging</strong> with on-device OCR via Apple Vision, appliance detection, window assessment, and <strong>ACCA Manual J BTU calculations</strong>. Generates tiered upgrade recommendations with payback periods and <strong>battery synergy insights</strong>.</p>
-      <p><strong>The thesis:</strong> An inefficient building envelope directly cannibalizes home battery ROI during peak grid events ($2,000-$5,000/MWh). ManorOS quantifies how much additional battery export capacity passive efficiency upgrades unlock.</p>
-      <div class="callout gray"><span class="icon">&#128295;</span><div class="content stack-label"><strong>Stack:</strong> Swift, SwiftUI, SwiftData, ARKit, RoomPlan, AVFoundation, Vision OCR, CoreLocation, PDFKit. Zero external dependencies.</div></div>
-
-      <hr>
-
-      <h3><a href="https://github.com/mrbese/cellsense">CellSense: Battery ROI Calculator</a></h3>
-      <p>Compare <strong>Tesla Powerwall 3, Enphase IQ 5P, Pila Mesh, and Base Power</strong> side-by-side. Supports <strong>16 utilities, 32 rate plans</strong>, NEM 3.0 calculations, and <strong>VPP earnings</strong> projections for ELRP, ConnectedSolutions, and ERCOT programs. Covers time-of-use arbitrage, net metering, demand charge reduction, 4CP peak billing savings, and battery degradation modeling.</p>
-      <div class="callout gray"><span class="icon">&#128267;</span><div class="content stack-label">Pure vanilla JavaScript. Zero dependencies. Dark glassmorphism UI with canvas-based charts.</div></div>
-
-      <hr>
-
-      <h3><a href="https://github.com/mrbese/HazShip">HazShip: Lithium Battery HAZMAT Shipping Classifier</a></h3>
-      <p>Encodes the entire regulatory decision tree for <strong>49 CFR &sect;173.185, IATA DGR 66th Edition, and IMDG Code Amendment 42-24</strong>. Outputs UN numbers, packing instructions, labels, documentation checklists, and carrier restrictions. Built from direct experience shipping lithium-ion medical devices through FDA clearance and Amazon UK/EU fulfillment.</p>
-      <div class="callout gray"><span class="icon">&#128230;</span><div class="content stack-label">SwiftUI (iOS 17+). Pure engine pattern. Zero dependencies. Fully offline.</div></div>
+    <!-- ==========================================
+         THE HUMAN (STICKY SCROLL)
+         ========================================== -->
+    <section id="human" class="section-bg-dark">
+        <div class="section-label" style="max-width:1200px;margin:0 auto;padding:4rem 2rem 0 2rem;">The Human</div>
+        <div class="human-layout">
+            <div class="human-left">
+                <div class="human-why">Why?</div>
+                <img src="img/portrait.jpg" alt="Omer Bese" class="human-portrait" loading="lazy">
+            </div>
+            <div class="human-right">
+                <p class="reveal">I built my life around a simple question: "Why?"</p>
+                <p class="reveal">That pursuit led me to become an unapologetic vitalist with just enough audacity to paint a giant mural of my own face in my living room, yet somehow still not "too good" to clean houses myself every weekday for six months for my startup.</p>
+                <p class="reveal">I have a relentless curiosity and often find inspiration in obscurity, like the fact that we invented four-wheeled luggage after stepping on the moon. However, frustration often follows as we fail to evolve the status quo alongside inventions just like keeping the vertical design even though it creates significant instability with the added wheels.</p>
+                <p class="reveal">I am equally baffled by things that make no sense at all as simple as pedal trash cans next to toilets, placed as if your foot can reach the lever while you are seated.</p>
+                <p class="reveal">I usually don't like revolution, as it proves a lack of evolution. But looking at the current energy landscape, I am irritated by how stagnant the industry is. I am frustrated with incompetent incentive programs. I am appalled by asset-based delivery charges. I am tired of policies protecting monopolies, and mostly, of policymakers who act only when the lights go out.</p>
+                <p class="reveal">I have worked in our family business, a small company, an NGO, and a startup, and finally, as a full-time founder. I can easily say I thrive in a startup environment, though I am not naive enough to do it solo anymore. I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren't working and build the things that do.</p>
+                <p class="reveal">The curse of monopolies is that technology has evolved so fast that the laws protecting them are finally crumbling, and indeed lights did go out. This gives me the thrill of being part of rewriting the game and driving that much-needed revolution.</p>
+            </div>
+        </div>
     </section>
 
-    <hr>
+    <!-- ==========================================
+         I AM A POLYGLOT
+         ========================================== -->
+    <section id="polyglot" class="section-bg-darker">
+        <div class="section">
+            <div class="section-label reveal">Languages</div>
+            <h2 class="section-heading reveal">I am a Polyglot</h2>
+            <div class="accent-line reveal"></div>
+            <p class="polyglot-intro reveal">I am not proficient in all of these languages. But with closed captions, I am fluent enough to communicate with the native speakers.</p>
 
-    <!-- DEEP DIVES -->
-    <section id="deep-dives">
-      <h1>Deep Dives &amp; Published Writing</h1>
-      <div class="callout gray section-intro">
-        <span class="icon">&#128214;</span>
-        <div class="content">For those who want the full analysis. 60+ hours of primary source research. All numbers cited. Nothing softened.</div>
-      </div>
+            <details class="toggle-item reveal">
+                <summary>I speak engineering;</summary>
+                <div class="toggle-content">So I wonder why we accept "defaults" without questioning them. Every "standard" spec was once someone's best guess that got frozen into practice. When I look at any system (electrical, mechanical, software) my first question is; what constraint set this default, and has that constraint changed? Breaking the status quo is much easier when you question assumptions nobody revisits.</div>
+            </details>
 
-      <h2>What I Learned About Base Power</h2>
-      <p>60+ hours of primary source research across ERCOT filings, Potomac Economics, Modo Energy, CPUC, CAISO, IRS guidance, and Base Power's own spec pages. All numbers from primary sources. Nothing softened.</p>
+            <details class="toggle-item reveal">
+                <summary>I speak operations;</summary>
+                <div class="toggle-content">So I wonder why so many field service industries still send their most expensive, licensed specialist to handle the full job when 70% of the work requires no license at all. Henry Ford didn't invent the assembly line. He stole it from slaughterhouses in Chicago that decoupled the master butcher from volume labor. Splitting skilled from unskilled work is the oldest throughput hack in the book, and it's hiding in plain sight across energy, construction, and HVAC.</div>
+            </details>
 
-      <details>
-        <summary>The Gentailer Model. Actually Executed.</summary>
-        <div class="detail-content">
-          <p>Most battery companies sell you an $18,000 box and disappear. Base Power does not. Starting $695 upfront. $19/month. They own the hardware. You get backup power and a lower electricity bill. They eat the arbitrage and virtual power plant revenue. Simple pitch. But there is a specific structural reason it works when everyone running a similar thesis has failed.</p>
-          <p>"Gentailer" means you're the generator and the retailer simultaneously. In Texas's deregulated ERCOT market, most REPs buy power at wholesale prices and sell at fixed rates. When prices spike, retailers bleed. Generators love those spikes. Base Power owns both sides of that trade: the battery is the generation asset, the customer relationship is the retail contract. The same price event that hits the retail book prints money in the dispatch book. That internal hedge is why the unit economics hold when they should not.</p>
-          <p>The customer pays once. Gets whole-home backup. Gets below-market energy rates. Base owns the distributed energy asset and collects grid revenue from wholesale dispatch around the clock. The subscription alone runs $228 to $348 per home per year. Grid trading sits on top of that. The customer got backup power for 95% less than a traditional install. Base got a yield-generating asset on someone else's property, on their grid connection.</p>
-        </div>
-      </details>
-      <details>
-        <summary>The Cost Basis. Not the Technology.</summary>
-        <div class="detail-content">
-          <p>Base does not manufacture batteries. They assemble them. CATL makes the lithium iron phosphate cells in China. Base imports those cells at roughly $55/kWh and assembles at a 90,000 sq ft facility in Austin. Off-the-shelf integrators buy finished modules at around $100/kWh. Result: Base's 25 kWh single-unit system costs roughly $2,500 to $3,000 to build versus $6,000 to $8,000 for comparable off-the-shelf configurations.</p>
-          <p>Cell fabrication is a commodity race they cannot win and do not try to. They control stages 3 through 5: module assembly, pack integration, proprietary inverter. CATL bleeds on stages 1 and 2. Every Wright's Law cost drop in cells flows straight to Base's economics instead of being captured by a vendor margin.</p>
-          <p>Ford did not invent the assembly line. He borrowed the concept from Chicago slaughterhouses where master butchers were the production bottleneck. Base did the same thing. The Austin factory is not a Gigafactory. It is a very smart warehouse designed so a driveway crew can assemble the system without field improvisation. The factory exists to make the installer stupid-fast. The bottleneck was never manufacturing. It is installation crews. All design decisions follow from that constraint.</p>
-        </div>
-      </details>
-      <details>
-        <summary>The IRA. Working Capital Flywheel.</summary>
-        <div class="detail-content">
-          <p>Section 48E ITC gives 30% back on Fair Market Value, not on COGS. COGS is roughly $3,000. Retail fair market value is roughly $10,000. The 30% credit returns approximately $3,000 per unit. The hardware effectively pays for itself before the customer writes a check.</p>
-          <p>US assembly triggers the domestic content adder, pushing the total investment tax credit toward 40%. One caveat: FEOC compliance thresholds are escalating (50% non-PFE content required in 2026, rising to 75% by 2030). With CATL cells as the primary input, that 40% is not automatic for 2026 deployments. The new factory Base is building outside Austin, targeting 4 GWh per year of production capacity, is as much about protecting this credit stack as it is about any operational scaling goal.</p>
-          <p>Section 6418 transferability closes the loop. Base can sell those credits immediately at 91 to 94 cents on the dollar. No 18-month negotiations. Deploy, generate credit, sell, redeploy. That is the working capital engine behind deployment velocity.</p>
-        </div>
-      </details>
-      <details>
-        <summary>The Inverter. Not a Commodity.</summary>
-        <div class="detail-content">
-          <p>Base publishes 11.4 kW max continuous real power for both the single-unit 25 kWh system and the dual-unit 50 kWh system. The dual unit doubles storage capacity and dispatch duration. It does not change the inverter output. Both configurations share the same 11.4 kW ceiling.</p>
-          <p>SolarEdge and Enphase are designed for solar self-consumption. Wrong tool for this job. Base needs bidirectional, millisecond-latency, grid-forming power electronics that auto-switch in under 0.5 seconds for outage protection while running sub-second telemetry for VPP dispatch simultaneously. So they built it in-house.</p>
-          <p>Why 11.4 kW continuous matters in ERCOT: the real-time system-wide offer cap (SWCAP) sits at $2,000/MWh. The day-ahead SWCAP is $5,000/MWh. These are offer caps, not price ceilings. Actual locational marginal prices can exceed both thresholds under congestion. During those events, 11.4 kW dispatching versus a competitor's 5 kW is the difference between full revenue capture and watching half the value disappear. The inverter is the monetization engine. Build it yourself or leave that money for someone else.</p>
-        </div>
-      </details>
-      <details>
-        <summary>The ERCOT Revenue Collapse. And What Survived.</summary>
-        <div class="detail-content">
-          <p>Here is the part that does not make it into pitch decks. ERCOT battery storage grew from under 1 GW in 2021 to approximately 13.9 GW by early 2026. That growth cannibalized the ancillary services revenue that justified building all those batteries. ECRS clearing prices fell from $76.77/MWh in 2023 to $9.62/MWh in 2024: an 87% collapse. Total battery revenue fell 75 to 78% over the same period, from approximately $192/kW-year to roughly $43/kW-year. (Sources: Potomac Economics, Modo Energy.)</p>
-          <p>Companies that built their model on ancillary service revenue with $8,000 system COGS are finished. Base survives because their cost basis is below $3,000 and they built grid services revenue streams that do not depend on ancillary prices.</p>
-          <p>The 4CP peak billing optimization does not care what ancillary prices are doing. Texas bills transmission charges based on each customer's share of the four highest system-demand 15-minute intervals of the year, one qualifying interval per month, during the June through September peak window. Base's dispatch software forecasts when those intervals are likely, pre-discharges the fleet, and shaves the peaks. Billing optimization on software and fleet telemetry. Not a commodity market position.</p>
-          <p>The ADER program sets another ceiling to work within: ERCOT expanded the Aggregated Distributed Energy Resources cap to 200 MW system-wide, with a single entity allowed to control up to 50%. Hard ceiling of 100 MW per participant. At roughly 10 kW of usable dispatch per home, that is around 10,000 homes. First-mover position is real.</p>
-          <p>December 2025: ERCOT launched Real-Time Co-optimization plus Batteries. Every five minutes, the system dynamically reassigns batteries between energy and reserves. Passive standby revenue is gone. You need a real dispatch algorithm now.</p>
-        </div>
-      </details>
-      <details>
-        <summary>Volatility Paradox. Hoax.</summary>
-        <div class="detail-content">
-          <p>The conventional narrative: more batteries suppress the price spikes that justify building batteries. This is real and supported by 2024 data. But the bull case deserves serious treatment. The ERCOT large-load interconnection queue, primarily data centers and industrial demand, nominally shows approximately 233 GW of pending new load. The generation interconnection queue is approximately 432 GW of active requests (storage, solar, gas, wind). Historically, 75 to 85% of generation queue projects are never built, yielding realistic net new generation of 65 to 110 GW.</p>
-          <p>AI data centers, EV charging, and industrial electrification could add 20 to 30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin (currently above 30%) compresses back toward sub-15%, where scarcity events become frequent again and batteries print money. But until then companies that depend solely on ancillary prices need to get creative.</p>
-        </div>
-      </details>
-      <details>
-        <summary>The Funding. AC vs DC.</summary>
-        <div class="detail-content">
-          <p>$1.3 billion total. $1 billion Series C in October 2025, led by Addition at a $4 billion valuation. Andreessen Horowitz, Lightspeed, Thrive, CapitalG, and Ribbit all participated. Over 100 MWh of distributed battery capacity deployed across DFW, Houston, and Austin in under two years.</p>
-          <p>The Warren Buffett inside me is screaming, "Sunrun! Srun, run, run, run!" With a market cap at $20 billion in Jan 2021, they got destroyed. After hitting rock bottom at $1.5 billion in April 2025, they are making a comeback today at $4.5 billion, trading at 1.72x sales and pivoting hard to Battery-First, "home-to-grid" VPPs. Meanwhile, the market believes Base has verticalized deep enough to survive a revenue compression that is washing out everyone else. And there is something in Base's "sacred lunch" that Sunrun simply cannot replicate with their 9,751 employees.</p>
-          <p>One thing is for sure: Volatility is the middle name of this game. It seems like anything that touches electricity eventually copies its sine wave. Here's hoping Base's valuation adopts DC.</p>
-        </div>
-      </details>
+            <details class="toggle-item reveal">
+                <summary>I speak thermodynamics;</summary>
+                <div class="toggle-content">So I wonder from first principles; Should we aim to consume less before we store or generate more? The most valuable kilowatt-hour is the one you never have to produce. Reducing a building's peak demand by even 2-3 kW through passive upgrades (attic insulation R-49, aerosol duct sealing, ECM blower motor swap) can actually make your home "Thermal Battery" at a fraction of the cost of new hardware.</div>
+            </details>
 
-      <hr>
+            <details class="toggle-item reveal">
+                <summary>I speak finance;</summary>
+                <div class="toggle-content">So I wonder why more infrastructure companies don't hedge volatile market revenue with bankable long-term contracts in adjacent markets. High-beta volatility is exciting on a spreadsheet but terrifying to a lender. Pairing it with fixed, multi-year capacity agreements in regulated markets is how you get the cost of capital down and the deployment velocity up. The two structures are natural complements that most companies treat as "either/or" while the stable answer is "and".</div>
+            </details>
 
-      <h2>What I Would Do at Base Power</h2>
-      <p>The ERCOT revenue collapse is well-documented. 87% drop in ancillary service clearing prices and 75 to 78% drop in total battery revenue per kW. Companies carrying $8,000 system COGS are done. Base Power is not, because they verticalized hard and early. But verticalization is a direction, not a destination. Here is what I would do next. Actual numbers, because strategic frameworks without specifics are just opinions.</p>
+            <details class="toggle-item reveal">
+                <summary>I speak policy;</summary>
+                <div class="toggle-content">So I wonder why the split incentive problem (where the person who pays for an upgrade isn't the person who benefits) still paralyzes entire sectors. Renters, tenants, landlords, utilities: everyone points at someone else. And since none of the individuals are gaining, whole society loses. But when you look at the world you can find tried and done answers to your problems for example Sweden solved it with "Warm Rent." The U.S. hasn't even tried. The policy fix often exists; the political will doesn't.</div>
+            </details>
 
-      <details>
-        <summary>The Thermal Battery: Liberating an extra 2 kW of export capacity through energy efficiency</summary>
-        <div class="detail-content">
-          <p>There is a framing problem costing Base money every day they do not address it. The battery is competing with the home for power. Whether a customer buys the single-unit (25 kWh) or the dual-unit (50 kWh), both systems are capped at the exact same 11.4 kW continuous output. The dual unit gives you twice the storage duration, but it doesn't give Base more dispatch power. So for every customer, actual export capacity during a grid event equals:</p>
-          <p><strong>EXPORT CAPACITY = 11.4 kW - HOUSE LOAD</strong></p>
-          <p>A standard, inefficient Texas home draws 5 to 6 kW on a summer afternoon. That leaves the inverter exporting barely half its rated output. Base installed an 11.4 kW asset but captures only ~5 kW during the exact scarcity events that pay the highest rates. The building envelope is cannibalizing grid services revenue.</p>
-          <p><strong>The Physics, Quantified</strong></p>
-          <p>An Austin attic hits 140F in August. The AC compressor runs continuously. Here is what happens when you address the building envelope:</p>
-          <p>Upgrade attic insulation (R-49): 1.0 to 1.5 kW peak load reduction.<br>
-          Aerosol duct sealing (&lt;4% leakage): Recovers 15 to 20% of lost conditioned air.<br>
-          ECM blower motor swap: 200 to 300W continuous draw reduction.</p>
-          <p>By liberating an extra 2 kW per home through these passive upgrades, Base yields 33% to 40% more export capacity from the exact same hardware. The inverter didn't change. The cells didn't change.</p>
-          <p>Under ERCOT's new RTC+B market rules, and assuming just 20 hours of extreme scarcity a year, optimizing the split between $2,000/MWh Real-Time dispatch and $5,000/MWh Day-Ahead reserves across a 30,000-home fleet translates to $2.4M to $6.0M in additional annual revenue.</p>
+            <details class="toggle-item reveal">
+                <summary>I speak legal;</summary>
+                <div class="toggle-content">So I wonder why companies building vertically don't structure their corporate entities to match the stack. Manufacturing, installation, retail, and software each carry fundamentally different liability profiles. Isolating them into separate LLCs doesn't just lower insurance premiums. It unlocks R&amp;D tax credits and grant eligibility that a monolithic structure would miss entirely.</div>
+            </details>
+
+            <p class="polyglot-closing reveal">In a nutshell, I speak lots of languages. While I am not proficient in all of them, with closed captions I am fluent enough to communicate with the native speakers. I am simply looking for a place where this "unnecessary" curiosity is actually a prerequisite.</p>
         </div>
-      </details>
-      <details>
-        <summary>The Moat. Decoupled Installation.</summary>
-        <div class="detail-content">
-          <p>Base Power already treats home installation like a decoupled assembly line. Because they own the manufacturing and prep everything in advance, their install schedule is broken into specialized nodes: an advance material drop-off, an electrical crew for a 1-3 hour power disconnect, and a separate cleanup crew.</p>
-          <p>Here is exactly how the efficiency upgrades slot into this existing schedule with zero friction:</p>
-          <p><strong>Phase 1: Material Drop-off.</strong> The blown-in cellulose and duct sealing materials arrive on the advance pallet alongside the battery hardware.</p>
-          <p><strong>Phase 2: Parallel Workflow.</strong> While the core electrical crew is outside managing the 1-3 hour panel reconfiguration and power disconnect, an unlicensed insulation crew is inside the attic blowing in cellulose. They can also prep the HVAC unit for the motor swap so everything is staged and ready for the licensed technician to execute a fast swap. Two parallel workflows, zero interference.</p>
-          <p><strong>Phase 3: Clean up.</strong> The next day, the standard Base cleanup crew returns to sweep the site and collect any leftover boxes and equipment.</p>
-          <p>By piggybacking on their existing decoupled schedule, Base achieves zero additional customer acquisition cost and zero extra truck rolls. This structural advantage saves $650 to $1,100 per home compared to traditional efficiency contractors. At 40 installs/day with a 30% upsell rate, that route efficiency alone generates a $2M to $3M annual operational advantage, before a single VPP revenue dollar hits the books.</p>
-        </div>
-      </details>
-      <details>
-        <summary>California. The Financial Arbitrage.</summary>
-        <div class="detail-content">
-          <p>Texas is an energy-only market. Lenders price that merchant risk: SOFR + 350-450 bps, 50% LTV, 2.0x DSCR. For every $12,000 deployed in Texas, Base can borrow roughly $6,000.</p>
-          <p>California's Resource Adequacy (RA) framework is different. RA contracts pay fixed dollars per kW-month, regardless of dispatch. Lenders treat these like infrastructure contracts: SOFR + 175-250 bps, up to 75-80% LTV, 1.2x DSCR. For every $16,000 deployed in CA, Base can borrow $12,000 to $13,000.</p>
-          <p>Same cells. Same inverter. Different contract. That contracted California revenue cross-collateralizes the Texas fleet. On a blended $100M portfolio (60% TX, 40% CA), this saves $900k to $1.5M annually in interest expense.</p>
-          <p><strong>San Diego. Market Entry.</strong></p>
-          <p>Rates: SDG&amp;E residential rates average $0.39 to $0.40/kWh (2.5x the national average). A $40 to $60/mo subscription is commercially supportable, double the Texas rate for the same hardware.</p>
-          <p>The NEM 3.0 Void: Solar export credits cratered. Customers were left behind with panels on their roofs and no economic answer for excess generation. This is exactly who Base walks into. Base's $695 upfront fee vs. a $15,000+ Tesla Powerwall is a mismatch.</p>
-          <p>B2B2C Entry: Base enters as a DER aggregator through CCA partnerships (like San Diego Community Power), bringing the fleet and the RA capacity that CCAs desperately need.</p>
-        </div>
-      </details>
-      <details>
-        <summary>The Capital Flywheel</summary>
-        <div class="detail-content">
-          <p>The self-defeating nature of energy storage is validated by 2024 data in Texas. The argument is that as more batteries are deployed to capitalize on extreme volatility, they erase the very price spikes that make them profitable. But the bull case exposes the hoax in this paradox.</p>
-          <p>ERCOT currently has a staggering 233 GW interconnection queue for demand-side load. On the supply side, the generation queue holds roughly 432 GW of active requests. But anyone working in the industry knows the reality: 75 to 85% of these are speculative "node hunters". When the dust settles, realistic net new generation is only about 65 to 110 GW.</p>
-          <p>Meanwhile, a massive wave of AI data centers and industrial electrification is crashing into the grid. This isn't flexible demand; this is 20 to 30 GW of flat, continuous, 24/7 baseload. If this demand materializes faster than net storage grows, the reserve margin (currently above 30%) will compress back toward sub-15%, where scarcity events become frequent again and batteries print money.</p>
-          <p>Doubling down on energy efficiency squeezes the last drop of juice from the battery they already deployed, maximizing profits from the wild Texas volatility. Meanwhile, diversifying into California's RA market secures the investment-grade debt needed to fund that Texas expansion. These are not two separate markets running in parallel. It is a united capital structure.</p>
-          <p>California offers the steady, predictable "Direct Current" of regulated returns, shielding Base Power from the troughs of Texas's wild "Alternating Current" while letting them bank the crests.</p>
-        </div>
-      </details>
     </section>
 
-    <hr>
+    <!-- SVG DIVIDER -->
+    <svg class="svg-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,80 C200,20 400,100 600,50 C800,0 1000,90 1200,40 C1300,20 1400,70 1440,60" />
+    </svg>
 
-    <!-- LET'S TALK -->
-    <section id="lets-talk">
-      <h1>Let's Talk</h1>
-      <div class="contact-grid">
-        <div class="callout gray"><span class="icon">&#9993;</span><div class="content"><a href="mailto:omerbese@gmail.com">omerbese@gmail.com</a></div></div>
-        <div class="callout gray"><span class="icon">&#128241;</span><div class="content">+1 (650) 250 9984</div></div>
-        <div class="callout gray"><span class="icon">&#128188;</span><div class="content"><a href="https://linkedin.com/in/omerbese">LinkedIn: in/omerbese</a></div></div>
-        <div class="callout gray"><span class="icon">&#128038;</span><div class="content"><a href="https://x.com/mrbese">X: @mrbese</a></div></div>
-        <div class="callout gray"><span class="icon">&#128187;</span><div class="content"><a href="https://github.com/mrbese">GitHub: mrbese</a></div></div>
-        <div class="callout gray"><span class="icon">&#128205;</span><div class="content">West Hollywood, CA</div></div>
-      </div>
+    <!-- ==========================================
+         BACKGROUND
+         ========================================== -->
+    <section id="background" class="section-bg-dark">
+        <div class="section">
+            <div class="section-label reveal">Background</div>
+            <h2 class="section-heading reveal">Columbia to Startups to Energy</h2>
+            <div class="accent-line reveal"></div>
+            <p class="background-intro reveal">Columbia to startups to energy. The thread connecting all of it: an obsession with building systems from scratch and making them efficient, whether in buildings, supply chains, or business models.</p>
+
+            <!-- Education -->
+            <h3 class="subsection-heading reveal">Education</h3>
+
+            <div class="education-item reveal">
+                <h4>Columbia University</h4>
+                <div class="education-meta">M.S. Sustainability Management &nbsp;|&nbsp; 2015-2016 &nbsp;|&nbsp; New York</div>
+                <p>Solar Project Development, Smart Cities, Energy Markets &amp; Innovation, GHG Emissions &amp; Carbon Footprint.</p>
+                <p class="highlight-story">Capstone: Reducing Milk Waste in NYC with WWF. My solution was rejected by all 9 teammates, then selected for implementation.</p>
+            </div>
+
+            <div class="education-item reveal">
+                <h4>Istanbul Bilgi University</h4>
+                <div class="education-meta">B.S. Energy Systems Engineering &nbsp;|&nbsp; 2010-2014</div>
+                <p>Energy Efficient Building Design, Solar Energy, Wind Energy, Nuclear Energy, Geothermal Energy.</p>
+                <p class="highlight-story">Thesis on Geothermal Power Systems. Flew to the Stanford Geothermal Workshop and persuaded Ormat Technologies to share proprietary data our government didn't have.</p>
+            </div>
+
+            <!-- Career -->
+            <div class="career-section">
+                <h3 class="subsection-heading reveal">Career</h3>
+
+                <details class="toggle-item career-toggle reveal">
+                    <summary>Bonjuur, Founder &amp; Janitor</summary>
+                    <div class="toggle-content">
+                        <span class="career-meta">2022-Present &nbsp;|&nbsp; NY &gt; LA</span>
+                        Timeshare subscription of a full-time housekeeper for daily micro-visits. Built a 180-person waitlist by cleaning houses myself 6 months every weekday, mapping bottlenecks, redesigning workflows, and building systems from the ground up. Secured first investment check from Jason Calacanis. He broke both his "No Solo Founders" and "No Service Businesses" rules. Raised $90K total. First customer: Jordan Fliegel, MD of Techstars NYC, right after rejecting me. Pivoted to AI House Manager (bodycams + Vision AI). Navigated the Trough of Sorrow. Returned to energy.
+                    </div>
+                </details>
+
+                <details class="toggle-item career-toggle reveal">
+                    <summary>Tulip Haus, Co-Founder</summary>
+                    <div class="toggle-content">
+                        <span class="career-meta">2020-2025 &nbsp;|&nbsp; New York</span>
+                        Artisan home decor from Turkey. Days from signing NYC retail lease when COVID hit. Pivoted to e-commerce. First container hit by crane in Spain, marine law shipping insurance doesn't cover shipyard faults. B2C failed. Survived via B2B.
+                    </div>
+                </details>
+
+                <details class="toggle-item career-toggle reveal">
+                    <summary>SpiroHome, Business Developer</summary>
+                    <div class="toggle-content">
+                        <span class="career-meta">2019 &nbsp;|&nbsp; Ankara</span>
+                        Medical IoT. Oversaw FDA clearance. Launched Amazon UK/EU in "Medical Device II" category in 3 months (usually 10-16 months, 90% rejection rate). Got called 6 months later asking how I managed Amazon.
+                    </div>
+                </details>
+
+                <details class="toggle-item career-toggle reveal">
+                    <summary>Istanbul Chamber of Industry, Energy &amp; Environment</summary>
+                    <div class="toggle-content">
+                        <span class="career-meta">2018-2019</span>
+                        Initiated program supplying industrial measurement devices to university students for energy efficiency analyses on member factories. Learned bureaucracy takes a full year to launch a basic program.
+                    </div>
+                </details>
+
+                <details class="toggle-item career-toggle reveal">
+                    <summary>NULARIS, Energy Efficiency Engineer</summary>
+                    <div class="toggle-content">
+                        <span class="career-meta">2016-2017 &nbsp;|&nbsp; Los Angeles</span>
+                        Audited buildings for the LADWP CLIP incentive program. Replaced half the lightbulbs at the Jonathan Club. 30% electricity bill drop after a 2-day LED upgrade.
+                    </div>
+                </details>
+            </div>
+
+            <!-- Fellowships -->
+            <div class="fellowships reveal">
+                <h4>Fellowships &amp; Community</h4>
+                <p>On Deck #ODF17 (2023) &nbsp;|&nbsp; All-In Summit Volunteer (2023) &nbsp;|&nbsp; Angel Squad / Hustle Fund (2021) &nbsp;|&nbsp; Camp Lightbulb nonprofit (2024-Present)</p>
+            </div>
+        </div>
     </section>
-  </main>
+
+    <!-- ==========================================
+         OPEN SOURCE ENERGY TOOLS
+         ========================================== -->
+    <section id="projects" class="section-bg-darker">
+        <div class="section-wide" style="max-width:1200px;margin:0 auto;">
+            <div class="section-label reveal">Open Source</div>
+            <h2 class="section-heading reveal">Energy Tools</h2>
+            <div class="accent-line reveal"></div>
+
+            <div class="projects-scroll-container reveal">
+                <!-- ManorOS -->
+                <div class="project-card">
+                    <h3>ManorOS</h3>
+                    <div class="project-tagline">iOS Home Energy Auditor</div>
+                    <p class="project-desc">An open-source home energy assessment tool that uses LiDAR room scanning via Apple RoomPlan, HVAC equipment logging with on-device OCR via Apple Vision, appliance detection, window assessment, and ACCA Manual J BTU calculations. Generates tiered upgrade recommendations with payback periods and battery synergy insights. Thesis: An inefficient building envelope directly cannibalizes home battery ROI during peak grid events ($2,000-$5,000/MWh).</p>
+                    <div class="project-stack">Swift, SwiftUI, SwiftData, ARKit, RoomPlan, AVFoundation, Vision OCR, CoreLocation, PDFKit</div>
+                    <a href="https://github.com/mrbese/ManorOS" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        GitHub
+                    </a>
+                </div>
+
+                <!-- CellSense -->
+                <div class="project-card">
+                    <h3>CellSense</h3>
+                    <div class="project-tagline">Battery ROI Calculator</div>
+                    <p class="project-desc">Compare Tesla Powerwall 3, Enphase IQ 5P, Pila Mesh, and Base Power side-by-side. Supports 16 utilities, 32 rate plans, NEM 3.0, VPP earnings projections for ELRP, ConnectedSolutions, ERCOT.</p>
+                    <div class="project-stack">Pure vanilla JavaScript. Zero dependencies. Dark glassmorphism UI with canvas-based charts.</div>
+                    <a href="https://github.com/mrbese/cellsense" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        GitHub
+                    </a>
+                </div>
+
+                <!-- HazShip -->
+                <div class="project-card">
+                    <h3>HazShip</h3>
+                    <div class="project-tagline">Lithium Battery HAZMAT Shipping Classifier</div>
+                    <p class="project-desc">Encodes the entire regulatory decision tree for 49 CFR 173.185, IATA DGR 66th Edition, and IMDG Code Amendment 42-24. Outputs UN numbers, packing instructions, labels, documentation checklists. Built from direct experience shipping lithium-ion medical devices through FDA clearance.</p>
+                    <div class="project-stack">SwiftUI (iOS 17+). Pure engine pattern. Zero dependencies. Fully offline.</div>
+                    <a href="https://github.com/mrbese/HazShip" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         DEEP DIVES & PUBLISHED WRITING
+         ========================================== -->
+    <section id="deepdives" class="section-bg-dark">
+        <div class="section">
+            <div class="section-label reveal">Research</div>
+            <h2 class="section-heading reveal">Deep Dives &amp; Published Writing</h2>
+            <div class="accent-line reveal"></div>
+            <p class="deepdive-intro reveal">For those who want the full analysis. 60+ hours of primary source research. All numbers cited. Nothing softened.</p>
+
+            <!-- What I Learned About Base Power -->
+            <h3 class="deepdive-group-title reveal">What I Learned About Base Power</h3>
+            <p class="deepdive-group-intro reveal">60+ hours of primary source research across ERCOT filings, Potomac Economics, Modo Energy, CPUC, CAISO, IRS guidance, and Base Power's own spec pages.</p>
+
+            <details class="toggle-item reveal">
+                <summary>The Gentailer Model. Actually Executed.</summary>
+                <div class="toggle-content">Most battery companies sell you an $18,000 box and disappear. Base Power does not. Starting $695 upfront. $19/month. They own the hardware. You get backup power and a lower electricity bill. They eat the arbitrage and virtual power plant revenue. Simple pitch. But there is a specific structural reason it works when everyone running a similar thesis has failed. "Gentailer" means you're the generator and the retailer simultaneously. In Texas's deregulated ERCOT market, most REPs buy power at wholesale prices and sell at fixed rates. When prices spike, retailers bleed. Generators love those spikes. Base Power owns both sides of that trade: the battery is the generation asset, the customer relationship is the retail contract. The same price event that hits the retail book prints money in the dispatch book. That internal hedge is why the unit economics hold when they should not. The customer pays once. Gets whole-home backup. Gets below-market energy rates. Base owns the distributed energy asset and collects grid revenue from wholesale dispatch around the clock. The subscription alone runs $228 to $348 per home per year. Grid trading sits on top of that.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>The Cost Basis. Not the Technology.</summary>
+                <div class="toggle-content">Base does not manufacture batteries. They assemble them. CATL makes the lithium iron phosphate cells in China. Base imports those cells at roughly $55/kWh and assembles at a 90,000 sq ft facility in Austin. Off-the-shelf integrators buy finished modules at around $100/kWh. Result: Base's 25 kWh single-unit system costs roughly $2,500 to $3,000 to build versus $6,000 to $8,000 for comparable off-the-shelf configurations. Cell fabrication is a commodity race they cannot win and do not try to. They control stages 3 through 5: module assembly, pack integration, proprietary inverter. Ford did not invent the assembly line. He borrowed the concept from Chicago slaughterhouses where master butchers were the production bottleneck. Base did the same thing. The factory exists to make the installer stupid-fast. The bottleneck was never manufacturing. It is installation crews.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>The IRA. Working Capital Flywheel.</summary>
+                <div class="toggle-content">Section 48E ITC gives 30% back on Fair Market Value, not on COGS. COGS is roughly $3,000. Retail fair market value is roughly $10,000. The 30% credit returns approximately $3,000 per unit. The hardware effectively pays for itself before the customer writes a check. US assembly triggers the domestic content adder, pushing the total investment tax credit toward 40%. Section 6418 transferability closes the loop. Base can sell those credits immediately at 91 to 94 cents on the dollar. Deploy, generate credit, sell, redeploy. That is the working capital engine behind deployment velocity.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>The Inverter. Not a Commodity.</summary>
+                <div class="toggle-content">Base publishes 11.4 kW max continuous real power for both the single-unit 25 kWh system and the dual-unit 50 kWh system. SolarEdge and Enphase are designed for solar self-consumption. Wrong tool for this job. Base needs bidirectional, millisecond-latency, grid-forming power electronics that auto-switch in under 0.5 seconds. Why 11.4 kW matters in ERCOT: the real-time SWCAP sits at $2,000/MWh. The day-ahead SWCAP is $5,000/MWh. During those events, 11.4 kW dispatching versus a competitor's 5 kW is the difference between full revenue capture and watching half the value disappear. The inverter is the monetization engine.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>The ERCOT Revenue Collapse. And What Survived.</summary>
+                <div class="toggle-content">ERCOT battery storage grew from under 1 GW in 2021 to approximately 13.9 GW by early 2026. ECRS clearing prices fell from $76.77/MWh in 2023 to $9.62/MWh in 2024: an 87% collapse. Total battery revenue fell 75 to 78%. Companies that built their model on ancillary service revenue with $8,000 system COGS are finished. Base survives because their cost basis is below $3,000. The 4CP peak billing optimization does not care what ancillary prices are doing. The ADER program: ERCOT expanded the Aggregated Distributed Energy Resources cap to 200 MW system-wide. December 2025: ERCOT launched Real-Time Co-optimization plus Batteries.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>Volatility Paradox. Hoax.</summary>
+                <div class="toggle-content">The conventional narrative: more batteries suppress the price spikes that justify building batteries. But the ERCOT large-load interconnection queue shows approximately 233 GW of pending new load. AI data centers, EV charging, and industrial electrification could add 20 to 30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin compresses back toward sub-15%, where scarcity events become frequent again and batteries print money.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>The Funding. AC vs DC.</summary>
+                <div class="toggle-content">$1.3 billion total. $1 billion Series C in October 2025, led by Addition at a $4 billion valuation. Andreessen Horowitz, Lightspeed, Thrive, CapitalG, and Ribbit all participated. The Warren Buffett inside me is screaming, "Sunrun!" Volatility is the middle name of this game. It seems like anything that touches electricity eventually copies its sine wave. Here's hoping Base's valuation adopts DC.</div>
+            </details>
+
+            <!-- What I Would Do at Base Power -->
+            <h3 class="deepdive-group-title reveal" style="margin-top:3.5rem;">What I Would Do at Base Power</h3>
+            <p class="deepdive-group-intro reveal">The ERCOT revenue collapse is well-documented. 87% drop in ancillary service clearing prices. Companies carrying $8,000 system COGS are done. Base Power is not, because they verticalized hard and early. But verticalization is a direction, not a destination. Here is what I would do next. Actual numbers, because strategic frameworks without specifics are just opinions.</p>
+
+            <details class="toggle-item reveal">
+                <summary>The Thermal Battery: Liberating an extra 2 kW</summary>
+                <div class="toggle-content">There is a framing problem costing Base money every day. The battery is competing with the home for power. Both systems are capped at 11.4 kW continuous output. EXPORT CAPACITY = 11.4 kW - HOUSE LOAD. A standard Texas home draws 5 to 6 kW on a summer afternoon. By liberating an extra 2 kW per home through passive upgrades (attic insulation R-49, aerosol duct sealing, ECM blower motor swap), Base yields 33% to 40% more export capacity from the exact same hardware. Across a 30,000-home fleet this translates to $2.4M to $6.0M in additional annual revenue.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>The Moat. Decoupled Installation.</summary>
+                <div class="toggle-content">Base's install schedule is broken into specialized nodes. Phase 1: Material Drop-off alongside battery hardware. Phase 2: Parallel Workflow where unlicensed insulation crew works inside while electrical crew works outside. Phase 3: Cleanup. Zero additional customer acquisition cost and zero extra truck rolls. This structural advantage saves $650 to $1,100 per home. At 40 installs/day with a 30% upsell rate, that generates a $2M to $3M annual operational advantage.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>California. The Financial Arbitrage.</summary>
+                <div class="toggle-content">Texas: SOFR + 350-450 bps, 50% LTV. California's Resource Adequacy: SOFR + 175-250 bps, up to 75-80% LTV. Same cells. Same inverter. Different contract. On a blended $100M portfolio this saves $900k to $1.5M annually in interest expense. San Diego entry via SDG&amp;E rates ($0.39-$0.40/kWh) and CCA partnerships.</div>
+            </details>
+
+            <details class="toggle-item reveal">
+                <summary>The Capital Flywheel</summary>
+                <div class="toggle-content">California offers the steady, predictable "Direct Current" of regulated returns, shielding Base Power from the troughs of Texas's wild "Alternating Current" while letting them bank the crests.</div>
+            </details>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT / LET'S TALK
+         ========================================== -->
+    <section id="contact">
+        <div class="contact-grid">
+            <div class="contact-left reveal">
+                <h2>Let's Talk</h2>
+                <p>West Hollywood, CA</p>
+            </div>
+            <div class="contact-right reveal-children reveal">
+                <a href="mailto:omerbese@gmail.com" class="contact-link">
+                    <span>omerbese@gmail.com</span>
+                    <span class="label">Email</span>
+                </a>
+                <a href="tel:+16502509984" class="contact-link">
+                    <span>+1 (650) 250 9984</span>
+                    <span class="label">Phone</span>
+                </a>
+                <a href="https://linkedin.com/in/omerbese" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <span>linkedin.com/in/omerbese</span>
+                    <span class="label">LinkedIn</span>
+                </a>
+                <a href="https://x.com/mrbese" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <span>x.com/mrbese</span>
+                    <span class="label">X</span>
+                </a>
+                <a href="https://github.com/mrbese" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <span>github.com/mrbese</span>
+                    <span class="label">GitHub</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Omer Bese
+        </div>
+    </section>
+
+    <!-- ==========================================
+         THREE.JS TORUS KNOT
+         ========================================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        (function() {
+            var canvas = document.getElementById('torus-canvas');
+            if (!canvas) return;
+
+            var renderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                alpha: true,
+                antialias: true
+            });
+
+            var size = canvas.clientWidth || 450;
+            renderer.setSize(size, size);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            var scene = new THREE.Scene();
+            var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+            camera.position.z = 5;
+
+            var geometry = new THREE.TorusKnotGeometry(1.2, 0.4, 128, 32, 2, 3);
+            var material = new THREE.MeshBasicMaterial({
+                color: 0xFF0055,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.3
+            });
+
+            var torusKnot = new THREE.Mesh(geometry, material);
+            scene.add(torusKnot);
+
+            function animate() {
+                requestAnimationFrame(animate);
+                torusKnot.rotation.x += 0.002;
+                torusKnot.rotation.y += 0.004;
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            window.addEventListener('resize', function() {
+                var newSize = canvas.clientWidth || 450;
+                renderer.setSize(newSize, newSize);
+            });
+        })();
+    </script>
+
+    <!-- ==========================================
+         INTERSECTION OBSERVER (REVEAL ON SCROLL)
+         ========================================== -->
+    <script>
+        (function() {
+            var revealObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                    }
+                });
+            }, {
+                threshold: 0.08,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            document.querySelectorAll('.reveal, .reveal-children').forEach(function(el) {
+                revealObserver.observe(el);
+            });
+
+            // SVG line draw on scroll
+            var svgObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('drawn');
+                    }
+                });
+            }, {
+                threshold: 0.2
+            });
+
+            document.querySelectorAll('.svg-divider').forEach(function(el) {
+                svgObserver.observe(el);
+            });
+        })();
+    </script>
+
 </body>
 </html>
