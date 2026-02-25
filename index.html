@@ -266,7 +266,7 @@
            ======================================== */
         .svg-divider {
             width: 100%;
-            height: 120px;
+            height: 60px;
             overflow: visible;
             display: block;
         }
@@ -305,7 +305,7 @@
 
         .applying-body {
             font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.75);
             max-width: 720px;
             margin-bottom: 2.5rem;
             line-height: 1.85;
@@ -315,7 +315,7 @@
             border-left: 2px solid #FF0055;
             padding-left: 1.5rem;
             font-style: italic;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.65);
             font-size: 1rem;
             max-width: 720px;
             line-height: 1.85;
@@ -335,8 +335,8 @@
         }
 
         .highlight-card {
-            background: #0a0a0a;
-            border: 1px solid #1a1a1a;
+            background: linear-gradient(145deg, #0a0a0a 0%, #18181c 50%, #0e0e12 100%);
+            border: 1px solid rgba(255,0,85,0.06);
             border-radius: 12px;
             padding: 2rem;
             position: relative;
@@ -366,9 +366,18 @@
             transform: scaleX(1);
         }
 
+        .highlight-card .stat {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: #FF0055;
+            line-height: 1;
+            margin-bottom: 0.75rem;
+        }
+
         .highlight-card p {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
             line-height: 1.75;
         }
 
@@ -416,7 +425,7 @@
 
         .human-right p {
             font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.65);
+            color: rgba(255, 255, 255, 0.8);
             line-height: 1.9;
             margin-bottom: 2.5rem;
         }
@@ -429,6 +438,7 @@
         }
 
         .toggle-item {
+            background: linear-gradient(145deg, rgba(255,0,85,0.02) 0%, rgba(255,255,255,0.05) 50%, rgba(255,0,85,0.01) 100%);
             border: 1px solid #222;
             border-radius: 8px;
             margin-bottom: 0.75rem;
@@ -479,15 +489,20 @@
 
         .toggle-content {
             padding: 0 1.5rem 1.5rem 1.5rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.75);
             font-size: 0.95rem;
             line-height: 1.85;
+        }
+
+        .toggle-content strong {
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 500;
         }
 
         .polyglot-intro,
         .polyglot-closing {
             font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.75);
             line-height: 1.85;
             margin-bottom: 2rem;
         }
@@ -506,7 +521,7 @@
 
         .background-intro {
             font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.75);
             line-height: 1.85;
             margin-bottom: 3rem;
             max-width: 800px;
@@ -521,8 +536,8 @@
         }
 
         .education-item {
-            background: #111;
-            border: 1px solid #1a1a1a;
+            background: linear-gradient(145deg, #111114 0%, #1c1c22 50%, #141418 100%);
+            border: 1px solid rgba(255,0,85,0.06);
             border-radius: 12px;
             padding: 2rem;
             margin-bottom: 1rem;
@@ -536,21 +551,21 @@
 
         .education-meta {
             font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.35);
+            color: rgba(255, 255, 255, 0.5);
             letter-spacing: 0.1em;
             text-transform: uppercase;
             margin-bottom: 0.75rem;
         }
 
         .education-item p {
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255, 255, 255, 0.7);
             font-size: 0.95rem;
             line-height: 1.75;
             margin-bottom: 0.5rem;
         }
 
         .education-item .highlight-story {
-            color: rgba(255, 255, 255, 0.75);
+            color: rgba(255, 255, 255, 0.85);
             font-style: italic;
             font-size: 0.9rem;
         }
@@ -576,7 +591,7 @@
             padding: 1.5rem;
             border: 1px solid #1a1a1a;
             border-radius: 8px;
-            background: #111;
+            background: linear-gradient(145deg, #111114 0%, #1c1c22 50%, #141418 100%);
         }
 
         .fellowships h4 {
@@ -589,7 +604,7 @@
         }
 
         .fellowships p {
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
             line-height: 1.7;
         }
@@ -626,8 +641,8 @@
         .project-card {
             flex: 0 0 min(400px, 85vw);
             scroll-snap-align: start;
-            background: #1a1a1a;
-            border: 1px solid #222;
+            background: linear-gradient(145deg, #1a1a1e 0%, #28282e 50%, #1e1e24 100%);
+            border: 1px solid rgba(255,0,85,0.06);
             border-radius: 16px;
             padding: 2.5rem;
             position: relative;
@@ -671,14 +686,14 @@
 
         .project-card .project-desc {
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.55);
+            color: rgba(255, 255, 255, 0.7);
             line-height: 1.75;
             margin-bottom: 1.5rem;
         }
 
         .project-card .project-stack {
             font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.45);
             letter-spacing: 0.05em;
             margin-bottom: 1.25rem;
             line-height: 1.6;
@@ -711,7 +726,7 @@
 
         .deepdive-intro {
             font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.65);
             line-height: 1.85;
             margin-bottom: 1.5rem;
             max-width: 800px;
@@ -728,10 +743,35 @@
 
         .deepdive-group-intro {
             font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.45);
+            color: rgba(255, 255, 255, 0.6);
             line-height: 1.75;
             margin-bottom: 1.5rem;
             max-width: 800px;
+        }
+
+        /* Deep dive toggles: numbered + left accent */
+        #deepdives .toggle-item {
+            border-left: 2px solid #FF0055;
+            counter-increment: deepdive;
+        }
+
+        #deepdives .toggle-item summary::before {
+            content: counter(deepdive, decimal-leading-zero);
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #FF0055;
+            margin-right: 1rem;
+            min-width: 1.5rem;
+        }
+
+        #deepdives {
+            counter-reset: deepdive;
+        }
+
+        /* Reset counter for "What I Would Do" sub-group */
+        #deepdives .deepdive-group-title ~ .toggle-item {
+            counter-increment: deepdive;
         }
 
         /* ========================================
@@ -758,7 +798,7 @@
 
         .contact-left p {
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.55);
         }
 
         .contact-right {
@@ -774,7 +814,7 @@
             padding: 1rem 0;
             border-bottom: 1px solid #1a1a1a;
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.65);
+            color: rgba(255, 255, 255, 0.8);
             transition: color 0.3s ease, padding-left 0.3s ease;
         }
 
@@ -787,14 +827,14 @@
             font-size: 0.68rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.25);
+            color: rgba(255, 255, 255, 0.45);
         }
 
         .footer-bottom {
             text-align: center;
             padding: 2rem;
             font-size: 0.72rem;
-            color: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.35);
             letter-spacing: 0.1em;
         }
 
@@ -826,7 +866,7 @@
             gap: 0.75rem;
             padding: 0.5rem 0;
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.35);
             transition: color 0.3s ease;
         }
 
@@ -882,7 +922,7 @@
             font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(1.5rem, 3vw, 2.5rem);
             font-weight: 700;
-            color: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.2);
             margin-bottom: 1.25rem;
         }
 
@@ -993,8 +1033,7 @@
     </nav>
 
     <!-- ==========================================
-         HERO SECTION — 3-layer depth effect
-         Back: circle portrait | Middle: text | Front: cutout portrait
+         HERO SECTION
          ========================================== -->
     <section id="hero">
         <img src="img/hero-banner-dark.png" alt="Omer Bese" class="hero-banner" loading="eager">
@@ -1005,9 +1044,9 @@
         </div>
     </section>
 
-    <!-- SVG DIVIDER -->
-    <svg class="svg-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60" />
+    <!-- SINE WAVE DIVIDER -->
+    <svg class="svg-divider" viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1440,0 1440,40" />
     </svg>
 
     <!-- ==========================================
@@ -1030,27 +1069,30 @@
          ========================================== -->
     <section id="highlights">
         <div class="section">
+            <div class="section-label reveal">Track Record</div>
+            <h2 class="section-heading reveal">Numbers, Not Words</h2>
+            <div class="accent-line reveal"></div>
             <div class="highlights-grid reveal-children reveal">
                 <div class="highlight-card">
+                    <div class="stat">2 Rules Broken</div>
                     <p>Jason Calacanis broke both his "No Solo Founders" and "No Service Businesses" rules to write the first check.</p>
                 </div>
                 <div class="highlight-card">
-                    <p>Amazon Medical Device Launch in 3 Months. Category avg: 10-16 months. 90% rejection rate. Got called back 6 months later asking how.</p>
+                    <div class="stat">3 Months</div>
+                    <p>Amazon Medical Device Launch. Category avg: 10-16 months. 90% rejection rate. Got called back 6 months later asking how.</p>
                 </div>
                 <div class="highlight-card">
-                    <p>30% Electricity Bill Drop at the Jonathan Club after a 2-day LED upgrade.</p>
+                    <div class="stat">30% Drop</div>
+                    <p>Electricity bill reduction at the Jonathan Club after a 2-day LED upgrade.</p>
                 </div>
                 <div class="highlight-card">
-                    <p>180-Person Waitlist at Bonjuur. Built by cleaning houses myself for 6 months, mapping every bottleneck, and redesigning workflows from the ground up.</p>
+                    <div class="stat">180 People</div>
+                    <p>Waitlist at Bonjuur. Built by cleaning houses myself for 6 months, mapping every bottleneck, redesigning workflows from the ground up.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SVG DIVIDER -->
-    <svg class="svg-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,60 Q360,0 720,60 T1440,60" />
-    </svg>
 
     <!-- ==========================================
          THE HUMAN (STICKY SCROLL)
@@ -1092,42 +1134,38 @@
 
             <details class="toggle-item reveal">
                 <summary>I speak engineering;</summary>
-                <div class="toggle-content">So I wonder why we accept "defaults" without questioning them. Every "standard" spec was once someone's best guess that got frozen into practice. When I look at any system (electrical, mechanical, software) my first question is; what constraint set this default, and has that constraint changed? Breaking the status quo is much easier when you question assumptions nobody revisits.</div>
+                <div class="toggle-content">So I wonder why we accept "defaults" without questioning them. Every "standard" spec was once <strong>someone's best guess that got frozen into practice</strong>. When I look at any system (electrical, mechanical, software) my first question is: <strong>what constraint set this default, and has that constraint changed?</strong> Breaking the status quo is much easier when you question assumptions nobody revisits.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>I speak operations;</summary>
-                <div class="toggle-content">So I wonder why so many field service industries still send their most expensive, licensed specialist to handle the full job when 70% of the work requires no license at all. Henry Ford didn't invent the assembly line. He stole it from slaughterhouses in Chicago that decoupled the master butcher from volume labor. Splitting skilled from unskilled work is the oldest throughput hack in the book, and it's hiding in plain sight across energy, construction, and HVAC.</div>
+                <div class="toggle-content">So I wonder why so many field service industries still send their most expensive, licensed specialist to handle the full job when <strong>70% of the work requires no license at all</strong>. Henry Ford didn't invent the assembly line. He stole it from slaughterhouses in Chicago that <strong>decoupled the master butcher from volume labor</strong>. Splitting skilled from unskilled work is the oldest throughput hack in the book, and it's hiding in plain sight across energy, construction, and HVAC.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>I speak thermodynamics;</summary>
-                <div class="toggle-content">So I wonder from first principles; Should we aim to consume less before we store or generate more? The most valuable kilowatt-hour is the one you never have to produce. Reducing a building's peak demand by even 2-3 kW through passive upgrades (attic insulation R-49, aerosol duct sealing, ECM blower motor swap) can actually make your home "Thermal Battery" at a fraction of the cost of new hardware.</div>
+                <div class="toggle-content">So I wonder from first principles: should we aim to <strong>consume less before we store or generate more?</strong> The most valuable kilowatt-hour is the one you never have to produce. Reducing a building's peak demand by even <strong>2-3 kW through passive upgrades</strong> (attic insulation R-49, aerosol duct sealing, ECM blower motor swap) can actually make your home a "Thermal Battery" at a fraction of the cost of new hardware.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>I speak finance;</summary>
-                <div class="toggle-content">So I wonder why more infrastructure companies don't hedge volatile market revenue with bankable long-term contracts in adjacent markets. High-beta volatility is exciting on a spreadsheet but terrifying to a lender. Pairing it with fixed, multi-year capacity agreements in regulated markets is how you get the cost of capital down and the deployment velocity up. The two structures are natural complements that most companies treat as "either/or" while the stable answer is "and".</div>
+                <div class="toggle-content">So I wonder why more infrastructure companies don't <strong>hedge volatile market revenue with bankable long-term contracts</strong> in adjacent markets. High-beta volatility is exciting on a spreadsheet but terrifying to a lender. Pairing it with fixed, multi-year capacity agreements in regulated markets is how you get <strong>the cost of capital down and the deployment velocity up</strong>. The two structures are natural complements that most companies treat as "either/or" while the stable answer is "and".</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>I speak policy;</summary>
-                <div class="toggle-content">So I wonder why the split incentive problem (where the person who pays for an upgrade isn't the person who benefits) still paralyzes entire sectors. Renters, tenants, landlords, utilities: everyone points at someone else. And since none of the individuals are gaining, whole society loses. But when you look at the world you can find tried and done answers to your problems for example Sweden solved it with "Warm Rent." The U.S. hasn't even tried. The policy fix often exists; the political will doesn't.</div>
+                <div class="toggle-content">So I wonder why the <strong>split incentive problem</strong> (where the person who pays for an upgrade isn't the person who benefits) still paralyzes entire sectors. Renters, tenants, landlords, utilities: everyone points at someone else. And since none of the individuals are gaining, whole society loses. But when you look at the world you can find tried and done answers: <strong>Sweden solved it with "Warm Rent."</strong> The U.S. hasn't even tried. The policy fix often exists; the political will doesn't.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>I speak legal;</summary>
-                <div class="toggle-content">So I wonder why companies building vertically don't structure their corporate entities to match the stack. Manufacturing, installation, retail, and software each carry fundamentally different liability profiles. Isolating them into separate LLCs doesn't just lower insurance premiums. It unlocks R&amp;D tax credits and grant eligibility that a monolithic structure would miss entirely.</div>
+                <div class="toggle-content">So I wonder why companies building vertically don't <strong>structure their corporate entities to match the stack</strong>. Manufacturing, installation, retail, and software each carry fundamentally different liability profiles. Isolating them into separate LLCs doesn't just lower insurance premiums. It <strong>unlocks R&amp;D tax credits and grant eligibility</strong> that a monolithic structure would miss entirely.</div>
             </details>
 
             <p class="polyglot-closing reveal">In a nutshell, I speak lots of languages. While I am not proficient in all of them, with closed captions I am fluent enough to communicate with the native speakers. I am simply looking for a place where this "unnecessary" curiosity is actually a prerequisite.</p>
         </div>
     </section>
 
-    <!-- SVG DIVIDER -->
-    <svg class="svg-divider" viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,80 C200,20 400,100 600,50 C800,0 1000,90 1200,40 C1300,20 1400,70 1440,60" />
-    </svg>
 
     <!-- ==========================================
          BACKGROUND
@@ -1274,37 +1312,37 @@
 
             <details class="toggle-item reveal">
                 <summary>The Gentailer Model. Actually Executed.</summary>
-                <div class="toggle-content">Most battery companies sell you an $18,000 box and disappear. Base Power does not. Starting $695 upfront. $19/month. They own the hardware. You get backup power and a lower electricity bill. They eat the arbitrage and virtual power plant revenue. Simple pitch. But there is a specific structural reason it works when everyone running a similar thesis has failed. "Gentailer" means you're the generator and the retailer simultaneously. In Texas's deregulated ERCOT market, most REPs buy power at wholesale prices and sell at fixed rates. When prices spike, retailers bleed. Generators love those spikes. Base Power owns both sides of that trade: the battery is the generation asset, the customer relationship is the retail contract. The same price event that hits the retail book prints money in the dispatch book. That internal hedge is why the unit economics hold when they should not. The customer pays once. Gets whole-home backup. Gets below-market energy rates. Base owns the distributed energy asset and collects grid revenue from wholesale dispatch around the clock. The subscription alone runs $228 to $348 per home per year. Grid trading sits on top of that.</div>
+                <div class="toggle-content">Most battery companies sell you an $18,000 box and disappear. Base Power does not. Starting <strong>$695 upfront</strong>. $19/month. They own the hardware. You get backup power and a lower electricity bill. They eat the arbitrage and virtual power plant revenue. Simple pitch. But there is a specific structural reason it works when everyone running a similar thesis has failed. "Gentailer" means you're the generator and the retailer simultaneously. In Texas's deregulated ERCOT market, most REPs buy power at wholesale prices and sell at fixed rates. When prices spike, retailers bleed. Generators love those spikes. Base Power owns both sides of that trade: the battery is the generation asset, the customer relationship is the retail contract. The same price event that hits the retail book prints money in the dispatch book. That <strong>internal hedge</strong> is why the unit economics hold when they should not. The customer pays once. Gets whole-home backup. Gets below-market energy rates. Base owns the distributed energy asset and collects grid revenue from wholesale dispatch around the clock. The subscription alone runs <strong>$228 to $348 per home per year</strong>. Grid trading sits on top of that.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>The Cost Basis. Not the Technology.</summary>
-                <div class="toggle-content">Base does not manufacture batteries. They assemble them. CATL makes the lithium iron phosphate cells in China. Base imports those cells at roughly $55/kWh and assembles at a 90,000 sq ft facility in Austin. Off-the-shelf integrators buy finished modules at around $100/kWh. Result: Base's 25 kWh single-unit system costs roughly $2,500 to $3,000 to build versus $6,000 to $8,000 for comparable off-the-shelf configurations. Cell fabrication is a commodity race they cannot win and do not try to. They control stages 3 through 5: module assembly, pack integration, proprietary inverter. Ford did not invent the assembly line. He borrowed the concept from Chicago slaughterhouses where master butchers were the production bottleneck. Base did the same thing. The factory exists to make the installer stupid-fast. The bottleneck was never manufacturing. It is installation crews.</div>
+                <div class="toggle-content">Base does not manufacture batteries. They assemble them. CATL makes the lithium iron phosphate cells in China. Base imports those cells at roughly <strong>$55/kWh</strong> and assembles at a 90,000 sq ft facility in Austin. Off-the-shelf integrators buy finished modules at around $100/kWh. Result: Base's 25 kWh single-unit system costs roughly <strong>$2,500 to $3,000 to build</strong> versus $6,000 to $8,000 for comparable off-the-shelf configurations. Cell fabrication is a commodity race they cannot win and do not try to. They control stages 3 through 5: module assembly, pack integration, proprietary inverter. Ford did not invent the assembly line. He borrowed the concept from Chicago slaughterhouses where master butchers were the production bottleneck. Base did the same thing. The factory exists to make the installer stupid-fast. <strong>The bottleneck was never manufacturing. It is installation crews.</strong></div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>The IRA. Working Capital Flywheel.</summary>
-                <div class="toggle-content">Section 48E ITC gives 30% back on Fair Market Value, not on COGS. COGS is roughly $3,000. Retail fair market value is roughly $10,000. The 30% credit returns approximately $3,000 per unit. The hardware effectively pays for itself before the customer writes a check. US assembly triggers the domestic content adder, pushing the total investment tax credit toward 40%. Section 6418 transferability closes the loop. Base can sell those credits immediately at 91 to 94 cents on the dollar. Deploy, generate credit, sell, redeploy. That is the working capital engine behind deployment velocity.</div>
+                <div class="toggle-content">Section 48E ITC gives <strong>30% back on Fair Market Value, not on COGS</strong>. COGS is roughly $3,000. Retail fair market value is roughly $10,000. The 30% credit returns approximately $3,000 per unit. The <strong>hardware effectively pays for itself</strong> before the customer writes a check. US assembly triggers the domestic content adder, pushing the total investment tax credit toward 40%. Section 6418 transferability closes the loop. Base can sell those credits immediately at <strong>91 to 94 cents on the dollar</strong>. Deploy, generate credit, sell, redeploy. That is the working capital engine behind deployment velocity.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>The Inverter. Not a Commodity.</summary>
-                <div class="toggle-content">Base publishes 11.4 kW max continuous real power for both the single-unit 25 kWh system and the dual-unit 50 kWh system. SolarEdge and Enphase are designed for solar self-consumption. Wrong tool for this job. Base needs bidirectional, millisecond-latency, grid-forming power electronics that auto-switch in under 0.5 seconds. Why 11.4 kW matters in ERCOT: the real-time SWCAP sits at $2,000/MWh. The day-ahead SWCAP is $5,000/MWh. During those events, 11.4 kW dispatching versus a competitor's 5 kW is the difference between full revenue capture and watching half the value disappear. The inverter is the monetization engine.</div>
+                <div class="toggle-content">Base publishes <strong>11.4 kW max continuous real power</strong> for both the single-unit 25 kWh system and the dual-unit 50 kWh system. SolarEdge and Enphase are designed for solar self-consumption. Wrong tool for this job. Base needs bidirectional, millisecond-latency, grid-forming power electronics that auto-switch in under 0.5 seconds. Why 11.4 kW matters in ERCOT: the real-time SWCAP sits at <strong>$2,000/MWh</strong>. The day-ahead SWCAP is $5,000/MWh. During those events, 11.4 kW dispatching versus a competitor's 5 kW is the difference between full revenue capture and watching half the value disappear. <strong>The inverter is the monetization engine.</strong></div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>The ERCOT Revenue Collapse. And What Survived.</summary>
-                <div class="toggle-content">ERCOT battery storage grew from under 1 GW in 2021 to approximately 13.9 GW by early 2026. ECRS clearing prices fell from $76.77/MWh in 2023 to $9.62/MWh in 2024: an 87% collapse. Total battery revenue fell 75 to 78%. Companies that built their model on ancillary service revenue with $8,000 system COGS are finished. Base survives because their cost basis is below $3,000. The 4CP peak billing optimization does not care what ancillary prices are doing. The ADER program: ERCOT expanded the Aggregated Distributed Energy Resources cap to 200 MW system-wide. December 2025: ERCOT launched Real-Time Co-optimization plus Batteries.</div>
+                <div class="toggle-content">ERCOT battery storage grew from under 1 GW in 2021 to approximately 13.9 GW by early 2026. ECRS clearing prices fell from $76.77/MWh in 2023 to $9.62/MWh in 2024: an <strong>87% collapse</strong>. Total battery revenue fell <strong>75 to 78%</strong>. Companies that built their model on ancillary service revenue with $8,000 system COGS are finished. Base survives because their <strong>cost basis is below $3,000</strong>. The 4CP peak billing optimization does not care what ancillary prices are doing. The ADER program: ERCOT expanded the Aggregated Distributed Energy Resources cap to 200 MW system-wide. December 2025: ERCOT launched Real-Time Co-optimization plus Batteries.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>Volatility Paradox. Hoax.</summary>
-                <div class="toggle-content">The conventional narrative: more batteries suppress the price spikes that justify building batteries. But the ERCOT large-load interconnection queue shows approximately 233 GW of pending new load. AI data centers, EV charging, and industrial electrification could add 20 to 30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin compresses back toward sub-15%, where scarcity events become frequent again and batteries print money.</div>
+                <div class="toggle-content">The conventional narrative: more batteries suppress the price spikes that justify building batteries. But the ERCOT large-load interconnection queue shows approximately <strong>233 GW of pending new load</strong>. AI data centers, EV charging, and industrial electrification could add 20 to 30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin compresses back toward <strong>sub-15%</strong>, where scarcity events become frequent again and <strong>batteries print money</strong>.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>The Funding. AC vs DC.</summary>
-                <div class="toggle-content">$1.3 billion total. $1 billion Series C in October 2025, led by Addition at a $4 billion valuation. Andreessen Horowitz, Lightspeed, Thrive, CapitalG, and Ribbit all participated. The Warren Buffett inside me is screaming, "Sunrun!" Volatility is the middle name of this game. It seems like anything that touches electricity eventually copies its sine wave. Here's hoping Base's valuation adopts DC.</div>
+                <div class="toggle-content"><strong>$1.3 billion total</strong>. $1 billion Series C in October 2025, led by Addition at a <strong>$4 billion valuation</strong>. Andreessen Horowitz, Lightspeed, Thrive, CapitalG, and Ribbit all participated. The Warren Buffett inside me is screaming, "<strong>Sunrun!</strong>" Volatility is the middle name of this game. It seems like anything that touches electricity eventually copies its sine wave. Here's hoping Base's valuation adopts DC.</div>
             </details>
 
             <!-- What I Would Do at Base Power -->
@@ -1313,22 +1351,22 @@
 
             <details class="toggle-item reveal">
                 <summary>The Thermal Battery: Liberating an extra 2 kW</summary>
-                <div class="toggle-content">There is a framing problem costing Base money every day. The battery is competing with the home for power. Both systems are capped at 11.4 kW continuous output. EXPORT CAPACITY = 11.4 kW - HOUSE LOAD. A standard Texas home draws 5 to 6 kW on a summer afternoon. By liberating an extra 2 kW per home through passive upgrades (attic insulation R-49, aerosol duct sealing, ECM blower motor swap), Base yields 33% to 40% more export capacity from the exact same hardware. Across a 30,000-home fleet this translates to $2.4M to $6.0M in additional annual revenue.</div>
+                <div class="toggle-content">There is a framing problem costing Base money every day. The battery is competing with the home for power. Both systems are capped at 11.4 kW continuous output. <strong>EXPORT CAPACITY = 11.4 kW - HOUSE LOAD</strong>. A standard Texas home draws 5 to 6 kW on a summer afternoon. By liberating an extra 2 kW per home through passive upgrades (attic insulation R-49, aerosol duct sealing, ECM blower motor swap), Base yields <strong>33% to 40% more export capacity</strong> from the exact same hardware. Across a 30,000-home fleet this translates to <strong>$2.4M to $6.0M</strong> in additional annual revenue.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>The Moat. Decoupled Installation.</summary>
-                <div class="toggle-content">Base's install schedule is broken into specialized nodes. Phase 1: Material Drop-off alongside battery hardware. Phase 2: Parallel Workflow where unlicensed insulation crew works inside while electrical crew works outside. Phase 3: Cleanup. Zero additional customer acquisition cost and zero extra truck rolls. This structural advantage saves $650 to $1,100 per home. At 40 installs/day with a 30% upsell rate, that generates a $2M to $3M annual operational advantage.</div>
+                <div class="toggle-content">Base's install schedule is broken into specialized nodes. Phase 1: Material Drop-off alongside battery hardware. Phase 2: Parallel Workflow where unlicensed insulation crew works inside while electrical crew works outside. Phase 3: Cleanup. <strong>Zero additional customer acquisition cost</strong> and zero extra truck rolls. This structural advantage saves <strong>$650 to $1,100 per home</strong>. At 40 installs/day with a 30% upsell rate, that generates a <strong>$2M to $3M annual</strong> operational advantage.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>California. The Financial Arbitrage.</summary>
-                <div class="toggle-content">Texas: SOFR + 350-450 bps, 50% LTV. California's Resource Adequacy: SOFR + 175-250 bps, up to 75-80% LTV. Same cells. Same inverter. Different contract. On a blended $100M portfolio this saves $900k to $1.5M annually in interest expense. San Diego entry via SDG&amp;E rates ($0.39-$0.40/kWh) and CCA partnerships.</div>
+                <div class="toggle-content">Texas: SOFR + 350-450 bps, 50% LTV. California's Resource Adequacy: <strong>SOFR + 175-250 bps, up to 75-80% LTV</strong>. Same cells. Same inverter. Different contract. On a blended $100M portfolio this saves <strong>$900k to $1.5M annually</strong> in interest expense. San Diego entry via SDG&amp;E rates (<strong>$0.39-$0.40/kWh</strong>) and CCA partnerships.</div>
             </details>
 
             <details class="toggle-item reveal">
                 <summary>The Capital Flywheel</summary>
-                <div class="toggle-content">California offers the steady, predictable "Direct Current" of regulated returns, shielding Base Power from the troughs of Texas's wild "Alternating Current" while letting them bank the crests.</div>
+                <div class="toggle-content">California offers the steady, predictable "<strong>Direct Current</strong>" of regulated returns, shielding Base Power from the troughs of Texas's wild "<strong>Alternating Current</strong>" while letting them bank the crests.</div>
             </details>
         </div>
     </section>
@@ -1366,7 +1404,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 Omer Bese
+            &copy; 2026 Omer Bese &nbsp;&middot;&nbsp; v1.1
         </div>
     </section>
 
@@ -1445,8 +1483,16 @@
                     }
                 });
             }, {
-                threshold: 0.1,
-                rootMargin: '-10% 0px -75% 0px'
+                threshold: 0.05,
+                rootMargin: '-20% 0px -55% 0px'
+            });
+
+            // When scrolled to bottom, activate last section
+            window.addEventListener('scroll', function() {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+                    navLinks.forEach(function(l) { l.classList.remove('active'); });
+                    sections[sections.length - 1].link.classList.add('active');
+                }
             });
 
             sections.forEach(function(s) {
