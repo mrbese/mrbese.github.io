@@ -428,15 +428,28 @@
             line-height: 1.75;
         }
 
+        /* Extra vertical air between the heaviest bands (density without dilution) */
+        #highlights .section {
+            padding-bottom: clamp(7rem, 16vw, 12rem);
+        }
+
+        #human .human-section-inner {
+            padding-top: clamp(3.5rem, 9vw, 7rem);
+        }
+
+        #polyglot .section {
+            padding-bottom: clamp(7rem, 16vw, 12rem);
+        }
+
+        #background > .section:first-of-type {
+            padding-top: clamp(5.5rem, 12vw, 10rem);
+        }
+
         /* ========================================
            ABOUT ME (#human)
            ======================================== */
         #human {
             background: #0a0a0a;
-        }
-
-        .human-section-inner {
-            padding-top: 2rem;
         }
 
         .human-section-inner .section-heading {
@@ -1063,9 +1076,72 @@
         /* ========================================
            RESPONSIVE
            ======================================== */
+        .mobile-jump {
+            display: none;
+        }
+
         @media (max-width: 900px) {
+            html {
+                scroll-padding-bottom: calc(3.85rem + env(safe-area-inset-bottom, 0px));
+            }
+
+            body {
+                padding-bottom: calc(3.85rem + env(safe-area-inset-bottom, 0px));
+            }
+
             .side-nav {
                 display: none;
+            }
+
+            .mobile-jump {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 70;
+                align-items: center;
+                gap: 0.4rem;
+                padding: 0.45rem max(0.6rem, env(safe-area-inset-right, 0px)) calc(0.45rem + env(safe-area-inset-bottom, 0px)) max(0.6rem, env(safe-area-inset-left, 0px));
+                background: rgba(0, 0, 0, 0.88);
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                border-top: 1px solid rgba(255, 0, 85, 0.18);
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .mobile-jump::-webkit-scrollbar {
+                display: none;
+            }
+
+            .mobile-jump a {
+                flex: 0 0 auto;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.62rem;
+                font-weight: 500;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                padding: 0.42rem 0.7rem;
+                border-radius: 999px;
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                color: rgba(255, 255, 255, 0.72);
+                transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+                white-space: nowrap;
+            }
+
+            .mobile-jump a:hover,
+            .mobile-jump a:focus-visible {
+                color: #FF0055;
+                border-color: rgba(255, 0, 85, 0.45);
+                outline: none;
+            }
+
+            .mobile-jump a.active {
+                color: #FF0055;
+                border-color: #FF0055;
+                background: rgba(255, 0, 85, 0.06);
             }
 
             .human-layout {
@@ -1155,6 +1231,16 @@
         <a href="#projects"><span class="nav-dot"></span><span class="nav-label">Projects</span></a>
         <a href="#deepdives"><span class="nav-dot"></span><span class="nav-label">Deep Dives</span></a>
         <a href="#contact"><span class="nav-dot"></span><span class="nav-label">Contact</span></a>
+    </nav>
+
+    <nav class="mobile-jump" aria-label="Quick section links">
+        <a href="#hero">Home</a>
+        <a href="#highlights">Proof</a>
+        <a href="#human">About</a>
+        <a href="applying/">Apply</a>
+        <a href="#projects">Tools</a>
+        <a href="#deepdives">Read</a>
+        <a href="#contact">Hi</a>
     </nav>
 
     <!-- ==========================================
@@ -1538,7 +1624,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 Omer Bese &nbsp;&middot;&nbsp; v1.4
+            &copy; 2026 Omer Bese &nbsp;&middot;&nbsp; v1.5
         </div>
     </section>
 
@@ -1635,6 +1721,59 @@
             sections.forEach(function(s) {
                 activeObserver.observe(s.el);
             });
+        })();
+    </script>
+
+    <!-- Mobile jump bar: highlight active section -->
+    <script>
+        (function() {
+            var bar = document.querySelector('.mobile-jump');
+            if (!bar) return;
+            var jumpLinks = bar.querySelectorAll('a[href^="#"]');
+            var sectionEntries = [];
+            jumpLinks.forEach(function(link) {
+                var id = (link.getAttribute('href') || '').substring(1);
+                if (!id) return;
+                var el = document.getElementById(id);
+                if (el) sectionEntries.push({ el: el, link: link });
+            });
+            if (!sectionEntries.length) return;
+
+            var mq = window.matchMedia('(max-width: 900px)');
+            var obs;
+
+            function clearActive() {
+                jumpLinks.forEach(function(l) { l.classList.remove('active'); });
+            }
+
+            function setup() {
+                if (obs) {
+                    obs.disconnect();
+                    obs = null;
+                }
+                clearActive();
+                if (!mq.matches) return;
+
+                obs = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (!entry.isIntersecting) return;
+                        clearActive();
+                        sectionEntries.forEach(function(s) {
+                            if (s.el === entry.target) s.link.classList.add('active');
+                        });
+                    });
+                }, {
+                    threshold: 0.12,
+                    rootMargin: '-22% 0px -48% 0px'
+                });
+
+                sectionEntries.forEach(function(s) {
+                    obs.observe(s.el);
+                });
+            }
+
+            setup();
+            mq.addEventListener('change', setup);
         })();
     </script>
 
