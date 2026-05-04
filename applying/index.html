@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>#ApplyingInPublic | Omer Bese</title>
-    <meta name="description" content="Job search in public: companies, roles, research notes, and what I would do in the first weeks. By Omer Bese.">
+    <meta name="description" content="Public job search: how I research companies, what I learned, week-one plans—and a log as entries ship.">
     <link rel="canonical" href="https://mrbese.com/applying/">
 
     <meta property="og:title" content="#ApplyingInPublic | Omer Bese">
-    <meta property="og:description" content="Companies, roles, diligence notes, and week-one plans—documented in public.">
+    <meta property="og:description" content="Companies, roles, diligence notes, and week-one plans—same rigor as my market research, published as I go.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mrbese.com/applying/">
 
@@ -18,7 +18,7 @@
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: #333 #000; }
         body {
             font-family: 'Inter', sans-serif;
             background: #000;
@@ -49,14 +49,6 @@
         }
         .back strong { color: #FF0055; font-weight: 500; }
 
-        #applying {
-            background: #0a0a0a;
-        }
-        .section {
-            padding: 5rem 2rem 6rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
         .section-label {
             font-family: 'Inter', sans-serif;
             font-size: 0.7rem;
@@ -64,45 +56,180 @@
             letter-spacing: 0.3em;
             text-transform: uppercase;
             color: #FF0055;
-            margin-bottom: 2rem;
+            margin-bottom: 1.25rem;
         }
         .accent-line {
             width: 60px;
             height: 1px;
             background: #FF0055;
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
         }
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .section-inner.tight-top { padding-top: 3rem; }
+        .band-dark { background: #0a0a0a; }
+        .band-darker { background: #050505; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+
         .applying-hero-text {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(1.8rem, 3.5vw, 3rem);
+            font-size: clamp(1.75rem, 3.2vw, 2.85rem);
             font-weight: 700;
-            line-height: 1.25;
-            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.25rem;
+            max-width: 52rem;
         }
         .applying-hero-text .highlight { color: #FF0055; }
-        .applying-body {
+        .lede {
             font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.75);
-            max-width: 720px;
-            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.76);
+            max-width: 40rem;
             line-height: 1.85;
+            margin-bottom: 2rem;
         }
         .applying-quote {
             border-left: 2px solid #FF0055;
             padding-left: 1.5rem;
             font-style: italic;
-            color: rgba(255, 255, 255, 0.65);
+            color: rgba(255, 255, 255, 0.62);
             font-size: 1rem;
-            max-width: 720px;
+            max-width: 40rem;
             line-height: 1.85;
         }
+
+        .section-heading {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        .prose {
+            font-size: 0.98rem;
+            color: rgba(255, 255, 255, 0.72);
+            max-width: 42rem;
+            line-height: 1.82;
+            margin-bottom: 1.25rem;
+        }
+        .bullet-list {
+            list-style: none;
+            max-width: 42rem;
+        }
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.35rem;
+            margin-bottom: 0.85rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.74);
+            line-height: 1.65;
+        }
+        .bullet-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: #FF0055;
+            border-radius: 1px;
+        }
+
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            max-width: 900px;
+        }
+        .format-card {
+            background: linear-gradient(145deg, #0a0a0a 0%, #141418 50%, #0c0c10 100%);
+            border: 1px solid rgba(255, 0, 85, 0.08);
+            border-radius: 10px;
+            padding: 1.35rem 1.25rem;
+            transition: border-color 0.3s ease;
+        }
+        .format-card:hover { border-color: rgba(255, 255, 255, 0.12); }
+        .format-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        .format-card p {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.62);
+            line-height: 1.55;
+        }
+
+        .proof-card {
+            max-width: 44rem;
+            background: linear-gradient(145deg, rgba(255,0,85,0.04) 0%, rgba(255,255,255,0.04) 50%, rgba(255,0,85,0.02) 100%);
+            border: 1px solid rgba(255, 0, 85, 0.15);
+            border-radius: 12px;
+            padding: 1.75rem 1.5rem;
+        }
+        .proof-card p { margin-bottom: 1rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.72); line-height: 1.75; }
+        .proof-card p:last-of-type { margin-bottom: 1.25rem; }
+        .proof-cta {
+            display: inline-block;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #FF0055;
+            border-bottom: 1px solid #FF0055;
+            padding-bottom: 0.2rem;
+        }
+        .proof-cta:hover { color: #fff; border-bottom-color: #fff; }
+
+        .log-wrap { max-width: 56rem; overflow-x: auto; }
+        .log-table {
+            width: 100%;
+            min-width: 520px;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+        .log-table th {
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.45);
+            padding: 0.65rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .log-table td {
+            padding: 1rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.55);
+            vertical-align: top;
+        }
+        .log-empty {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.65;
+            padding: 1.25rem 0 0;
+        }
+        .log-empty a { border-bottom: 1px solid rgba(255, 0, 85, 0.35); }
+        .log-empty a:hover { border-bottom-color: #FF0055; }
+
         .footer-note {
             text-align: center;
-            padding: 3rem 1.5rem;
-            font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.35);
+            padding: 2.5rem 1.5rem 3rem;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.32);
+            letter-spacing: 0.04em;
         }
-        .footer-note a { border-bottom: 1px solid rgba(255, 0, 85, 0.35); }
+        .footer-note a { border-bottom: 1px solid rgba(255, 0, 85, 0.3); }
+
+        @media (max-width: 600px) {
+            .section-inner { padding: 3rem 1.25rem; }
+            .log-table { min-width: 100%; font-size: 0.8rem; }
+        }
     </style>
 </head>
 <body>
@@ -112,19 +239,98 @@
     </header>
 
     <main>
-        <section id="applying">
-            <div class="section">
+        <section id="applying" class="band-dark">
+            <div class="section-inner">
                 <div class="section-label">#ApplyingInPublic</div>
                 <div class="accent-line"></div>
                 <p class="applying-hero-text">While everyone is building in public, I am <span class="highlight">JOB HUNTING</span> in public.</p>
-                <p class="applying-body">I share the companies and positions I've applied to, what I learned while researching them, and what I would do if I got the role. #ApplyingInPublic</p>
+                <p class="lede">This page is the home for the search: what I&rsquo;m chasing, how I diligence it, and—when I publish them—write-ups per company/role. It is intentionally separate from the homepage so strangers meet <strong>proof first</strong>, narrative second.</p>
                 <blockquote class="applying-quote">
-                    "I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren't working and build the things that do."
+                    &ldquo;I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren&rsquo;t working and build the things that do.&rdquo;
                 </blockquote>
+            </div>
+        </section>
+
+        <section class="band-darker" aria-labelledby="what-heading">
+            <div class="section-inner tight-top">
+                <div class="section-label">What you get here</div>
+                <h2 class="section-heading" id="what-heading">Same bar as my market research—applied to hiring</h2>
+                <div class="accent-line"></div>
+                <ul class="bullet-list">
+                    <li><strong style="color:rgba(255,255,255,0.9);font-weight:500;">Thesis</strong> — why the company, why now, why me.</li>
+                    <li><strong style="color:rgba(255,255,255,0.9);font-weight:500;">Diligence</strong> — primary sources where it matters (filings, tariffs, specs), not recycled blog takes.</li>
+                    <li><strong style="color:rgba(255,255,255,0.9);font-weight:500;">Week one</strong> — what I would actually do in the first 30 days if I landed the seat.</li>
+                    <li><strong style="color:rgba(255,255,255,0.9);font-weight:500;">Honest status</strong> — applied, passed, ghosted, advanced—labeled plainly when I post an entry.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="band-dark" aria-labelledby="format-heading">
+            <div class="section-inner">
+                <div class="section-label">Per entry</div>
+                <h2 class="section-heading" id="format-heading">What each public write-up is built to include</h2>
+                <div class="accent-line"></div>
+                <div class="format-grid">
+                    <div class="format-card">
+                        <h3>Context</h3>
+                        <p>Category, geography, regulatory environment, and the specific wedge I believe in.</p>
+                    </div>
+                    <div class="format-card">
+                        <h3>Role fit</h3>
+                        <p>What the job actually is vs what the JD pretends it is—and where I overlap.</p>
+                    </div>
+                    <div class="format-card">
+                        <h3>Numbers</h3>
+                        <p>When possible: unit economics, throughput, risk—same instinct as my deep dives.</p>
+                    </div>
+                    <div class="format-card">
+                        <h3>Artifact</h3>
+                        <p>Links to anything I ship alongside the app (calcs, memos, tools) when relevant.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band-darker" aria-labelledby="proof-heading">
+            <div class="section-inner">
+                <div class="section-label">Proof of depth</div>
+                <h2 class="section-heading" id="proof-heading">This is not vapor &ldquo;thought leadership&rdquo;</h2>
+                <div class="accent-line"></div>
+                <div class="proof-card">
+                    <p>The Base Power work on my main site is <strong style="color:#fff;font-weight:500;">not a job application</strong>—it is the same diligence muscle: filings, market structure, hardware cost walk, and an operator take on what I would do next.</p>
+                    <p>If you want to calibrate how I think before any application post exists, start there.</p>
+                    <a class="proof-cta" href="../#deepdives">Open Research &amp; deep dives on mrbese.com</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="band-dark" aria-labelledby="log-heading">
+            <div class="section-inner">
+                <div class="section-label">Public log</div>
+                <h2 class="section-heading" id="log-heading">Companies &amp; roles (as published)</h2>
+                <div class="accent-line"></div>
+                <p class="prose">Rows fill in as I ship each write-up here—no fake entries. Until then, the table is intentionally empty; the proof card above is the calibration anchor.</p>
+                <div class="log-wrap">
+                    <table class="log-table">
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Note</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="4" class="log-empty">No published rows yet. For the live stream in the meantime: <a href="https://x.com/mrbese" target="_blank" rel="noopener noreferrer">@mrbese</a> · <a href="../#contact">Contact on main site</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
     </main>
 
-    <p class="footer-note">Full portfolio &amp; tools on the <a href="../">homepage</a> &nbsp;&middot;&nbsp; v1.3</p>
+    <p class="footer-note">Portfolio, tools, contact: <a href="../">mrbese.com</a> &nbsp;&middot;&nbsp; v1.4</p>
 </body>
 </html>
