@@ -212,6 +212,81 @@
             50% { opacity: 1; transform: scaleY(1); }
         }
 
+        /* Pitch-first hero (above the fold) */
+        .hero-pitch {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 0.5rem 1.5rem 1rem;
+            text-align: center;
+        }
+
+        .hero-headline {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.35rem, 3.2vw, 2.35rem);
+            font-weight: 700;
+            line-height: 1.18;
+            margin-bottom: 1.15rem;
+            color: #fff;
+        }
+
+        .hero-lede {
+            font-size: clamp(0.92rem, 1.45vw, 1.08rem);
+            color: rgba(255, 255, 255, 0.72);
+            font-weight: 300;
+            line-height: 1.65;
+            margin-bottom: 1.65rem;
+        }
+
+        .hero-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.65rem 1rem;
+            margin-bottom: 1.35rem;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 0.62rem 1.15rem;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 999px;
+            color: rgba(255, 255, 255, 0.92);
+            transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            border-color: #FF0055;
+            color: #FF0055;
+        }
+
+        .hero-cta-primary {
+            border-color: rgba(255, 0, 85, 0.55);
+            color: #FF0055;
+        }
+
+        .hero-secondary {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.42);
+            line-height: 1.55;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .hero-secondary a {
+            color: rgba(255, 255, 255, 0.62);
+            border-bottom: 1px solid rgba(255, 0, 85, 0.35);
+        }
+
+        .hero-secondary a:hover {
+            color: #FF0055;
+            border-bottom-color: #FF0055;
+        }
+
         /* ========================================
            SECTION COMMON
            ======================================== */
@@ -319,6 +394,28 @@
             font-size: 1rem;
             max-width: 720px;
             line-height: 1.85;
+        }
+
+        #applying-teaser .section {
+            padding: 3rem 2rem 3.5rem;
+        }
+
+        .applying-teaser-text {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.78);
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.75;
+        }
+
+        .applying-teaser-text a {
+            color: #FF0055;
+            border-bottom: 1px solid rgba(255, 0, 85, 0.35);
+        }
+
+        .applying-teaser-text a:hover {
+            border-bottom-color: #FF0055;
         }
 
         /* ========================================
@@ -1022,7 +1119,7 @@
     <!-- SIDE NAVIGATION -->
     <nav class="side-nav" aria-label="Section navigation">
         <a href="#hero"><span class="nav-dot"></span><span class="nav-label">Top</span></a>
-        <a href="#applying"><span class="nav-dot"></span><span class="nav-label">Applying</span></a>
+        <a href="applying/"><span class="nav-dot"></span><span class="nav-label">Applying</span></a>
         <a href="#highlights"><span class="nav-dot"></span><span class="nav-label">Highlights</span></a>
         <a href="#human"><span class="nav-dot"></span><span class="nav-label">The Human</span></a>
         <a href="#polyglot"><span class="nav-dot"></span><span class="nav-label">Polyglot</span></a>
@@ -1038,6 +1135,16 @@
     <section id="hero">
         <img src="img/hero-banner-dark.png" alt="Omer Bese" class="hero-banner" loading="eager">
         <p class="hero-subtitle">Energy Systems Engineer &nbsp;.&nbsp; Founder turned Operator &nbsp;.&nbsp; Open Source Builder</p>
+        <div class="hero-pitch">
+            <h1 class="hero-headline">Distributed energy, physical ops, and software—built with first-principles curiosity and shipped artifacts.</h1>
+            <p class="hero-lede">Open-source home energy tools, primary-source market research, and operator experience from regulated programs to founder-led execution.</p>
+            <div class="hero-cta-row">
+                <a href="#deepdives" class="hero-cta hero-cta-primary">Flagship research</a>
+                <a href="#projects" class="hero-cta">Shipped tools</a>
+                <a href="#contact" class="hero-cta">Let&rsquo;s talk</a>
+            </div>
+            <p class="hero-secondary">Hiring mode, documented separately: <a href="applying/">#ApplyingInPublic</a> (companies, roles, diligence notes—secondary to proof above).</p>
+        </div>
         <div class="scroll-indicator">
             <span>scroll</span>
             <div class="scroll-line"></div>
@@ -1050,17 +1157,11 @@
     </svg>
 
     <!-- ==========================================
-         #APPLYINGINPUBLIC
+         #APPLYINGINPUBLIC (teaser → full page)
          ========================================== -->
-    <section id="applying" class="section-bg-dark">
+    <section id="applying-teaser" class="section-bg-dark" aria-label="Applying in public teaser">
         <div class="section">
-            <div class="section-label reveal">#ApplyingInPublic</div>
-            <div class="accent-line reveal"></div>
-            <p class="applying-hero-text reveal">While everyone is building in public, I am <span class="highlight">JOB HUNTING</span> in public.</p>
-            <p class="applying-body reveal">I share the companies and positions I've applied to, what I learned while researching them, and what I would do if I got the role. #ApplyingInPublic</p>
-            <blockquote class="applying-quote reveal">
-                "I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren't working and build the things that do."
-            </blockquote>
+            <p class="applying-teaser-text reveal">I also run <strong>#ApplyingInPublic</strong>: companies, roles, what I learned researching them, and what I would do in the first weeks on the job. <a href="applying/">Read the full thread-style notes</a>—kept off the hero so this page stays pitch-first.</p>
         </div>
     </section>
 
@@ -1404,7 +1505,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 Omer Bese &nbsp;&middot;&nbsp; v1.1
+            &copy; 2026 Omer Bese &nbsp;&middot;&nbsp; v1.2
         </div>
     </section>
 
@@ -1468,7 +1569,9 @@
             // Track active section
             var sections = [];
             navLinks.forEach(function(link) {
-                var id = link.getAttribute('href').substring(1);
+                var href = link.getAttribute('href') || '';
+                if (href.charAt(0) !== '#') return;
+                var id = href.substring(1);
                 var section = document.getElementById(id);
                 if (section) sections.push({ id: id, el: section, link: link });
             });
@@ -1489,6 +1592,7 @@
 
             // When scrolled to bottom, activate last section
             window.addEventListener('scroll', function() {
+                if (!sections.length) return;
                 if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
                     navLinks.forEach(function(l) { l.classList.remove('active'); });
                     sections[sections.length - 1].link.classList.add('active');
