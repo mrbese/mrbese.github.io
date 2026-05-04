@@ -174,13 +174,16 @@
 
         .hero-subtitle {
             font-family: 'Inter', sans-serif;
-            font-size: clamp(0.8rem, 1.3vw, 1.1rem);
-            font-weight: 300;
-            letter-spacing: 0.15em;
-            color: rgba(255, 255, 255, 0.45);
+            font-size: clamp(0.78rem, 1.25vw, 1.05rem);
+            font-weight: 400;
+            letter-spacing: 0.18em;
+            color: rgba(255, 255, 255, 0.5);
             text-transform: uppercase;
             text-align: center;
-            padding: 2rem 1rem 0;
+            padding: 1.75rem 1.25rem 0;
+            max-width: 40rem;
+            margin: 0 auto;
+            line-height: 1.5;
         }
 
         .scroll-indicator {
@@ -214,27 +217,31 @@
 
         /* Pitch-first hero (above the fold) */
         .hero-pitch {
-            max-width: 920px;
+            max-width: 52rem;
             margin: 0 auto;
-            padding: 0.5rem 1.5rem 1rem;
+            padding: 1.25rem 1.5rem 0.5rem;
             text-align: center;
         }
 
         .hero-headline {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: clamp(1.35rem, 3.2vw, 2.35rem);
+            font-size: clamp(1.35rem, 3.1vw, 2.35rem);
             font-weight: 700;
-            line-height: 1.18;
-            margin-bottom: 1.15rem;
+            line-height: 1.2;
+            letter-spacing: -0.025em;
+            margin-bottom: 1.1rem;
             color: #fff;
+            text-wrap: balance;
         }
 
         .hero-lede {
-            font-size: clamp(0.92rem, 1.45vw, 1.08rem);
-            color: rgba(255, 255, 255, 0.72);
+            font-size: clamp(0.94rem, 1.5vw, 1.09rem);
+            color: rgba(255, 255, 255, 0.74);
             font-weight: 300;
-            line-height: 1.65;
-            margin-bottom: 1.65rem;
+            line-height: 1.62;
+            max-width: 36rem;
+            margin: 0 auto 1.6rem;
+            text-wrap: pretty;
         }
 
         .hero-cta-row {
@@ -242,17 +249,17 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            gap: 0.65rem 1rem;
-            margin-bottom: 1.35rem;
+            gap: 0.6rem 0.85rem;
+            margin-bottom: 1.25rem;
         }
 
         .hero-cta {
             display: inline-block;
             font-family: 'Inter', sans-serif;
-            font-size: 0.68rem;
-            letter-spacing: 0.14em;
+            font-size: 0.7rem;
+            letter-spacing: 0.13em;
             text-transform: uppercase;
-            padding: 0.62rem 1.15rem;
+            padding: 0.72rem 1.28rem;
             border: 1px solid rgba(255, 255, 255, 0.22);
             border-radius: 999px;
             color: rgba(255, 255, 255, 0.92);
@@ -270,11 +277,12 @@
         }
 
         .hero-secondary {
-            font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.42);
-            line-height: 1.55;
-            max-width: 640px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.44);
+            line-height: 1.58;
+            max-width: 32rem;
             margin: 0 auto;
+            padding-bottom: 0.25rem;
         }
 
         .hero-secondary a {
@@ -360,31 +368,6 @@
         }
 
         /* ========================================
-           #APPLYINGINPUBLIC teaser (full page: /applying/)
-           ======================================== */
-        #applying-teaser .section {
-            padding: 3rem 2rem 3.5rem;
-        }
-
-        .applying-teaser-text {
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.78);
-            max-width: 720px;
-            margin: 0 auto;
-            text-align: center;
-            line-height: 1.75;
-        }
-
-        .applying-teaser-text a {
-            color: #FF0055;
-            border-bottom: 1px solid rgba(255, 0, 85, 0.35);
-        }
-
-        .applying-teaser-text a:hover {
-            border-bottom-color: #FF0055;
-        }
-
-        /* ========================================
            HIGHLIGHT CARDS
            ======================================== */
         #highlights {
@@ -445,20 +428,91 @@
         }
 
         /* ========================================
-           THE HUMAN (STICKY SCROLL)
+           ABOUT ME (#human)
            ======================================== */
         #human {
             background: #0a0a0a;
         }
 
+        .human-section-inner {
+            padding-top: 2rem;
+        }
+
+        .human-section-inner .section-heading {
+            margin-bottom: 0;
+        }
+
+        .human-hook {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+            font-weight: 600;
+            line-height: 1.35;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .human-about-details {
+            margin-top: 0.5rem;
+        }
+
+        .human-about-details summary {
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .human-about-details summary .human-about-summary-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .human-about-summary-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.45;
+        }
+
+        .human-about-summary-text strong {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: 0;
+            text-transform: none;
+            color: #fff;
+        }
+
+        .human-about-summary-hint {
+            font-size: 0.72rem;
+            font-weight: 300;
+            letter-spacing: 0.06em;
+            text-transform: none;
+            color: rgba(255, 255, 255, 0.4);
+            max-width: 28rem;
+        }
+
+        .human-about-expanded p {
+            margin-bottom: 1.35rem;
+        }
+
+        .human-about-expanded p:last-child {
+            margin-bottom: 0;
+        }
+
         .human-layout {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
-            gap: 4rem;
-            min-height: 100vh;
+            gap: 3rem 4rem;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3rem 0 4rem;
         }
 
         .human-left {
@@ -486,11 +540,10 @@
             border: 1px solid #1a1a1a;
         }
 
-        .human-right p {
-            font-size: 1.05rem;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.9;
-            margin-bottom: 2.5rem;
+        .human-right .toggle-content p {
+            font-size: 1.02rem;
+            color: rgba(255, 255, 255, 0.78);
+            line-height: 1.88;
         }
 
         /* ========================================
@@ -1073,6 +1126,14 @@
                 padding: 1rem 1.25rem;
             }
 
+            .human-about-summary-text strong {
+                font-size: 0.98rem;
+            }
+
+            .human-about-summary-hint {
+                font-size: 0.68rem;
+            }
+
             .toggle-content {
                 padding: 0 1.25rem 1.25rem 1.25rem;
                 font-size: 0.9rem;
@@ -1087,7 +1148,7 @@
         <a href="#hero"><span class="nav-dot"></span><span class="nav-label">Top</span></a>
         <a href="applying/"><span class="nav-dot"></span><span class="nav-label">Applying</span></a>
         <a href="#highlights"><span class="nav-dot"></span><span class="nav-label">Highlights</span></a>
-        <a href="#human"><span class="nav-dot"></span><span class="nav-label">The Human</span></a>
+        <a href="#human"><span class="nav-dot"></span><span class="nav-label">About me</span></a>
         <a href="#polyglot"><span class="nav-dot"></span><span class="nav-label">Polyglot</span></a>
         <a href="#background"><span class="nav-dot"></span><span class="nav-label">Background</span></a>
         <a href="#projects"><span class="nav-dot"></span><span class="nav-label">Projects</span></a>
@@ -1123,15 +1184,6 @@
     </svg>
 
     <!-- ==========================================
-         #APPLYINGINPUBLIC (teaser → full page)
-         ========================================== -->
-    <section id="applying-teaser" class="section-bg-dark" aria-label="Applying in public teaser">
-        <div class="section">
-            <p class="applying-teaser-text reveal">I also run <strong>#ApplyingInPublic</strong>: companies, roles, what I learned researching them, and what I would do in the first weeks on the job. <a href="applying/">Read the full thread-style notes</a>—kept off the hero so this page stays pitch-first.</p>
-        </div>
-    </section>
-
-    <!-- ==========================================
          HIGHLIGHT CARDS
          ========================================== -->
     <section id="highlights">
@@ -1162,23 +1214,37 @@
 
 
     <!-- ==========================================
-         THE HUMAN (STICKY SCROLL)
+         ABOUT ME (hook + expandable essay)
          ========================================== -->
     <section id="human" class="section-bg-dark">
-        <div class="section-label" style="max-width:1200px;margin:0 auto;padding:4rem 2rem 0 2rem;">The Human</div>
-        <div class="human-layout">
-            <div class="human-left">
-                <div class="human-why">Why?</div>
-                <img src="img/portrait.jpg" alt="Omer Bese" class="human-portrait" loading="lazy">
-            </div>
-            <div class="human-right">
-                <p class="reveal">I built my life around a simple question: "Why?"</p>
-                <p class="reveal">That pursuit led me to become an unapologetic vitalist with just enough audacity to paint a giant mural of my own face in my living room, yet somehow still not "too good" to clean houses myself every weekday for six months for my startup.</p>
-                <p class="reveal">I have a relentless curiosity and often find inspiration in obscurity, like the fact that we invented four-wheeled luggage after stepping on the moon. However, frustration often follows as we fail to evolve the status quo alongside inventions just like keeping the vertical design even though it creates significant instability with the added wheels.</p>
-                <p class="reveal">I am equally baffled by things that make no sense at all as simple as pedal trash cans next to toilets, placed as if your foot can reach the lever while you are seated.</p>
-                <p class="reveal">I usually don't like revolution, as it proves a lack of evolution. But looking at the current energy landscape, I am irritated by how stagnant the industry is. I am frustrated with incompetent incentive programs. I am appalled by asset-based delivery charges. I am tired of policies protecting monopolies, and mostly, of policymakers who act only when the lights go out.</p>
-                <p class="reveal">I have worked in our family business, a small company, an NGO, and a startup, and finally, as a full-time founder. I can easily say I thrive in a startup environment, though I am not naive enough to do it solo anymore. I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren't working and build the things that do.</p>
-                <p class="reveal">The curse of monopolies is that technology has evolved so fast that the laws protecting them are finally crumbling, and indeed lights did go out. This gives me the thrill of being part of rewriting the game and driving that much-needed revolution.</p>
+        <div class="section human-section-inner">
+            <div class="section-label reveal">About me</div>
+            <h2 class="section-heading reveal">The human behind the work</h2>
+            <div class="accent-line reveal"></div>
+            <div class="human-layout">
+                <div class="human-left">
+                    <div class="human-why">Why?</div>
+                    <img src="img/portrait.jpg" alt="Omer Bese" class="human-portrait" loading="lazy">
+                </div>
+                <div class="human-right">
+                    <p class="human-hook reveal">I built my life around a simple question: &ldquo;Why?&rdquo;</p>
+                    <details class="toggle-item human-about-details reveal">
+                        <summary>
+                            <span class="human-about-summary-text">
+                                <strong>Expand the story</strong>
+                                <span class="human-about-summary-hint">Mural + founder reality, luggage and trash-can rants, grid politics, and why I still want startupland.</span>
+                            </span>
+                        </summary>
+                        <div class="toggle-content human-about-expanded">
+                            <p>That pursuit led me to become an unapologetic vitalist with just enough audacity to paint a giant mural of my own face in my living room, yet somehow still not &ldquo;too good&rdquo; to clean houses myself every weekday for six months for my startup.</p>
+                            <p>I have a relentless curiosity and often find inspiration in obscurity, like the fact that we invented four-wheeled luggage after stepping on the moon. However, frustration often follows as we fail to evolve the status quo alongside inventions just like keeping the vertical design even though it creates significant instability with the added wheels.</p>
+                            <p>I am equally baffled by things that make no sense at all as simple as pedal trash cans next to toilets, placed as if your foot can reach the lever while you are seated.</p>
+                            <p>I usually don't like revolution, as it proves a lack of evolution. But looking at the current energy landscape, I am irritated by how stagnant the industry is. I am frustrated with incompetent incentive programs. I am appalled by asset-based delivery charges. I am tired of policies protecting monopolies, and mostly, of policymakers who act only when the lights go out.</p>
+                            <p>I have worked in our family business, a small company, an NGO, and a startup, and finally, as a full-time founder. I can easily say I thrive in a startup environment, though I am not naive enough to do it solo anymore. I am looking for a place that I failed to create for myself as a founder, where I am surrounded by challenging minds who share the same enthusiasm, hunger, and a bit of frustration to dismantle the things that aren't working and build the things that do.</p>
+                            <p>The curse of monopolies is that technology has evolved so fast that the laws protecting them are finally crumbling, and indeed lights did go out. This gives me the thrill of being part of rewriting the game and driving that much-needed revolution.</p>
+                        </div>
+                    </details>
+                </div>
             </div>
         </div>
     </section>
@@ -1471,7 +1537,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2026 Omer Bese &nbsp;&middot;&nbsp; v1.2
+            &copy; 2026 Omer Bese &nbsp;&middot;&nbsp; v1.3
         </div>
     </section>
 
