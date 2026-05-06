@@ -52,9 +52,7 @@
             "addressLocality": "West Hollywood",
             "addressRegion": "CA",
             "addressCountry": "US"
-        },
-        "email": "omerbese@gmail.com",
-        "telephone": "+16502509984"
+        }
     }
     </script>
 
@@ -102,7 +100,7 @@
             color: #fff;
             overflow-x: hidden;
             line-height: 1.7;
-            font-weight: 300;
+            font-weight: 400;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
@@ -164,6 +162,7 @@
             position: relative;
             background: #000;
             overflow: hidden;
+            min-height: 40vh;
         }
 
         .hero-banner {
@@ -177,7 +176,7 @@
             font-size: clamp(0.78rem, 1.25vw, 1.05rem);
             font-weight: 400;
             letter-spacing: 0.18em;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.65);
             text-transform: uppercase;
             text-align: center;
             padding: 1.75rem 1.25rem 0;
@@ -681,7 +680,7 @@
 
         .education-meta {
             font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.65);
             letter-spacing: 0.1em;
             text-transform: uppercase;
             margin-bottom: 0.75rem;
@@ -729,7 +728,7 @@
             font-weight: 500;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.35);
+            color: rgba(255, 255, 255, 0.50);
             margin-bottom: 0.75rem;
         }
 
@@ -957,14 +956,14 @@
             font-size: 0.68rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.45);
+            color: rgba(255, 255, 255, 0.60);
         }
 
         .footer-bottom {
             text-align: center;
             padding: 2rem;
             font-size: 0.72rem;
-            color: rgba(255, 255, 255, 0.35);
+            color: rgba(255, 255, 255, 0.50);
             letter-spacing: 0.1em;
         }
 
@@ -1194,7 +1193,7 @@
             }
 
             .project-card {
-                flex: 0 0 88vw;
+                flex: 0 0 82vw;
                 padding: 1.5rem;
             }
 
@@ -1215,6 +1214,15 @@
                 padding: 0 1.25rem 1.25rem 1.25rem;
                 font-size: 0.9rem;
             }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .reveal-children > * {
+                transition: none;
+                opacity: 1;
+                transform: none;
+            }
+            .scroll-line { animation: none; }
         }
     </style>
 </head>
@@ -1270,6 +1278,7 @@
         <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1440,0 1440,40" />
     </svg>
 
+    <!-- ==========================================
     <!-- ==========================================
          HIGHLIGHT CARDS
          ========================================== -->
@@ -1338,7 +1347,7 @@
 
     <!-- MID-PAGE CTA -->
     <div class="mid-cta reveal">
-        <p>Still reading?</p>
+        <p>You've done your homework.</p>
         <a href="#contact" class="cta-link">Let's talk &rarr;</a>
     </div>
 
@@ -1484,7 +1493,7 @@
                     <p class="project-desc">An open-source home energy assessment tool that uses LiDAR room scanning via Apple RoomPlan, HVAC equipment logging with on-device OCR via Apple Vision, appliance detection, window assessment, and ACCA Manual J BTU calculations. Generates tiered upgrade recommendations with payback periods and battery synergy insights. Thesis: An inefficient building envelope directly cannibalizes home battery ROI during peak grid events ($2,000-$5,000/MWh).</p>
                     <div class="project-stack">Swift, SwiftUI, SwiftData, ARKit, RoomPlan, AVFoundation, Vision OCR, CoreLocation, PDFKit</div>
                     <a href="https://github.com/mrbese/ManorOS" target="_blank" rel="noopener noreferrer" class="project-link">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                         GitHub
                     </a>
                 </div>
@@ -1496,7 +1505,7 @@
                     <p class="project-desc">Compare Tesla Powerwall 3, Enphase IQ 5P, Pila Mesh, and Base Power side-by-side. Supports 16 utilities, 32 rate plans, NEM 3.0, VPP earnings projections for ELRP, ConnectedSolutions, ERCOT.</p>
                     <div class="project-stack">Pure vanilla JavaScript. Zero dependencies. Dark glassmorphism UI with canvas-based charts.</div>
                     <a href="https://github.com/mrbese/cellsense" target="_blank" rel="noopener noreferrer" class="project-link">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                         GitHub
                     </a>
                 </div>
@@ -1508,7 +1517,7 @@
                     <p class="project-desc">Encodes the entire regulatory decision tree for 49 CFR 173.185, IATA DGR 66th Edition, and IMDG Code Amendment 42-24. Outputs UN numbers, packing instructions, labels, documentation checklists. Built from direct experience shipping lithium-ion medical devices through FDA clearance.</p>
                     <div class="project-stack">SwiftUI (iOS 17+). Pure engine pattern. Zero dependencies. Fully offline.</div>
                     <a href="https://github.com/mrbese/HazShip" target="_blank" rel="noopener noreferrer" class="project-link">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
                         GitHub
                     </a>
                 </div>
@@ -1522,7 +1531,7 @@
     <section id="deepdives" class="section-bg-dark">
         <div class="section">
             <div class="section-label reveal">Research</div>
-            <h2 class="section-heading reveal">Deep Dives &amp; Published Writing</h2>
+            <h2 class="section-heading reveal">Deep Dives</h2>
             <div class="accent-line reveal"></div>
             <p class="deepdive-intro reveal">For those who want the full analysis. 60+ hours of primary source research. All numbers cited. Nothing softened.</p>
 
@@ -1674,14 +1683,6 @@
                 <p>West Hollywood, CA</p>
             </div>
             <div class="contact-right reveal-children reveal">
-                <a href="mailto:omerbese@gmail.com" class="contact-link">
-                    <span>omerbese@gmail.com</span>
-                    <span class="label">Email</span>
-                </a>
-                <a href="tel:+16502509984" class="contact-link">
-                    <span>+1 (650) 250 9984</span>
-                    <span class="label">Phone</span>
-                </a>
                 <a href="https://linkedin.com/in/omerbese" target="_blank" rel="noopener noreferrer" class="contact-link">
                     <span>linkedin.com/in/omerbese</span>
                     <span class="label">LinkedIn</span>
