@@ -123,6 +123,19 @@
             color: #FF0055;
         }
 
+        /* Focus rings: visible for keyboard users, suppressed for mouse clicks. */
+        :focus-visible {
+            outline: 2px solid #FF0055;
+            outline-offset: 2px;
+            border-radius: 2px;
+        }
+        a:focus-visible,
+        button:focus-visible,
+        summary:focus-visible {
+            outline: 2px solid #FF0055;
+            outline-offset: 3px;
+        }
+
         /* ========================================
            REVEAL ANIMATIONS
            ======================================== */
