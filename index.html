@@ -259,20 +259,28 @@
             letter-spacing: 0.13em;
             text-transform: uppercase;
             padding: 0.72rem 1.28rem;
-            border: 1px solid rgba(255, 255, 255, 0.22);
+            border: 1px solid rgba(255, 255, 255, 0.14);
             border-radius: 999px;
-            color: rgba(255, 255, 255, 0.92);
+            color: rgba(255, 255, 255, 0.62);
             transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
         }
 
         .hero-cta:hover {
-            border-color: #FF0055;
-            color: #FF0055;
+            border-color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.95);
         }
 
         .hero-cta-primary {
-            border-color: rgba(255, 0, 85, 0.55);
-            color: #FF0055;
+            background: #FF0055;
+            border-color: #FF0055;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .hero-cta-primary:hover {
+            background: #d80048;
+            border-color: #d80048;
+            color: #fff;
         }
 
         .hero-secondary {
@@ -1246,7 +1254,7 @@
          ========================================== -->
     <section id="hero">
         <img src="img/hero-banner-dark.png" alt="Omer Bese" class="hero-banner" loading="eager">
-        <p class="hero-subtitle">Energy Systems Engineer &nbsp;.&nbsp; Founder turned Operator &nbsp;.&nbsp; Open Source Builder</p>
+        <p class="hero-subtitle">Energy Systems Engineer &nbsp;·&nbsp; Founder and Operator &nbsp;·&nbsp; Open Source Builder</p>
         <div class="hero-pitch">
             <h1 class="hero-headline">Distributed energy, physical ops, and software. Built with first-principles curiosity and shipped artifacts.</h1>
             <p class="hero-lede">Open-source home energy tools, primary-source market research, and operator experience from regulated programs to founder-led execution.</p>
