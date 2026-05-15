@@ -1025,11 +1025,12 @@
             white-space: nowrap;
         }
 
-        .side-nav a:hover .nav-label,
-        .side-nav a.active .nav-label {
+        .side-nav a:hover .nav-label {
             opacity: 1;
             transform: translateX(0);
         }
+        /* Active state: keep label hidden so it does not float over content.
+           The scaled dot already indicates the active section. */
 
         /* ========================================
            MID-PAGE CTA
