@@ -1238,6 +1238,24 @@
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
                 scrollbar-width: none;
+                opacity: 0;
+                transform: translateY(100%);
+                pointer-events: none;
+                transition: opacity 0.4s ease, transform 0.4s ease;
+            }
+            .mobile-jump.visible {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+            /* Right-edge fade hint that the bar is horizontally scrollable */
+            .mobile-jump::after {
+                content: "";
+                position: absolute;
+                top: 0; right: 0; bottom: 0;
+                width: 2.5rem;
+                background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.88));
+                pointer-events: none;
             }
 
             .mobile-jump::-webkit-scrollbar {
@@ -1945,7 +1963,7 @@
         })();
     </script>
 
-    <!-- Mobile jump bar: highlight active section -->
+    <!-- Mobile jump bar: highlight active section + show after hero -->
     <script>
         (function() {
             var bar = document.querySelector('.mobile-jump');
@@ -1959,6 +1977,23 @@
                 if (el) sectionEntries.push({ el: el, link: link });
             });
             if (!sectionEntries.length) return;
+
+            // Hide the bar over the hero, show after user scrolls past it.
+            var heroSection = document.getElementById('hero');
+            if (heroSection) {
+                var heroObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            bar.classList.remove('visible');
+                        } else {
+                            bar.classList.add('visible');
+                        }
+                    });
+                }, { threshold: 0.3 });
+                heroObserver.observe(heroSection);
+            } else {
+                bar.classList.add('visible');
+            }
 
             var mq = window.matchMedia('(max-width: 900px)');
             var obs;
