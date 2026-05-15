@@ -626,6 +626,32 @@
             margin-left: 1rem;
         }
 
+        /* Polyglot chip: small mono 2-letter glyph differentiating each language */
+        .polyglot-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2.4rem;
+            height: 1.7rem;
+            padding: 0 0.4rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: #FF0055;
+            background: rgba(255, 0, 85, 0.08);
+            border: 1px solid rgba(255, 0, 85, 0.22);
+            border-radius: 4px;
+            margin-right: 0.9rem;
+            font-variant-numeric: tabular-nums;
+            flex-shrink: 0;
+        }
+        .toggle-item[open] .polyglot-chip {
+            color: #fff;
+            background: #FF0055;
+            border-color: #FF0055;
+        }
+
         .toggle-item[open] summary::after {
             transform: rotate(45deg);
         }
@@ -1371,32 +1397,32 @@
             <p class="polyglot-intro reveal">I am not proficient in all of these languages. But with closed captions, I am fluent enough to communicate with the native speakers.</p>
 
             <details class="toggle-item reveal">
-                <summary>I speak engineering;</summary>
+                <summary><span class="polyglot-chip">EN</span>I speak engineering;</summary>
                 <div class="toggle-content">So I wonder why we accept "defaults" without questioning them. Every "standard" spec was once <strong>someone's best guess that got frozen into practice</strong>. When I look at any system (electrical, mechanical, software) my first question is: <strong>what constraint set this default, and has that constraint changed?</strong> Breaking the status quo is much easier when you question assumptions nobody revisits.</div>
             </details>
 
             <details class="toggle-item reveal">
-                <summary>I speak operations;</summary>
+                <summary><span class="polyglot-chip">OP</span>I speak operations;</summary>
                 <div class="toggle-content">So I wonder why so many field service industries still send their most expensive, licensed specialist to handle the full job when <strong>70% of the work requires no license at all</strong>. Henry Ford didn't invent the assembly line. He stole it from slaughterhouses in Chicago that <strong>decoupled the master butcher from volume labor</strong>. Splitting skilled from unskilled work is the oldest throughput hack in the book, and it's hiding in plain sight across energy, construction, and HVAC.</div>
             </details>
 
             <details class="toggle-item reveal">
-                <summary>I speak thermodynamics;</summary>
+                <summary><span class="polyglot-chip">TH</span>I speak thermodynamics;</summary>
                 <div class="toggle-content">So I wonder from first principles: should we aim to <strong>consume less before we store or generate more?</strong> The most valuable kilowatt-hour is the one you never have to produce. Reducing a building's peak demand by even <strong>2-3 kW through passive upgrades</strong> (attic insulation R-49, aerosol duct sealing, ECM blower motor swap) can actually make your home a "Thermal Battery" at a fraction of the cost of new hardware.</div>
             </details>
 
             <details class="toggle-item reveal">
-                <summary>I speak finance;</summary>
+                <summary><span class="polyglot-chip">FI</span>I speak finance;</summary>
                 <div class="toggle-content">So I wonder why more infrastructure companies don't <strong>hedge volatile market revenue with bankable long-term contracts</strong> in adjacent markets. High-beta volatility is exciting on a spreadsheet but terrifying to a lender. Pairing it with fixed, multi-year capacity agreements in regulated markets is how you get <strong>the cost of capital down and the deployment velocity up</strong>. The two structures are natural complements that most companies treat as "either/or" while the stable answer is "and".</div>
             </details>
 
             <details class="toggle-item reveal">
-                <summary>I speak policy;</summary>
+                <summary><span class="polyglot-chip">PO</span>I speak policy;</summary>
                 <div class="toggle-content">So I wonder why the <strong>split incentive problem</strong> (where the person who pays for an upgrade isn't the person who benefits) still paralyzes entire sectors. Renters, tenants, landlords, utilities: everyone points at someone else. And since none of the individuals are gaining, whole society loses. But when you look at the world you can find tried and done answers: <strong>Sweden solved it with "Warm Rent."</strong> The U.S. hasn't even tried. The policy fix often exists; the political will doesn't.</div>
             </details>
 
             <details class="toggle-item reveal">
-                <summary>I speak legal;</summary>
+                <summary><span class="polyglot-chip">LE</span>I speak legal;</summary>
                 <div class="toggle-content">So I wonder why companies building vertically don't <strong>structure their corporate entities to match the stack</strong>. Manufacturing, installation, retail, and software each carry fundamentally different liability profiles. Isolating them into separate LLCs doesn't just lower insurance premiums. It <strong>unlocks R&amp;D tax credits and grant eligibility</strong> that a monolithic structure would miss entirely.</div>
             </details>
 
