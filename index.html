@@ -705,8 +705,23 @@
             font-family: 'Space Grotesk', sans-serif;
             font-size: 1.6rem;
             font-weight: 600;
+            margin-top: 3rem;
             margin-bottom: 1.5rem;
             color: #fff;
+            position: relative;
+            padding-top: 1.25rem;
+        }
+        .subsection-heading::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 1px;
+            background: #FF0055;
+        }
+        .subsection-heading:first-of-type {
+            margin-top: 0;
         }
 
         .education-item {
