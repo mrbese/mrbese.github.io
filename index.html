@@ -910,6 +910,87 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Featured synthesis card: surfaces "What I Would Do at X" above the
+           accordion list so the operational thesis lands first, with the dives
+           as supporting evidence below. */
+        .deepdive-synthesis {
+            background: linear-gradient(145deg, #0a0a0a 0%, #18181c 50%, #0e0e12 100%);
+            border: 1px solid rgba(255, 0, 85, 0.18);
+            border-left: 3px solid #FF0055;
+            border-radius: 12px;
+            padding: 1.75rem 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            transition: border-color 0.3s ease;
+        }
+        .deepdive-synthesis:hover {
+            border-color: rgba(255, 0, 85, 0.35);
+            border-left-color: #FF0055;
+        }
+        .deepdive-synthesis-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #FF0055;
+            margin-bottom: 0.85rem;
+        }
+        .deepdive-synthesis-eyebrow .company {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: none;
+            font-size: 0.85rem;
+        }
+        .deepdive-synthesis-eyebrow .sep {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .deepdive-synthesis-headline {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+        }
+        .deepdive-synthesis-body {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.72);
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+        }
+        .deepdive-synthesis-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #FF0055;
+            border-bottom: 1px solid rgba(255, 0, 85, 0.3);
+            padding-bottom: 0.2rem;
+            transition: border-color 0.3s ease;
+        }
+        .deepdive-synthesis-link:hover {
+            border-color: #FF0055;
+            color: #FF0055;
+        }
+        .deepdive-synthesis-link .arrow {
+            font-family: 'Space Grotesk', sans-serif;
+            transition: transform 0.2s ease;
+        }
+        .deepdive-synthesis-link:hover .arrow {
+            transform: translateY(2px);
+        }
+
         .deepdive-group-intro {
             font-size: 0.95rem;
             color: rgba(255, 255, 255, 0.6);
@@ -1570,6 +1651,18 @@
             <div class="accent-line reveal"></div>
             <p class="deepdive-intro reveal">For those who want the full analysis. 60+ hours of primary source research. All numbers cited. Nothing softened.</p>
 
+            <!-- Base Power: featured synthesis card -->
+            <div class="deepdive-synthesis reveal">
+                <div class="deepdive-synthesis-eyebrow">
+                    <span>What I Would Do at</span>
+                    <span class="sep">·</span>
+                    <span class="company">Base Power</span>
+                </div>
+                <p class="deepdive-synthesis-headline">Verticalize further. Then buy the cost-of-capital arbitrage California gives away.</p>
+                <p class="deepdive-synthesis-body">The ERCOT revenue collapse is well-documented. 87% drop in ancillary service clearing prices. Companies carrying $8,000 system COGS are done. Base Power is not, because they verticalized hard and early. But verticalization is a direction, not a destination. Four strategic actions, with actual numbers, follow below.</p>
+                <a href="#base-would-do" class="deepdive-synthesis-link">4 strategic actions <span class="arrow">↓</span></a>
+            </div>
+
             <!-- What I Learned About Base Power -->
             <h3 class="deepdive-group-title reveal">What I Learned About Base Power</h3>
             <p class="deepdive-group-intro reveal">60+ hours of primary source research across ERCOT filings, Potomac Economics, Modo Energy, CPUC, CAISO, IRS guidance, and Base Power's own spec pages.</p>
@@ -1610,7 +1703,7 @@
             </details>
 
             <!-- What I Would Do at Base Power -->
-            <h3 class="deepdive-group-title reveal" style="margin-top:3.5rem;">What I Would Do at Base Power</h3>
+            <h3 id="base-would-do" class="deepdive-group-title reveal" style="margin-top:3.5rem;">What I Would Do at Base Power</h3>
             <p class="deepdive-group-intro reveal">The ERCOT revenue collapse is well-documented. 87% drop in ancillary service clearing prices. Companies carrying $8,000 system COGS are done. Base Power is not, because they verticalized hard and early. But verticalization is a direction, not a destination. Here is what I would do next. Actual numbers, because strategic frameworks without specifics are just opinions.</p>
 
             <details class="toggle-item reveal">
@@ -1632,6 +1725,18 @@
                 <summary>The Capital Flywheel</summary>
                 <div class="toggle-content">California offers the steady, predictable "<strong>Direct Current</strong>" of regulated returns, shielding Base Power from the troughs of Texas's wild "<strong>Alternating Current</strong>" while letting them bank the crests.</div>
             </details>
+
+            <!-- Pila Energy: featured synthesis card -->
+            <div class="deepdive-synthesis reveal" style="margin-top:4.5rem;">
+                <div class="deepdive-synthesis-eyebrow">
+                    <span>What I Would Do at</span>
+                    <span class="sep">·</span>
+                    <span class="company">Pila Energy</span>
+                </div>
+                <p class="deepdive-synthesis-headline">Pull the two operational levers already on the balance sheet. Both unlock distribution Pila is paying for and not using.</p>
+                <p class="deepdive-synthesis-body">Two strategic actions, both grounded in operational physics, both leveraging assets already on Pila's balance sheet. The actual job of an Operations Lead is identifying which existing assets are operational levers in disguise. Two of them are not being pulled today. Below is what they unlock.</p>
+                <a href="#pila-would-do" class="deepdive-synthesis-link">2 strategic actions <span class="arrow">↓</span></a>
+            </div>
 
             <!-- What I Learned About Pila Energy -->
             <h3 class="deepdive-group-title reveal" id="pila-deep-dive" style="margin-top:4rem;">What I Learned About Pila Energy</h3>
@@ -1678,7 +1783,7 @@
             </details>
 
             <!-- What I Would Do at Pila Energy -->
-            <h3 class="deepdive-group-title reveal" style="margin-top:3.5rem;">What I Would Do at Pila Energy</h3>
+            <h3 id="pila-would-do" class="deepdive-group-title reveal" style="margin-top:3.5rem;">What I Would Do at Pila Energy</h3>
             <p class="deepdive-group-intro reveal">Two strategic actions, both grounded in operational physics, both leveraging assets already on Pila's balance sheet. The actual job of an Operations Lead is identifying which existing assets are operational levers in disguise. Two of them are not being pulled today. Here is what they unlock.</p>
 
             <details class="toggle-item reveal">
