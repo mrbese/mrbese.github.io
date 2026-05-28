@@ -1,2 +1,3 @@
 # gstack artifact directory (timeline, design explorations, local state)
 .gstack/
+.DS_Store

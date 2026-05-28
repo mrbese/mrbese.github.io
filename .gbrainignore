@@ -1,0 +1,7 @@
+# gbrain ignore — added 2026-05-26.
+.gstack/
+.gstack-design-audit/
+node_modules/
+_site/
+.jekyll-cache/
+.DS_Store
