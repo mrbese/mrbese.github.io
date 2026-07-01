@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostRow from '../../components/PostRow.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) =>
+    (b.data.featured ? 1 : 0) - (a.data.featured ? 1 : 0) ||
+    b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const featured = posts.filter((p) => p.data.featured);
+const rest = posts.filter((p) => !p.data.featured);
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+---
+<BaseLayout
+  title="Writing · Omer Bese"
+  description="Energy engineering, primary-source research, and productively frustrated observations."
+  path="/writing"
+>
+  <div class="phead">
+    <div class="eyebrow">writing</div>
+    <h1>Primary-source research, and the occasional raised eyebrow.</h1>
+    <p class="sub">Sixty-plus hours per deep dive. All numbers cited. Nothing softened.</p>
+  </div>
+
+  {featured.length > 0 && (
+    <section class="grp">
+      <div class="lbl">research</div>
+      {featured.map((p) => (
+        <PostRow date={fmt(p.data.date)} title={p.data.title} href={`/writing/${p.id}/`} tag={p.data.readTime} />
+      ))}
+    </section>
+  )}
+
+  {rest.length > 0 && (
+    <section class="grp">
+      <div class="lbl">notes</div>
+      {rest.map((p) => (
+        <PostRow date={fmt(p.data.date)} title={p.data.title} href={`/writing/${p.id}/`} tag={p.data.readTime} />
+      ))}
+    </section>
+  )}
+</BaseLayout>
+<style>
+  .grp{padding:34px var(--gutter)}
+  .grp + .grp{border-top:1px solid var(--line)}
+  .lbl{font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--filament);margin-bottom:18px}
+</style>

@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroBanner from '../components/HeroBanner.astro';
+import Rail from '../components/Rail.astro';
+import Row from '../components/Row.astro';
+import PostRow from '../components/PostRow.astro';
+import ProjectItem from '../components/ProjectItem.astro';
+import Tag from '../components/Tag.astro';
+import { site } from '../data/site.ts';
+import { projects } from '../data/projects.ts';
+import { services } from '../data/services.ts';
+import { social } from '../data/social.ts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort(
+    (a, b) =>
+      (b.data.featured ? 1 : 0) - (a.data.featured ? 1 : 0) ||
+      b.data.date.valueOf() - a.data.date.valueOf(),
+  )
+  .slice(0, 3);
+const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+---
+<BaseLayout title="Omer Bese · energy systems engineer & builder" description={site.lede} path="/">
+  <HeroBanner />
+
+  <div class="hero">
+    <Rail />
+    <div class="c">
+      <h1>{site.hero.pre}<span class="why">{site.hero.em}</span>{site.hero.post}</h1>
+      <p class="lede">{site.lede}</p>
+    </div>
+  </div>
+
+  <Row label="about" first>
+    <p class="lede-row">
+      Energy systems engineer, founder, and operator. Columbia M.S., a decade across a
+      family business, a nonprofit, and three startups, and a stubborn habit of asking why
+      the defaults are the defaults.
+    </p>
+    <a class="more" href="/about">the longer story &rarr;</a>
+  </Row>
+
+  <Row label="writing">
+    {posts.map((p) => (
+      <PostRow date={fmt(p.data.date)} title={p.data.title} href={`/writing/${p.id}/`} tag={p.data.featured ? 'research' : undefined} />
+    ))}
+    <a class="more" href="/writing">read the writing &rarr;</a>
+  </Row>
+
+  <Row label="building">
+    <div class="builds">
+      {projects.map((p) => <ProjectItem {...p} compact />)}
+    </div>
+    <a class="more" href="/projects">all projects &rarr;</a>
+  </Row>
+
+  <Row label="services">
+    <div class="pills">
+      {services.map((s) => <Tag href="/services">{s.name}</Tag>)}
+    </div>
+  </Row>
+
+  <Row label="elsewhere">
+    <div class="links">
+      {social.map((s) => <a href={s.href}>{s.label} <span class="ar">&#8599;</span></a>)}
+    </div>
+  </Row>
+</BaseLayout>
+<style>
+  .lede-row{font-family:var(--serif);font-size:17px;line-height:1.6;color:var(--ink-1);max-width:56ch}
+  .builds{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+  .builds :global(.proj):nth-child(2){border-top:none;padding-top:0}
+  .pills{display:flex;flex-wrap:wrap;gap:10px}
+  @media(max-width:640px){.builds{grid-template-columns:1fr}.builds :global(.proj):nth-child(2){border-top:1px solid var(--line);padding-top:24px}}
+</style>

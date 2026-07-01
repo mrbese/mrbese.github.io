@@ -1,0 +1,22 @@
+---
+import { Picture } from 'astro:assets';
+import banner from '../assets/hero-banner-dark.png';
+---
+<div class="banner">
+  <Picture
+    src={banner}
+    alt="OMER BESE, with a portrait inside the O"
+    widths={[640, 940, 1880]}
+    sizes="(max-width: 760px) 88vw, 940px"
+    formats={['avif', 'webp']}
+    fallbackFormat="png"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="tag">energy engineer &middot; builder</div>
+</div>
+<style>
+  .banner{padding:clamp(40px,7vw,84px) var(--gutter) clamp(28px,4vw,48px);border-bottom:1px solid var(--line)}
+  .banner :global(img){width:100%;max-width:940px;height:auto}
+  .banner .tag{margin-top:22px;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-2)}
+</style>

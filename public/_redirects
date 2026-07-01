@@ -1,0 +1,5 @@
+# Preserve CellSense, which is a separate GitHub Pages project served under the domain today.
+# Its github.io project page stays live independently of this site, so 301 there.
+# (Cutover note: alternatively host the CellSense build in public/cellsense/ to keep it first-party.)
+/cellsense       https://mrbese.github.io/cellsense/          301
+/cellsense/*     https://mrbese.github.io/cellsense/:splat    301

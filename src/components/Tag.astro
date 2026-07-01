@@ -1,0 +1,14 @@
+---
+interface Props {
+  href?: string;
+}
+const { href } = Astro.props;
+const Wrap = href ? 'a' : 'span';
+---
+<Wrap class="pill" href={href}>
+  <slot />
+</Wrap>
+<style>
+  .pill{display:inline-block;font-size:13px;color:var(--ink-1);border:1px solid var(--line-strong);border-radius:99px;padding:7px 15px;transition:color var(--dur),border-color var(--dur)}
+  a.pill:hover{color:var(--filament);border-color:var(--filament)}
+</style>

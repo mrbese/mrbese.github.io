@@ -1,0 +1,23 @@
+---
+interface Props {
+  date: string;
+  title: string;
+  href: string;
+  tag?: string;
+}
+const { date, title, href, tag } = Astro.props;
+---
+<a class="post" href={href}>
+  <span class="d">{date}</span>
+  <span class="t">{title}</span>
+  {tag && <span class="tg">{tag}</span>}
+</a>
+<style>
+  .post{display:flex;gap:24px;align-items:baseline;padding:15px 0;border-top:1px solid var(--line)}
+  .post:first-child{padding-top:0;border-top:none}
+  .d{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);min-width:92px;flex:none}
+  .t{font-size:17px;color:var(--ink-0);transition:color var(--dur)}
+  .post:hover .t{color:var(--filament)}
+  .tg{margin-left:auto;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--filament);align-self:center;flex:none}
+  @media(max-width:520px){.post{flex-wrap:wrap;gap:6px 18px}.tg{margin-left:0}}
+</style>

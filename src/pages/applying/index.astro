@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Row from '../../components/Row.astro';
+
+const getYou = [
+  ['Thesis', 'Why this company, why now, and why me. Stated plainly, not padded.'],
+  ['Diligence', 'Primary sources. Filings, tariffs, spec sheets, earnings calls. Not blog posts about blog posts.'],
+  ['Week one', 'What I would actually do in the first thirty days, concretely enough to argue with.'],
+  ['Honest status', 'Applied, passed, ghosted, advanced. Labeled plainly. No fake entries.'],
+];
+const log = [
+  { company: 'Pila Energy', role: 'Operations Lead', status: 'Applied / Ghosted', href: '/writing/pila-energy/' },
+  { company: 'Base Power Company', role: 'New Opportunities', status: 'Applied / Ghosted', href: '/writing/base-power/' },
+];
+---
+<BaseLayout
+  title="Applying in public · Omer Bese"
+  description="While everyone is building in public, I am job hunting in public. Same bar as my research, applied to hiring."
+  path="/applying"
+>
+  <div class="phead">
+    <div class="eyebrow">#ApplyingInPublic</div>
+    <h1>While everyone is building in public, I am job hunting in public.</h1>
+    <p class="sub">I kept it off the front door on purpose, so strangers meet the proof first and the narrative second.</p>
+  </div>
+
+  <Row label="what you get" first>
+    <div class="grid">
+      {getYou.map(([k, v]) => (
+        <div class="cell"><div class="k">{k}</div><p>{v}</p></div>
+      ))}
+    </div>
+  </Row>
+
+  <Row label="proof of depth">
+    <p class="prose-line">
+      This is not vapor thought leadership. The Base Power and Pila Energy write-ups were not
+      job applications, they were the same diligence muscle, run at full effort. Read them and
+      calibrate.
+    </p>
+    <a class="more" href="/writing">the research &rarr;</a>
+  </Row>
+
+  <Row label="public log">
+    <table class="log">
+      <thead><tr><th>Company</th><th>Role</th><th>Status</th><th></th></tr></thead>
+      <tbody>
+        {log.map((r) => (
+          <tr>
+            <td class="co">{r.company}</td>
+            <td class="ro">{r.role}</td>
+            <td class="stt">{r.status}</td>
+            <td class="lk"><a href={r.href}>read the deep dive &rarr;</a></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p class="note">No fake entries. The list is short because the bar is real.</p>
+  </Row>
+</BaseLayout>
+<style>
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
+  .cell .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--filament);margin-bottom:8px}
+  .cell p{font-family:var(--serif);font-size:15.5px;line-height:1.55;color:var(--ink-1)}
+  .prose-line{font-family:var(--serif);font-size:16px;line-height:1.6;color:var(--ink-1);max-width:60ch}
+  .log{width:100%;border-collapse:collapse;font-size:14px}
+  .log th{text-align:left;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);font-weight:500;padding:0 16px 12px 0;border-bottom:1px solid var(--line)}
+  .log td{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+  .co{color:var(--ink-0);font-weight:500}
+  .ro{color:var(--ink-1)}
+  .stt{color:var(--ink-2);white-space:nowrap}
+  .lk a{color:var(--ink-2)}
+  .lk a:hover{color:var(--filament)}
+  .note{margin-top:18px;font-size:12.5px;color:var(--ink-3)}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}.log,.log thead,.log tbody,.log tr,.log td,.log th{display:block}.log th{display:none}.log td{padding:4px 0;border:none}.log tr{padding:16px 0;border-bottom:1px solid var(--line)}}
+</style>
