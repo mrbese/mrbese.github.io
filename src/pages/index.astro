@@ -22,7 +22,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 ---
 <BaseLayout title="Omer Bese · energy systems engineer & builder" description={site.lede} path="/">
-  <HeroBanner />
+  <HeroBanner slot="top" />
 
   <div class="hero">
     <Rail />
