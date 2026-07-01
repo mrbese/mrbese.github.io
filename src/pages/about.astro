@@ -11,36 +11,29 @@ import { stats } from '../data/stats.ts';
   path="/about"
 >
   <div class="phead">
-    <div class="eyebrow">about</div>
-    <h1>I built my life around a simple question: why?</h1>
-    <p class="sub">The mural, the founder reality, the luggage and trash-can rants, and why I still want startupland.</p>
+    <div class="eyebrow">the human</div>
+    <h1>Everything boils down to the only question. <span class="whyq">Why?</span></h1>
   </div>
 
   <section class="essay">
     <div class="prose">
       <p>
-        That question made me an unapologetic vitalist with just enough audacity to paint a
-        giant mural of my own face in my living room, and somehow still not too good to clean
-        houses myself, every weekday, for six months, to get a startup off the ground.
+        I am an unapologetic hedonist with just enough narcissism to paint a giant mural of my
+        own face in my living room, yet somehow still not too good to clean houses myself,
+        every weekday, for six months, for my startup.
       </p>
       <p>
-        I find inspiration in obscurity. We landed on the moon before anyone thought to put
-        four wheels on a suitcase. I get productively frustrated by design that makes no sense,
-        the pedal trash can parked next to a toilet, the push door with a pull handle. Small
-        crimes, but they tell you no one asked why.
+        I have a relentless curiosity and often find inspiration in obscurity, like the fact
+        that we invented four-wheeled luggage after we had already stepped on the moon.
+        Frustration usually follows, though, because we fail to evolve the status quo alongside
+        the invention, like keeping the vertical design even though it now creates significant
+        instability.
       </p>
       <p>
-        I dislike revolution, because it usually proves a lack of evolution. And yet I am
-        irritated by how stagnant energy is: the incompetent incentive programs, the
-        asset-based delivery charges, the policies quietly protecting monopolies. I have
-        worked in a family business, a small company, an NGO, and a startup, and finally as a
-        full-time founder. I am not naive enough to do it solo anymore.
-      </p>
-      <p>
-        So I am looking for the place I failed to build for myself as a founder: surrounded by
-        challenging minds who share the same enthusiasm, hunger, and a bit of frustration, to
-        dismantle the things that do not work and build the things that do. The monopolies are
-        starting to crumble. I want to be part of rewriting the game.
+        I am equally baffled by things that make no sense at all. Like pedal trash cans next to
+        toilets, placed as if your foot could reach the lever just after wiping your ass. Or
+        pull door handles on push doors. God, it should be a crime. So I ask why more than I
+        should, according to my therapist, but god, it would be so boring.
       </p>
     </div>
     <div class="stats">
@@ -92,6 +85,7 @@ import { stats } from '../data/stats.ts';
 <style>
   .essay{display:grid;grid-template-columns:1fr;gap:40px;padding:clamp(40px,6vw,64px) var(--gutter);border-bottom:1px solid var(--line)}
   .essay .prose{max-width:var(--measure)}
+  .whyq{font-family:var(--serif);font-style:italic;font-weight:400}
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:var(--measure)}
   .stat .v{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.02em;color:var(--ink-0)}
   .stat .k{margin-top:6px;font-size:11.5px;line-height:1.4;color:var(--ink-2)}
