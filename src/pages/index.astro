@@ -27,8 +27,28 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: '
   <div class="hero">
     <Rail />
     <div class="c">
-      <h1>{site.hero.pre}<span class="why">{site.hero.em}</span>{site.hero.post}</h1>
-      <p class="lede">{site.lede}</p>
+      <div class="eyebrow">the human</div>
+      <h1>Everything boils down to the only question. <span class="why">Why?</span></h1>
+      <div class="prose why-essay">
+        <p>
+          I am an unapologetic hedonist with just enough narcissism to paint a giant mural of my
+          own face in my living room, yet somehow still not too good to clean houses myself,
+          every weekday, for six months, for my startup.
+        </p>
+        <p>
+          I have a relentless curiosity and often find inspiration in obscurity, like the fact
+          that we invented four-wheeled luggage after we had already stepped on the moon.
+          Frustration usually follows, though, because we fail to evolve the status quo alongside
+          the invention, like keeping the vertical design even though it now creates significant
+          instability.
+        </p>
+        <p>
+          I am equally baffled by things that make no sense at all. Like pedal trash cans next to
+          toilets, placed as if your foot could reach the lever just after wiping your ass. Or
+          pull door handles on push doors. God, it should be a crime. So I ask why more than I
+          should, according to my therapist, but god, it would be so boring.
+        </p>
+      </div>
     </div>
   </div>
 
@@ -68,6 +88,9 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: '
   </Row>
 </BaseLayout>
 <style>
+  .hero .c .eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--filament);margin-bottom:16px}
+  .why-essay{margin-top:24px;max-width:58ch}
+  .why-essay :global(p){font-size:16.5px}
   .lede-row{font-family:var(--serif);font-size:17px;line-height:1.6;color:var(--ink-1);max-width:56ch}
   .builds{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
   .builds :global(.proj):nth-child(2){border-top:none;padding-top:0}
