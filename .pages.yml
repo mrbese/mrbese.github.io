@@ -1,0 +1,50 @@
+media:
+  input: public/img
+  output: /img
+
+content:
+  - name: blog
+    label: Writing
+    type: collection
+    path: src/content/blog
+    format: yaml-frontmatter
+    filename: "{fields.slug}.md"
+    view:
+      fields: [title, date, featured, draft]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        description: "Used as the filename and the /writing/<slug>/ URL. Lowercase, hyphens only."
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: description
+        label: Description
+        type: text
+        description: "One line. Shown on the index page and used for social previews."
+        required: true
+      - name: readTime
+        label: Read time
+        type: string
+        description: "e.g. '5 min'"
+      - name: tags
+        label: Tags
+        type: list
+      - name: featured
+        label: Featured (pinned as research)
+        type: boolean
+        default: false
+      - name: draft
+        label: Draft (hide from the live site)
+        type: boolean
+        default: true
+      - name: body
+        label: Body
+        type: rich-text
