@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectItem from '../../components/ProjectItem.astro';
+import { projects } from '../../data/projects.ts';
+---
+<BaseLayout
+  title="Projects · Omer Bese"
+  description="Open-source energy tools: LiDAR home audits, battery ROI, and lithium HAZMAT shipping."
+  path="/projects"
+>
+  <div class="phead">
+    <div class="eyebrow">projects</div>
+    <h1>Energy tools I shipped, in the open.</h1>
+    <p class="sub">Built to answer a question I actually had. All open source, all on GitHub.</p>
+  </div>
+
+  <section class="list">
+    {projects.map((p) => <ProjectItem {...p} />)}
+  </section>
+</BaseLayout>
+<style>
+  .list{padding:clamp(36px,5vw,56px) var(--gutter)}
+</style>

@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+// DRAFT: Omer, confirm the Re_Tera one-liner + facts + link below. Do not present unverified
+// specifics as fact. Everything here is drafted from what is public at getretera.com.
+const url = 'https://getretera.com';
+---
+<BaseLayout
+  title="Re_Tera · Omer Bese"
+  description="Re_Tera: a home inventory app that gets you ready for the insurance claim you hope you never file."
+  path="/retera"
+>
+  <div class="phead">
+    <div class="eyebrow">retera</div>
+    <h1>The claim you hope you never file, prepared before you need it.</h1>
+    <p class="sub">Re_Tera is a home inventory app: scan your rooms, catalog what you own, and keep the documentation an insurer actually asks for.</p>
+  </div>
+
+  <section class="body">
+    <div class="prose">
+      <p>
+        Almost nobody has a real inventory of what they own, and everybody discovers this at
+        the worst possible moment, standing in front of an adjuster after a fire, a flood, or a
+        break-in, trying to remember what was in the room. Re_Tera exists to make that moment
+        boring.
+      </p>
+      <p>
+        You walk your home, capture your rooms and your belongings, and Re_Tera keeps the
+        catalog and the paper trail current, so the documentation is already done when you need
+        it. It is the same instinct as the rest of my work: do the unglamorous preparation once,
+        so the expensive surprise later is just a formality.
+      </p>
+      <p>
+        <a href={url}>See Re_Tera <span>&#8599;</span></a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .body{padding:clamp(36px,5vw,56px) var(--gutter)}
+  .body .prose{max-width:var(--measure)}
+</style>

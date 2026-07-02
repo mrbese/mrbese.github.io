@@ -1,0 +1,20 @@
+---
+import { Picture } from 'astro:assets';
+import banner from '../assets/hero-banner-dark.png';
+---
+<div class="banner">
+  <Picture
+    src={banner}
+    alt="OMER BESE, with a portrait inside the O"
+    widths={[640, 1180, 2360]}
+    sizes="(max-width: 1180px) 100vw, 1180px"
+    formats={['avif', 'webp']}
+    fallbackFormat="png"
+    loading="eager"
+    fetchpriority="high"
+  />
+</div>
+<style>
+  .banner{border-bottom:1px solid var(--line)}
+  .banner :global(img){width:100%;max-width:none;height:auto;display:block}
+</style>

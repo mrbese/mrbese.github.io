@@ -1,0 +1,25 @@
+:root{
+  /* surfaces + ink (dark only, true black) */
+  --paper-0:#000; --ink-0:#F3EEE3; --ink-1:#D2C9B8; --ink-2:#9A9180; --ink-3:#6C6456;
+  --line:rgba(243,238,227,0.11); --line-strong:rgba(243,238,227,0.28);
+
+  /* accent · Filament, used sparingly */
+  --filament:#FF0155; --filament-hi:#FF5C88;
+
+  /* fonts (fontsource families, imported in BaseLayout) */
+  --font:"Space Grotesk Variable","Space Grotesk",system-ui,sans-serif;
+  --serif:"Newsreader Variable",Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+
+  /* layout */
+  --rail:200px; --gutter:clamp(20px,5vw,56px); --maxw:1180px; --measure:42rem;
+
+  /* type scale */
+  --t-hero:clamp(2.5rem,6vw,4.6rem); --t-h1:clamp(2.1rem,5vw,3.3rem);
+  --t-lede:clamp(16px,1.6vw,18px); --t-prose:19px;
+
+  /* motion */
+  --ease:cubic-bezier(0.2,0.7,0.3,1); --dur:.15s;
+
+  color-scheme: dark;
+}

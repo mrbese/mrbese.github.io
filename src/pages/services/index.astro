@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { services } from '../../data/services.ts';
+import { social } from '../../data/social.ts';
+const linkedin = social.find((s) => s.label === 'LinkedIn')?.href ?? '#';
+---
+<BaseLayout
+  title="Services · Omer Bese"
+  description="Things I will set up for you: agentic browser automation, smart home, credit-card points, and home energy audits."
+  path="/services"
+>
+  <div class="phead">
+    <div class="eyebrow">services</div>
+    <h1>A few things I will just set up for you.</h1>
+    <p class="sub">Practical, hourly, no retainer. If it saves you a weekend of fighting with a manual, it paid for itself.</p>
+  </div>
+
+  <section class="list">
+    {services.map((s) => (
+      <article class="svc">
+        <h2>{s.name}</h2>
+        <p>{s.blurb}</p>
+      </article>
+    ))}
+    <div class="cta">
+      <a href={linkedin}>Ask me about it <span class="ar">&#8599;</span></a>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .list{padding:clamp(36px,5vw,56px) var(--gutter)}
+  .svc{padding:26px 0;border-top:1px solid var(--line);max-width:64ch}
+  .svc:first-child{border-top:none;padding-top:0}
+  .svc h2{font-size:18px;font-weight:600;color:var(--ink-0)}
+  .svc p{margin-top:10px;font-family:var(--serif);font-size:16px;line-height:1.6;color:var(--ink-1)}
+  .cta{margin-top:40px;padding-top:26px;border-top:1px solid var(--line-strong)}
+  .cta a{font-size:15px;border-bottom:1px solid var(--line-strong);padding-bottom:2px}
+  .cta a .ar{color:var(--filament)}
+  .cta a:hover{color:var(--filament);border-color:var(--filament)}
+</style>

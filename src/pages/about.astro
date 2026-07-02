@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Row from '../components/Row.astro';
+import { languages } from '../data/languages.ts';
+import { education, career, fellowships } from '../data/timeline.ts';
+import { stats } from '../data/stats.ts';
+---
+<BaseLayout
+  title="About · Omer Bese"
+  description="The human behind the work: the mural, the why, and a decade of building systems from scratch."
+  path="/about"
+>
+  <div class="phead">
+    <div class="eyebrow">the human</div>
+    <h1>I ask <span class="whyq">why</span> for a living.</h1>
+  </div>
+
+  <section class="essay">
+    <div class="prose">
+      <p>
+        Energy systems engineer and founder-operator. Distributed energy, physical ops, and
+        software, built from first principles. I find inspiration in obscurity (we landed on
+        the moon before inventing four-wheeled luggage) and get productively frustrated by
+        design that makes no sense.
+      </p>
+    </div>
+    <div class="stats">
+      {stats.map((s) => (
+        <div class="stat"><div class="v">{s.value}</div><div class="k">{s.label}</div></div>
+      ))}
+    </div>
+  </section>
+
+  <Row label="polyglot">
+    <p class="intro">I am not proficient in all of these languages. But with closed captions, I am fluent enough to talk to the native speakers.</p>
+    <div class="langs">
+      {languages.map((l) => (
+        <div class="lang">
+          <span class="code">{l.code}</span>
+          <div>
+            <div class="name">{l.name}</div>
+            <p class="wonder">{l.wonder}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Row>
+
+  <Row label="education">
+    {education.map((e) => (
+      <div class="entry">
+        <div class="etop"><span class="org">{e.org}</span><span class="per">{e.period}</span></div>
+        <div class="role">{e.role}{e.location && <span class="loc"> · {e.location}</span>}</div>
+        {e.note && <p class="note">{e.note}</p>}
+      </div>
+    ))}
+  </Row>
+
+  <Row label="work">
+    {career.map((e) => (
+      <div class="entry">
+        <div class="etop"><span class="org">{e.org}</span><span class="per">{e.period}</span></div>
+        <div class="role">{e.role}{e.location && <span class="loc"> · {e.location}</span>}</div>
+        {e.note && <p class="note">{e.note}</p>}
+      </div>
+    ))}
+  </Row>
+
+  <Row label="elsewhere">
+    <p class="fell">{fellowships.join('  ·  ')}</p>
+  </Row>
+</BaseLayout>
+<style>
+  .essay{display:grid;grid-template-columns:1fr;gap:40px;padding:clamp(40px,6vw,64px) var(--gutter);border-bottom:1px solid var(--line)}
+  .essay .prose{max-width:var(--measure)}
+  .whyq{font-family:var(--serif);font-style:italic;font-weight:400}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:var(--measure)}
+  .stat .v{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.02em;color:var(--ink-0)}
+  .stat .k{margin-top:6px;font-size:11.5px;line-height:1.4;color:var(--ink-2)}
+  .intro{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;color:var(--ink-2);max-width:52ch;margin-bottom:28px}
+  .langs{display:flex;flex-direction:column;gap:24px}
+  .lang{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+  .code{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;color:var(--filament);border:1px solid var(--line-strong);border-radius:4px;padding:5px 0;text-align:center}
+  .lang .name{font-size:15px;font-weight:500;color:var(--ink-0)}
+  .lang .wonder{margin-top:6px;font-family:var(--serif);font-size:15.5px;line-height:1.6;color:var(--ink-1);max-width:62ch}
+  .entry{padding:22px 0;border-top:1px solid var(--line)}
+  .entry:first-child{border-top:none;padding-top:0}
+  .etop{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+  .org{font-size:16px;font-weight:600;color:var(--ink-0)}
+  .per{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);white-space:nowrap}
+  .role{margin-top:3px;font-size:13px;color:var(--ink-2)}
+  .role .loc{color:var(--ink-3)}
+  .note{margin-top:10px;font-family:var(--serif);font-size:15.5px;line-height:1.6;color:var(--ink-1);max-width:66ch}
+  .fell{font-size:14px;line-height:1.8;color:var(--ink-1)}
+  @media(max-width:560px){.stats{grid-template-columns:1fr 1fr}}
+</style>

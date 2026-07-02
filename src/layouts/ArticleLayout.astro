@@ -1,0 +1,46 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  index?: string;
+}
+const { post, index = '01' } = Astro.props;
+const { title, description, date, readTime, tags } = post.data;
+const dateStr = date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+---
+<BaseLayout title={`${title} · Omer Bese`} description={description} path={`/writing/${post.id}/`}>
+  <article class="article">
+    <a class="back" href="/writing">&larr; the writing</a>
+    <div class="meta">
+      <span class="idx">{index}</span>
+      <span>{dateStr}</span>
+      {readTime && <span>{readTime}</span>}
+      {tags.map((t) => <span>{t}</span>)}
+    </div>
+    <h1>{title}</h1>
+    <p class="standfirst">{description}</p>
+    <div class="rule"></div>
+    <div class="prose">
+      <slot />
+    </div>
+  </article>
+  <div class="afoot">
+    <a href="/writing">all writing</a>
+    <a href="/">home</a>
+  </div>
+</BaseLayout>
+<style>
+  .article{max-width:var(--measure);margin:0 auto;padding:clamp(48px,7vw,88px) var(--gutter) 80px}
+  .back{font-size:12.5px;letter-spacing:0.04em;color:var(--ink-2)}
+  .back:hover{color:var(--filament)}
+  .meta{margin-top:40px;display:flex;flex-wrap:wrap;gap:16px;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3)}
+  .meta .idx{color:var(--filament)}
+  h1{margin-top:18px;font-weight:300;font-size:var(--t-h1);line-height:1.08;letter-spacing:-0.03em}
+  .standfirst{margin-top:24px;font-family:var(--serif);font-size:clamp(19px,2.2vw,23px);font-style:italic;line-height:1.5;color:var(--ink-2)}
+  .rule{height:1px;background:var(--line);margin:40px 0}
+  .afoot{max-width:var(--measure);margin:0 auto;padding:28px var(--gutter) 64px;border-top:1px solid var(--line-strong);display:flex;justify-content:space-between}
+  .afoot a{font-size:13px;color:var(--ink-2)}
+  .afoot a:hover{color:var(--filament)}
+</style>

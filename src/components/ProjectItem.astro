@@ -1,0 +1,23 @@
+---
+import type { Project } from '../data/projects.ts';
+interface Props extends Project {
+  compact?: boolean;
+}
+const { name, tagline, description, stack = [], repoUrl, compact } = Astro.props;
+---
+<article class="proj">
+  <a href={repoUrl} class="n">{name} <span class="ar">&#8599;</span></a>
+  <div class="tl">{tagline}</div>
+  {!compact && <p class="ds">{description}</p>}
+  {!compact && stack.length > 0 && <div class="st">{stack.join(' · ')}</div>}
+</article>
+<style>
+  .proj{padding:24px 0;border-top:1px solid var(--line)}
+  .proj:first-child{border-top:none;padding-top:0}
+  .n{font-size:18px;font-weight:600;transition:color var(--dur)}
+  .n .ar{color:var(--filament)}
+  .n:hover{color:var(--filament)}
+  .tl{margin-top:3px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+  .ds{margin-top:12px;font-family:var(--serif);font-size:16px;line-height:1.6;color:var(--ink-1);max-width:64ch}
+  .st{margin-top:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--ink-3)}
+</style>
