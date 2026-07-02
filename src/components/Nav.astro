@@ -1,5 +1,6 @@
 ---
 const path = Astro.url.pathname;
+const isHome = path === '/';
 const items: [string, string][] = [
   ['/', 'home'],
   ['/about', 'about'],
@@ -12,7 +13,9 @@ const isOn = (href: string) =>
   href === '/' ? path === '/' : path === href || path.startsWith(href + '/');
 ---
 <div class="mast">
-  <a href="/" class="mono">omer bese<i>.</i></a>
+  {isHome
+    ? <a href="/" class="tagline">energy engineer &middot; builder</a>
+    : <a href="/" class="mono">omer bese<i>.</i></a>}
   <nav class="nav" aria-label="Primary">
     {items.map(([href, label]) => (
       <a href={href} class={isOn(href) ? 'on' : ''} aria-current={isOn(href) ? 'page' : undefined}>{label}</a>
@@ -23,6 +26,8 @@ const isOn = (href: string) =>
   .mast{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px var(--gutter);border-bottom:1px solid var(--line);flex-wrap:wrap}
   .mono{font-size:17px;font-weight:600;letter-spacing:-0.01em}
   .mono i{font-style:normal;color:var(--filament)}
+  .tagline{font-size:15px;color:var(--ink-1);transition:color var(--dur)}
+  .tagline:hover{color:var(--filament)}
   .nav{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
   .nav a{font-size:13.5px;color:var(--ink-2);padding-bottom:3px;border-bottom:1.5px solid transparent;transition:color var(--dur),border-color var(--dur)}
   .nav a.on{color:var(--ink-0);border-bottom-color:var(--filament)}
