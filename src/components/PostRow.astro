@@ -15,8 +15,8 @@ const { date, title, href, tag } = Astro.props;
 <style>
   .post{display:flex;gap:24px;align-items:baseline;padding:15px 0;border-top:1px solid var(--line)}
   .post:first-child{padding-top:0;border-top:none}
-  .d{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);min-width:92px;flex:none}
-  .t{font-size:17px;color:var(--ink-0);transition:color var(--dur)}
+  .d{font-size:var(--t-label);letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);min-width:92px;flex:none}
+  .t{font-size:var(--t-title);color:var(--ink-0);transition:color var(--dur)}
   .post:hover .t{color:var(--filament)}
   .tg{margin-left:auto;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--filament);align-self:center;flex:none}
   @media(max-width:520px){.post{flex-wrap:wrap;gap:6px 18px}.tg{margin-left:0}}
