@@ -88,12 +88,10 @@ const fmt = (d: Date) =>
   </Row>
 </BaseLayout>
 <style>
-  /* .hero h1 in global.css would otherwise restyle this heading */
-  .hero .the-human{margin:0;font-size:17px;font-weight:600;letter-spacing:-0.01em;color:var(--ink-0)}
+  .hero .the-human{margin:0;font-size:17px;line-height:1.2;font-weight:600;letter-spacing:-0.01em;color:var(--ink-0)}
   .the-human .dot{color:var(--filament)}
   .why-essay{margin-top:24px;max-width:58ch}
-  .why-essay :global(p){font-size:16.5px}
-  .lede-row{font-family:var(--serif);font-size:17px;line-height:1.6;color:var(--ink-1);max-width:56ch}
+  .lede-row{font-family:var(--serif);font-size:var(--t-body);line-height:1.6;color:var(--ink-1);max-width:56ch}
   .builds{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
   .builds :global(.proj):nth-child(2){border-top:none;padding-top:0}
   .pills{display:flex;flex-wrap:wrap;gap:10px}
