@@ -14,9 +14,13 @@
   /* layout */
   --rail:200px; --gutter:clamp(20px,5vw,56px); --maxw:1180px; --measure:42rem;
 
-  /* type scale */
+  /* type scale · one size per role, shared by every page */
   --t-hero:clamp(2.5rem,6vw,4.6rem); --t-h1:clamp(2.1rem,5vw,3.3rem);
-  --t-lede:clamp(16px,1.6vw,18px); --t-prose:19px;
+  --t-standfirst:clamp(18px,2vw,21px);  /* serif dek under any h1 */
+  --t-prose:19px;                       /* serif reading prose */
+  --t-body:16px;                        /* serif support/description text */
+  --t-title:18px;                       /* list-item / card titles */
+  --t-label:11px;                       /* uppercase kickers, .16em tracking */
 
   /* motion */
   --ease:cubic-bezier(0.2,0.7,0.3,1); --dur:.15s;
