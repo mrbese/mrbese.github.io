@@ -35,4 +35,12 @@ In QA or design-review mode, flag any code that does not match `DESIGN.md`.
 
 ## Deployment
 
-Push to `main`. Cloudflare Pages builds (`astro build`) and deploys automatically. Verify at `https://mrbese.com` after deploy.
+The Cloudflare Pages project `mrbese-site` is NOT git-connected. Pushing to `main` records the source but does not deploy. To ship:
+
+```
+npm ci
+npx astro build
+npx wrangler pages deploy dist --project-name=mrbese-site --branch=main --commit-hash=$(git rev-parse HEAD)
+```
+
+wrangler is already authenticated on this machine (account Mr.Bese). DNS: `mrbese.com` and `www` are proxied CNAMEs to `mrbese-site.pages.dev`. The repo's GitHub Pages config and `CNAME` file are relics of the old static site; GitHub Pages shows status "errored" and serves nothing. Verify at `https://mrbese.com` after deploy.
