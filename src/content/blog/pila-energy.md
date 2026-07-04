@@ -2,7 +2,7 @@
 title: What I learned building a thesis on Pila Energy
 date: 2026-05-15
 readTime: 8 min
-description: Three weeks across founder interviews, the tech-specs page, NEC Article 706, ERCOT and CAISO renter-grid filings, and one Hacker News thread where the founder defended the design live. All numbers from primary sources.
+description: Three weeks across founder interviews, NEC Article 706, renter-grid filings, and one Hacker News thread where the founder defended the design live.
 tags: ["research", "energy"]
 featured: true
 ---

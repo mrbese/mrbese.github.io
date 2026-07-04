@@ -12,16 +12,16 @@ const items: [string, string][] = [
 const isOn = (href: string) =>
   href === '/' ? path === '/' : path === href || path.startsWith(href + '/');
 ---
-<div class="mast">
+<header class="mast">
   {isHome
-    ? <a href="/" class="tagline">energy engineer &middot; builder</a>
+    ? <a href="/" class="tagline">operator &middot; builder</a>
     : <a href="/" class="mono">omer bese<i>.</i></a>}
   <nav class="nav" aria-label="Primary">
     {items.map(([href, label]) => (
       <a href={href} class={isOn(href) ? 'on' : ''} aria-current={isOn(href) ? 'page' : undefined}>{label}</a>
     ))}
   </nav>
-</div>
+</header>
 <style>
   .mast{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px var(--gutter);border-bottom:1px solid var(--line);flex-wrap:wrap}
   .mono{font-size:17px;font-weight:600;letter-spacing:-0.01em}

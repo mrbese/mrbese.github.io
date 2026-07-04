@@ -1,7 +1,9 @@
 export interface Project {
   name: string;
   tagline: string;
-  repoUrl: string;
+  // Omit while a repo is private. A missing repoUrl renders the card unlinked
+  // instead of pointing the public at a 404.
+  repoUrl?: string;
   description: string;
   stack: string[];
 }
@@ -10,9 +12,8 @@ export const projects: Project[] = [
   {
     name: 'ManorOS',
     tagline: 'iOS Home Energy Auditor',
-    repoUrl: 'https://github.com/mrbese/ManorOS',
     description:
-      'An open-source home energy assessment tool that uses LiDAR room scanning via Apple RoomPlan, HVAC equipment logging with on-device OCR via Apple Vision, appliance detection, window assessment, and ACCA Manual J BTU calculations. Generates tiered upgrade recommendations with payback periods and battery synergy insights.',
+      'A home energy assessment tool that uses LiDAR room scanning via Apple RoomPlan, HVAC equipment logging with on-device OCR via Apple Vision, appliance detection, window assessment, and ACCA Manual J BTU calculations. Generates tiered upgrade recommendations with payback periods and battery synergy insights. Code opens up when it ships.',
     stack: ['Swift', 'SwiftUI', 'SwiftData', 'ARKit', 'RoomPlan', 'AVFoundation', 'Vision OCR', 'CoreLocation', 'PDFKit'],
   },
   {

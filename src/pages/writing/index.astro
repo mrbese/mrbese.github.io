@@ -10,7 +10,8 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 );
 const featured = posts.filter((p) => p.data.featured);
 const rest = posts.filter((p) => !p.data.featured);
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 ---
 <BaseLayout
   title="Writing · Omer Bese"

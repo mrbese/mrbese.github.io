@@ -14,16 +14,20 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  ogType?: string;
   path?: string;
 }
-const { title, description, ogImage = site.ogImage, path = Astro.url.pathname } = Astro.props;
-const canonical = new URL(path, site.url).href;
+const { title, description, ogImage = site.ogImage, ogType = 'website', path = Astro.url.pathname } = Astro.props;
+// Pages are served at the trailing-slash URL (Cloudflare Pages 308s the bare form),
+// and the sitemap declares the trailing-slash form. Canonicals must match both.
+const slashed = path.endsWith('/') ? path : path + '/';
+const canonical = new URL(slashed, site.url).href;
 const person = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: site.name,
   url: site.url,
-  jobTitle: 'Energy Systems Engineer',
+  jobTitle: 'Founder and Operator',
   address: { '@type': 'PostalAddress', addressLocality: 'Los Angeles', addressRegion: 'CA', addressCountry: 'US' },
   sameAs: ['https://github.com/mrbese', 'https://x.com/mrbese', 'https://linkedin.com/in/omerbese'],
 };
@@ -39,20 +43,27 @@ const person = {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(ogImage, site.url).href} />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content={ogType} />
   <meta property="og:url" content={canonical} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@mrbese" />
   <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="alternate" type="application/rss+xml" title="Omer Bese" href="/rss.xml" />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(person)} />
+  <slot name="head" />
 </head>
 <body>
+  <a class="skip" href="#main">skip to content</a>
   <div class="wrap">
     <slot name="top" />
     <Nav />
-    <slot />
+    <main id="main">
+      <slot />
+    </main>
     <Footer />
   </div>
 </body>

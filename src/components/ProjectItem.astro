@@ -6,7 +6,9 @@ interface Props extends Project {
 const { name, tagline, description, stack = [], repoUrl, compact } = Astro.props;
 ---
 <article class="proj">
-  <a href={repoUrl} class="n">{name} <span class="ar">&#8599;</span></a>
+  {repoUrl
+    ? <a href={repoUrl} class="n">{name} <span class="ar">&#8599;</span></a>
+    : <span class="n">{name}</span>}
   <div class="tl">{tagline}</div>
   {!compact && <p class="ds">{description}</p>}
   {!compact && stack.length > 0 && <div class="st">{stack.join(' · ')}</div>}

@@ -2,7 +2,7 @@
 title: What I learned building a thesis on Base Power
 date: 2026-05-01
 readTime: 9 min
-description: Sixty-plus hours across ERCOT filings, Potomac Economics, Modo Energy, and Base Power's own specs. The gentailer model, actually executed, and the four things I would do next.
+description: Sixty-plus hours across ERCOT filings, Potomac Economics, Modo Energy, and Base Power's own specs. The gentailer model, actually executed.
 tags: ["research", "energy"]
 featured: true
 ---

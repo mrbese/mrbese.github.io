@@ -19,15 +19,16 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       b.data.date.valueOf() - a.data.date.valueOf(),
   )
   .slice(0, 3);
-const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 ---
-<BaseLayout title="Omer Bese · energy systems engineer & builder" description={site.lede} path="/">
+<BaseLayout title="Omer Bese · operator & builder" description={site.lede} path="/">
   <HeroBanner slot="top" />
 
   <div class="hero">
     <Rail />
     <div class="c">
-      <div class="the-human">the human<span class="dot">.</span></div>
+      <h1 class="the-human">the human<span class="dot">.</span></h1>
       <div class="prose why-essay">
         <p>
           I am an unapologetic hedonist with just enough narcissism to paint a giant mural of my
@@ -44,7 +45,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: '
         <p>
           I am equally baffled by things that make no sense at all. Like pedal trash cans next to
           toilets, placed as if your foot could reach the lever just after wiping your ass. Or
-          pull door handles on push to open doors are just a couple of examples in my list of
+          pull door handles on push-to-open doors. Just a couple of examples in my list of
           crimes against humanity.
         </p>
       </div>
@@ -53,7 +54,7 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: '
 
   <Row label="about" first>
     <p class="lede-row">
-      Energy systems engineer, founder, and operator. Columbia M.S., a decade across a
+      Founder, operator, and energy systems engineer. Columbia M.S., a decade across a
       family business, a nonprofit, and three startups, and a stubborn habit of asking why
       the defaults are the defaults.
     </p>
@@ -87,7 +88,8 @@ const fmt = (d: Date) => d.toLocaleDateString('en-US', { month: 'short', year: '
   </Row>
 </BaseLayout>
 <style>
-  .the-human{font-size:17px;font-weight:600;letter-spacing:-0.01em;color:var(--ink-0)}
+  /* .hero h1 in global.css would otherwise restyle this heading */
+  .hero .the-human{margin:0;font-size:17px;font-weight:600;letter-spacing:-0.01em;color:var(--ink-0)}
   .the-human .dot{color:var(--filament)}
   .why-essay{margin-top:24px;max-width:58ch}
   .why-essay :global(p){font-size:16.5px}

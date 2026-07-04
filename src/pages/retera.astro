@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-// DRAFT: Omer, confirm the Re_Tera one-liner + facts + link below. Do not present unverified
-// specifics as fact. Everything here is drafted from what is public at getretera.com.
 const url = 'https://getretera.com';
+const appStoreUrl = 'https://apps.apple.com/us/app/re-tera/id6776045760';
 ---
 <BaseLayout
   title="Re_Tera · Omer Bese"
@@ -12,7 +11,7 @@ const url = 'https://getretera.com';
   <div class="phead">
     <div class="eyebrow">retera</div>
     <h1>The claim you hope you never file, prepared before you need it.</h1>
-    <p class="sub">Re_Tera is a home inventory app: scan your rooms, catalog what you own, and keep the documentation an insurer actually asks for.</p>
+    <p class="sub">Re_Tera is a native iOS home inventory app: scan your rooms, catalog what you own, and keep the documentation an insurer actually asks for. Live on the App Store.</p>
   </div>
 
   <section class="body">
@@ -30,7 +29,11 @@ const url = 'https://getretera.com';
         so the expensive surprise later is just a formality.
       </p>
       <p>
-        <a href={url}>See Re_Tera <span>&#8599;</span></a>
+        Re_Tera shipped to the public App Store in June 2026, built native in Swift, iOS first.
+      </p>
+      <p class="ctas">
+        <a href={appStoreUrl}>Get it on the App Store <span>&#8599;</span></a>
+        <a href={url}>getretera.com <span>&#8599;</span></a>
       </p>
     </div>
   </section>
@@ -38,4 +41,5 @@ const url = 'https://getretera.com';
 <style>
   .body{padding:clamp(36px,5vw,56px) var(--gutter)}
   .body .prose{max-width:var(--measure)}
+  .ctas{display:flex;gap:28px;flex-wrap:wrap}
 </style>
