@@ -1,6 +1,8 @@
 # Design System. mrbese.com
 
-This document captures the existing visual identity. The site has its own face. Do not redesign without explicit approval. Use this as the source of truth for any future edit.
+> **STALE. Describes the pre-2026-07 static-HTML site** (Inter, section accordions, side nav). The live site is the Astro rebuild: fonts are Space Grotesk (UI), Newsreader (serif prose), IBM Plex Mono; the type scale is tokenized in `src/styles/tokens.css` (one size per role: --t-prose 19px, --t-body 16px, --t-title 18px, --t-standfirst, --t-label 11px/.16em). For current conventions read `CLAUDE.md` and `src/styles/tokens.css` first. The brand constants below still hold: dark-only, filament accent used sparingly, the OMER BESE hero composite is sacred, no em dashes.
+
+This document captures the pre-rebuild visual identity. Do not redesign without explicit approval.
 
 ## Product Context
 
