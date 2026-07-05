@@ -1,9 +1,9 @@
 ---
-import '@fontsource-variable/space-grotesk/index.css';
+import '@fontsource/instrument-serif/400.css';
+import '@fontsource/instrument-serif/400-italic.css';
 import '@fontsource-variable/newsreader/index.css';
 import '@fontsource-variable/newsreader/wght-italic.css';
 import '@fontsource/ibm-plex-mono/400.css';
-import '@fontsource/ibm-plex-mono/500.css';
 import '../styles/tokens.css';
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
@@ -47,24 +47,40 @@ const person = {
   <meta property="og:url" content={canonical} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@mrbese" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#0A0908" />
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="alternate" type="application/rss+xml" title="Omer Bese" href="/rss.xml" />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(person)} />
+  <script is:inline>document.documentElement.classList.add('js');</script>
   <slot name="head" />
 </head>
 <body>
   <a class="skip" href="#main">skip to content</a>
-  <div class="wrap">
-    <slot name="top" />
+  <slot name="top" />
+  <div class="col">
+    <slot name="standfirst" />
     <Nav />
     <main id="main">
       <slot />
     </main>
     <Footer />
   </div>
+  <script is:inline>
+    (function () {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.2, rootMargin: '0px 0px -5% 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>

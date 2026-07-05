@@ -14,8 +14,8 @@ const isOn = (href: string) =>
 ---
 <header class="mast">
   {isHome
-    ? <a href="/" class="tagline">operator &middot; builder</a>
-    : <a href="/" class="mono">omer bese<i>.</i></a>}
+    ? <span class="tagline">operator &middot; builder</span>
+    : <a href="/" class="wm">omer bese<i>.</i></a>}
   <nav class="nav" aria-label="Primary">
     {items.map(([href, label]) => (
       <a href={href} class={isOn(href) ? 'on' : ''} aria-current={isOn(href) ? 'page' : undefined}>{label}</a>
@@ -23,17 +23,17 @@ const isOn = (href: string) =>
   </nav>
 </header>
 <style>
-  .mast{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px var(--gutter);border-bottom:1px solid var(--line);flex-wrap:wrap}
-  .mono{font-size:17px;font-weight:600;letter-spacing:-0.01em}
-  .mono i{font-style:normal;color:var(--filament)}
-  .tagline{font-size:15px;color:var(--ink-1);transition:color var(--dur)}
-  .tagline:hover{color:var(--filament)}
-  .nav{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-  .nav a{font-size:13.5px;color:var(--ink-2);padding-bottom:3px;border-bottom:1.5px solid transparent;transition:color var(--dur),border-color var(--dur)}
-  .nav a.on{color:var(--ink-0);border-bottom-color:var(--filament)}
+  .mast{display:flex;align-items:baseline;justify-content:space-between;gap:16px 24px;padding:26px 0 0;flex-wrap:wrap}
+  .wm,.tagline{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+  .wm{transition:color var(--dur) var(--ease)}
+  .wm i{font-style:normal;color:var(--filament)}
+  .wm:hover{color:var(--filament)}
+  .nav{display:flex;align-items:baseline;gap:14px 24px;flex-wrap:wrap}
+  .nav a{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);transition:color var(--dur) var(--ease)}
+  .nav a.on{color:var(--ink-0)}
   .nav a:hover{color:var(--filament)}
   @media(max-width:600px){
-    .mast{padding:18px var(--gutter)}
-    .nav{gap:14px 16px;width:100%}
+    .mast{padding-top:20px}
+    .nav{gap:12px 16px;width:100%}
   }
 </style>

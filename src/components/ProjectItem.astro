@@ -2,24 +2,35 @@
 import type { Project } from '../data/projects.ts';
 interface Props extends Project {
   compact?: boolean;
+  delay?: number;
 }
-const { name, tagline, description, stack = [], repoUrl, compact } = Astro.props;
+const { name, tagline, year, description, stack = [], repoUrl, compact, delay } = Astro.props;
 ---
-<article class="proj">
-  {repoUrl
-    ? <a href={repoUrl} class="n">{name} <span class="ar">&#8599;</span></a>
-    : <span class="n">{name}</span>}
-  <div class="tl">{tagline}</div>
-  {!compact && <p class="ds">{description}</p>}
-  {!compact && stack.length > 0 && <div class="st">{stack.join(' · ')}</div>}
+<article class="proj reveal" style={delay ? `--d:${delay}s` : undefined}>
+  <div class="nm">
+    {repoUrl
+      ? <a href={repoUrl} class="n"><i>{name}</i> <span class="ar">&#8599;</span></a>
+      : <span class="n"><i>{name}</i></span>}
+    {year && <span class="yr">{year}</span>}
+  </div>
+  {compact
+    ? <div class="ds">{tagline}</div>
+    : <Fragment>
+        <div class="tl">{tagline}</div>
+        <p class="dl">{description}</p>
+        {stack.length > 0 && <div class="st">{stack.join(' · ')}</div>}
+      </Fragment>}
 </article>
 <style>
-  .proj{padding:24px 0;border-top:1px solid var(--line)}
-  .proj:first-child{border-top:none;padding-top:0}
-  .n{font-size:var(--t-title);font-weight:600;transition:color var(--dur)}
-  .n .ar{color:var(--filament)}
-  .n:hover{color:var(--filament)}
-  .tl{margin-top:3px;font-size:var(--t-label);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
-  .ds{margin-top:12px;font-family:var(--serif);font-size:var(--t-body);line-height:1.6;color:var(--ink-1);max-width:64ch}
+  .proj{padding:16px 0}
+  .nm{font-size:var(--t-item)}
+  .n i{font-family:var(--display);font-style:italic;font-weight:400;color:var(--ink-0)}
+  .n .ar{font-family:var(--mono);font-size:11px;color:var(--ink-3);transition:color var(--dur) var(--ease)}
+  .yr{font-family:var(--mono);font-size:var(--t-label);color:var(--ink-3);margin-left:14px;letter-spacing:.1em}
+  a.n:hover .ar{color:var(--filament)}
+  .tl{margin-top:4px;font-family:var(--mono);font-size:var(--t-label);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+  .ds{margin-top:4px;font-size:var(--t-note);color:var(--ink-2);line-height:1.65;transition:color var(--dur) var(--ease)}
+  .proj:hover .ds{color:var(--ink-1)}
+  .dl{margin-top:12px;font-size:var(--t-note);line-height:1.7;color:var(--ink-1);max-width:58ch}
   .st{margin-top:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--ink-3)}
 </style>

@@ -1,21 +1,25 @@
 ---
 import { social } from '../data/social.ts';
 ---
-<footer class="foot">
-  <div class="a">
-    <span class="wm">omer bese.</span>
-    <nav class="fl" aria-label="Elsewhere">
-      {social.map((s) => <a href={s.href} rel="me">{s.label}</a>)}
-    </nav>
-  </div>
-  <span class="b">&copy; 2026 &middot; built by asking &ldquo;why?&rdquo;</span>
+<footer class="colophon">
+  <div class="rule reveal"></div>
+  <nav class="clinks reveal" aria-label="Elsewhere">
+    {social.map((s) => <a href={s.href} rel="me">{s.label}</a>)}
+  </nav>
+  <p class="fine reveal">
+    <span class="wm">omer bese<span class="d">.</span></span>
+    <span class="c">&copy; 2026 &middot; built by asking &ldquo;why?&rdquo;</span>
+  </p>
 </footer>
 <style>
-  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:24px var(--gutter);border-top:1px solid var(--line-strong);flex-wrap:wrap}
-  .a{display:flex;align-items:baseline;gap:22px;flex-wrap:wrap}
-  .wm{font-size:13px;color:var(--ink-2)}
-  .fl{display:flex;gap:18px}
-  .fl a{font-size:12.5px;color:var(--ink-3);transition:color var(--dur)}
-  .fl a:hover{color:var(--filament)}
-  .b{font-size:11.5px;letter-spacing:0.06em;color:var(--ink-3)}
+  .colophon{margin-top:150px;padding:0 0 72px}
+  .rule{width:64px;height:1px;background:var(--ink-3);margin-bottom:30px}
+  .clinks{display:flex;gap:26px;margin-bottom:24px;flex-wrap:wrap}
+  .clinks a{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);transition:color var(--dur) var(--ease)}
+  .clinks a:hover{color:var(--filament)}
+  .fine{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap}
+  .wm{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+  .wm .d{color:var(--filament)}
+  .c{font-size:15px;font-style:italic;color:var(--ink-3)}
+  @media(max-width:720px){.colophon{margin-top:96px}}
 </style>

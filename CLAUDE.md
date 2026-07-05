@@ -6,14 +6,14 @@ Personal website. Astro static site in `mrbese/mrbese.github.io`, served through
 
 Always read `DESIGN.md` before making any visual or UI decisions. All font choices, colors, spacing, and aesthetic direction are defined there. Do not deviate without explicit user approval.
 
-In QA or design-review mode, flag any code that does not match `DESIGN.md`.
+**State as of 2026-07-05:** the Private Press system (variant C3 + C4 motion layer) is IMPLEMENTED and live; DESIGN.md and the code now agree. Judge all work against DESIGN.md. **The site copy remains frozen: the human essay, ledes, descriptions, section names, and footer are content decisions, not design surface; any new or changed sentence needs Omer's explicit approval.**
 
 ## Iron rules
 
 - **No em dashes anywhere on the site OR in commits, PRs, or this CLAUDE.md.** Use periods, commas, or parentheses instead. This rule applies to all written output for this repo.
 - The OMER BESE wordmark with portrait composited inside the O is the memorable thing. Do not redesign the hero composite without explicit approval.
-- **Space Grotesk (display/UI), Newsreader (serif prose), IBM Plex Mono (mono) only.** Do not introduce a fourth font without explicit approval.
-- The accent color `--filament: #FF0155` is rare. One or two uses per section by default.
+- **Approved font trio (2026-07-04): Instrument Serif (display), Newsreader (serif prose), IBM Plex Mono (mono).** Space Grotesk was removed with the 2026-07-05 migration; never reintroduce it or any fourth font without explicit approval.
+- The accent color `--filament: #FF0155` is rare, with a closed usage list (see DESIGN.md): the red-period signature on display headlines, the round status dot, and hover states. Nothing else.
 - Positioning: operator/builder leads; "energy systems engineer" is a supporting proof clause, never the headline identity (titles, taglines, JSON-LD jobTitle included).
 - No personal email addresses anywhere on the site. Contact is GitHub/X/LinkedIn links only.
 

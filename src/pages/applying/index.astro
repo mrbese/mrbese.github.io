@@ -18,13 +18,13 @@ const log = [
   description="While everyone is building in public, I am job hunting in public. Same bar as my research, applied to hiring."
   path="/applying"
 >
-  <div class="phead">
+  <div class="phead reveal">
     <div class="eyebrow">#ApplyingInPublic</div>
-    <h1>While everyone is building in public, I am job hunting in public.</h1>
+    <h1>While everyone is building in public, I am job hunting in public<span class="d">.</span></h1>
     <p class="sub">I kept it off the front door on purpose, so strangers meet the proof first and the narrative second.</p>
   </div>
 
-  <Row label="what you get" first>
+  <Row label="what you get" num="01" first>
     <div class="grid">
       {getYou.map(([k, v]) => (
         <div class="cell"><div class="k">{k}</div><p>{v}</p></div>
@@ -32,7 +32,7 @@ const log = [
     </div>
   </Row>
 
-  <Row label="proof of depth">
+  <Row label="proof of depth" num="02">
     <p class="prose-line">
       This is not vapor thought leadership. The Base Power and Pila Energy write-ups were not
       job applications, they were the same diligence muscle, run at full effort. Read them and
@@ -41,7 +41,7 @@ const log = [
     <a class="more" href="/writing">the research &rarr;</a>
   </Row>
 
-  <Row label="public log">
+  <Row label="public log" num="03">
     <table class="log">
       <thead><tr><th scope="col">Company</th><th scope="col">Role</th><th scope="col">Status</th><th scope="col"><span class="sr-only">Deep dive</span></th></tr></thead>
       <tbody>
@@ -60,11 +60,11 @@ const log = [
 </BaseLayout>
 <style>
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 40px}
-  .cell .k{font-size:var(--t-label);letter-spacing:.16em;text-transform:uppercase;color:var(--filament);margin-bottom:8px}
-  .cell p{font-family:var(--serif);font-size:var(--t-body);line-height:1.55;color:var(--ink-1)}
-  .prose-line{font-family:var(--serif);font-size:var(--t-body);line-height:1.6;color:var(--ink-1);max-width:60ch}
+  .cell .k{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+  .cell p{font-size:var(--t-body);line-height:1.55;color:var(--ink-1)}
+  .prose-line{font-size:var(--t-body);line-height:1.6;color:var(--ink-1);max-width:60ch}
   .log{width:100%;border-collapse:collapse;font-size:14px}
-  .log th{text-align:left;font-size:var(--t-label);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-weight:500;padding:0 16px 12px 0;border-bottom:1px solid var(--line)}
+  .log th{text-align:left;font-family:var(--mono);font-size:var(--t-label);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-weight:400;padding:0 16px 12px 0;border-bottom:1px solid var(--line)}
   .log td{padding:16px 16px 16px 0;border-bottom:1px solid var(--line);vertical-align:baseline}
   .co{color:var(--ink-0);font-weight:500}
   .ro{color:var(--ink-1)}

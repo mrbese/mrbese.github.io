@@ -1,29 +1,38 @@
 :root{
-  /* surfaces + ink (dark only, true black) */
-  --paper-0:#000; --ink-0:#F3EEE3; --ink-1:#D2C9B8; --ink-2:#9A9180; --ink-3:#6C6456;
-  --line:rgba(243,238,227,0.11); --line-strong:rgba(243,238,227,0.28);
+  /* surfaces + ink · Private Press: warm near-black + four-step warm ink ladder */
+  --paper-0:#0A0908; --ink-0:#EFE9DC; --ink-1:#C9C0AE; --ink-2:#8E8574; --ink-3:#5C554A;
+  /* hairlines: data tables and the colophon rule only; sections use whitespace, not rules */
+  --line:rgba(239,233,220,0.12); --line-strong:rgba(239,233,220,0.28);
 
-  /* accent · Filament, used sparingly */
-  --filament:#FF0155; --filament-hi:#FF5C88;
+  /* accent · Filament. Closed usage list: red-period signature, status dot, hover states */
+  --filament:#FF0155;
 
   /* fonts (fontsource families, imported in BaseLayout) */
-  --font:"Space Grotesk Variable","Space Grotesk",system-ui,sans-serif;
+  --display:"Instrument Serif",Georgia,serif;
   --serif:"Newsreader Variable",Georgia,serif;
   --mono:"IBM Plex Mono",ui-monospace,monospace;
 
-  /* layout */
-  --rail:200px; --gutter:clamp(20px,5vw,56px); --maxw:1180px; --measure:42rem;
+  /* layout · single offset column */
+  --col:660px; --offset:max(8vw,90px); --gutter:28px; --measure:58ch;
 
   /* type scale · one size per role, shared by every page */
-  --t-hero:clamp(2.5rem,6vw,4.6rem); --t-h1:clamp(2.1rem,5vw,3.3rem);
-  --t-standfirst:clamp(18px,2vw,21px);  /* serif dek under any h1 */
-  --t-prose:19px;                       /* serif reading prose */
-  --t-body:16px;                        /* serif support/description text */
-  --t-title:18px;                       /* list-item / card titles */
-  --t-label:11px;                       /* uppercase kickers, .16em tracking */
+  --t-standfirst:clamp(26px,3.2vw,36px); /* Instrument Serif italic opening line */
+  --t-display:clamp(30px,3.4vw,40px);    /* Instrument Serif headlines */
+  --t-essay:19.5px;                      /* Newsreader reading prose */
+  --t-support:18px;                      /* Newsreader support paragraphs, deks */
+  --t-item:20px;                         /* index item names */
+  --t-note:16px;                         /* index item descriptions, fine serif */
+  --t-toc:18.5px;                        /* writing index titles */
+  --t-label:11px;                        /* mono folios, nav, status lines, .18em tracking */
+
+  /* legacy role aliases still referenced by subpages */
+  --t-h1:var(--t-display);
+  --t-prose:var(--t-essay);
+  --t-body:var(--t-note);
+  --t-title:var(--t-item);
 
   /* motion */
-  --ease:cubic-bezier(0.2,0.7,0.3,1); --dur:.15s;
+  --ease:ease-out; --dur:.15s;
 
   color-scheme: dark;
 }
