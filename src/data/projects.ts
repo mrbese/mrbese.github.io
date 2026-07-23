@@ -17,7 +17,7 @@ export const projects: Project[] = [
     // Repo is private; the link points at the live app instead.
     repoUrl: 'https://negawatt-one.vercel.app',
     description:
-      'A funder pays for permanent grid-demand reduction, residents get rebate-funded home upgrades. Built in two days for OpenAI Build Week: passwordless auth, a guided apply wizard, GPT-vision home inspection, and a deterministic offer engine priced from Texas TRM v13.0 deemed savings, so the model can never reprice or approve. Live as a staged demo serving Milam County, Texas.',
+      'A funder pays for permanent grid-demand reduction, residents get home upgrades with the rebate paid straight to the contractor. Built in two days for OpenAI Build Week: passwordless auth, a guided apply wizard, GPT-vision home inspection, and a deterministic offer engine priced from Texas TRM v13.0 deemed savings, so the model can never reprice or approve. Live as a staged demo serving Milam County, Texas.',
     stack: ['Next.js 16', 'React 19', 'Supabase', 'OpenAI vision', 'Texas TRM v13.0', '230-test Vitest suite'],
   },
   {
