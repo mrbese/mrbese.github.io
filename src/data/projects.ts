@@ -11,6 +11,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: 'NegaWatt',
+    tagline: 'AI Rebate Clearinghouse for Home Efficiency',
+    year: '2026',
+    // Repo is private; the link points at the live app instead.
+    repoUrl: 'https://negawatt-one.vercel.app',
+    description:
+      'A funder pays for permanent grid-demand reduction, residents get rebate-funded home upgrades. Built in two days for OpenAI Build Week: passwordless auth, a guided apply wizard, GPT-vision home inspection, and a deterministic offer engine priced from Texas TRM v13.0 deemed savings, so the model can never reprice or approve. Live as a staged demo serving Milam County, Texas.',
+    stack: ['Next.js 16', 'React 19', 'Supabase', 'OpenAI vision', 'Texas TRM v13.0', '230-test Vitest suite'],
+  },
+  {
     name: 'ManorOS',
     tagline: 'iOS Home Energy Auditor',
     year: '2026',
