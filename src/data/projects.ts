@@ -14,11 +14,11 @@ export const projects: Project[] = [
     name: 'WattShed',
     tagline: 'B2B Rebate Engine for Grid Capacity',
     year: '2026',
-    // Repo is private; the link points at the live app (wattshed.co once it serves).
-    repoUrl: 'https://negawatt-one.vercel.app',
+    // Repo is private; the link points at the live app, wattshed.co.
+    repoUrl: 'https://wattshed.co',
     description:
-      'Grid capacity does not have to be generated, it can be freed. WattShed is an end-to-end rebate creation and clearing engine for whoever needs grid headroom (a utility, a data-center developer, any large load): the funder pays for permanent demand reduction, residents get home upgrades, and the rebate goes straight to the contractor. Built in two days for OpenAI Build Week and customized as if OpenAI were the client: GPT-vision home inspection, with offers priced from Texas TRM v13.0 deemed savings by a deterministic engine the model cannot override. Live as a staged demo serving Milam County, Texas.',
-    stack: ['Next.js 16', 'React 19', 'Supabase', 'OpenAI vision', 'Texas TRM v13.0', '230-test Vitest suite'],
+      'Grid capacity does not have to be generated, it can be freed. WattShed is an end-to-end rebate creation and clearing engine for whoever needs grid headroom (a utility, a data-center developer, any large load): the funder pays for permanent demand reduction, residents get home upgrades, and the rebate goes straight to the contractor. Built in two days for OpenAI Build Week and customized as if OpenAI were the client: GPT-vision home inspection, with offers priced from Texas TRM v13.0 deemed savings by a reasoning model working a fixed qualification rulebook against a single client-set dollar-per-kW constant. Live as a staged demo serving Milam County, Texas.',
+    stack: ['Next.js 16', 'React 19', 'Firebase', 'OpenAI vision', 'Texas TRM v13.0', '255-test Vitest suite'],
   },
   {
     name: 'ManorOS',
