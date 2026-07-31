@@ -1,9 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Row from '../components/Row.astro';
-import { languages } from '../data/languages.ts';
 import { education, career, fellowships } from '../data/timeline.ts';
-import { stats } from '../data/stats.ts';
+import { record } from '../data/record.ts';
 ---
 <BaseLayout
   title="About · Omer Bese"
@@ -21,11 +20,6 @@ import { stats } from '../data/stats.ts';
         Founder-operator and builder, energy systems engineer by training. Distributed energy,
         physical ops, and software, built from first principles.
       </p>
-    </div>
-    <div class="stats">
-      {stats.map((s) => (
-        <div class="stat"><div class="v">{s.value}</div><div class="k">{s.label}</div></div>
-      ))}
     </div>
     <div class="prose record">
       <p>
@@ -49,16 +43,13 @@ import { stats } from '../data/stats.ts';
     </div>
   </section>
 
-  <Row label="polyglot" num="01">
-    <p class="intro">I am not proficient in all of these languages. But with closed captions, I am fluent enough to talk to the native speakers.</p>
-    <div class="langs">
-      {languages.map((l) => (
-        <div class="lang">
-          <span class="code">{l.code}</span>
-          <div>
-            <div class="name">{l.name}</div>
-            <p class="wonder">{l.wonder}</p>
-          </div>
+  <Row label="the record" num="01">
+    <div class="ledger">
+      {record.map((r) => (
+        <div class="rec">
+          <span class="ryr">{r.year}</span>
+          <span class="rlead" aria-hidden="true"></span>
+          <span class="rtxt">{r.line}</span>
         </div>
       ))}
     </div>
@@ -93,15 +84,11 @@ import { stats } from '../data/stats.ts';
   .essay .prose{max-width:var(--measure)}
   .record p{margin:0 0 1.3em}
   .record p:last-child{margin-bottom:0}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:var(--measure)}
-  .stat .v{font-family:var(--display);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:400;color:var(--ink-0)}
-  .stat .k{margin-top:6px;font-size:11.5px;line-height:1.4;color:var(--ink-2)}
-  .intro{font-style:italic;font-size:var(--t-support);line-height:1.5;color:var(--ink-2);max-width:52ch;margin-bottom:28px}
-  .langs{display:flex;flex-direction:column;gap:24px}
-  .lang{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
-  .code{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--ink-2)}
-  .lang .name{font-size:15px;font-weight:500;color:var(--ink-0)}
-  .lang .wonder{margin-top:6px;font-size:var(--t-body);line-height:1.6;color:var(--ink-1);max-width:62ch}
+  .ledger{display:flex;flex-direction:column;gap:16px}
+  .rec{display:flex;align-items:baseline;gap:12px;max-width:62ch}
+  .ryr{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);flex:none;font-variant-numeric:tabular-nums}
+  .rlead{border-bottom:1px dotted var(--ink-3);width:22px;transform:translateY(-4px);flex:none}
+  .rtxt{font-size:var(--t-body);line-height:1.65;color:var(--ink-1)}
   .entry{margin-top:28px}
   .entry:first-child{margin-top:0}
   .etop{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
@@ -111,5 +98,4 @@ import { stats } from '../data/stats.ts';
   .role .loc{color:var(--ink-3)}
   .note{margin-top:10px;font-size:var(--t-body);line-height:1.6;color:var(--ink-1);max-width:66ch}
   .fell{font-size:14px;line-height:1.8;color:var(--ink-1)}
-  @media(max-width:560px){.stats{grid-template-columns:1fr 1fr}}
 </style>
