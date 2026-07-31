@@ -42,10 +42,10 @@ img{max-width:100%;height:auto;display:block}
 .prose a{color:var(--ink-0);border-bottom:1px solid var(--line-strong);padding-bottom:1px;transition:color var(--dur) var(--ease),border-color var(--dur) var(--ease)}
 .prose a:hover{color:var(--filament);border-color:var(--filament)}
 .prose h2{font-family:var(--display);font-weight:400;font-size:clamp(24px,2.6vw,30px);line-height:1.15;color:var(--ink-0);margin:56px 0 20px}
-.prose h3{font-family:var(--display);font-style:italic;font-weight:400;font-size:21px;color:var(--ink-0);margin:36px 0 12px}
+.prose h3{font-family:var(--display);font-style:normal;font-weight:400;font-size:21px;color:var(--ink-0);margin:36px 0 12px}
 .prose ul,.prose ol{margin:0 0 1.4em 1.2em}
 .prose li{margin:0 0 .5em}
-.prose blockquote{margin:48px 0;font-family:var(--display);font-style:italic;font-size:clamp(21px,2.4vw,25px);line-height:1.4;color:var(--ink-0)}
+.prose blockquote{margin:48px 0;font-family:var(--display);font-style:normal;font-size:clamp(21px,2.4vw,25px);line-height:1.4;color:var(--ink-0)}
 .prose code{font-family:var(--mono);font-size:.82em;background:rgba(239,233,220,0.06);padding:.1em .4em}
 .prose hr{border:none;border-top:1px solid var(--line);margin:48px 0}
 

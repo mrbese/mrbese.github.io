@@ -1,5 +1,5 @@
 ---
-title: What I learned building a thesis on Pila Energy
+title: "Pila Energy: The Permissionless Insight, Not the Battery"
 date: 2026-05-15
 readTime: 8 min
 description: Three weeks across founder interviews, NEC Article 706, renter-grid filings, and one Hacker News thread where the founder defended the design live.

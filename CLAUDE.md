@@ -6,7 +6,7 @@ Personal website. Astro static site in `mrbese/mrbese.github.io`, served through
 
 Always read `DESIGN.md` before making any visual or UI decisions. All font choices, colors, spacing, and aesthetic direction are defined there. Do not deviate without explicit user approval.
 
-**State as of 2026-07-05:** the Private Press system (variant C3 + C4 motion layer) is IMPLEMENTED and live; DESIGN.md and the code now agree. Judge all work against DESIGN.md. **The site copy remains frozen: the human essay, ledes, descriptions, section names, and footer are content decisions, not design surface; any new or changed sentence needs Omer's explicit approval.**
+**State as of 2026-07-30:** the Private Press system in its Evidence Room register is IMPLEMENTED and live (2026-07-30 reframe: analyst voice sitewide, roman display type, proof-first homepage, standfirst = h1; spec in `~/.gstack/projects/mrbese-mrbese.github.io/mrbese-main-design-20260730-205831.md`); DESIGN.md and the code agree. Judge all work against DESIGN.md. **The site copy is frozen at the reframe: any new or changed sentence needs Omer's explicit approval, and `npm run deploy` enforces the register gates (scripts/gates.sh).**
 
 ## Iron rules
 
@@ -39,8 +39,9 @@ The Cloudflare Pages project `mrbese-site` is NOT git-connected. Pushing to `mai
 
 ```
 npm ci
-npx astro build
-npx wrangler pages deploy dist --project-name=mrbese-site --branch=main --commit-hash=$(git rev-parse HEAD)
+npm run deploy
 ```
+
+`npm run deploy` chains the register gates (scripts/gates.sh --src), the build, the built-output gates (--dist: motif/em-dash greps, one-h1-inside-main per page, meta-description length), and the wrangler deploy with --commit-hash. A failing gate blocks the ship. Manual fallback: `npx astro build && npx wrangler pages deploy dist --project-name=mrbese-site --branch=main --commit-hash=$(git rev-parse HEAD)`.
 
 wrangler is already authenticated on this machine (account Mr.Bese). DNS: `mrbese.com` and `www` are proxied CNAMEs to `mrbese-site.pages.dev`. The repo's GitHub Pages config and `CNAME` file are relics of the old static site; GitHub Pages shows status "errored" and serves nothing. Verify at `https://mrbese.com` after deploy.

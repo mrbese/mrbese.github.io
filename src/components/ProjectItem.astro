@@ -2,11 +2,13 @@
 import type { Project } from '../data/projects.ts';
 interface Props extends Project {
   compact?: boolean;
+  /* homepage building index renders names one step larger (--t-item-lead) */
+  lead?: boolean;
   delay?: number;
 }
-const { name, tagline, year, description, stack = [], repoUrl, compact, delay } = Astro.props;
+const { name, tagline, year, description, stack = [], repoUrl, compact, lead, delay } = Astro.props;
 ---
-<article class="proj reveal" style={delay ? `--d:${delay}s` : undefined}>
+<article class:list={['proj', 'reveal', { lead }]} style={delay ? `--d:${delay}s` : undefined}>
   <div class="nm">
     {repoUrl
       ? <a href={repoUrl} class="n"><i>{name}</i> <span class="ar">&#8599;</span></a>
@@ -24,7 +26,8 @@ const { name, tagline, year, description, stack = [], repoUrl, compact, delay } 
 <style>
   .proj{padding:16px 0}
   .nm{font-size:var(--t-item)}
-  .n i{font-family:var(--display);font-style:italic;font-weight:400;color:var(--ink-0)}
+  .proj.lead .nm{font-size:var(--t-item-lead)}
+  .n i{font-family:var(--display);font-style:normal;font-weight:400;color:var(--ink-0)}
   .n .ar{font-family:var(--mono);font-size:11px;color:var(--ink-3);transition:color var(--dur) var(--ease)}
   .yr{font-family:var(--mono);font-size:var(--t-label);color:var(--ink-3);margin-left:14px;letter-spacing:.1em}
   a.n:hover .ar{color:var(--filament)}

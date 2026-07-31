@@ -6,13 +6,13 @@ const linkedin = social.find((s) => s.label === 'LinkedIn')?.href ?? '#';
 ---
 <BaseLayout
   title="Services · Omer Bese"
-  description="Things I will set up for you: agentic browser automation, smart home, credit-card points, and home energy audits."
+  description="Home energy audits and smart-home setup, hourly. Working systems plus the documentation to run them without me."
   path="/services"
 >
   <div class="phead reveal">
     <div class="eyebrow">services</div>
-    <h1>A few things I will just set up for you<span class="d">.</span></h1>
-    <p class="sub">Practical, hourly, no retainer. If it saves you a weekend of fighting with a manual, it paid for itself.</p>
+    <h1>Two things I set up<span class="d">.</span></h1>
+    <p class="sub">Hourly, no retainer. You get working systems and the documentation to run them without me.</p>
   </div>
 
   <section class="list">
@@ -23,7 +23,7 @@ const linkedin = social.find((s) => s.label === 'LinkedIn')?.href ?? '#';
       </article>
     ))}
     <div class="cta">
-      <a href={linkedin}>Ask me about it <span class="ar">&#8599;</span></a>
+      <a href={linkedin}>reach me on linkedin <span class="ar">&#8599;</span></a>
     </div>
   </section>
 </BaseLayout>
@@ -31,7 +31,7 @@ const linkedin = social.find((s) => s.label === 'LinkedIn')?.href ?? '#';
   .list{margin-top:56px}
   .svc{margin-top:40px;max-width:64ch}
   .svc:first-child{margin-top:0}
-  .svc h2{font-family:var(--display);font-style:italic;font-weight:400;font-size:var(--t-item);color:var(--ink-0)}
+  .svc h2{font-family:var(--display);font-style:normal;font-weight:400;font-size:var(--t-item);color:var(--ink-0)}
   .svc p{margin-top:10px;font-size:var(--t-note);line-height:1.6;color:var(--ink-1)}
   .cta{margin-top:48px}
   .cta::before{content:"";display:block;width:64px;height:1px;background:var(--ink-3);margin-bottom:26px}
