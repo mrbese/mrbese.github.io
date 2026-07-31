@@ -23,7 +23,7 @@ Always read `DESIGN.md` before making any visual or UI decisions. All font choic
 - `src/layouts/`: `BaseLayout.astro` (head, favicon, canonical, Person JSON-LD, skip link, `<main>`), `ArticleLayout.astro` (article OG + BlogPosting JSON-LD)
 - `src/components/`: Nav, Footer, Row (section rows with h2 labels), ProjectItem (repoUrl optional; omit for private repos), HeroBanner, PostRow, Rail, Tag, PullQuote
 - `src/content/blog/`: posts (frontmatter `date` is the single source of truth for both on-page dates and RSS pubDate; all date formatting must pass `timeZone: 'UTC'` or the two drift)
-- `src/data/`: site.ts (title/lede/chip copy), projects.ts, services.ts, social.ts, timeline.ts, stats.ts, languages.ts
+- `src/data/`: site.ts (title/lede/chip copy), projects.ts, services.ts, social.ts, timeline.ts, record.ts (the /about dated ledger; every line must stay literally true with a verified year)
 - `public/`: `_headers`, `_redirects` (Cloudflare Pages), favicon.svg/.ico, apple-touch-icon.png, robots.txt, img/
 - `DESIGN.md`: design system, source of truth
 
