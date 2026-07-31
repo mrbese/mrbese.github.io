@@ -7,7 +7,6 @@ import PostRow from '../components/PostRow.astro';
 import ProjectItem from '../components/ProjectItem.astro';
 import { site } from '../data/site.ts';
 import { projects } from '../data/projects.ts';
-import { services } from '../data/services.ts';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
@@ -20,90 +19,46 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 const fmt = (d: Date) =>
   `${String(d.getUTCMonth() + 1).padStart(2, '0')}.${String(d.getUTCFullYear() % 100).padStart(2, '0')}`;
 // red-period signature on the standfirst: same characters, last "." wrapped
-const postBody = site.hero.post.endsWith('.') ? site.hero.post.slice(0, -1) : site.hero.post;
-const postDot = site.hero.post.endsWith('.') ? '.' : '';
+const heroBody = site.hero.endsWith('.') ? site.hero.slice(0, -1) : site.hero;
+const heroDot = site.hero.endsWith('.') ? '.' : '';
 ---
 <BaseLayout title="Omer Bese · operator & builder" description={site.lede} path="/">
   <HeroBanner slot="top" />
 
   <div class="standfirst" slot="standfirst">
     <div class="mask">
-      <p class="line">{site.hero.pre}<em>{site.hero.em}</em>{postBody}<span class="d">{postDot}</span></p>
+      <h1 class="line">{heroBody}<span class="d">{heroDot}</span></h1>
     </div>
   </div>
 
-  <section class="s1">
-    <p class="folio reveal"><b>&#8470; 01</b></p>
-    <h1 class="disp reveal">the human<span class="d">.</span></h1>
-    <div class="prose essay">
-      <p class="reveal">
-        I am an unapologetic hedonist with just enough narcissism to paint a giant mural of my
-        own face in my living room, yet somehow still not too good to clean houses myself,
-        every weekday, for six months, for my startup.
-      </p>
-      <p class="reveal">
-        I have a relentless curiosity and often find inspiration in obscurity, like the fact
-        that we invented four-wheeled luggage after we had already stepped on the moon.
-        Frustration usually follows, though, because we fail to evolve the status quo alongside
-        the invention, like keeping the vertical design even though it now creates significant
-        instability.
-      </p>
-      <p class="reveal">
-        I am equally baffled by things that make no sense at all. Like pedal trash cans next to
-        toilets, placed as if your foot could reach the lever just after wiping your ass. Or
-        pull door handles on push-to-open doors. Just a couple of examples in my list of
-        crimes against humanity.
-      </p>
-    </div>
-  </section>
-
-  <Row label="about" num="02">
-    <p class="lede reveal">
-      Founder, operator, and energy systems engineer. Columbia M.S., a decade across a
-      family business, a nonprofit, and three startups, and a stubborn habit of asking why
-      the defaults are the defaults.
-    </p>
-    <Rail />
-    <a class="more reveal" href="/about">the longer story &rarr;</a>
+  <Row label="building">
+    {projects.map((p, i) => <ProjectItem {...p} compact lead delay={i * 0.07} />)}
+    <a class="more reveal" href="/projects">all projects &rarr;</a>
   </Row>
 
-  <Row label="writing" num="03">
+  <Row label="writing">
     {posts.map((p, i) => (
       <PostRow date={fmt(p.data.date)} title={p.data.title} href={`/writing/${p.id}/`} delay={i * 0.07} />
     ))}
     <a class="more reveal" href="/writing">read the writing &rarr;</a>
   </Row>
 
-  <Row label="building" num="04">
-    {projects.map((p, i) => <ProjectItem {...p} compact delay={i * 0.07} />)}
-    <a class="more reveal" href="/projects">all projects &rarr;</a>
-  </Row>
-
-  <Row label="services" num="05">
-    <p class="svcline reveal">
-      A few things I take on: {services.map((s, i) => (
-        <Fragment><b>{s.name}</b>{i < services.length - 2 ? ', ' : i === services.length - 2 ? ', and ' : ''}</Fragment>
-      ))}.
+  <Row label="about">
+    <p class="lede reveal">
+      Founder, operator, and energy systems engineer. Columbia M.S., a decade across a
+      family business, a nonprofit, and three startups.
     </p>
+    <Rail />
+    <a class="more reveal" href="/about">the longer story &rarr;</a>
   </Row>
 </BaseLayout>
 <style>
   .standfirst{padding-top:64px}
   .mask{overflow:hidden}
-  .line{font-family:var(--display);font-style:italic;font-size:var(--t-standfirst);line-height:1.3;color:var(--ink-0);max-width:24ch;transform:translateY(112%);animation:rise .9s cubic-bezier(.19,1,.22,1) .15s forwards}
+  .line{font-family:var(--display);font-weight:400;font-size:var(--t-standfirst);line-height:1.3;color:var(--ink-0);max-width:26ch;transform:translateY(112%);animation:rise .9s cubic-bezier(.19,1,.22,1) .15s forwards}
   @keyframes rise{to{transform:none}}
-  .line .d{color:var(--filament);font-style:normal}
-  .line em{font-style:italic}
-  .s1{margin-top:128px}
-  .folio{margin:0 0 18px;font-family:var(--mono);font-size:var(--t-label);letter-spacing:.2em;color:var(--ink-3);text-transform:uppercase}
-  .folio b{color:var(--ink-2);font-weight:400}
-  .disp{font-family:var(--display);font-size:var(--t-display);font-weight:400;line-height:1.1;color:var(--ink-0)}
-  .disp .d{color:var(--filament)}
-  .essay{margin-top:26px;max-width:58ch}
-  .essay p:first-child::first-letter{font-family:var(--display);float:left;font-size:74px;line-height:.82;padding:8px 12px 0 0;color:var(--ink-0)}
+  .line .d{color:var(--filament)}
   .lede{font-size:var(--t-support);line-height:1.75;color:var(--ink-1);max-width:56ch}
-  .svcline{font-size:var(--t-support);line-height:1.75;color:var(--ink-1);max-width:56ch;font-style:italic}
-  .svcline b{font-style:normal;font-weight:500;color:var(--ink-0)}
   @media (prefers-reduced-motion: reduce){.line{transform:none}}
-  @media(max-width:720px){.s1{margin-top:80px}.standfirst{padding-top:44px}}
+  @media(max-width:720px){.standfirst{padding-top:44px}}
 </style>

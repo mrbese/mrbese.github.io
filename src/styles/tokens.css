@@ -16,11 +16,12 @@
   --col:660px; --offset:max(8vw,90px); --gutter:28px; --measure:58ch;
 
   /* type scale · one size per role, shared by every page */
-  --t-standfirst:clamp(26px,3.2vw,36px); /* Instrument Serif italic opening line */
+  --t-standfirst:clamp(26px,3.2vw,36px); /* Instrument Serif opening line (roman; italic retired 2026-07-30) */
   --t-display:clamp(30px,3.4vw,40px);    /* Instrument Serif headlines */
   --t-essay:19.5px;                      /* Newsreader reading prose */
   --t-support:18px;                      /* Newsreader support paragraphs, deks */
   --t-item:20px;                         /* index item names */
+  --t-item-lead:23px;                    /* homepage building index names */
   --t-note:16px;                         /* index item descriptions, fine serif */
   --t-toc:18.5px;                        /* writing index titles */
   --t-label:11px;                        /* mono folios, nav, status lines, .18em tracking */

@@ -1,5 +1,5 @@
 ---
-title: What I learned building a thesis on Base Power
+title: "Base Power: The Gentailer, Actually Executed"
 date: 2026-05-01
 readTime: 9 min
 description: Sixty-plus hours across ERCOT filings, Potomac Economics, Modo Energy, and Base Power's own specs. The gentailer model, actually executed.

@@ -17,7 +17,7 @@ The OMER BESE wordmark hero with the portrait composited inside the O. Single ra
 
 ## Aesthetic Direction
 
-- **Direction:** Private Press. A dark literary journal register: one offset text column, whitespace instead of rules, folio numbers, dotted-leader indexes, a drop cap. The page reads like a privately printed record of work, not a portfolio.
+- **Direction:** Private Press, Evidence Room register (2026-07-30 reframe). One offset text column, whitespace instead of rules, dotted-leader indexes, mono section labels. The page reads like a privately printed record of work, not a portfolio. Folio numerals and the drop cap were retired 2026-07-30 with the copy reframe (journal costume out, evidence presentation in).
 - **Decoration level:** Minimal. No cards, no borders around content, no chips, no icons. Typography and whitespace do all the work; the hero and the red dot are the only loud elements.
 - **Mood:** Confident, literary, unhurried. The design says: this person's evidence can afford to be quiet.
 - **Why this direction:** Chosen 2026-07-04 over (A) sharpening the existing Editorial Instrument system and (B) an industrial "Substation at Night" direction. Research across admired 2026 personal sites (Freiberg, Kowalski, Chiang, Comeau, Graham, Rauch) showed the field splits between single-sans minimalism and cloned dark-portfolio templates; a serif-led literary system with a face-forward hero has no analog in that set.
@@ -26,7 +26,7 @@ The OMER BESE wordmark hero with the portrait composited inside the O. Single ra
 
 Three fonts, self-hosted via Fontsource (repo convention). Space Grotesk retires at migration.
 
-- **Display:** **Instrument Serif** (roman and italic). Standfirst, display headlines, project names, article titles in indexes. Italic is allowed at display size in this direction (approved after an explicit calm-font review round); roman for headlines that need more weight.
+- **Display:** **Instrument Serif**, ROMAN ONLY. Standfirst, display headlines, project names, article titles in indexes. Italic was retired from ALL display roles on 2026-07-30 (Omer: "I don't like the italic font"), reversing the 2026-07-04 italic approval; the italic font file is no longer shipped. Newsreader inline italics within prose remain allowed.
 - **Prose:** **Newsreader** (variable, optical sizing, 300 to 600, plus italics). All reading text: essays, descriptions, support lines.
 - **Instrument:** **IBM Plex Mono** (400). Folios, nav, dates, status lines, colophon links. Tabular numerals wherever numbers align.
 
@@ -34,11 +34,12 @@ Three fonts, self-hosted via Fontsource (repo convention). Space Grotesk retires
 
 | Token | Value | Role |
 |---|---|---|
-| `--t-standfirst` | clamp(26px, 3.2vw, 36px) | Instrument Serif italic opening line under the hero |
+| `--t-standfirst` | clamp(26px, 3.2vw, 36px) | Instrument Serif roman opening line under the hero (the homepage h1) |
 | `--t-display` | clamp(30px, 3.4vw, 40px) | Instrument Serif section headlines |
 | `--t-essay` | 19.5px / 1.78 | Newsreader reading prose |
 | `--t-support` | 18px / 1.75 | Newsreader support paragraphs (about line, services sentence) |
 | `--t-item` | 20px | Index item names (Instrument Serif) |
+| `--t-item-lead` | 23px | Homepage building index names (lead position) |
 | `--t-note` | 16px / 1.65 | Index item descriptions (Newsreader) |
 | `--t-toc` | 18.5px | Writing index titles (Instrument Serif italic) |
 | `--t-label` | 11px / .18em tracking, uppercase | Mono folios, nav, status lines |
@@ -64,12 +65,12 @@ Never hardcode a px size for these roles; use the token.
 ## Layout
 
 - **Approach:** single-column editorial, composition over components. Full-bleed hero, then one offset column to the colophon.
-- **Structure per page:** hero artwork (home only), standfirst + small mono nav, numbered sections (folio kicker then content), colophon (hairline 64px rule, mono links, one italic fine-print line).
+- **Structure per page:** hero artwork (home only), small mono nav, then the standfirst h1 inside main (home only), sections (mono label then content), colophon (hairline 64px rule, mono links, one fine-print line). Nav sits ABOVE the standfirst since 2026-07-30 so the h1 lives inside the main landmark.
 - **Patterns:**
-  - **Folio kicker:** `№ 0N · section name` in mono, faint.
-  - **Essay:** drop cap on the first paragraph (Instrument Serif), Newsreader body.
-  - **Writing index:** title, dotted leader, mono date (`05.26`). No tags, no chips.
-  - **Project index:** Instrument Serif italic name + mono year, one-line Newsreader description. No stack pills, no repo cards.
+  - **Section label:** the section name in mono, faint, uppercase (folio numerals retired 2026-07-30).
+  - **Essay:** Newsreader body, no drop cap (retired 2026-07-30).
+  - **Writing index:** title (Instrument Serif roman), dotted leader, mono date (`05.26`). No tags, no chips.
+  - **Project index:** Instrument Serif roman name + mono year, one-line Newsreader description. No stack pills, no repo cards. Homepage building index renders names at `--t-item-lead`.
   - **Services:** one Newsreader sentence, bolded service names inline. Never a pill row (chips are the most-cloned pattern in this genre; banned). The sentence wording is content: keep the live service names verbatim and get the connecting words approved before shipping.
 - **Border radius:** none, except the status dot (round). No rounded cards exist because no cards exist.
 
@@ -95,7 +96,7 @@ Never hardcode a px size for these roles; use the token.
 
 ## Iron rules
 
-0. **This is a DESIGN system, not a copy rewrite. All site text stays exactly as it is live.** The "the human." essay (all three paragraphs), ledes, project taglines and descriptions, service names, section names (about / writing / building / services / elsewhere), and the footer line are untouched by the migration. The mockup's copy (the standfirst sentence, "Ten years of asking why.", rewritten project descriptions, the services sentence wording) was illustrative only and must NOT ship. Where the target layout has a slot the live site has no copy for (the standfirst), use existing site copy or leave the slot out; any new sentence needs Omer's explicit approval first.
+0. **Copy freeze.** All site text is frozen at the 2026-07-30 Evidence Room reframe (design doc `mrbese-main-design-20260730-205831.md`, every sentence line-approved by Omer in that session). Any new or changed sentence needs Omer's explicit approval first. `npm run deploy` enforces the register gates (scripts/gates.sh); a gate failure blocks the ship.
 1. **No em dashes anywhere on the site, in commits, PRs, or repo files.** Periods, commas, or parentheses.
 2. **The hero composite is sacred.** No redesign without explicit approval.
 3. **Three fonts only: Instrument Serif, Newsreader, IBM Plex Mono.** Space Grotesk is legacy and leaves at migration. No fourth font without explicit approval.
@@ -144,3 +145,5 @@ Implemented 2026-07-05; kept as a record of what changed and why.
 | 2026-07-05 | Standfirst slot filled with existing site copy. | "I ask why for a living." (site.ts hero line) satisfies iron rule 0; no new sentence was written. |
 | 2026-07-05 | Migration implemented and deployed. | Copy freeze verified byte-identical by an independent review pass. Sanctioned deltas: Rail facts folded into the sig block (labels Location/Focus/Now dropped, all values kept, per the migration map) and factual mono years (2026) added to the project index per the C4 pattern. |
 | 2026-07-05 | Essential mono text raised from `--faint` to `--dim` after review. | Nav, eyebrows, and the open-to-work line were at ~2.7:1 contrast, contradicting the Accessibility section; `--faint` is now ornament-only. |
+| 2026-07-30 | Evidence Room reframe shipped: one analyst voice, "why" motif retired, claim-forward titles, proof-first homepage (building → writing → about), services cut to two. | Omer: the front door was "very cringe"; the articles' analyst register became the sitewide voice. Full spec in design doc mrbese-main-design-20260730-205831.md. |
+| 2026-07-30 | Instrument Serif italic retired from all display roles; folios and drop cap removed; standfirst became the homepage h1 inside main with nav above it. | Omer: "I don't like the italic font." Journal costume out; evidence presentation in. Reverses the 2026-07-04 italic approval. |

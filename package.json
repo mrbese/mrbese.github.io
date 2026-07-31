@@ -7,7 +7,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "gates": "bash scripts/gates.sh --src && bash scripts/gates.sh --dist",
+    "deploy": "bash scripts/gates.sh --src && astro build && bash scripts/gates.sh --dist && wrangler pages deploy dist --project-name=mrbese-site --branch=main --commit-hash=$(git rev-parse HEAD)"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
