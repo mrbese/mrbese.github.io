@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const url = 'https://shitster.org';
+const campaignUrl = 'https://dashoff.org';
+const repoUrl = 'https://github.com/mrbese/shitster';
+---
+<BaseLayout
+  title="shitster · Omer Bese"
+  description="shitster: consumer self-help campaigns. The tool prepares, the human acts."
+  path="/shitster"
+>
+  <div class="phead reveal">
+    <div class="eyebrow">shitster</div>
+    <h1>Consumer self-help campaigns. The tool prepares, the human acts<span class="d">.</span></h1>
+  </div>
+
+  <section class="body">
+    <div class="prose">
+      <p>
+        BMW pushed a Spider-Man ad to the dashboard of cars people own, on a screen it once
+        called a private space. I read the 28-page contract they wrote, found the clause where
+        they obligate themselves to call every complaining owner back individually, and built
+        the tool that generates those letters in the browser. Zero accounts, zero stored data,
+        open source. First campaign: DashOff. Every big brand should carry a shitster budget.
+      </p>
+    </div>
+    <div class="links ctas">
+      <a href={url}>shitster.org <span class="ar">&#8599;</span></a>
+      <a href={campaignUrl}>dashoff.org <span class="ar">&#8599;</span></a>
+      <a href={repoUrl}>github.com/mrbese/shitster <span class="ar">&#8599;</span></a>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .body{margin-top:56px}
+  .body .prose{max-width:var(--measure)}
+  .ctas{margin-top:28px}
+</style>
