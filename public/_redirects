@@ -3,3 +3,8 @@
 # (Cutover note: alternatively host the CellSense build in public/cellsense/ to keep it first-party.)
 /cellsense       https://mrbese.github.io/cellsense/          301
 /cellsense/*     https://mrbese.github.io/cellsense/:splat    301
+
+# Applying-in-public page retired (now committed to Shitster full-time, also
+# in accelerator conversations). 301 both the bare page and any deep links.
+/applying        /                                            301
+/applying/*      /                                            301
