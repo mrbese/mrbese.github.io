@@ -8,3 +8,6 @@
 # in accelerator conversations). 301 both the bare page and any deep links.
 /applying        /                                            301
 /applying/*      /                                            301
+
+# Agents and validators probe the conventional path; Astro emits sitemap-index.xml.
+/sitemap.xml     /sitemap-index.xml                           301
