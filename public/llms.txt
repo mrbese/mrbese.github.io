@@ -1,19 +1,22 @@
 # Omer Bese
 
-> Founder-operator and energy systems engineer in Los Angeles. Builds energy tools and publishes the research behind them. This file indexes mrbese.com for AI agents and crawlers; all listed pages are static, server-rendered HTML.
+> Energy systems engineer and operator in Los Angeles. Builds software for physical systems and publishes the research behind it. This file indexes mrbese.com for AI agents and crawlers; all listed pages are static, server-rendered HTML.
 
 ## Writing
 
 - [Base Power: The Gentailer, Actually Executed](https://mrbese.com/writing/base-power/): 60+ hours of primary-source research across ERCOT and CPUC filings (2026-05-01)
 - [Pila Energy: The Permissionless Insight, Not the Battery](https://mrbese.com/writing/pila-energy/): why the wedge is the meter, not the cell (2026-05-15)
 - [Current War II: Tesla vs Edison](https://mrbese.com/writing/war-of-the-currents/): the AC/DC fight, re-run inside the home (2026-07-08)
+- [Geothermal is in Heat](https://mrbese.com/writing/geothermal-heat/): what the heat-pump market misses about geothermal energy (2026-08-26)
 - [All writing](https://mrbese.com/writing/)
 - [RSS feed](https://mrbese.com/rss.xml)
 
 ## Products
 
-- [WattShed](https://wattshed.co): rebate program creator and clearinghouse for private funders of residential efficiency; built during OpenAI Build Week 2026, live in production
-- [Re_Tera](https://getretera.com): AI insurance copilot; live on the Apple App Store since June 2026
+- [WattShed](https://wattshed.co): live national rebate-program software with location-specific methodology offerings and a Milam County case study; no real payment execution
+- [WattShed engineering notes](https://github.com/mrbese/wattshed-notes): public product and engineering documentation; source code remains private
+- [Re_Tera](https://apps.apple.com/us/app/re-tera-insurance-copilot/id6776045760): AI insurance copilot for homeowners and renters, available on the Apple App Store
+- [Re_Tera engineering notes](https://github.com/mrbese/retera-notes): public product and engineering documentation; source code remains private
 - [CellSense](https://github.com/mrbese/cellsense): home battery payback calculator, native iOS
 - [HazShip](https://github.com/mrbese/HazShip): lithium-battery shipping compliance tool (UN 38.3, IATA DGR)
 
