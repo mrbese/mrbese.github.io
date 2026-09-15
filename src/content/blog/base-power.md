@@ -13,7 +13,7 @@ featured: true
 
 Everyone’s building in public. I’m job hunting in public. Researched → Applied → Hired or Ghosted. This is the full Base Power deep dive: 60+ hours of primary source research across ERCOT filings, Potomac Economics, Modo Energy, CPUC, CAISO, IRS guidance, and Base Power’s own spec pages. All numbers from primary sources. Nothing softened. Full disclaimer, still ghosted✌🏻.
 
-### The Gentailer Model. Actually Executed.
+## The Gentailer Model. Actually Executed.
 
 Most battery companies sell you an $18,000 box and disappear. [@basepowerco](https://x.com/@basepowerco) does not. Starting $695 upfront. $19/month. They own the hardware. You get backup power and a lower electricity bill. They eat the arbitrage and virtual power plant revenue. Simple pitch. But there is a specific structural reason it works when everyone running a similar thesis has failed.
 
@@ -21,7 +21,7 @@ Most battery companies sell you an $18,000 box and disappear. [@basepowerco](htt
 
 The customer pays once. Gets whole-home backup. Gets below-market energy rates. Base owns the distributed energy asset and collects grid revenue from wholesale dispatch around the clock. The subscription alone runs $228 to $348 per home per year. Grid trading sits on top of that. The customer got backup power for 95% less than a traditional install. Base got a yield-generating asset on someone else’s property, on their grid connection.
 
-### The Cost Basis. Not the Technology.
+## The Cost Basis. Not the Technology.
 
 Base does not manufacture batteries. They assemble them. CATL makes the lithium iron phosphate cells in China. Base imports those cells at roughly $55/kWh and assembles at a 90,000 sq ft facility in Austin. Off-the-shelf integrators buy finished modules at around $100/kWh. Result: Base’s 25 kWh single-unit system costs roughly $2,500 to $3,000 to build versus $6,000 to $8,000 for comparable off-the-shelf configurations.
 
@@ -29,7 +29,7 @@ Cell fabrication is a commodity race they cannot win and do not try to. They con
 
 Ford did not invent the assembly line. He borrowed the concept from Chicago slaughterhouses where master butchers were the production bottleneck. Base did the same thing. The Austin factory is not a Gigafactory. It is a very smart warehouse designed so a driveway crew can assemble the system without field improvisation. The factory exists to make the installer stupid-fast. The bottleneck was never manufacturing. It is installation crews. All design decisions follow from that constraint.
 
-### The IRA. Working Capital Flywheel.
+## The IRA. Working Capital Flywheel.
 
 Section 48E ITC gives 30% back on Fair Market Value, not on COGS. COGS is roughly $3,000. Retail fair market value is roughly $10,000. The 30% credit returns approximately $3,000 per unit. The hardware effectively pays for itself before the customer writes a check.
 
@@ -37,7 +37,7 @@ US assembly triggers the domestic content adder, pushing the total investment ta
 
 Section 6418 transferability closes the loop. Base can sell those credits immediately at 91 to 94 cents on the dollar. No 18-month negotiations. Deploy, generate credit, sell, redeploy. That is the working capital engine behind deployment velocity.
 
-### The Inverter. Not a Commodity.
+## The Inverter. Not a Commodity.
 
 Base publishes 11.4 kW max continuous real power for both the single-unit 25 kWh system and the dual-unit 50 kWh system. The dual unit doubles storage capacity and dispatch duration. It does not change the inverter output. Both configurations share the same 11.4 kW ceiling.
 
@@ -45,7 +45,7 @@ SolarEdge and Enphase are designed for solar self-consumption. Wrong tool for th
 
 Why 11.4 kW continuous matters in ERCOT: the real-time system-wide offer cap (SWCAP) sits at $2,000/MWh. The day-ahead SWCAP is $5,000/MWh. These are offer caps, not price ceilings. Actual locational marginal prices can exceed both thresholds under congestion. During those events, 11.4 kW dispatching versus a competitor’s 5 kW is the difference between full revenue capture and watching half the value disappear. The inverter is the monetization engine. Build it yourself or leave that money for someone else.
 
-### The ERCOT Revenue Collapse. And What Survived.
+## The ERCOT Revenue Collapse. And What Survived.
 
 Here is the part that does not make it into pitch decks. ERCOT battery storage grew from under 1 GW in 2021 to approximately 13.9 GW by early 2026. That growth cannibalized the ancillary services revenue that justified building all those batteries. ECRS clearing prices fell from $76.77/MWh in 2023 to $9.62/MWh in 2024: an 87% collapse. Total battery revenue fell 75 to 78% over the same period, from approximately $192/kW-year to roughly $43/kW-year. (Sources: Potomac Economics, Modo Energy.)
 
@@ -57,13 +57,13 @@ The ADER program sets another ceiling to work within: ERCOT expanded the Aggrega
 
 December 2025: ERCOT launched Real-Time Co-optimization plus Batteries. Every five minutes, the system dynamically reassigns batteries between energy and reserves. Passive standby revenue is gone. You need a real dispatch algorithm now.
 
-### Volatility Paradox. Hoax.
+## Volatility Paradox. Hoax.
 
 The conventional narrative: more batteries suppress the price spikes that justify building batteries. This is real and supported by 2024 data. But the bull case deserves serious treatment. The ERCOT large-load interconnection queue, primarily data centers and industrial demand, nominally shows approximately 233 GW of pending new load. The generation interconnection queue is approximately 432 GW of active requests (storage, solar, gas, wind). Historically, 75–85% of generation queue projects are never built, yielding realistic net new generation of 65–110 GW.
 
 AI data centers, EV charging, and industrial electrification could add 20–30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin (currently above 30%) compresses back toward sub-15%, Where scarcity events become frequent again and batteries print money. But until then companies depend solely on ancillary prices need to get creative.
 
-### The Funding. AC vs DC.
+## The Funding. AC vs DC.
 
 $1.3 billion total. $1 billion Series C in October 2025, led by Addition at a $4 billion valuation. Andreessen Horowitz, Lightspeed, Thrive, CapitalG, and Ribbit all participated. Over 100 MWh of distributed battery capacity deployed across DFW, Houston, and Austin in under two years. That's $200 million in April, and another $1 billion just six months later.
 
@@ -80,9 +80,9 @@ Omer Bese
 
 The ERCOT revenue collapse is well-documented. We’ve seen an 87% drop in ancillary service clearing prices and a 75–78% drop in total battery revenue per kW. Companies carrying $8,000 system COGS are done. Base Power is not, because they verticalized hard and early. But verticalization is a direction, not a destination. Here is what I would do next. I'm bringing actual numbers, because strategic frameworks without specifics are just opinions.
 
-### FIRST ACTION
+## FIRST ACTION
 
-### The Thermal Battery. Doubling Down on Verticalization via Energy Efficiency
+## The Thermal Battery. Doubling Down on Verticalization via Energy Efficiency
 
 There is a framing problem costing Base money every day they do not address it. The battery is competing with the home for power. Whether a customer buys the single-unit (25 kWh) or the dual-unit (50 kWh), both systems are capped at the exact same 11.4 kW continuous output. The dual unit gives you twice the storage duration, but it doesn't give Base more dispatch power. So for every customer, actual export capacity during a grid event equals:
 
@@ -90,7 +90,7 @@ There is a framing problem costing Base money every day they do not address it. 
 
 A standard, inefficient Texas home draws 5–6 kW on a summer afternoon. That leaves the inverter exporting barely half its rated output. Base installed an 11.4 kW asset but captures only ~5 kW during the exact scarcity events that pay the highest rates. The building envelope is cannibalizing grid services revenue.
 
-### The Physics, Quantified
+## The Physics, Quantified
 
 An Austin attic hits 140°F in August. The AC compressor runs continuously. Here is what happens when you address the building envelope:
 
@@ -102,7 +102,7 @@ By liberating an extra 2 kW per home through these passive upgrades, Base yields
 
 Under ERCOT's new RTC+B market rules, and assuming just 20 hours of extreme scarcity a year, optimizing the split between $2,000/MWh Real-Time dispatch and $5,000/MWh Day-Ahead reserves across a 30,000-home fleet translates to $2.4M to $6.0M in additional annual revenue.
 
-### The Moat. Decoupled Installation.
+## The Moat. Decoupled Installation.
 
 Base Power already treats home installation like a decoupled assembly line. Because they own the manufacturing and prep everything in advance, their install schedule is broken into specialized nodes; An advance material drop-off, an electrical crew for a 1-3 hour power disconnect, and a separate cleanup crew.
 
@@ -114,9 +114,9 @@ Here is exactly how the efficiency upgrades slot perfectly into this existing sc
 
 By piggybacking on their existing decoupled schedule, Base achieves zero additional customer acquisition cost and zero extra truck rolls. This structural advantage saves $650 to $1,100 per home compared to traditional efficiency contractors. At 40 installs/day with a 30% upsell rate, that route efficiency alone generates a $2M–$3M annual operational advantage, before a single VPP revenue dollar hits the books.
 
-### SECOND ACTION
+## SECOND ACTION
 
-### California. The Financial Arbitrage.
+## California. The Financial Arbitrage.
 
 Texas is an energy-only market. Lenders price that merchant risk: SOFR + 350-450 bps, 50% LTV, 2.0x DSCR. For every $12,000 deployed in Texas, Base can borrow roughly $6,000.
 
@@ -130,7 +130,7 @@ San Diego. Market Entery.
 - The NEM 3.0 Void: Solar export credits cratered. Customers were left behind with panels on their roofs and no economic answer for excess generation. This is exactly who Base walks into. Base's $695 upfront fee vs. a $15,000+ Tesla Powerwall is a mismatch.
 - B2B2C Entry: Base enters as a DER aggregator through CCA partnerships (like San Diego Community Power), bringing the fleet and the RA capacity that CCAs desperately need.
 
-### Volatility Paradox. Hoax.
+## Volatility Paradox. Hoax.
 
 The self-defeating nature of energy storage is validated by 2024 data in Texas. The argument is that as more batteries are deployed to capitalize on extreme volatility, they erase the very price spikes that make them profitable.
 
@@ -140,7 +140,7 @@ ERCOT currently has a staggering 233 GW interconnection queue for demand-side lo
 
 Meanwhile, a massive wave of AI data centers and industrial electrification is crashing into the grid. This isn't flexible demand; this is 20–30 GW of flat, continuous, 24/7 baseload. If this demand materializes faster than net storage grows, the reserve margin (currently above 30%) will compress back toward sub-15%. where scarcity events become frequent again and batteries print money.
 
-### The Capital Flywheel
+## The Capital Flywheel
 
 Doubling down on energy efficiency squeezes the last drop of juice from the battery they already deployed, maximizing profits from the wild Texas volatility. Meanwhile, diversifying into California’s RA market secures the investment-grade debt needed to fund that Texas expansion. These are not two separate markets running in parallel. It is a united capital structure.
 
