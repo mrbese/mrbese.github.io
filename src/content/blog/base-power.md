@@ -7,11 +7,9 @@ tags: ["research", "energy"]
 featured: true
 ---
 
-> **Rejected but it lead me to found [wattshed.co](https://wattshed.co).**
+> **Update: Rejected but it lead me to found [wattshed.co](https://wattshed.co).**
 
-[Part 1 on X](https://x.com/mrbese/article/2025062849970889191) · [Part 2 on X](https://x.com/mrbese/status/2025065336748331017)
-
-## Part 1
+## What I learned about Base Power
 
 Everyone’s building in public. I’m job hunting in public. Researched → Applied → Hired or Ghosted. This is the full Base Power deep dive: 60+ hours of primary source research across ERCOT filings, Potomac Economics, Modo Energy, CPUC, CAISO, IRS guidance, and Base Power’s own spec pages. All numbers from primary sources. Nothing softened. Full disclaimer, still ghosted✌🏻.
 
@@ -75,31 +73,7 @@ One thing is for sure: Volatility is the middle name of this game. It seems like
 
 Omer Bese
 
-[#ApplyingInPublic](https://x.com/search?q=%23ApplyingInPublic&src=hashtag_click)
-
-[#EnergyStorage](https://x.com/search?q=%23EnergyStorage&src=hashtag_click)
-
-[#BasePower](https://x.com/search?q=%23BasePower&src=hashtag_click)
-
-[#ERCOT](https://x.com/search?q=%23ERCOT&src=hashtag_click)
-
-[#VirtualPowerPlant](https://x.com/search?q=%23VirtualPowerPlant&src=hashtag_click)
-
-[#DistributedEnergy](https://x.com/search?q=%23DistributedEnergy&src=hashtag_click)
-
-[#GridServices](https://x.com/search?q=%23GridServices&src=hashtag_click)
-
-[#HomeEnergy](https://x.com/search?q=%23HomeEnergy&src=hashtag_click)
-
-[#EnergyTransition](https://x.com/search?q=%23EnergyTransition&src=hashtag_click)
-
-[#VerticalIntegration](https://x.com/search?q=%23VerticalIntegration&src=hashtag_click)
-
-[#ClimateInvesting](https://x.com/search?q=%23ClimateInvesting&src=hashtag_click)
-
-## Part 2. What I Would Do If I land the Job.
-
-Everyone’s “building in public.” I’m job hunting in public. Researched → Applied → Hired or Ghosted. This is the full Base Power deep dive, Part 2. What I would do if I landed the New Opportunities position at [@basepowerco](https://x.com/@basepowerco)
+## What I Would Do If I land the Job.
 
 1. The Thermal Battery: Liberating an extra 2 kW of export capacity to the grid by doubling down into vertical integration by adding energy efficiency upgrades to the stack.
 2. California. The Financial Arbitrage: Using California's stable RA contracts to secure investment-grade debt to fund Texas growth.
@@ -173,7 +147,3 @@ Doubling down on energy efficiency squeezes the last drop of juice from the batt
 California offers the steady, predictable 'Direct Current' of regulated returns, shielding [Base Power Company](https://www.linkedin.com/company/basepowercompany/) from the troughs of Texas's wild 'Alternating Current' while letting them bank the crests.
 
 Omer Bese
-
-Any thoughts from the energy storage network? What did I miss? Let's discuss below. 👇
-
-[#ApplyingInPublic](https://x.com/search?q=%23ApplyingInPublic&src=hashtag_click)
