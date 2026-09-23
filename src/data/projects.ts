@@ -7,6 +7,8 @@ export interface Project {
   repoUrl?: string;
   description: string;
   stack: string[];
+  // Homepage "building" index. Entries without it live on /projects only.
+  home?: boolean;
 }
 
 export const projects: Project[] = [
@@ -19,6 +21,7 @@ export const projects: Project[] = [
     description:
       'Grid capacity does not have to be generated, it can be freed. WattShed is an end-to-end rebate creation and clearing engine for whoever needs grid headroom (a utility, a data-center developer, any large load): the funder pays for permanent demand reduction, residents get home upgrades, and the rebate goes straight to the contractor. Built in two days for OpenAI Build Week and customized as if OpenAI were the client: GPT-vision home inspection, with offers priced from Texas TRM v13.0 deemed savings by a reasoning model working a fixed qualification rulebook against a single client-set dollar-per-kW constant. Live as a staged demo serving Milam County, Texas.',
     stack: ['Next.js 16', 'React 19', 'Firebase', 'OpenAI vision', 'Texas TRM v13.0', '255-test Vitest suite'],
+    home: true,
   },
   {
     name: 'ManorOS',
@@ -27,6 +30,7 @@ export const projects: Project[] = [
     description:
       'A home energy assessment tool that uses LiDAR room scanning via Apple RoomPlan, HVAC equipment logging with on-device OCR via Apple Vision, appliance detection, window assessment, and ACCA Manual J BTU calculations. Generates tiered upgrade recommendations with payback periods and battery synergy insights. Code opens up when it ships.',
     stack: ['Swift', 'SwiftUI', 'SwiftData', 'ARKit', 'RoomPlan', 'AVFoundation', 'Vision OCR', 'CoreLocation', 'PDFKit'],
+    home: true,
   },
   {
     name: 'CellSense',
@@ -36,6 +40,7 @@ export const projects: Project[] = [
     description:
       'Compare Tesla Powerwall 3, Enphase IQ 5P, Pila Mesh, and Base Power side by side. Supports 16 utilities, 32 rate plans, NEM 3.0, and VPP earnings projections for ELRP, ConnectedSolutions, and ERCOT.',
     stack: ['Vanilla JavaScript', 'Zero dependencies', 'Canvas charts'],
+    home: true,
   },
   {
     name: 'HazShip',
@@ -45,5 +50,26 @@ export const projects: Project[] = [
     description:
       'Encodes the entire regulatory decision tree for 49 CFR 173.185, IATA DGR 66th Edition, and IMDG Code Amendment 42-24. Outputs UN numbers, packing instructions, labels, and documentation checklists. Built from direct experience shipping lithium-ion medical devices through FDA clearance.',
     stack: ['SwiftUI (iOS 17+)', 'Pure engine pattern', 'Zero dependencies', 'Fully offline'],
+    home: true,
+  },
+  {
+    name: 'Re_Tera',
+    tagline: 'iOS Home Inventory for Insurance Claims',
+    year: '2026',
+    // Internal page, not a repo link: /retera.
+    repoUrl: '/retera',
+    description:
+      'Re_Tera is a native iOS home inventory app: scan your rooms, catalog what you own, and keep the documentation an insurer actually asks for. Re_Tera shipped to the public App Store in June 2026, built native in Swift, iOS first.',
+    stack: ['Swift', 'iOS'],
+  },
+  {
+    name: 'shitster',
+    tagline: 'Consumer Self-Help Campaigns',
+    year: '2026',
+    // Internal page, not a repo link: /shitster.
+    repoUrl: '/shitster',
+    description:
+      'BMW pushed a Spider-Man ad to the dashboard of cars people own, on a screen it once called a private space. I read the 28-page contract they wrote, found the clause where they obligate themselves to call every complaining owner back individually, and built the tool that generates those letters in the browser. Zero accounts, zero stored data, open source. First campaign: DashOff.',
+    stack: [],
   },
 ];

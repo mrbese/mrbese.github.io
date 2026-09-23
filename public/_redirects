@@ -9,5 +9,10 @@
 /applying        /                                            301
 /applying/*      /                                            301
 
+# Services page removed. 301 the bare page and any deep links so old links
+# and crawler caches do not land on a 404.
+/services        /                                            301
+/services/*      /                                            301
+
 # Agents and validators probe the conventional path; Astro emits sitemap-index.xml.
 /sitemap.xml     /sitemap-index.xml                           301

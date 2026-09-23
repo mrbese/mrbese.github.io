@@ -21,7 +21,6 @@
 
 - [About](https://mrbese.com/about/): a dated record of outcomes, 2014 to 2026
 - [Projects](https://mrbese.com/projects/)
-- [Services](https://mrbese.com/services/): residential energy audits, smart-home and AI setups
 
 ## Contact
 

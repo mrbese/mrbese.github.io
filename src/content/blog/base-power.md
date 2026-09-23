@@ -2,16 +2,16 @@
 title: "What I Learned About Base Power."
 date: 2026-05-01
 readTime: 12 min
-description: "Everyone’s building in public. I’m job hunting in public. Researched → Applied → Hired or Ghosted."
+description: "Sixty-plus hours of primary source research across ERCOT filings, Potomac Economics, Modo Energy, IRS guidance, and Base Power's own spec pages."
 tags: ["research", "energy"]
 featured: true
 ---
 
-> **Update: Rejected but it lead me to found [wattshed.co](https://wattshed.co).**
+> **This research led me to found [wattshed.co](https://wattshed.co).**
 
 ## What I learned about Base Power
 
-Everyone’s building in public. I’m job hunting in public. Researched → Applied → Hired or Ghosted. This is the full Base Power deep dive: 60+ hours of primary source research across ERCOT filings, Potomac Economics, Modo Energy, CPUC, CAISO, IRS guidance, and Base Power’s own spec pages. All numbers from primary sources. Nothing softened. Full disclaimer, still ghosted✌🏻.
+This is the full Base Power deep dive: 60+ hours of primary source research across ERCOT filings, Potomac Economics, Modo Energy, CPUC, CAISO, IRS guidance, and Base Power’s own spec pages. All numbers from primary sources. Nothing softened.
 
 ## The Gentailer Model. Actually Executed.
 
@@ -67,13 +67,11 @@ AI data centers, EV charging, and industrial electrification could add 20–30 G
 
 $1.3 billion total. $1 billion Series C in October 2025, led by Addition at a $4 billion valuation. Andreessen Horowitz, Lightspeed, Thrive, CapitalG, and Ribbit all participated. Over 100 MWh of distributed battery capacity deployed across DFW, Houston, and Austin in under two years. That's $200 million in April, and another $1 billion just six months later.
 
-The Warren Buffett inside me is screaming, "Sunrun! Srun, run, run, run!" With a market cap at $20 billion in Jan 2021, they got destroyed. After hitting rock bottom at $1.5 billion in April 2025, they are making a comeback today at $4.5 billion, trading at 1.72x sales and pivoting hard to Battery-First, "home-to-grid" VPPs. Meanwhile, the market believes Base has verticalized deep enough to survive a revenue compression that is washing out everyone else. And there is something in Base's "sacret lunch" that Sunrun simply cannot replicate with their 9,751 employees (Sept 2025).
+The Warren Buffett inside me is screaming, "Sunrun! Srun, run, run, run!" With a market cap at $20 billion in Jan 2021, they got destroyed. After hitting rock bottom at $1.5 billion in April 2025, they are making a comeback today at $4.5 billion, trading at 1.72x sales and pivoting hard to Battery-First, "home-to-grid" VPPs. Meanwhile, the market believes Base has verticalized deep enough to survive a revenue compression that is washing out everyone else. And there is something in Base's "secret sauce" that Sunrun simply cannot replicate with their 9,751 employees (Sept 2025).
 
 One thing is for sure: Volatility is the middle name of this game. It seems like anything that touches electricity eventually copies its sine wave. Here's hoping Base's valuation adopts DC.
 
-Omer Bese
-
-## What I Would Do If I land the Job.
+## What I Would Do Next.
 
 1. The Thermal Battery: Liberating an extra 2 kW of export capacity to the grid by doubling down into vertical integration by adding energy efficiency upgrades to the stack.
 2. California. The Financial Arbitrage: Using California's stable RA contracts to secure investment-grade debt to fund Texas growth.
@@ -124,21 +122,11 @@ California’s Resource Adequacy (RA) framework is different. RA contracts pay f
 
 Same cells. Same inverter. Different contract. That contracted California revenue cross-collateralizes the Texas fleet. On a blended $100M portfolio (60% TX, 40% CA), this saves $900k to $1.5M annually in interest expense.
 
-San Diego. Market Entery.
+San Diego. Market Entry.
 
 - Rates: SDG&E residential rates average $0.39–$0.40/kWh (2.5x the national average). A $40–$60/mo subscription is commercially supportable, double the Texas rate for the same hardware.
 - The NEM 3.0 Void: Solar export credits cratered. Customers were left behind with panels on their roofs and no economic answer for excess generation. This is exactly who Base walks into. Base's $695 upfront fee vs. a $15,000+ Tesla Powerwall is a mismatch.
 - B2B2C Entry: Base enters as a DER aggregator through CCA partnerships (like San Diego Community Power), bringing the fleet and the RA capacity that CCAs desperately need.
-
-## Volatility Paradox. Hoax.
-
-The self-defeating nature of energy storage is validated by 2024 data in Texas. The argument is that as more batteries are deployed to capitalize on extreme volatility, they erase the very price spikes that make them profitable.
-
-But the bull case expose the hoax in this paradox.
-
-ERCOT currently has a staggering 233 GW interconnection queue for demand-side load. On the supply side, the generation queue holds roughly 432 GW of active requests. But anyone working in the industry knows the reality: 75–85% of these are speculative "node hunters". When the dust settles, realistic net new generation is only about 65–110 GW.
-
-Meanwhile, a massive wave of AI data centers and industrial electrification is crashing into the grid. This isn't flexible demand; this is 20–30 GW of flat, continuous, 24/7 baseload. If this demand materializes faster than net storage grows, the reserve margin (currently above 30%) will compress back toward sub-15%. where scarcity events become frequent again and batteries print money.
 
 ## The Capital Flywheel
 

@@ -17,7 +17,7 @@ img{max-width:100%;height:auto;display:block}
 /* mono label register */
 .label{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.18em;text-transform:uppercase}
 
-/* generic page header (about/projects/services/etc.) */
+/* generic page header (about/projects/writing/etc.) */
 .phead{padding:56px 0 0}
 .phead .eyebrow{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.2em;text-transform:uppercase;color:var(--ink-2);margin-bottom:18px}
 .phead h1{font-family:var(--display);font-weight:400;font-size:var(--t-display);line-height:1.12;max-width:22ch}

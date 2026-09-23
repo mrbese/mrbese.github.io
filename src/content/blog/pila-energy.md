@@ -7,8 +7,6 @@ tags: ["research", "energy"]
 featured: true
 ---
 
-Full disclosure up front, because the brand here is honesty: I applied for the Operations Lead role, through Dover, and got ghosted. I wrote this anyway. The work was worth doing whether or not anyone read it.
-
 ## the permissionless insight, not the battery
 
 The clever part of Pila is not the cell. It is a plug. By landing on a NEMA 5-15 plug with roughly 20-millisecond anti-islanding, the unit reclassifies from "energy system" to "portable appliance." That single regulatory choice sidesteps the permitting and interconnection gauntlet that keeps storage out of the exact homes that need it most. It is arbitrage, and it is legal.

@@ -2,12 +2,12 @@
 title: "Current War II: Tesla vs Edison"
 date: 2026-07-08
 readTime: 13 min
-description: A three-part series. Edison lost the war of the currents to a component gap. 130 years later the physics, the building code, and Texas all flipped his way.
+description: Edison lost the war of the currents to a component gap. 130 years later the physics, the building code, and Texas all flipped his way.
 tags: ["research", "energy"]
 featured: true
 ---
 
-## part 1: elon should rename tesla to edison
+## elon should rename tesla to edison
 
 *Don't worry, it's not clickbait. But before coming to that part, let's take a look at a 130-year-old hiatus.*
 
@@ -49,7 +49,7 @@ The newest generations of these units also pack the inverter directly inside the
 
 Add it up. The entire residential energy transition is executing the central strategic bet Edison made on iron-based storage for a DC world, now shipping at global scale under the corporate brand of the man he spent his life fighting. Nikola Tesla spent his life proving AC could power a planet. The trillion-dollar brand carrying his name is out proving it doesn't have to. Somewhere, the most ruthless man in early American technology is getting the last laugh.
 
-## part 2: the stopwatch that made 450V legal
+## the stopwatch that made 450V legal
 
 If you want to know where the regulatory undercurrents are shifting, you do not read corporate mission statements. You read the building codes.
 
@@ -103,7 +103,7 @@ The electrical infrastructure becomes exposed to voltage ripple driven by the gr
 
 Electromagnetic transformers carry more than a century of field data. Fault-managed FMPS transmitters have roughly three years of commercial history. Corporate claims of 200 percent reliability gains over AC equivalents often trace back to thin, circular citation chains. The real entrepreneurial alpha is not in building another transmitter. It is in the boring, recurring work of monitoring capacitor aging and varistor health across DC infrastructure.
 
-## part 3: texas can have their cake and eat it too
+## texas can have their cake and eat it too
 
 At the scale of entire grids, direct current stops being mainly about efficiency. It becomes a tool for keeping federal regulators on the other side of the state line.
 

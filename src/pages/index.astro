@@ -32,7 +32,7 @@ const heroDot = site.hero.endsWith('.') ? '.' : '';
   </div>
 
   <Row label="building">
-    {projects.map((p, i) => <ProjectItem {...p} compact lead delay={i * 0.07} />)}
+    {projects.filter((p) => p.home).map((p, i) => <ProjectItem {...p} compact lead delay={i * 0.07} />)}
     <a class="more reveal" href="/projects">all projects &rarr;</a>
   </Row>
 
