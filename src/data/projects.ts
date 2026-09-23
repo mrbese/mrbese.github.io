@@ -14,14 +14,24 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: 'WattShed',
-    tagline: 'B2B Rebate Engine for Grid Capacity',
+    tagline: 'Rebate Program Designer and Evidence Workflow',
     year: '2026',
     // Repo is private; the link points at the live app, wattshed.co.
     repoUrl: 'https://wattshed.co',
     description:
-      'Grid capacity does not have to be generated, it can be freed. WattShed is an end-to-end rebate creation and clearing engine for whoever needs grid headroom (a utility, a data-center developer, any large load): the funder pays for permanent demand reduction, residents get home upgrades, and the rebate goes straight to the contractor. Built in two days for OpenAI Build Week and customized as if OpenAI were the client: GPT-vision home inspection, with offers priced from Texas TRM v13.0 deemed savings by a reasoning model working a fixed qualification rulebook against a single client-set dollar-per-kW constant. Live as a staged demo serving Milam County, Texas.',
-    stack: ['Next.js 16', 'React 19', 'Firebase', 'OpenAI vision', 'Texas TRM v13.0', '255-test Vitest suite'],
+      'WattShed is live national rebate-program software with a public, no-login designer for all 50 states and DC. Its deterministic engine combines degree-day and modified-bin estimates with location-appropriate deemed methodologies where available. A Milam County case study demonstrates evidence review, qualification, quote approval, completion clearance, and payment-instruction records. Settlement remains simulated. WattShed has no payment processor, does not custody funds, and moves no money.',
+    stack: ['Next.js 16', 'React 19', 'Firebase', 'OpenAI vision', 'Deterministic qualification engine'],
     home: true,
+  },
+  {
+    name: 'Re_Tera',
+    tagline: 'AI Insurance Copilot for Homeowners and Renters',
+    year: '2026',
+    // Internal page, not a repo link: /retera. It carries the App Store link.
+    repoUrl: '/retera',
+    description:
+      'A native iOS policy-investigation and home-inventory product for homeowners and renters, available on the Apple App Store for iPhone and iPad. Re_Tera helps users inspect coverage gaps, sublimits, and exclusions against their own policy and organize documentation for inventory export.',
+    stack: ['Swift', 'SwiftUI', 'Firebase', 'OpenAI', 'Apple Vision', 'RevenueCat'],
   },
   {
     name: 'ManorOS',
@@ -51,16 +61,6 @@ export const projects: Project[] = [
       'Encodes the entire regulatory decision tree for 49 CFR 173.185, IATA DGR 66th Edition, and IMDG Code Amendment 42-24. Outputs UN numbers, packing instructions, labels, and documentation checklists. Built from direct experience shipping lithium-ion medical devices through FDA clearance.',
     stack: ['SwiftUI (iOS 17+)', 'Pure engine pattern', 'Zero dependencies', 'Fully offline'],
     home: true,
-  },
-  {
-    name: 'Re_Tera',
-    tagline: 'iOS Home Inventory for Insurance Claims',
-    year: '2026',
-    // Internal page, not a repo link: /retera.
-    repoUrl: '/retera',
-    description:
-      'Re_Tera is a native iOS home inventory app: scan your rooms, catalog what you own, and keep the documentation an insurer actually asks for. Re_Tera shipped to the public App Store in June 2026, built native in Swift, iOS first.',
-    stack: ['Swift', 'iOS'],
   },
   {
     name: 'shitster',
