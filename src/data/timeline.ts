@@ -26,7 +26,7 @@ export const education: Entry[] = [
 export const career: Entry[] = [
   {
     org: 'Bonjuur',
-    role: 'Founder and Janitor',
+    role: 'Founder and CEO',
     period: '2022 - Present',
     location: 'NY to LA',
     note: 'Timeshare subscription for a full-time housekeeper. Built a 180-person waitlist by cleaning houses myself for six months. First check from Jason Calacanis. Raised $90K, navigated the trough of sorrow, returned to energy.',
