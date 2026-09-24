@@ -4,7 +4,6 @@ export const site = {
   chip: 'operator · builder',
   location: 'Los Angeles, California',
   focus: 'distributed energy · ops · software',
-  now: 'Looking for the right role. Building energy tools in the meantime.',
   // The standfirst is the homepage h1. The trailing period renders as the
   // red-period signature (sliced in index.astro), so keep it terminal.
   hero: 'I build energy tools and publish the research behind them.',
