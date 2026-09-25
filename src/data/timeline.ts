@@ -19,7 +19,7 @@ export const education: Entry[] = [
     role: 'B.S. Energy Systems Engineering',
     period: '2010 - 2014',
     location: 'Istanbul',
-    note: 'Thesis on geothermal power systems. Flew to the Stanford Geothermal Workshop to ask Ormat Technologies for their well data in person.',
+    note: 'Thesis on geothermal power systems. Flew to the Stanford Geothermal Workshop to listen, learn and network. The well data was private, so I tracked down Ormat Technologies and got it over breakfast.',
   },
 ];
 
