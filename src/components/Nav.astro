@@ -1,4 +1,5 @@
 ---
+import { site } from '../data/site.ts';
 const path = Astro.url.pathname;
 const isHome = path === '/';
 const items: [string, string][] = [
@@ -12,7 +13,7 @@ const isOn = (href: string) =>
 ---
 <header class="mast">
   {isHome
-    ? <span class="tagline">operator &middot; builder</span>
+    ? <span class="tagline">{site.chip}</span>
     : <a href="/" class="wm">omer bese<i>.</i></a>}
   <nav class="nav" aria-label="Primary">
     {items.map(([href, label]) => (
