@@ -36,7 +36,7 @@ export const career: Entry[] = [
     role: 'Founder',
     period: '2022 - 2025',
     location: 'NY to LA',
-    note: 'A daily housekeeping service built on short visits. Built a 180-person waitlist by cleaning houses myself for six months. First check from Jason Calacanis. Raised $90K, navigated the trough of sorrow, returned to energy.',
+    note: 'A daily housekeeping service built on short visits. Built a 180-person waitlist by cleaning houses myself for six months. First check from Jason Calacanis. Raised $90K. Wound the service down at the end of 2024, pivoted in 2025 to vision AI for in-home service work, then wound the pivot down in December 2025 and returned to energy.',
   },
   {
     org: 'Tulip Haus',
