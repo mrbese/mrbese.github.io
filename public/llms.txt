@@ -13,7 +13,7 @@
 
 ## Products
 
-- [WattShed](https://wattshed.co): live national rebate-program software with location-specific methodology offerings and a Milam County case study; no real payment execution
+- [WattShed](https://wattshed.co): live national software that creates, verifies and pays residential energy efficiency rebates; public no-login program designer for all 50 states and DC
 - [WattShed engineering notes](https://github.com/mrbese/wattshed-notes): public product and engineering documentation; source code remains private
 - [Re_Tera](https://apps.apple.com/us/app/re-tera-insurance-copilot/id6776045760): AI insurance copilot for homeowners and renters, available on the Apple App Store
 - [Re_Tera engineering notes](https://github.com/mrbese/retera-notes): public product and engineering documentation; source code remains private
@@ -22,7 +22,7 @@
 
 ## About
 
-- [About](https://mrbese.com/about/): a dated record of outcomes, 2014 to 2026
+- [About](https://mrbese.com/about/): education, career, and fellowships
 - [Projects](https://mrbese.com/projects/)
 
 ## Contact

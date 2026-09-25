@@ -14,7 +14,7 @@ Always read `DESIGN.md` before making any visual or UI decisions. All font choic
 - The OMER BESE wordmark with portrait composited inside the O is the memorable thing. Do not redesign the hero composite without explicit approval.
 - **Approved font trio (2026-07-04): Instrument Serif (display), Newsreader (serif prose), IBM Plex Mono (mono).** Space Grotesk was removed with the 2026-07-05 migration; never reintroduce it or any fourth font without explicit approval.
 - The accent color `--filament: #FF0155` is rare, with a closed usage list (see DESIGN.md): the red-period signature on display headlines, the round status dot, and hover states. Nothing else.
-- Positioning: operator/builder leads; "energy systems engineer" is a supporting proof clause, never the headline identity (titles, taglines, JSON-LD jobTitle included).
+- Positioning (updated 2026-09-25 with Omer's approval): the identity line is "energy systems engineer, founder, builder, operator", and "energy systems engineer" may lead (titles, taglines, JSON-LD jobTitle included).
 - No personal email addresses anywhere on the site. Contact is GitHub/X/LinkedIn links only.
 
 ## File layout
@@ -23,7 +23,7 @@ Always read `DESIGN.md` before making any visual or UI decisions. All font choic
 - `src/layouts/`: `BaseLayout.astro` (head, favicon, canonical, Person JSON-LD, skip link, `<main>`), `ArticleLayout.astro` (article OG + BlogPosting JSON-LD)
 - `src/components/`: Nav, Footer, Row (section rows with h2 labels), ProjectItem (repoUrl optional; omit for private repos), HeroBanner, PostRow, Rail, Tag, PullQuote
 - `src/content/blog/`: posts (frontmatter `date` is the single source of truth for both on-page dates and RSS pubDate; all date formatting must pass `timeZone: 'UTC'` or the two drift)
-- `src/data/`: site.ts (title/lede/chip copy), projects.ts, services.ts, social.ts, timeline.ts, record.ts (the /about dated ledger; every line must stay literally true with a verified year)
+- `src/data/`: site.ts (title/lede/chip copy), projects.ts, social.ts, timeline.ts (record.ts, the /about dated ledger, was removed 2026-09-25)
 - `public/`: `_headers`, `_redirects` (Cloudflare Pages), favicon.svg/.ico, apple-touch-icon.png, robots.txt, img/
 - `DESIGN.md`: design system, source of truth
 

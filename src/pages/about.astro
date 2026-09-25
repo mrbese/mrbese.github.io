@@ -2,11 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Row from '../components/Row.astro';
 import { education, career, fellowships } from '../data/timeline.ts';
-import { record } from '../data/record.ts';
+import { site } from '../data/site.ts';
 ---
 <BaseLayout
   title="About · Omer Bese"
-  description="Founder-operator and builder: Columbia M.S., a decade across a family business, a nonprofit, and three startups, and the shipped work to show for it."
+  description="Energy systems engineer, founder, builder and operator. Columbia M.S., a decade across a family business, a nonprofit, and three startups."
   path="/about"
 >
   <div class="phead reveal">
@@ -16,46 +16,30 @@ import { record } from '../data/record.ts';
 
   <section class="essay">
     <div class="prose">
-      <p>
-        Founder-operator and builder, energy systems engineer by training. Distributed energy,
-        physical ops, and software, built from first principles.
-      </p>
+      <p>{site.lede}</p>
     </div>
     <div class="prose record">
       <p>
-        I am an unapologetic hedonist with just enough narcissism to paint a giant mural of my
-        own face in my living room, yet somehow still not too good to clean houses myself,
-        every weekday, for six months, for my startup.
+        Energy systems engineer who builds. I notice what doesn't work, trace it back to the
+        assumption nobody questioned, and build the fix instead of complaining about it.
       </p>
       <p>
-        I have a relentless curiosity and often find inspiration in obscurity, like the fact
-        that we invented four-wheeled luggage after we had already stepped on the moon.
-        Frustration usually follows, though, because we fail to evolve the status quo alongside
-        the invention, like keeping the vertical design even though it now creates significant
-        instability.
+        Humankind walked on the moon before it invented the four-wheeled suitcase. That fact has
+        always inspired and frustrated me at the same time. It inspires me because it shows the
+        solution often already exists. It frustrates me because it shows how hard it is to break
+        the status quo. We kept the vertical design instead of turning it horizontal, so now it
+        tips over.
       </p>
       <p>
-        I am equally baffled by things that make no sense at all. Like pedal trash cans next to
-        toilets, placed as if your foot could reach the lever just after wiping your ass. Or
-        pull door handles on push-to-open doors. Just a couple of examples in my list of
-        crimes against humanity.
+        I am equally baffled by pedal trash cans next to toilets, placed as if your foot could
+        reach the lever right after wiping your ass. Or pull handles on push doors. Or faucet
+        handles placed so the water in your hands drips outside the sink. Just a few entries on
+        my list of crimes against humanity.
       </p>
     </div>
   </section>
 
-  <Row label="the record" num="01">
-    <div class="ledger">
-      {record.map((r) => (
-        <div class="rec">
-          <span class="ryr">{r.year}</span>
-          <span class="rlead" aria-hidden="true"></span>
-          <span class="rtxt">{r.line}</span>
-        </div>
-      ))}
-    </div>
-  </Row>
-
-  <Row label="education" num="02">
+  <Row label="education" num="01">
     {education.map((e) => (
       <div class="entry">
         <div class="etop"><span class="org">{e.org}</span><span class="per">{e.period}</span></div>
@@ -65,7 +49,7 @@ import { record } from '../data/record.ts';
     ))}
   </Row>
 
-  <Row label="work" num="03">
+  <Row label="work" num="02">
     {career.map((e) => (
       <div class="entry">
         <div class="etop"><span class="org">{e.org}</span><span class="per">{e.period}</span></div>
@@ -75,7 +59,7 @@ import { record } from '../data/record.ts';
     ))}
   </Row>
 
-  <Row label="elsewhere" num="04">
+  <Row label="elsewhere" num="03">
     <p class="fell">{fellowships.join('  ·  ')}</p>
   </Row>
 </BaseLayout>
@@ -84,11 +68,6 @@ import { record } from '../data/record.ts';
   .essay .prose{max-width:var(--measure)}
   .record p{margin:0 0 1.3em}
   .record p:last-child{margin-bottom:0}
-  .ledger{display:flex;flex-direction:column;gap:16px}
-  .rec{display:flex;align-items:baseline;gap:12px;max-width:62ch}
-  .ryr{font-family:var(--mono);font-size:11.5px;color:var(--ink-2);flex:none;font-variant-numeric:tabular-nums}
-  .rlead{border-bottom:1px dotted var(--ink-3);width:22px;transform:translateY(-4px);flex:none}
-  .rtxt{font-size:var(--t-body);line-height:1.65;color:var(--ink-1)}
   .entry{margin-top:28px}
   .entry:first-child{margin-top:0}
   .etop{display:flex;justify-content:space-between;gap:16px;align-items:baseline}

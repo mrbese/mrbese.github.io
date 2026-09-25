@@ -103,7 +103,7 @@ Never hardcode a px size for these roles; use the token.
 4. **Filament `#FF0155` usage is the closed list above.** A page using the accent outside the red-period signature, the status dot, or hover states needs justification.
 5. **No pills, chips, tag badges, or icon grids.** No purple gradients, no centered-everything, no gradient CTAs, no card grids. The services sentence and mono labels replace all chip use cases.
 6. **Every public claim stays literally true.** Applies to any future pattern that surfaces facts (dates, statuses, metrics).
-7. **Positioning: operator/builder leads.** "Energy systems engineer" is the proof clause, never the headline.
+7. **Positioning: the identity line is "energy systems engineer, founder, builder, operator".** "Energy systems engineer" may lead (updated 2026-09-25 with Omer's approval; the earlier operator/builder-leads rule is retired).
 8. **No personal email addresses on the site.** Contact via GitHub/X/LinkedIn links only.
 
 ## Migration map (legacy → Private Press)

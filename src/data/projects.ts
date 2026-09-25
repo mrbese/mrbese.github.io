@@ -19,7 +19,7 @@ export const projects: Project[] = [
     // Repo is private; the link points at the live app, wattshed.co.
     repoUrl: 'https://wattshed.co',
     description:
-      'WattShed is live national rebate-program software with a public, no-login designer for all 50 states and DC. Its deterministic engine combines degree-day and modified-bin estimates with location-appropriate deemed methodologies where available. A Milam County case study demonstrates evidence review, qualification, quote approval, completion clearance, and payment-instruction records. Settlement remains simulated. WattShed has no payment processor, does not custody funds, and moves no money.',
+      'WattShed is live national software that creates, verifies and pays residential energy efficiency rebates. A public, no-login program designer covers all 50 states and DC. A deterministic engine combines degree-day and modified-bin estimates with location-appropriate deemed methodologies where available, and payment moves only against reviewed evidence.',
     stack: ['Next.js 16', 'React 19', 'Firebase', 'OpenAI vision', 'Deterministic qualification engine'],
     home: true,
   },
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     // Internal page, not a repo link: /retera. It carries the App Store link.
     repoUrl: '/retera',
     description:
-      'A native iOS policy-investigation and home-inventory product for homeowners and renters, available on the Apple App Store for iPhone and iPad. Re_Tera helps users inspect coverage gaps, sublimits, and exclusions against their own policy and organize documentation for inventory export.',
+      "A native iOS insurance policy app for homeowners and renters, on the Apple App Store for iPhone and iPad. Re_Tera reads your policy, explains coverage in plain English, and flags gaps, sublimits and exclusions against your state's insurance code. It also keeps the records a claim asks for.",
     stack: ['Swift', 'SwiftUI', 'Firebase', 'OpenAI', 'Apple Vision', 'RevenueCat'],
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     tagline: 'iOS Home Energy Auditor',
     year: '2026',
     description:
-      'A home energy assessment tool that uses LiDAR room scanning via Apple RoomPlan, HVAC equipment logging with on-device OCR via Apple Vision, appliance detection, window assessment, and ACCA Manual J BTU calculations. Generates tiered upgrade recommendations with payback periods and battery synergy insights. Code opens up when it ships.',
+      'A home energy assessment tool that uses LiDAR room scanning via Apple RoomPlan, HVAC equipment logging with on-device OCR via Apple Vision, appliance detection, window assessment, and ACCA Manual J BTU calculations. Generates tiered upgrade recommendations with payback periods and battery synergy insights.',
     stack: ['Swift', 'SwiftUI', 'SwiftData', 'ARKit', 'RoomPlan', 'AVFoundation', 'Vision OCR', 'CoreLocation', 'PDFKit'],
     home: true,
   },
@@ -48,7 +48,7 @@ export const projects: Project[] = [
     year: '2026',
     repoUrl: 'https://github.com/mrbese/cellsense',
     description:
-      'Compare Tesla Powerwall 3, Enphase IQ 5P, Pila Mesh, and Base Power side by side. Supports 16 utilities, 32 rate plans, NEM 3.0, and VPP earnings projections for ELRP, ConnectedSolutions, and ERCOT.',
+      'Compare Tesla Powerwall 3, Enphase IQ 5P, Pila Mesh, and Base Power side by side. Supports 16 utilities, 35 rate plans, NEM 3.0, and VPP earnings projections for ELRP, ConnectedSolutions, and ERCOT.',
     stack: ['Vanilla JavaScript', 'Zero dependencies', 'Canvas charts'],
     home: true,
   },

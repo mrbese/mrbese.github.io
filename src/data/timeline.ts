@@ -25,18 +25,25 @@ export const education: Entry[] = [
 
 export const career: Entry[] = [
   {
+    org: 'WattShed',
+    role: 'Founder and Engineer',
+    period: '2026 - Present',
+    location: 'Los Angeles',
+    note: 'Software that creates, verifies and pays residential energy efficiency rebates.',
+  },
+  {
     org: 'Bonjuur',
-    role: 'Founder and CEO',
-    period: '2022 - Present',
+    role: 'Founder',
+    period: '2022 - 2025',
     location: 'NY to LA',
-    note: 'Timeshare subscription for a full-time housekeeper. Built a 180-person waitlist by cleaning houses myself for six months. First check from Jason Calacanis. Raised $90K, navigated the trough of sorrow, returned to energy.',
+    note: 'A daily housekeeping service built on short visits. Built a 180-person waitlist by cleaning houses myself for six months. First check from Jason Calacanis. Raised $90K, navigated the trough of sorrow, returned to energy.',
   },
   {
     org: 'Tulip Haus',
     role: 'Co-Founder',
     period: '2020 - 2025',
     location: 'New York',
-    note: 'Artisan home decor from Turkey. Days from a NYC retail lease when COVID hit, pivoted to e-commerce. When a crane hit the first container in Spain and the marine insurer walked away on jurisdiction, I read the primary sources and recovered the damages from the port operator directly. B2C failed, survived via B2B.',
+    note: 'Artisan home decor from Turkey. Days from a NYC retail lease when COVID hit, pivoted to e-commerce. When a crane hit the first container in Spain and the marine insurer walked away on jurisdiction, I read the primary sources and partially recovered the damages from the port operator directly. B2C failed, survived via B2B.',
   },
   {
     org: 'SpiroHome',
@@ -50,14 +57,14 @@ export const career: Entry[] = [
     role: 'Energy and Environment',
     period: '2018 - 2019',
     location: 'Istanbul',
-    note: 'Ran a program supplying industrial measurement devices to students for factory energy-efficiency analyses. Learned that bureaucracy takes a full year to launch a basic program.',
+    note: 'Helped build a program supplying industrial measurement devices to students for factory energy-efficiency analyses, and supervised its first audit. Learned that bureaucracy takes a full year to launch a basic program.',
   },
   {
     org: 'NULARIS',
     role: 'Energy Efficiency Engineer',
     period: '2016 - 2017',
     location: 'Los Angeles',
-    note: 'Audited buildings for the LADWP CLIP incentive program. Replaced half the lightbulbs at the Jonathan Club, a 30% electricity-bill drop after a two-day LED upgrade.',
+    note: 'Audited buildings for the LADWP CLIP incentive program. Replaced about half the lightbulbs at the Jonathan Club myself when crews were short. Most clients saw at least a 30% reduction.',
   },
 ];
 
