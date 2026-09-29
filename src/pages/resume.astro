@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Row from '../components/Row.astro';
+import PostRow from '../components/PostRow.astro';
+import { summary, jobs, projects, publications, education, skills } from '../data/resume.ts';
+const pdf = '/Omer-Bese-Resume.pdf';
+const pdfNote = '2 pages, 90 kb';
+// A point that opens with a one-word lead-in ("Design: ...") gets the word set
+// in primary ink, the same move as the bolded names in the services sentence.
+const split = (p: string) => {
+  const m = p.match(/^([A-Z][a-z]{2,9}): (.*)$/s);
+  return m ? { lead: m[1], rest: m[2] } : { lead: '', rest: p };
+};
+---
+<BaseLayout
+  title="Resume · Omer Bese"
+  description="Resume of Omer Bese, energy systems engineer, founder, builder, operator: rebate program software, field energy audits, and shipped products."
+  path="/resume"
+>
+  <div class="phead reveal">
+    <div class="eyebrow">resume</div>
+    <h1>Omer Bese<span class="d">.</span></h1>
+    <p class="where">Los Angeles, CA</p>
+    <div class="links top">
+      <a href={pdf} download="Omer-Bese-Resume.pdf">download pdf <span class="ar" aria-hidden="true">&#8595;</span> <span class="hint">{pdfNote}</span></a>
+      <a href={pdf}>open pdf</a>
+      <a href="https://linkedin.com/in/omerbese">linkedin <span class="ar" aria-hidden="true">&#8599;</span></a>
+    </div>
+  </div>
+
+  <section class="lede">
+    <p class="prose">{summary}</p>
+  </section>
+
+  <Row label="experience">
+    {jobs.map((j) => (
+      <div class="entry">
+        <div class="etop">
+          <span class="nm">
+            <span class="org">{j.org}</span>
+            {j.link && <a class="ext" href={j.link.href}>{j.link.label} <span class="ar" aria-hidden="true">&#8599;</span></a>}
+          </span>
+          <span class="role">{j.role}<span class="loc"> · {j.location}</span></span>
+          <span class="per">{j.period}</span>
+        </div>
+        {j.intro && j.intro.map((p) => <p class="note">{p}</p>)}
+        <ul class="pts">
+          {j.points.map((p) => {
+            const s = split(p);
+            return <li>{s.lead && <strong>{s.lead}.</strong>} {s.rest}</li>;
+          })}
+        </ul>
+      </div>
+    ))}
+  </Row>
+
+  <Row label="projects">
+    {projects.map((p) => (
+      <div class="item">
+        <div class="nm">
+          <span class="org">{p.name}</span>
+          {p.links && p.links.map((l) => l.href
+            ? <a class="ext" href={l.href}>{l.label} <span class="ar" aria-hidden="true">&#8599;</span></a>
+            : <span class="ext">{l.label}</span>)}
+        </div>
+        <p class="note">{p.text}</p>
+      </div>
+    ))}
+  </Row>
+
+  <Row label="publications">
+    <div class="pubs">
+      {publications.map((p) => <PostRow title={p.title} date={p.date} href={p.href} />)}
+    </div>
+  </Row>
+
+  <Row label="education">
+    {education.map((e) => (
+      <div class="entry">
+        <div class="etop">
+          <span class="nm"><span class="org">{e.org}</span></span>
+          <span class="role">{e.role}</span>
+          <span class="per">{e.period}</span>
+        </div>
+        <p class="note">{e.note}</p>
+      </div>
+    ))}
+  </Row>
+
+  <Row label="skills">
+    {skills.map((s) => (
+      <p class="skill"><strong>{s.label}.</strong> {s.text}</p>
+    ))}
+  </Row>
+
+  <div class="links end reveal">
+    <a href={pdf} download="Omer-Bese-Resume.pdf">download pdf <span class="ar" aria-hidden="true">&#8595;</span> <span class="hint">{pdfNote}</span></a>
+    <a href={pdf}>open pdf</a>
+  </div>
+</BaseLayout>
+<style>
+  .phead h1{max-width:none}
+  .where{margin-top:14px;font-family:var(--mono);font-size:var(--t-label);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2)}
+  .links.top{margin-top:26px;gap:4px 26px}
+  .links.end{margin-top:96px;gap:4px 26px}
+  .links a{display:inline-block;padding:8px 0;color:var(--ink-1)}
+  .links a .hint{color:var(--ink-2);letter-spacing:.1em;text-transform:none;margin-left:6px}
+  .links a:hover .hint{color:inherit}
+  .lede{margin-top:40px}
+  .lede .prose{max-width:var(--measure);font-size:var(--t-support);line-height:1.75}
+  /* section labels carry the document structure here, so they sit one ladder step up */
+  :global(.sect .folio){color:var(--ink-2)}
+
+  .entry{margin-top:44px}
+  .entry:first-child{margin-top:0}
+  .etop{display:grid;grid-template-columns:1fr auto;grid-template-areas:"nm per" "role role";gap:3px 16px;align-items:baseline}
+  .etop .nm{grid-area:nm}
+  .etop .role{grid-area:role}
+  .etop .per{grid-area:per}
+  .nm{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+  .org{font-family:var(--display);font-style:normal;font-weight:400;font-size:var(--t-item);color:var(--ink-0)}
+  .per{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.06em;color:var(--ink-2);white-space:nowrap;font-variant-numeric:tabular-nums}
+  .role{font-size:var(--t-note);color:var(--ink-1)}
+  .role .loc{color:var(--ink-2)}
+  .note{margin-top:12px;font-size:var(--t-note);line-height:1.65;color:var(--ink-1);max-width:66ch}
+  .pts{list-style:none;margin:4px 0 0;padding:0}
+  .pts li{position:relative;margin-top:10px;padding-left:18px;font-size:var(--t-note);line-height:1.65;color:var(--ink-1);max-width:66ch}
+  .pts li::before{content:"\00B7";position:absolute;left:4px;top:0;font-family:var(--mono);color:var(--ink-3)}
+  .pts strong,.skill strong{color:var(--ink-0);font-weight:600}
+
+  .item{margin-top:28px}
+  .item:first-child{margin-top:0}
+  .ext{font-family:var(--mono);font-size:var(--t-label);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);transition:color var(--dur) var(--ease)}
+  .ext .ar{color:var(--ink-3)}
+  a.ext:hover{color:var(--filament)}
+  .item .note{margin-top:6px}
+  .pubs{margin-top:-11px}
+  .skill{margin-top:12px;font-size:var(--t-note);line-height:1.65;color:var(--ink-1);max-width:66ch}
+  .skill:first-child{margin-top:0}
+  @media(max-width:520px){
+    .etop{grid-template-columns:1fr;grid-template-areas:"nm" "role" "per";gap:3px}
+    .per{margin-top:2px}
+  }
+</style>
