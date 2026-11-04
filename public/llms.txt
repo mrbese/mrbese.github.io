@@ -4,7 +4,7 @@
 
 ## Writing
 
-- [Base Power: The Gentailer, Actually Executed](https://mrbese.com/writing/base-power/): 60+ hours of primary-source research across ERCOT and CPUC filings (2026-05-01)
+- [Base Power: The Gentailer, Actually Executed](https://mrbese.com/writing/base-power/): about 60 hours of primary-source research across ERCOT and CPUC filings (2026-05-01)
 - [Pila Energy: The Permissionless Insight, Not the Battery](https://mrbese.com/writing/pila-energy/): why the wedge is the meter, not the cell (2026-05-15)
 - [Current War II: Tesla vs Edison](https://mrbese.com/writing/war-of-the-currents/): the AC/DC fight, re-run inside the home (2026-07-08)
 - [Geothermal is in Heat](https://mrbese.com/writing/geothermal-heat/): what the heat-pump market misses about geothermal energy (2026-08-26)
@@ -13,12 +13,14 @@
 
 ## Products
 
-- [WattShed](https://wattshed.co): live national software that creates, verifies and pays residential energy efficiency rebates; public no-login program designer for all 50 states and DC
+- [WattShed](https://wattshed.co): community energy programs for data centers; software that creates, verifies and pays household efficiency rebates, with a public no-login program designer for all 50 states and DC
 - [WattShed engineering notes](https://github.com/mrbese/wattshed-notes): public product and engineering documentation; source code remains private
 - [Re_Tera](https://apps.apple.com/us/app/re-tera-insurance-copilot/id6776045760): AI insurance copilot for homeowners and renters, available on the Apple App Store
 - [Re_Tera engineering notes](https://github.com/mrbese/retera-notes): public product and engineering documentation; source code remains private
-- [CellSense](https://github.com/mrbese/cellsense): home battery payback calculator, native iOS
-- [HazShip](https://github.com/mrbese/HazShip): lithium-battery shipping compliance tool (UN 38.3, IATA DGR)
+- [ManorOS](https://apps.apple.com/us/app/manoros/id6759580676): home energy auditor for iPhone and iPad, on the Apple App Store
+- [PowerUP](https://github.com/mrbese/PowerUp): neighborhood islands for a home-battery fleet, InnovateLA Dual-Use Hackathon (USC, October 2026), team of four
+- [CellSense](https://github.com/mrbese/cellsense): home battery payback calculator, web and native iOS
+- [HazShip](https://github.com/mrbese/HazShip): lithium-battery shipping classification under 49 CFR, the IATA DGR and the IMDG Code
 
 ## About
 
