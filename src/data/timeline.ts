@@ -29,7 +29,7 @@ export const career: Entry[] = [
     role: 'Founder and Engineer',
     period: '2026 - Present',
     location: 'Los Angeles',
-    note: 'Software that creates, verifies and pays residential energy efficiency rebates.',
+    note: 'Community energy programs for data centers: software that creates, verifies and pays household efficiency rebates.',
   },
   {
     org: 'Bonjuur',
@@ -43,7 +43,7 @@ export const career: Entry[] = [
     role: 'Co-Founder',
     period: '2020 - 2025',
     location: 'New York',
-    note: 'Artisan home decor from Turkey. Days from a NYC retail lease when COVID hit, pivoted to e-commerce. When a crane hit the first container in Spain and the marine insurer walked away on jurisdiction, I read the primary sources and partially recovered the damages from the port operator directly. B2C failed, survived via B2B.',
+    note: 'Artisan home decor from Turkey. Days from a NYC retail lease when COVID hit, pivoted to e-commerce. When a crane hit the first container in Spain and the marine insurer walked away on jurisdiction, I read the fine print and pursued the claim with the shipyard operator directly. B2C failed, survived via B2B.',
   },
   {
     org: 'SpiroHome',
@@ -72,5 +72,5 @@ export const fellowships: string[] = [
   'On Deck #ODF17 (2023)',
   'All-In Summit Volunteer (2023)',
   'Angel Squad, Hustle Fund (2021)',
-  'Camp Lightbulb nonprofit (2024 - Present)',
+  'Camp Lightbulb nonprofit (2024)',
 ];
