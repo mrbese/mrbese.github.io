@@ -15,20 +15,37 @@ interface Props {
   ogImage?: string;
   ogType?: string;
   path?: string;
+  // Keep a page out of search results (the 404 page).
+  noindex?: boolean;
 }
-const { title, description, ogImage = site.ogImage, ogType = 'website', path = Astro.url.pathname } = Astro.props;
+const { title, description, ogImage = site.ogImage, ogType = 'website', path = Astro.url.pathname, noindex = false } = Astro.props;
 // Pages are served at the trailing-slash URL (Cloudflare Pages 308s the bare form),
 // and the sitemap declares the trailing-slash form. Canonicals must match both.
 const slashed = path.endsWith('/') ? path : path + '/';
 const canonical = new URL(slashed, site.url).href;
+const ogImageUrl = new URL(ogImage, site.url).href;
+// One Person node for the whole site; BlogPosting authors point at it by @id.
+// Every string here already appears in visible site copy (site.ts, the resume).
 const person = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': `${site.url}/#person`,
   name: site.name,
-  url: site.url,
+  url: `${site.url}/`,
+  image: new URL(site.ogImage, site.url).href,
   jobTitle: 'Energy Systems Engineer, Founder, Builder and Operator',
+  description: site.lede,
   address: { '@type': 'PostalAddress', addressLocality: 'Los Angeles', addressRegion: 'CA', addressCountry: 'US' },
-  sameAs: ['https://github.com/mrbese', 'https://x.com/mrbese', 'https://linkedin.com/in/omerbese'],
+  alumniOf: [
+    { '@type': 'CollegeOrUniversity', name: 'Columbia University' },
+    { '@type': 'CollegeOrUniversity', name: 'Istanbul Bilgi University' },
+  ],
+  sameAs: [
+    'https://www.linkedin.com/in/omerbese/',
+    'https://github.com/mrbese',
+    'https://x.com/mrbese',
+    'https://omerbese.com/',
+  ],
 };
 ---
 <!DOCTYPE html>
@@ -38,14 +55,22 @@ const person = {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="canonical" href={canonical} />
+  {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+  <meta name="author" content={site.name} />
+  <meta property="og:site_name" content={site.name} />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={new URL(ogImage, site.url).href} />
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:image:alt" content={`Portrait of ${site.name}`} />
   <meta property="og:type" content={ogType} />
   <meta property="og:url" content={canonical} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@mrbese" />
+  <meta name="twitter:creator" content="@mrbese" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImageUrl} />
   <meta name="theme-color" content="#0A0908" />
   <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
