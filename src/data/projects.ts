@@ -72,7 +72,7 @@ export const projects: Project[] = [
     stack: ['SwiftUI (iOS 17+)', 'Pure engine pattern', 'Zero dependencies', 'Fully offline'],
   },
   {
-    name: 'shitster',
+    name: 'DashOff',
     tagline: 'Consumer Self-Help Campaigns',
     year: '2026',
     // Internal page, not a repo link: /shitster.

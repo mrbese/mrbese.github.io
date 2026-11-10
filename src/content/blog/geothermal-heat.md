@@ -11,7 +11,7 @@ featured: true
 
 My love story with geothermal started in university. It fascinated me with its 24/7 production, closer than the sun, literally right under our footsteps. And I was lucky that my professor, Fusun Tut Haklidir, came from the corporate world. So the class was never just about engineering but also included feasibility, profits, and the corporate reality. Which hooked the entrepreneur in me at first sight.
 
-That is why I wrote my thesis on Geothermal energy in Izmir, my hometown, with an investment analysis rather than just a literature review. I flew all the way to the Stanford Geothermal Workshop just to listen. Later, I tracked down Gad Shoshan, Ormat's director for Turkey, because I refused to model the field on assumed numbers. Ormat had the real production data even the local government did not have. To my surprise, all I did was ask, and the rest was an instagram post I guess, with Mr.Shoshan, me holding the proprietary data and a permission to publish for the first time.
+That is why I wrote my thesis on Geothermal energy in Izmir, my hometown, with an investment analysis rather than just a literature review. I flew all the way to the Stanford Geothermal Workshop just to listen. Later, I tracked down Gad Shoshan, Ormat's director for Turkey, because I refused to model the field on assumed numbers. Ormat had the real production data even the local government did not have. To my surprise, all I did was ask, and the rest was an instagram post I guess, with Mr. Shoshan, me holding the proprietary data and a permission to publish for the first time.
 
 ![Instagram post from May 26, 2014, with Gad Shoshan of Ormat, holding the production data](/img/ormat-shoshan-2014.jpg)
 
@@ -81,9 +81,9 @@ Navigating this tradeoff requires evaluation not just from an engineering and fi
 
 ## data centers can flex
 
-Historically on-grid systems treats the grid as a battery that absorbs that double hit alongside maintenance cycles, failed units, and power spikes. Off-grid campus must size around them or use a load that can bend.
+Historically on-grid systems treat the grid as a battery that absorbs that double hit alongside maintenance cycles, failed units, and power spikes. Off-grid campus must size around them or use a load that can bend.
 
-Today's interconnection deals with hyperscalers prove the load can bend. To get power on the timeline they need, operators are already agreeing to demand response. Google has signed those deals. Duke's Nicholas Institute found that roughly 76 GW of new large load could fit on the existing grid with about 0.25 percent annual curtailment. At the end, If I have already agreed to flex my load when the utility calls, I would rather flex it around my own schedule. Skip the line, go off-grid, and control my own calendar.
+Today's interconnection deals with hyperscalers prove the load can bend. To get power on the timeline they need, operators are already agreeing to demand response. Google has signed those deals. Duke's Nicholas Institute found that roughly 76 GW of new large load could fit on the existing grid with about 0.25 percent annual curtailment. At the end, if I have already agreed to flex my load when the utility calls, I would rather flex it around my own schedule. Skip the line, go off-grid, and control my own calendar.
 
 Not everyone can make that trade. Alcoa found that out the hard way in Iceland. The Bakki smelter was one "frozen" block of demand that needed 400 MW. When those fields came up 140 MW short, the whole project walked away in 2011. Traditional industry is rigid like that. AI training centers share that same stubborn streak. But inference is different. It is modular, distributed, and it can throttle.
 
