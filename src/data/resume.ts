@@ -36,7 +36,7 @@ export const jobs: ResumeJob[] = [
       'Built the first prototype solo at OpenAI Build Week (July 2026), then made it a product. A deterministic TypeScript engine applies the rules and AI structures the inspection evidence; a vitest suite asserts that every figure on the methodology page equals a live call to that engine.',
       'Built the program runtime, live in production: funders set the terms, households apply, contractors quote and document the work, reviewers clear it, and funders pay on verified results. The whole journey passed end to end on production in October 2026.',
       "A public, no-login program designer for all 50 states and DC (degree-day, modified-bin and deemed-savings methods). A vision AI auditor estimates the house's current efficiency from video and pre-approves upgrades; a liveness check verifies that before-and-after video was captured live in that session.",
-      'Split the platform into 40 modules across six suites; 30 run as public, no-login tools. Built a live MCP server over the pricing engine (wattshed.co/mcp) and published the Mitchell County, Texas case study (modeled: 641 homes, about 2.06 MW of peak off the local grid).',
+      'Split the platform into 40 modules across six suites; 30 run as public, no-login tools. Built a live MCP server over the pricing engine (wattshed.co/mcp) and published the Mitchell County, Texas case study (modeled: 641 homes, about 2.08 MW of peak off the local grid).',
     ],
   },
   {

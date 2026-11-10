@@ -14,7 +14,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: 'WattShed',
-    tagline: 'Rebate Program Designer and Evidence Workflow',
+    tagline: 'Community Energy Programs for Data Centers',
     year: '2026',
     // Repo is private; the link points at the live app, wattshed.co.
     repoUrl: 'https://wattshed.co',
