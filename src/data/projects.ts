@@ -78,7 +78,7 @@ export const projects: Project[] = [
     // Internal page, not a repo link: /shitster.
     repoUrl: '/shitster',
     description:
-      'BMW pushed a Spider-Man ad to the dashboard of cars people own, on a screen it once called a private space. I read the 28-page contract they wrote, found the clause that gives every owner who sends a notice of dispute an individual conference with BMW, and built the tools that generate those letters in the browser. Zero accounts, zero stored data, open source. First campaign: DashOff.',
+      'BMW pushed a Spider-Man ad to the dashboard of cars people own, on a screen it once called a private space. I read the 28-page contract they wrote, found the clause that gives every owner who sends a notice of dispute an individual conference with BMW, and built the tools that generate those letters in the browser. Zero accounts, zero stored data. First campaign: DashOff.',
     stack: [],
   },
   {
