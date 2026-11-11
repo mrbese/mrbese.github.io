@@ -1,5 +1,5 @@
 // Public resume, rendered at /resume, with /Omer-Bese-Resume.pdf as the download.
-// Text follows the public resume built on 2026-11-10 (career-ops output/public-cv/v003). Keep the two in sync: a change
+// Text follows the public resume built on 2026-11-10 (career-ops output/public-cv/v004). Keep the two in sync: a change
 // here needs the PDF re-rendered, and the reverse. The PDF also prints a one-line
 // descriptor per publication; the page links to the articles themselves.
 
@@ -47,6 +47,7 @@ export const jobs: ResumeJob[] = [
     location: 'New York and Los Angeles',
     points: [
       'Built a housekeeping service and raised $90,000, $25,000 of it from Jason Calacanis after his pre-accelerator (one of roughly four funded from a cohort of about 150), getting him to break both of his rules: no solo founders, no service businesses.',
+      'Cleaned houses personally every weekday for six months, more than 500 visits, to find the bottlenecks firsthand. First customer: Jordan Fliegel, Managing Director of Techstars NYC, right after Techstars rejected Bonjuur.',
     ],
   },
   {
@@ -56,6 +57,7 @@ export const jobs: ResumeJob[] = [
     location: 'New York',
     points: [
       'Imported handmade Turkish home goods with a co-founder: sourcing, customs brokerage and tariff classification, ocean freight and fulfillment. Personally handled every invoice and import document.',
+      'When a shipyard crane damaged the first container and the cargo insurer rejected the claim, pursued it with the shipyard operator directly, reading the coverage terms and shipping law along the way.',
     ],
   },
   {
@@ -83,6 +85,7 @@ export const jobs: ResumeJob[] = [
     location: 'Los Angeles',
     points: [
       "Worked at a small contractor on LADWP's preferred list for the Commercial Lighting Incentive Program. Ran rebate projects from application and LADWP pre-inspection to the post-installation audit before LADWP released funds, several at once over four-to-six-month cycles, at sites from small garages to the Four Seasons.",
+      "Counted existing bulbs one by one for the audits, to Title 24 and ASHRAE standards. Most clients saw at least a 30% cut in lighting energy use. Replaced about half of the Jonathan Club's bulbs personally when crews were short-staffed.",
     ],
   },
 ];
@@ -105,7 +108,7 @@ export const projects: ResumeItem[] = [
   {
     name: 'Re_Tera',
     links: [{ label: 'getretera.com', href: 'https://getretera.com' }],
-    text: 'Insurance-policy app on a 50-state insurance-statute corpus. Checks every statute citation against the corpus text. A study of whether amendments can be found automatically (75 verified amendments, five states) surfaced a missed Alaska omnibus insurance act (SB 132).',
+    text: "Insurance-policy investigator for homeowners and renters, live on the App Store. Reads a homeowner's or renter's policy, explains the coverage in plain language and flags gaps, sublimits and exclusions, checking findings against state insurance statutes. Behind it is a statute corpus covering all 50 states, more than 95,000 sections. Every statute citation in an answer is checked against that corpus, and any that is not found is replaced with a visible marker. To decide how to keep the corpus current, tested on five states whether a search index of government documents could find amendments by itself. It found 52% of 75 hand-verified amendments, so it is used only for leads. One lead was Alaska's 2025 omnibus insurance act (SB 132, 57 sections amended), which the amendment records had missed.",
   },
 ];
 
@@ -127,9 +130,12 @@ export const education = [
     org: 'Istanbul Bilgi University',
     role: 'B.S. Energy Systems Engineering',
     period: '2010 to 2014',
-    note: "Geothermal thesis on the Seferihisar field, sizing a hypothetical 2 MW plant on proprietary well data that Ormat's regional director handed over with permission to publish. Attended the Stanford Geothermal Workshop.",
+    note: "Geothermal thesis on the Seferihisar field. The well data was private and even the local government did not hold it; tracked down Ormat's regional director, who handed it over with permission to publish, and sized a hypothetical 2 MW plant on it. Attended the Stanford Geothermal Workshop.",
   },
 ];
+
+export const community =
+  'Hustle Fund Angel Squad member since 2021. On Deck founder fellowship (ODF17, 2023). Hosts seated dinners for 12 to 14 people from different parts of life.';
 
 export const skills = [
   { label: 'Building with AI agents', text: 'Claude Code, Codex and Cursor, with agent-written test suites and cross-model reviews (Claude and Codex); deterministic engines and MCP servers.' },

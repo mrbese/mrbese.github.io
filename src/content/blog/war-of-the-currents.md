@@ -131,7 +131,7 @@ Every major new tie ERCOT is building follows this exact loophole. Pattern Energ
 
 The regulatory shield is a political choice wearing the costume of a physical law. Texas could build a conventional high-capacity AC interconnection to the Eastern grid tomorrow and end its isolation. It refuses because the state's political economy values absolute jurisdictional sovereignty over structural backup.
 
-Even the DC shield has faced stress. FERC warned that enough commingled power flowing through ties to Mexico could theoretically pull ERCOT under federal jurisdiction in edge cases. After Winter Storm Uri froze the grid and left hundreds dead, federal regulators asked explicitly whether maintaining the airwall was worth losing the ability to import emergency power when local infrastructure failed. Texas heard the question, weighed the cost, and chose to keep the island. The state that runs on pure alternating volatility in its capital markets uses direct current as its sovereign airwall.
+Even the DC shield has faced stress. In 2018 FERC warned (Docket TX18-1) that enough commingled power flowing through ties to Mexico could theoretically pull ERCOT under federal jurisdiction in edge cases. After Winter Storm Uri froze the grid in 2021 and left hundreds dead, FERC's chairman asked whether maintaining the airwall was worth losing the ability to import emergency power when local infrastructure failed. Texas heard the question, weighed the cost, and chose to keep the island. The state that runs on pure alternating volatility in its capital markets uses direct current as its sovereign airwall.
 
 ### the macro leapfrog
 
