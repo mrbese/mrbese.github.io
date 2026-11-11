@@ -119,7 +119,7 @@ Texas did something entirely different.
 
 The Electric Reliability Council of Texas (ERCOT) is a deliberate electrical island. The Federal Power Act of 1935 gave Washington sweeping authority over electricity moving in "interstate commerce". For a century, the courts have consistently tied that definition to whether a state's transmission lines are synchronously locked with an out-of-state grid. If your wires alternate in an unbroken 60 Hz lockstep across a state boundary, you fall under federal rules.
 
-Texas has been pathologically allergic to that synchronous handshake for nearly a hundred years. The lengths it will go to preserve its isolation became obvious in May 1976 during the infamous "Midnight Connection" incident. A utility executive flipped a switch linking a Texas power plant to an Oklahoma cooperative. Grid operators panicked. Fearing that single line would trigger total federal jurisdiction, they ripped every interstate tie out within days. The state regulator later ordered the physical line cut. They would literally rather risk blackouts than let Washington claim jurisdiction over their electrons.
+Texas has been pathologically allergic to that synchronous handshake for nearly a hundred years. The lengths it will go to preserve its isolation became obvious in May 1976 during the infamous "Midnight Connection" incident. A Texas utility flipped a switch and sent power from a substation in Vernon, Texas to Altus, Oklahoma. Grid operators panicked. Fearing that single line would trigger total federal jurisdiction, they ripped every interstate tie out within days. The state regulator later ordered the physical line cut. They would literally rather risk blackouts than let Washington claim jurisdiction over their electrons.
 
 This is where high-voltage direct current functions as a political shield rather than an efficiency tool. An HVDC converter takes out-of-state alternating current, flattens it to direct current, sends it across the state line as a non-alternating stream of electrons, and reconstructs an AC waveform on the receiving side. Because the DC segment never alternates, the two grids can trade massive blocks of power without ever locking frequencies. They remain fundamentally asynchronous.
 
@@ -148,3 +148,14 @@ A modern DC-powered LED already uses roughly 75 percent less energy than the inc
 Edison lost the first war on hardware. He may still win the long game on architecture. The company named after the man who proved alternating current could power a planet is now the one proving the planet doesn't actually need it, while the state that refused to synchronize its clocks found a way to import power without importing Washington.
 
 Somewhere, the most ruthless man in early American technology is still getting the last laugh.
+
+## receipts
+
+- **NEC Article 726 (2023 edition).** Class 4, fault-managed power. The first new power class in the code in 45 years. Equipment is listed to UL 1400-1 and cable to UL 1400-2.
+- **Panduit, Fault Managed Power System.** 520 watts over 500 meters on one pair of 16 AWG wire. Up to 60 percent lower cabling cost. Reach up to 2 kilometers. Power is cut within 2 milliseconds of a fault.
+- **Champlain Hudson Power Express.** 1,250 MW from Quebec to Astoria, Queens. Commercial operation on 13 May 2026.
+- **The Midnight Connection.** On 4 May 1976 West Texas Utilities sent power from a substation in Vernon, Texas to Altus, Oklahoma, and the other Texas utilities disconnected from it. Public Utility Commission of Texas Docket 14. KUT's history of the episode, 9 September 2022.
+- **Southern Cross, FERC Docket TX11-1.** Final order of 15 May 2014, 147 FERC ¶ 61,113. FERC ordered the interconnection under sections 210 and 211 of the Federal Power Act and found that no ERCOT utility becomes a public utility because of it.
+- **Ties to Mexico, FERC Docket TX18-1.** AEP Energy Partners, order of 26 July 2018, 164 FERC ¶ 61,056. FERC noted that planned links on the Mexican side could carry power from other states into ERCOT.
+- **Southern Spirit and Pecos West.** Pattern Energy's Southern Spirit fact sheet. About 320 miles, ±525 kV, 3,000 MW, from Rusk County, Texas to Choctaw County, Mississippi. Grid United's Pecos West Intertie. ERCOT to El Paso, 1,500 MW.
+- **Winter Storm Uri.** Texas Department of State Health Services final count. 246 deaths. FERC Chairman Richard Glick on 18 February 2021 urged Congress and Texas to "rethink" ERCOT's "go it alone approach" (Utility Dive, 19 February 2021).
