@@ -23,9 +23,9 @@ The customer pays once. Gets whole-home backup. Gets below-market energy rates. 
 
 ## The Cost Basis. Not the Technology.
 
-Base does not manufacture batteries. They assemble them. CATL makes the lithium iron phosphate cells in China. Base imports those cells at roughly $55/kWh and assembles at a 90,000 sq ft facility in Austin. Off-the-shelf integrators buy finished modules at around $100/kWh. Result: Base’s 25 kWh single-unit system costs roughly $2,500 to $3,000 to build versus $6,000 to $8,000 for comparable off-the-shelf configurations.
+Base does not manufacture batteries. They assemble them. Overseas suppliers make the lithium iron phosphate cells. Base imports those cells at an estimated $55/kWh and assembles at a 90,000 sq ft facility in Austin. Off-the-shelf integrators buy finished modules at around $100/kWh. Result: Base’s 25 kWh single-unit system costs an estimated $2,500 to $3,000 to build versus $6,000 to $8,000 for comparable off-the-shelf configurations.
 
-Cell fabrication is a commodity race they cannot win and do not try to. They control stages 3 through 5: module assembly, pack integration, proprietary inverter. CATL bleeds on stages 1 and 2. Every Wright’s Law cost drop in cells flows straight to Base’s economics instead of being captured by a vendor margin.
+Cell fabrication is a commodity race they cannot win and do not try to. They control stages 3 through 5: module assembly, pack integration, proprietary inverter. The cell makers bleed on stages 1 and 2. Every Wright’s Law cost drop in cells flows straight to Base’s economics instead of being captured by a vendor margin.
 
 Ford did not invent the assembly line. He borrowed the concept from Chicago slaughterhouses where master butchers were the production bottleneck. Base did the same thing. The Austin factory is not a Gigafactory. It is a very smart warehouse designed so a driveway crew can assemble the system without field improvisation. The factory exists to make the installer stupid-fast. The bottleneck was never manufacturing. It is installation crews. All design decisions follow from that constraint.
 
@@ -33,7 +33,7 @@ Ford did not invent the assembly line. He borrowed the concept from Chicago slau
 
 Section 48E ITC gives 30% back on Fair Market Value, not on COGS. COGS is roughly $3,000. Retail fair market value is roughly $10,000. The 30% credit returns approximately $3,000 per unit. The hardware effectively pays for itself before the customer writes a check.
 
-US assembly triggers the domestic content adder, pushing the total investment tax credit toward 40%. One caveat: FEOC compliance thresholds are escalating (50% non-PFE content required in 2026, rising to 75% by 2030). With CATL cells as the primary input, that 40% is not automatic for 2026 deployments. The new factory Base is building outside Austin, targeting 4 GWh per year of production capacity, is as much about protecting this credit stack as it is about any operational scaling goal.
+US assembly triggers the domestic content adder, pushing the total investment tax credit toward 40%. One caveat: FEOC compliance thresholds are escalating (55% non-PFE content required for storage in 2026, rising to 75% by 2030). With imported cells as the primary input, that 40% is not automatic for 2026 deployments. The Austin factory, designed to ramp to 4 GWh per year of production capacity, is as much about protecting this credit stack as it is about any operational scaling goal.
 
 Section 6418 transferability closes the loop. Base can sell those credits immediately at 91 to 94 cents on the dollar. No 18-month negotiations. Deploy, generate credit, sell, redeploy. That is the working capital engine behind deployment velocity.
 
@@ -47,27 +47,27 @@ Why 11.4 kW continuous matters in ERCOT: the real-time system-wide offer cap (SW
 
 ## The ERCOT Revenue Collapse. And What Survived.
 
-Here is the part that does not make it into pitch decks. ERCOT battery storage grew from under 1 GW in 2021 to approximately 13.9 GW by early 2026. That growth cannibalized the ancillary services revenue that justified building all those batteries. ECRS clearing prices fell from $76.77/MWh in 2023 to $9.62/MWh in 2024: an 87% collapse. Total battery revenue fell 75 to 78% over the same period, from approximately $192/kW-year to roughly $43/kW-year. (Sources: Potomac Economics, Modo Energy.)
+Here is the part that does not make it into pitch decks. ERCOT battery storage grew from under 1 GW at the start of 2021 to approximately 13.9 GW by early 2026. That growth cannibalized the ancillary services revenue that justified building all those batteries. ECRS clearing prices fell from $76.77/MWh in 2023 to $9.62/MWh in 2024: an 87% collapse. Total battery revenue fell 75 to 78%, from approximately $192/kW-year in 2023 to an average of roughly $43/kW-year across 2024 and 2025. (Sources: Potomac Economics, Modo Energy.)
 
 Companies that built their model on ancillary service revenue with $8,000 system COGS are finished. Base survives because their cost basis is below $3,000 and they built grid services revenue streams that do not depend on ancillary prices.
 
 The 4CP peak billing optimization does not care what ancillary prices are doing. Texas bills transmission charges based on each customer’s share of the four highest system-demand 15-minute intervals of the year, one qualifying interval per month, during the June through September peak window. Base’s dispatch software forecasts when those intervals are likely, pre-discharges the fleet, and shaves the peaks. Billing optimization on software and fleet telemetry. Not a commodity market position.
 
-The ADER program sets another ceiling to work within: ERCOT expanded the Aggregated Distributed Energy Resources cap to 200 MW system-wide, with a single entity allowed to control up to 50%. Hard ceiling of 100 MW per participant. At roughly 10 kW of usable dispatch per home, that is around 10,000 homes. First-mover position is real.
+The ADER program sets another ceiling to work within: ERCOT expanded the Aggregated Distributed Energy Resources cap to 500 MW system-wide in March 2026, with a single entity allowed to control up to 90%. Hard ceiling of 450 MW per participant. At roughly 10 kW of usable dispatch per home, that is around 45,000 homes. First-mover position is real.
 
 December 2025: ERCOT launched Real-Time Co-optimization plus Batteries. Every five minutes, the system dynamically reassigns batteries between energy and reserves. Passive standby revenue is gone. You need a real dispatch algorithm now.
 
 ## Volatility Paradox. Hoax.
 
-The conventional narrative: more batteries suppress the price spikes that justify building batteries. This is real and supported by 2024 data. But the bull case deserves serious treatment. The ERCOT large-load interconnection queue, primarily data centers and industrial demand, nominally shows approximately 233 GW of pending new load. The generation interconnection queue is approximately 432 GW of active requests (storage, solar, gas, wind). Historically, 75–85% of generation queue projects are never built, yielding realistic net new generation of 65–110 GW.
+The conventional narrative: more batteries suppress the price spikes that justify building batteries. This is real and supported by 2024 data. But the bull case deserves serious treatment. The ERCOT large-load interconnection queue, primarily data centers and industrial demand, nominally showed approximately 233 GW of pending new load in December 2025. The generation interconnection queue was approximately 432 GW of active requests (storage, solar, gas, wind). Historically, 75–85% of generation queue projects are never built, yielding realistic net new generation of 65–110 GW.
 
-AI data centers, EV charging, and industrial electrification could add 20–30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin (currently above 30%) compresses back toward sub-15%, Where scarcity events become frequent again and batteries print money. But until then companies depend solely on ancillary prices need to get creative.
+AI data centers, EV charging, and industrial electrification could add 20–30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin (about 18% for summer 2026 in the December 2025 ERCOT outlook) compresses back toward sub-15%, Where scarcity events become frequent again and batteries print money. But until then companies depend solely on ancillary prices need to get creative.
 
 ## The Funding. AC vs DC.
 
 $1.3 billion total. $1 billion Series C in October 2025, led by Addition at a $4 billion valuation. Andreessen Horowitz, Lightspeed, Thrive, CapitalG, and Ribbit all participated. Over 100 MWh of distributed battery capacity deployed across DFW, Houston, and Austin in under two years. That's $200 million in April, and another $1 billion just six months later.
 
-The Warren Buffett inside me is screaming, "Sunrun! Srun, run, run, run!" With a market cap at $20 billion in Jan 2021, they got destroyed. After hitting rock bottom at $1.5 billion in April 2025, they are making a comeback today at $4.5 billion, trading at 1.72x sales and pivoting hard to Battery-First, "home-to-grid" VPPs. Meanwhile, the market believes Base has verticalized deep enough to survive a revenue compression that is washing out everyone else. And there is something in Base's "sacred lunch" that Sunrun simply cannot replicate with their 9,751 employees (Sept 2025).
+The Warren Buffett inside me is screaming, "Sunrun! Srun, run, run, run!" With a market cap at $20 billion in Jan 2021, they got destroyed. After hitting rock bottom at $1.5 billion in April 2025, they came back to $4.5 billion by the start of 2026, trading at 1.72x sales and pivoting hard to Battery-First, "home-to-grid" VPPs. Meanwhile, the market believes Base has verticalized deep enough to survive a revenue compression that is washing out everyone else. And there is something in Base's "sacred lunch" that Sunrun simply cannot replicate with their 9,751 employees (Sept 2025).
 
 One thing is for sure: Volatility is the middle name of this game. It seems like anything that touches electricity eventually copies its sine wave. Here's hoping Base's valuation adopts DC.
 
@@ -124,7 +124,7 @@ Same cells. Same inverter. Different contract. That contracted California revenu
 
 San Diego. Market Entry.
 
-- Rates: SDG&E residential rates average $0.39–$0.40/kWh (2.5x the national average). A $40–$60/mo subscription is commercially supportable, double the Texas rate for the same hardware.
+- Rates: SDG&E residential rates average about $0.46/kWh (roughly 2.7x the national average). A $40–$60/mo subscription is commercially supportable, double the Texas rate for the same hardware.
 - The NEM 3.0 Void: Solar export credits cratered. Customers were left behind with panels on their roofs and no economic answer for excess generation. This is exactly who Base walks into. Base's $695 upfront fee vs. a $15,000+ Tesla Powerwall is a mismatch.
 - B2B2C Entry: Base enters as a DER aggregator through CCA partnerships (like San Diego Community Power), bringing the fleet and the RA capacity that CCAs desperately need.
 
@@ -135,3 +135,18 @@ Doubling down on energy efficiency squeezes the last drop of juice from the batt
 California offers the steady, predictable 'Direct Current' of regulated returns, shielding [Base Power Company](https://www.linkedin.com/company/basepowercompany/) from the troughs of Texas's wild 'Alternating Current' while letting them bank the crests.
 
 Omer Bese
+
+## Receipts
+
+- **Base Power.** Home page and spec pages. $695 upfront and $19 a month. 25 kWh and 50 kWh units, both at 11.4 kW maximum continuous. Switchover in under half a second.
+- **Base Power Series C, 8 October 2025.** $1 billion led by Addition, with Andreessen Horowitz, Lightspeed, Thrive, CapitalG and Ribbit. $4 billion post-money. More than 100 MWh deployed across Dallas-Fort Worth, Houston and Austin.
+- **Canary Media, 9 October 2025.** $200 million raised in April 2025. A 90,000 sq ft Austin factory planned for 4 GWh a year.
+- **Potomac Economics, 2024 State of the Market for ERCOT.** ECRS averaged $76.77/MWh in 2023 and $9.62/MWh in 2024. Battery capacity grew from 300 MW to 1,600 MW during 2021.
+- **Modo Energy.** 13,888 MW of ERCOT batteries at the end of 2025. Battery revenue of $192/kW in 2023, $55/kW in 2024, and an average of $43/kW across 2024 and 2025.
+- **ERCOT, Real-Time Co-optimization plus Batteries.** Live on 5 December 2025. The day-ahead system-wide offer cap is $5,000/MWh and the real-time cap is $2,000/MWh.
+- **4CP.** 16 TAC §25.192. Transmission charges are set on the ERCOT coincident peak in June, July, August and September.
+- **ERCOT market notice M-A030226-01, 2 March 2026.** The ADER pilot limit went from 200 MW to 500 MW, and the share one entity may hold from 50 to 90 percent.
+- **ERCOT queues and reserves.** Board figures of 9 December 2025. About 233 GW of large-load requests and about 432 GW of generation requests. Capacity, Demand and Reserves report of 19 December 2025. 18.3 percent planning reserve margin for summer 2026.
+- **Tax credits.** 26 USC 48E and 6418. Public Law 119-21 sets the storage threshold at 55 percent for construction starting in 2026, rising to 75 percent after 2029. Crux reports investment credits selling at about 93 to 94 cents in 2025.
+- **SDG&E.** Bundled residential average of 46.4 cents per kWh from April 2026.
+- **Estimates.** The cell and build costs, the upgrade and revenue math and the lender terms are estimates, not published figures.

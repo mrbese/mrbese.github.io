@@ -63,7 +63,7 @@ Class 2 was the cheap, low-voltage domain. It capped circuits at 100 watts and 6
 
 Class 4, or Fault-Managed Power Systems (FMPS), deliberately shatters that binary. It allows up to 450 volts DC to travel over thin, unshielded 16-to-18 AWG copper wire (think lamp cord) installed by low-voltage technicians with zero metal conduit.
 
-According to Panduit's design briefs, this architecture can push 520 watts over 500 meters or 250 watts up to two kilometers. That is roughly thirty times the power-and-distance envelope of a Class 2 circuit, with a 60 percent reduction in raw cable cost before labor even enters the picture.
+According to Panduit's design briefs, this architecture can push 520 watts over 500 meters on a single pair of wires, and reach as far as two kilometers at lower power. That is roughly thirty times the power-and-distance envelope of a Class 2 circuit, with a 60 percent reduction in raw cable cost before labor even enters the picture.
 
 The primary constraint in residential and commercial energy infrastructure right now is not the price of cells. It is the physical throughput of the installation crew. Class 4 removes both the licensed electrician and the conduit runner from the budget at the same time.
 
@@ -139,7 +139,7 @@ The ultimate destination for this technology is not the entrenched Western marke
 
 Developing countries famously bypassed copper landlines and went straight to cellular networks at the village edge. The same structural leapfrog is now available against the traditional AC grid.
 
-Class 4 power can deliver 250 watts over two kilometers of cheap, unshielded wire installed rapidly by local technicians instead of scarce electrical engineers. Connecting those lines directly to native-DC appliances removes the inverter stage and its conversion losses entirely.
+Class 4 power can carry electricity up to two kilometers over cheap, unshielded wire installed rapidly by local technicians instead of scarce electrical engineers. Connecting those lines directly to native-DC appliances removes the inverter stage and its conversion losses entirely.
 
 A modern DC-powered LED already uses roughly 75 percent less energy than the incandescent it replaces. Removing the local inverter on top of that efficiency gain shrinks the required solar array and battery bank dramatically. Pay-as-you-go (PAYGo) micro-financing then turns the reduced upfront capital into an operational expense managed over mobile money. The compounding advantages of direct current hit hardest exactly where the old centralized grid never bothered to arrive.
 
