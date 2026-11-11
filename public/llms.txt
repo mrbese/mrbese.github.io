@@ -4,10 +4,10 @@
 
 ## Writing
 
-- [Base Power: The Gentailer, Actually Executed](https://mrbese.com/writing/base-power/): about 60 hours of primary-source research across ERCOT and CPUC filings (2026-05-01)
+- [What I Learned About Base Power](https://mrbese.com/writing/base-power/): about 60 hours of primary-source research across ERCOT and CPUC filings (2026-05-01)
 - [Pila Energy: The Permissionless Insight, Not the Battery](https://mrbese.com/writing/pila-energy/): why the wedge is the meter, not the cell (2026-05-15)
 - [Current War II: Tesla vs Edison](https://mrbese.com/writing/war-of-the-currents/): the AC/DC fight, re-run inside the home (2026-07-08)
-- [Geothermal is in Heat](https://mrbese.com/writing/geothermal-heat/): what the heat-pump market misses about geothermal energy (2026-08-26)
+- [Geothermal Is in "Heat", and this time, buyer is moving in](https://mrbese.com/writing/geothermal-heat/): geothermal was held back by transmission distance rather than geology, and AI data centers can move to the wellhead (2026-08-20)
 - [All writing](https://mrbese.com/writing/)
 - [RSS feed](https://mrbese.com/rss.xml)
 

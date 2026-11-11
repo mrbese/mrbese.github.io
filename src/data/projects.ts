@@ -24,6 +24,26 @@ export const projects: Project[] = [
     home: true,
   },
   {
+    name: 'Hawesville, Kentucky',
+    tagline: 'The Hawesville Power Contract',
+    year: '2026',
+    repoUrl: 'https://wattshed.co/case-study/hancock-county',
+    description:
+      'A 482 MW data center contract in Kentucky, priced term by term from public filings. One finding: at least $9.7M billed for power not yet drawn.',
+    stack: [],
+    home: true,
+  },
+  {
+    name: 'Wythe County, Virginia',
+    tagline: 'Community Bill Reducer, a Wythe County Case Study',
+    year: '2026',
+    repoUrl: 'https://wattshed.co/case-study/wythe-county',
+    description:
+      "What $10M of free home upgrades near a 210 MW campus would cost under Virginia's capacity credit law. $5.6M over 14 years in the base case.",
+    stack: [],
+    home: true,
+  },
+  {
     name: 'Re_Tera',
     tagline: 'AI Insurance Copilot for Homeowners and Renters',
     year: '2026',

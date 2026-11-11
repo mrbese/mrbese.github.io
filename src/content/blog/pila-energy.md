@@ -4,7 +4,7 @@ date: 2026-05-15
 readTime: 8 min
 description: Three weeks across founder interviews, NEC Article 706, renter-grid filings, and one Hacker News thread where the founder defended the design live.
 tags: ["research", "energy"]
-featured: true
+featured: false
 ---
 
 ## the permissionless insight, not the battery

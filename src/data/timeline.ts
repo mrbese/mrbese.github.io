@@ -54,7 +54,7 @@ export const career: Entry[] = [
   },
   {
     org: 'Istanbul Chamber of Industry',
-    role: 'Energy and Environment',
+    role: 'Associate Specialist, Energy & Environment',
     period: '2018 - 2019',
     location: 'Istanbul',
     note: 'Helped build a program supplying industrial measurement devices to students for factory energy-efficiency analyses, and supervised its first audit. Learned that bureaucracy takes a full year to launch a basic program.',

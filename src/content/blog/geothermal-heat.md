@@ -23,7 +23,7 @@ Geothermal energy has always been chained to whatever carried value away from th
 
 The question was never where the richest resource was, but what stood next to it. Distance from the wellhead decided what got discovered, and we just kept our eyes closed to further lands. After all, that was the corporate reality. No one would pay Columbus to search for "hot" resources just for fun.
 
-Today I am having a full-circle moment. AI data centers showed up with wire cutters to free geothermal from its chains. US data centers already consume about 4 to 5 percent of US electricity, on a path that could double that share this decade, and they are the first buyer at this scale that can pick themselves up and move to the heat. That unlocks geothermal's biggest constraint. Distance from the wellhead. Going off-grid with data centers is now real.
+Today I am having a full-circle moment. AI data centers showed up with wire cutters to free geothermal from its chains. US data centers already consume about 4 to 5 percent of US electricity, on a path that could double that share this decade, and they are the first buyer at this scale that can pick themselves up and move to the heat. That unlocks geothermal's biggest constraint. Distance from the wellhead. Moving data centers to the wellhead is now real.
 
 These are exciting times for geothermal.
 
@@ -55,7 +55,7 @@ Those projects are not off-grid. What they prove is that the buyer can move to t
 
 The hyperscaler's real bill is not kilowatt-hours. It is time to compute. The electron is an input. Compute is the product. Waiting three years in a queue for interconnection is part of the bill. When time is the constraint, power stops being priced as a commodity and starts being priced as a calendar. That changes everything.
 
-The receipt for that already exists. Anthropic's 20-year campus lease with TeraWulf covers about 401 MW of IT load for roughly $19 billion. The arithmetic comes back near $271 per MWh. That is a lease for buildings and cooling, not a power-only PPA, but nobody signs a number like that to save on electrons. They sign it to buy the calendar.
+The receipt for that already exists. Anthropic's 20-year campus lease with TeraWulf covers about 401 MW of IT load for roughly $19 billion. The arithmetic comes back near $271 per MWh, if the campus runs flat out at 401 MW for all 20 years. That is a lease for buildings and cooling, not a power-only PPA, but nobody signs a number like that to save on electrons. They sign it to buy the calendar.
 
 Look at what the old buyer tolerates. More than 2,060 GW sat in US interconnection queues at the end of 2025, and historically only about 13 percent of queued capacity ever reaches operation. Those gigawatts are not steel waiting for a switch. They are applications waiting for a bill. Withdrawn projects in PJM faced about $599/kW in interconnection costs against $84/kW for the ones that finished. In the non-ISO West, where much of American geothermal actually lives, withdrawn projects averaged $671/kW. Do the arithmetic on 100 MW and a connection budgeted near $8 million comes back near $60 million. Nothing about the plant changed. The wire did.
 
@@ -131,6 +131,6 @@ What did I miss? Let's discuss.
 - **Seismicity Protocols.** DOE Induced Seismicity Mitigation Protocol and traffic-light implementations. Basel (2006) and Pohang (2017) as cautionary cases. Two-thirds of Great Basin Quaternary faults have no well within a kilometer.
 - **DOE Play-Fairway.** Gabbs Valley (TG holes 124–125°C at ~152 m. geothermometry 130–140°C indicated). Steptoe Valley (modeled 170–230°C at ~3 km). Granite Springs Valley (gradient well ~96°C at ~250 m).
 - **Mazama Energy, Newberry Volcano, Oregon (28 Oct 2025).** 331°C bottomhole in an EGS demonstration well. 15 MW pilot targeted 2026. 200 MW planned build-out.
-- **Anthropic–TeraWulf Campus Lease (TeraWulf 8-K).** ~401 MW IT load, ~$19B contracted lease revenue over 20 years, implied ~$271/MWh. Buildings and cooling, not a power-only PPA. A 2026 campus lease that wanted the term that long is still a number on pricing time, not electrons.
+- **Anthropic–TeraWulf Campus Lease (TeraWulf 8-K).** ~401 MW IT load, ~$19B contracted lease revenue over 20 years, implied ~$271/MWh at full load around the clock. Buildings and cooling, not a power-only PPA. A 2026 campus lease that wanted the term that long is still a number on pricing time, not electrons.
 - **Summer Stacking.** Binary geothermal in hot dry basins typically loses about 20 to 30 percent net output on peak afternoons because air-cooled condensers work harder. data-center cooling demand can also rise at the same hour. NREL ARRA hybrid-cooling report, NREL/TP-5500-58024. above 30°C, air-cooled binary output may decrease by more than 50 percent on the hottest days.
 - **Google Demand Response.** Google announced demand-response agreements with Indiana Michigan Power and TVA in August 2025, but the notice periods are not public. Google's earlier Northern Wasco County PUD pilot in Oregon demonstrated day-ahead demand response.
