@@ -1,5 +1,5 @@
 // Public resume, rendered at /resume, with /Omer-Bese-Resume.pdf as the download.
-// Text follows the public resume built from cv.md on 2026-11-04 (career-ops output/public-cv). Keep the two in sync: a change
+// Text follows the public resume built on 2026-11-10 (career-ops output/public-cv/v003). Keep the two in sync: a change
 // here needs the PDF re-rendered, and the reverse. The PDF also prints a one-line
 // descriptor per publication; the page links to the articles themselves.
 
@@ -21,7 +21,7 @@ export interface ResumeItem {
 }
 
 export const summary =
-  "Energy systems engineer, founder, builder, operator. Started in the field on LADWP's commercial lighting rebate program, running projects from bulb counts to utility sign-off, then helped launch an industrial energy-audit program at the Istanbul Chamber of Industry. Founded Bonjuur in 2022 and raised $90K. Since 2026, building and shipping software with AI agents, mostly solo: WattShed, Re_Tera and ManorOS. Built WattShed independently; now looking to build products like it inside a team.";
+  'Energy systems engineer and founder. Work from the primary text: read the tariff, power contract or statute, find the clause that decides the cost, and build the tool that prices it. Most recent: an independent case study of the power contract for the Hawesville, Kentucky campus Anthropic has leased, built with Claude from public filings. Started on contractor-side LADWP rebate projects, then co-launched an industrial energy-audit program at the Istanbul Chamber of Industry. Built WattShed independently; now looking to do this work inside a team.';
 
 export const jobs: ResumeJob[] = [
   {
@@ -32,11 +32,12 @@ export const jobs: ResumeJob[] = [
     link: { label: 'wattshed.co', href: 'https://wattshed.co' },
     intro: ['Community energy programs for data centers.'],
     points: [
-      "Thesis: a rebate priced per kilowatt saved, set against the funder's own return rather than a utility's rate case; audited with vision AI rather than a truck roll; settled in weeks; and visible to the household on next month's bill. Target buyers: hyperscalers and data center developers, companies like Base Power, and government agencies and utilities.",
-      'Built the first prototype solo at OpenAI Build Week (July 2026), then made it a product. A deterministic TypeScript engine applies the rules and AI structures the inspection evidence; a vitest suite asserts that every figure on the methodology page equals a live call to that engine.',
-      'Built the program runtime, live in production: funders set the terms, households apply, contractors quote and document the work, reviewers clear it, and funders pay on verified results. The whole journey passed end to end on production in October 2026.',
-      "A public, no-login program designer for all 50 states and DC (degree-day, modified-bin and deemed-savings methods). A vision AI auditor estimates the house's current efficiency from video and pre-approves upgrades; a liveness check verifies that before-and-after video was captured live in that session.",
-      'Split the platform into 40 modules across six suites; 30 run as public, no-login tools. Built a live MCP server over the pricing engine (wattshed.co/mcp) and published the Mitchell County, Texas case study (modeled: 641 homes, about 2.08 MW of peak off the local grid).',
+      'Published the Hawesville power contract case study (wattshed.co/case-study/hancock-county), an independent reading of the power contract for the 482 MW Hawesville, Kentucky campus that TeraWulf is building and Anthropic has leased, from public filings (Kentucky PSC case 2026-00115): a live model and a 2-page memo. The billing floor starts once a 30-minute peak passes 50 MW, or at a completion notice if earlier, so on an assumed nine-month ramp the campus is billed at least $9.7M for power not yet drawn; a 241 MW start would pay $3.2M of floor charges instead of $9.7M.',
+      "Built Lens (wattshed.co/lens), the model behind the study, as an MCP server. Claude prices any term live, pulls one power assumptions sheet (when power arrives, how much, how reliable, at what cost) and reads the stakeholder record: 10 parties including the PSC and the Attorney General, 10 deciding dates including MISO's answer to FERC's large-load show-cause order (EL26-70) and Kentucky's 2027 session (a possible HB 593 successor), each graded by source, and 7 unknowns.",
+      "Also priced in the study (modeled): the capacity charge sits outside the floor and is set on a seasonal peak the campus names by each 1 October, so naming a summer peak 10% lower and holding to it nets about $1.7M a year. The campus buys MISO energy at the hourly price, and gas set MISO's real-time price in 63% of intervals in 2024, so each $1 per MMBtu adds about $17M a year to its power bill.",
+      "Ratepayer test in the study, on a $10M household program (734 homes): about $123K a year is shifted to other Big Rivers customers if the credit is valued at Virginia's assumed $120 per kW-year; nothing is shifted if it is set at what the grid avoids.",
+      "Wrote the Wythe County, Virginia case study (wattshed.co/case-study/wythe-county) in four days, in a market not worked in before: from Appalachian Power's Tariff 28, the SCC's large-load order and Va. Code 56-596.7, priced a $10M home upgrade and battery program near Fluidstack's campus at $5.1M to $8.5M net over 14 years, depending on the credit rule, and named the three terms in Appalachian Power's January 2027 filing that move the net cost most.",
+      'Built the program runtime, live in production: funders set terms, households apply, contractors document the work, reviewers clear it, funders pay on verified results. About 2,000 unit tests.',
     ],
   },
   {
@@ -45,9 +46,7 @@ export const jobs: ResumeJob[] = [
     period: 'April 2022 to December 2025',
     location: 'New York and Los Angeles',
     points: [
-      'A housekeeping service built around short daily visits instead of the three-hour minimum. Cleaned houses personally every weekday for six months, more than 500 service visits, to experience the bottlenecks firsthand; built a 180-person waitlist.',
-      'Raised $90,000, including $25,000 from Jason Calacanis after his pre-accelerator, getting him to break both of his rules: no solo founders, no service businesses. First customer: Jordan Fliegel, Managing Director of Techstars NYC.',
-      'Pivot (2025): AI estate management, with bodycams and vision AI to automate oversight of in-home service work, then refocused ManorOS on home energy.',
+      'Built a housekeeping service and raised $90,000, $25,000 of it from Jason Calacanis after his pre-accelerator (one of roughly four funded from a cohort of about 150), getting him to break both of his rules: no solo founders, no service businesses.',
     ],
   },
   {
@@ -56,8 +55,7 @@ export const jobs: ResumeJob[] = [
     period: 'March 2020 to October 2025',
     location: 'New York',
     points: [
-      'Co-founded a two-person business importing handmade, high-end Turkish home goods. Was set to sign a six-figure SoHo retail lease on March 12, 2020, but decided to wait on COVID; the city locked down eight days later. Pivoted to e-commerce, then to B2B wholesale as the exclusive US representative of a couple of Turkish brands.',
-      "Ran the full chain with a co-founder: sourcing from artisans in Turkey, customs brokerage and tariff classification, ocean freight, inventory in NYC's Starrett-Lehigh Building, last-mile delivery and the Shopify store.",
+      'Imported handmade Turkish home goods with a co-founder: sourcing, customs brokerage and tariff classification, ocean freight and fulfillment. Personally handled every invoice and import document.',
     ],
   },
   {
@@ -66,17 +64,16 @@ export const jobs: ResumeJob[] = [
     period: 'April 2019 to November 2019',
     location: 'Ankara, Turkey',
     points: [
-      'Oversaw FDA-clearance work for a battery-powered IoT medical device, coordinating hardware engineering, regulatory and sales; the company obtained clearance during the role.',
-      'Launched the Amazon UK and EU stores in the restricted Medical Device II category in three months, against a usual ten, by preparing the UN 38.3, CE marking and EU medical-device documentation before Amazon asked for it.',
+      'Oversaw FDA-clearance work for a battery-powered IoT medical device, coordinating hardware engineering, regulatory and sales; the company obtained clearance during the role. Opened its Amazon UK and EU stores in a restricted medical-device category in three months (usually ten).',
     ],
   },
   {
     org: 'Istanbul Chamber of Industry',
-    role: 'Associate Specialist, Energy and Environment',
+    role: 'Associate Specialist, Energy & Environment',
     period: 'January 2018 to March 2019',
-    location: 'Istanbul',
+    location: 'Istanbul, Turkey',
     points: [
-      "Helped develop and launch an industrial energy-audit program with Yıldız Technical University: the Chamber funded audit and measurement equipment, students audited member factories at no charge using the factories' real data, and professors oversaw the reports. Supervised the program's first audit, at Sümer Plastik's 12,000 m² factory.",
+      "Co-developed an industrial energy-audit program for a Chamber of more than 18,000 member manufacturers and launched it after about a year of approvals: the Chamber funded the equipment, Yıldız Technical University students audited member factories at no charge on real data, and professors oversaw the reports. Supervised the first audit, at Sümer Plastik's 12,000 m² factory.",
     ],
   },
   {
@@ -85,50 +82,30 @@ export const jobs: ResumeJob[] = [
     period: 'November 2016 to November 2017',
     location: 'Los Angeles',
     points: [
-      "Ran LADWP Commercial Lighting Incentive Program rebate projects end to end for a contractor on the utility's preferred list, from small garages to the Jonathan Club, the Sofitel and the Four Seasons: fixture-by-fixture audits to California Title 24 and ASHRAE, savings in kW, kWh and GHG equivalents, installation checks and the post-installation audits before LADWP released funds.",
-      "Personally replaced about half of the Jonathan Club's bulbs with LEDs when crews were short-staffed. Most clients saw at least a 30% reduction in lighting energy use.",
+      "Worked at a small contractor on LADWP's preferred list for the Commercial Lighting Incentive Program. Ran rebate projects from application and LADWP pre-inspection to the post-installation audit before LADWP released funds, several at once over four-to-six-month cycles, at sites from small garages to the Four Seasons.",
     ],
   },
 ];
 
+// Built with AI agents, 2026. Solo except PowerUP (hackathon team of four).
 export const projects: ResumeItem[] = [
   {
     name: 'PowerUP',
-    links: [{ label: 'GitHub', href: 'https://github.com/mrbese/PowerUp' }],
-    text: 'InnovateLA Dual-Use Hackathon (USC, October 2026), Base Power track, team of four; top 20 and poster day. Owned the energy design and build direction: an opt-in neighborhood island behind an existing SCE switch for 456 homes, a wildfire-shutoff dispatcher replayed on the real October 2026 Malibu shutoff, and a guard that passes every order to the fleet through eight checks.',
-  },
-  {
-    name: 'Re_Tera',
     links: [
-      { label: 'getretera.com', href: 'https://getretera.com' },
-      { label: 'App Store', href: 'https://apps.apple.com/us/app/re-tera-insurance-copilot/id6776045760' },
+      { label: 'GitHub', href: 'https://github.com/mrbese/PowerUp' },
+      { label: 'live demo', href: 'https://mrbese.github.io/PowerUp/' },
     ],
-    text: 'Insurance-policy app: explains coverage in plain language and flags gaps, sublimits and exclusions against a 50-state insurance-statute corpus, with a citation validator. Native SwiftUI rewrite from first commit to the App Store in three weeks (June 2026), solo.',
+    text: "Neighborhood islands for a home-battery fleet, hackathon build, October 2026. Top 20 at USC's InnovateLA Dual-Use Hackathon, on the Energy and Grid Hardening track sponsored by Base Power, in a team of four. Owned the energy design and directed the build with Claude Code: homes behind an SCE line switch run as one island on their batteries, SCE opens the switch and bills, and a utility officer approves the recharge. In the simulated replay at clear-sky solar, the 456-home pilot carries all 16 historical shutoffs.",
   },
   {
     name: 'ManorOS',
     links: [{ label: 'App Store', href: 'https://apps.apple.com/us/app/manoros/id6759580676' }],
-    text: 'Native iOS home energy auditor with LiDAR room scanning (ARKit, RoomPlan), simplified Manual J room load estimates, HVAC nameplate OCR, utility-bill and tariff checks, and upgrade recommendations with payback periods. Live on the App Store since October 2026.',
+    text: "Home energy auditor iOS app, live on the App Store. For the peak-shaving release that follows the App Store build, built a demand-tariff dataset of 165 utilities in 34 states from NREL, OpenEI URDB and the tariff sheets: 73 verified with the governing sentence quoted and linked, after three research and four verification rounds re-checked 96 claims. Includes a bill check for LADWP's Power Access Charge, in effect a demand ratchet measured in kWh.",
   },
   {
-    name: 'CellSense',
-    links: [{ label: 'github.com/mrbese/cellsense', href: 'https://github.com/mrbese/cellsense' }],
-    text: 'Home battery economics across four battery systems, 16 utilities and 35 rate plans, as a web calculator and a SwiftUI app.',
-  },
-  {
-    name: 'HazShip',
-    links: [{ label: 'github.com/mrbese/HazShip', href: 'https://github.com/mrbese/HazShip' }],
-    text: 'Lithium battery shipping classification under 49 CFR 173.185, the IATA DGR and the IMDG Code, entirely on device.',
-  },
-  {
-    name: 'BESE, OpenAI Parameter Golf',
-    links: [{ label: 'PR #1327', href: 'https://github.com/openai/parameter-golf/pull/1327' }],
-    text: 'Custom tokenizer from T9 keypads, letter frequencies and QWERTY co-occurrence; 287-entry vocabulary, about 72% smaller than baseline, 1.1276 bits per byte in 15.3 MB (PR open, score self-reported).',
-  },
-  {
-    name: '1Relay',
-    links: [{ label: '1relay.com', href: 'https://1relay.com' }],
-    text: 'API key wallet with a zero-knowledge vault, and proxy for AI services, with budget and rate limiting across OpenAI and Anthropic.',
+    name: 'Re_Tera',
+    links: [{ label: 'getretera.com', href: 'https://getretera.com' }],
+    text: 'Insurance-policy app on a 50-state insurance-statute corpus. Checks every statute citation against the corpus text. A study of whether amendments can be found automatically (75 verified amendments, five states) surfaced a missed Alaska omnibus insurance act (SB 132).',
   },
 ];
 
@@ -143,19 +120,18 @@ export const education = [
   {
     org: 'Columbia University',
     role: 'M.S. Sustainability Management',
-    period: '2016',
-    note: 'Capstone with WWF: proposed UHT milk in place of refrigerated milk, selected by WWF for implementation.',
+    period: '2015 to 2016',
+    note: 'Coursework in Energy Markets and Innovation and Solar Project Development. WWF capstone: all nine teammates rejected the UHT-milk proposal at first; after weeks of added evidence, WWF selected it for implementation.',
   },
   {
     org: 'Istanbul Bilgi University',
     role: 'B.S. Energy Systems Engineering',
-    period: '2014',
-    note: 'Thesis on geothermal power in the Seferihisar field, built on proprietary well data obtained directly from Ormat Technologies.',
+    period: '2010 to 2014',
+    note: "Geothermal thesis on the Seferihisar field, sizing a hypothetical 2 MW plant on proprietary well data that Ormat's regional director handed over with permission to publish. Attended the Stanford Geothermal Workshop.",
   },
 ];
 
 export const skills = [
-  { label: 'Energy', text: 'Building audits, utility rebate programs, deemed-savings, degree-day and modified-bin methods, simplified Manual J, demand-charge billing and tariffs, home-battery payback, battery dispatch, GIS on utility open data.' },
-  { label: 'AI and software', text: 'AI agents (Claude Code, Codex, Cursor) and multi-agent orchestration, vision AI, retrieval-augmented generation, MCP servers, TypeScript, Next.js, Swift and SwiftUI, Firebase, Google Cloud, Cloudflare, Playwright, Vitest, GitHub Actions.' },
-  { label: 'Operations', text: 'Field operations, importing and customs, e-commerce and B2B wholesale, regulated-category marketplace launches, FDA clearance.' },
+  { label: 'Building with AI agents', text: 'Claude Code, Codex and Cursor, with agent-written test suites and cross-model reviews (Claude and Codex); deterministic engines and MCP servers.' },
+  { label: 'Energy markets and programs', text: 'MISO and Kentucky (Hawesville), PJM and Virginia (Wythe), ERCOT (Base Power essay), CAISO and SCE data (PowerUP), LADWP rebate programs.' },
 ];
