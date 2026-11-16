@@ -1,5 +1,5 @@
 ---
-title: 'Geothermal Is in "Heat", and this time, buyer is moving in'
+title: 'Geothermal Is in "Heat", and this time, the buyer is moving in'
 date: 2026-08-20
 readTime: 12 min
 description: The villain was never the geology. It was the geography. AI data centers showed up with wire cutters to free geothermal from its chains.
@@ -11,7 +11,7 @@ featured: true
 
 My love story with geothermal started in university. It fascinated me with its 24/7 production, closer than the sun, literally right under our footsteps. And I was lucky that my professor, Fusun Tut Haklidir, came from the corporate world. So the class was never just about engineering but also included feasibility, profits, and the corporate reality. Which hooked the entrepreneur in me at first sight.
 
-That is why I wrote my thesis on Geothermal energy in Izmir, my hometown, with an investment analysis rather than just a literature review. I flew all the way to the Stanford Geothermal Workshop just to listen. Later, I tracked down Gad Shoshan, Ormat's director for Turkey, because I refused to model the field on assumed numbers. Ormat had the real production data even the local government did not have. To my surprise, all I did was ask, and the rest was an instagram post I guess, with Mr. Shoshan, me holding the proprietary data and a permission to publish for the first time.
+That is why I wrote my thesis on Geothermal energy in Izmir, my hometown, with an investment analysis rather than just a literature review. I flew all the way to the Stanford Geothermal Workshop just to listen. Later, I tracked down Gad Shoshan, Ormat's regional manager, because I refused to model the field on assumed numbers. Ormat had the real production data even the local government did not have. To my surprise, all I did was ask, and the rest was an instagram post I guess, with Mr. Shoshan, me holding the proprietary data and permission to publish for the first time.
 
 ![Instagram post from May 26, 2014, with Gad Shoshan of Ormat, holding the production data](/img/ormat-shoshan-2014.jpg)
 
@@ -21,7 +21,7 @@ Following a master's at Columbia, energy audits in Los Angeles, factory efficien
 
 Geothermal energy has always been chained to whatever carried value away from the field. First the railroads, then the wires. More than a century ago, when the first aluminum smelters followed cheap hydropower, the constraint became the railroad as the metal had to be carried away from the field. Nobody built a railroad to a powerhouse. The powerhouse had to be born next to one. Then, with electricity production, the constraint just changed clothes. The transmission line became the new railroad.
 
-The question was never where the richest resource was, but what stood next to it. Distance from the wellhead decided what got discovered, and we just kept our eyes closed to further lands. After all, that was the corporate reality. No one would pay Columbus to search for "hot" resources just for fun.
+The question was never where the richest resource was, but what stood next to it. Distance from the wellhead decided what got discovered, and we just kept our eyes closed to farther lands. After all, that was the corporate reality. No one would pay Columbus to search for "hot" resources just for fun.
 
 Today I am having a full-circle moment. AI data centers showed up with wire cutters to free geothermal from its chains. US data centers already consume about 4 to 5 percent of US electricity, on a path that could double that share this decade, and they are the first buyer at this scale that can pick themselves up and move to the heat. That unlocks geothermal's biggest constraint. Distance from the wellhead. Moving data centers to the wellhead is now real.
 
@@ -67,7 +67,7 @@ A data center ships its product over glass at the speed of light. It can park a 
 
 ## the deepest pockets are willing to take risks
 
-The balance sheet scales too. At Krafla, IDDP-1 hit magma at about 2,100 meters, brought up hydrochloric acid, and was later quenched after a master-valve failure. That hole can end a developer. But it is just a rounding error for a hyperscaler. And they are comfortable with economics of scale.
+The balance sheet scales too. At Krafla, IDDP-1 hit magma at about 2,100 meters, brought up hydrochloric acid, and was later quenched after a master-valve failure. That hole can end a developer. But it is just a rounding error for a hyperscaler. And they are comfortable with economies of scale.
 
 Fervo already showed what repetition does. The first Project Red horizontal well took about 70 days, the fastest Cape well took 21, and the cost on the first four Cape wells fell from $9.4 million to $4.8 million. Impatience favors the resource you can start drilling tomorrow.
 
@@ -75,13 +75,13 @@ Fervo already showed what repetition does. The first Project Red horizontal well
 
 Data centers powered by off-grid geothermal energy face distinctive thermal challenges. A geothermal plant has to reject waste heat, either through evaporative water cooling or massive air-cooling fans. Water cooling stabilizes power output, especially in hot ambient conditions, but securing substantial consumptive water rights is an uphill battle getting steeper each day. Air cooling preserves water, but then a binary plant can lose 20 to 30 percent of its net output on a hot afternoon, and even more in extreme heat.
 
-Now pair that plant with a data center, thermal penalty compounds. The same ambient heat derating the generation also forces the data center to draw more power just to cool its silicon at the exact same summer afternoon. Generation falls when demand rises, you just double the hit.
+Now pair that plant with a data center, and the thermal penalty compounds. The same ambient heat derating the generation also forces the data center to draw more power just to cool its silicon on the exact same summer afternoon. Generation falls when demand rises, you just double the hit.
 
 Navigating this tradeoff requires evaluation not just from an engineering and financial standpoint, but also under growing public scrutiny over local resources. Fortunately, solutions like hybrid cooling systems are advancing quickly.
 
 ## data centers can flex
 
-Historically on-grid systems treat the grid as a battery that absorbs that double hit alongside maintenance cycles, failed units, and power spikes. Off-grid campus must size around them or use a load that can bend.
+Historically on-grid systems treat the grid as a battery that absorbs that double hit alongside maintenance cycles, failed units, and power spikes. An off-grid campus must size around them or use a load that can bend.
 
 Today's interconnection deals with hyperscalers prove the load can bend. To get power on the timeline they need, operators are already agreeing to demand response. Google has signed those deals. Duke's Nicholas Institute found that roughly 76 GW of new large load could fit on the existing grid with about 0.25 percent annual curtailment. At the end, if I have already agreed to flex my load when the utility calls, I would rather flex it around my own schedule. Skip the line, go off-grid, and control my own calendar.
 
@@ -123,14 +123,14 @@ What did I miss? Let's discuss.
 - **Rhodium Group (March 2025).** 1.7 GW waiting for an interconnection agreement, a potential 40 percent increase in US installed geothermal. 31 to 45 percent is the drop in national capacity-weighted LCOE of new geothermal when sited at data centers versus clustered siting, in a modeled behind-the-meter EGS case. Clustered siting. BTM EGS meets 55–64 percent of hyperscale growth (15–17 GW). Power-first siting. 100 percent of projected growth.
 - **Data Center Power Consumption.** LBNL 2023 electricity. 176 TWh, ~4.4 percent of US use. IEA 2024. 183 TWh, >4 percent. LBNL projection. 6.7 to 12 percent of US electricity by 2028.
 - **Duke Nicholas Institute.** Norris et al., Rethinking Load Growth (February 2025). 76 GW of new flexible load at 0.25 percent annual curtailment.
-- **Fervo Energy.** Project Red operational for Google as grid CFE, Nov 2023, ~3.5 MW. Corsac 115 MW. PUCN approval of NV Energy Clean Transition Tariff, 13 May 2025. Cape Station 500 MW target. S-1 (2026). 3 GW Google framework dated 19 Mar 2026, non-binding ("does not obligate Google to purchase power from us"). Drilling. first Project Red horizontal well ~70 days. fastest Cape well 21 days. Cost. first four Cape horizontal wells, $9.4M to $4.8M.
+- **Fervo Energy.** Project Red operational for Google as grid CFE, Nov 2023, ~3.5 MW. Corsac 115 MW. PUCN approval of NV Energy Clean Transition Tariff, 13 May 2025. Cape Station 500 MW target. S-1 (2026). 3 GW Google framework dated 19 Mar 2026, non-binding ("does not obligate Google to purchase power from us"). Drilling: first Project Red horizontal well ~70 days; fastest Cape well 21 days. Cost: first four Cape horizontal wells, $9.4M to $4.8M.
 - **Hyperscaler Deals.** Ormat / NV Energy / Google up to 150 MW, announced 17 Feb 2026, COD 2028–2030. Meta + Sage Geosystems 150 MW (26 Aug 2024). Meta + XGS Energy 150 MW into the PNM grid (12 Jun 2025).
 - **Alcoa Bakki Withdrawal (2011).** 400+ MW smelter. Iceland National Planning Agency comment on the joint EIA, ~140 MW shortfall. Planning spend reported between about $9 million and $17 million.
-- **Iceland Deep Drilling Project (IDDP-1 at Krafla).** Rhyolitic magma at ~2,100 m. HCl in superheated steam. completed and flow-tested 2010–2012. quenched after master-valve failure.
+- **Iceland Deep Drilling Project (IDDP-1 at Krafla).** Rhyolitic magma at ~2,100 m. HCl in superheated steam. Completed and flow-tested 2010–2012. Quenched after master-valve failure.
 - **USGS Assessments.** 2008 national assessment. 9,057 MWe identified. 30,033 MWe undiscovered conventional. USGS 2025 Great Basin fact sheet. 135 GWe EGS technical potential in that province, upper 6 km, if sufficient technological advances occur. Not a national hydrothermal-plus-EGS ceiling.
 - **Seismicity Protocols.** DOE Induced Seismicity Mitigation Protocol and traffic-light implementations. Basel (2006) and Pohang (2017) as cautionary cases. Two-thirds of Great Basin Quaternary faults have no well within a kilometer.
 - **DOE Play-Fairway.** Gabbs Valley (TG holes 124–125°C at ~152 m. geothermometry 130–140°C indicated). Steptoe Valley (modeled 170–230°C at ~3 km). Granite Springs Valley (gradient well ~96°C at ~250 m).
 - **Mazama Energy, Newberry Volcano, Oregon (28 Oct 2025).** 331°C bottomhole in an EGS demonstration well. 15 MW pilot targeted 2026. 200 MW planned build-out.
 - **Anthropic–TeraWulf Campus Lease (TeraWulf 8-K).** ~401 MW IT load, ~$19B contracted lease revenue over 20 years, implied ~$271/MWh at full load around the clock. Buildings and cooling, not a power-only PPA. A 2026 campus lease that wanted the term that long is still a number on pricing time, not electrons.
-- **Summer Stacking.** Binary geothermal in hot dry basins typically loses about 20 to 30 percent net output on peak afternoons because air-cooled condensers work harder. data-center cooling demand can also rise at the same hour. NREL ARRA hybrid-cooling report, NREL/TP-5500-58024. above 30°C, air-cooled binary output may decrease by more than 50 percent on the hottest days.
+- **Summer Stacking.** Binary geothermal in hot dry basins typically loses about 20 to 30 percent net output on peak afternoons because air-cooled condensers work harder. Data-center cooling demand can also rise at the same hour. NREL ARRA hybrid-cooling report, NREL/TP-5500-58024: above 30°C, air-cooled binary output may decrease by more than 50 percent on the hottest days.
 - **Google Demand Response.** Google announced demand-response agreements with Indiana Michigan Power and TVA in August 2025, but the notice periods are not public. Google's earlier Northern Wasco County PUD pilot in Oregon demonstrated day-ahead demand response.

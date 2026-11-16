@@ -61,7 +61,7 @@ December 2025: ERCOT launched Real-Time Co-optimization plus Batteries. Every fi
 
 The conventional narrative: more batteries suppress the price spikes that justify building batteries. This is real and supported by 2024 data. But the bull case deserves serious treatment. The ERCOT large-load interconnection queue, primarily data centers and industrial demand, nominally showed approximately 233 GW of pending new load in December 2025. The generation interconnection queue was approximately 432 GW of active requests (storage, solar, gas, wind). Historically, 75–85% of generation queue projects are never built, yielding realistic net new generation of 65–110 GW.
 
-AI data centers, EV charging, and industrial electrification could add 20–30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin (about 18% for summer 2026 in the December 2025 ERCOT outlook) compresses back toward sub-15%, Where scarcity events become frequent again and batteries print money. But until then companies depend solely on ancillary prices need to get creative.
+AI data centers, EV charging, and industrial electrification could add 20–30 GW of flat, continuous baseload demand. If this materializes faster than storage grows, the reserve margin (about 18% for summer 2026 in the December 2025 ERCOT outlook) compresses back toward sub-15%, where scarcity events become frequent again and batteries print money. But until then, companies that depend solely on ancillary prices need to get creative.
 
 ## The Funding. AC vs DC.
 

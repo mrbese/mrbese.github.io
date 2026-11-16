@@ -103,7 +103,7 @@ The electrical infrastructure becomes exposed to voltage ripple driven by the gr
 
 Electromagnetic transformers carry more than a century of field data. Fault-managed FMPS transmitters have roughly three years of commercial history. Corporate claims of 200 percent reliability gains over AC equivalents often trace back to thin, circular citation chains. The real entrepreneurial alpha is not in building another transmitter. It is in the boring, recurring work of monitoring capacitor aging and varistor health across DC infrastructure.
 
-## texas can have their cake and eat it too
+## texas can have its cake and eat it too
 
 At the scale of entire grids, direct current stops being mainly about efficiency. It becomes a tool for keeping federal regulators on the other side of the state line.
 
