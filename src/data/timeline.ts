@@ -32,6 +32,13 @@ export const career: Entry[] = [
     note: 'Community energy programs for data centers: software that creates, verifies and pays household efficiency rebates.',
   },
   {
+    org: 'ManorOS',
+    role: 'Founder',
+    period: '2025 - Present',
+    location: 'Los Angeles',
+    note: 'Native iOS home energy audit app, on the App Store since October 2026: LiDAR room scanning, load estimates, bill and tariff checks, and peak shaving for homes.',
+  },
+  {
     org: 'Bonjuur',
     role: 'Founder',
     period: '2022 - 2025',

@@ -1,7 +1,8 @@
 // Public resume, rendered at /resume, with /Omer-Bese-Resume.pdf as the download.
-// Text follows the public resume built on 2026-11-10 (career-ops output/public-cv/v004). Keep the two in sync: a change
-// here needs the PDF re-rendered, and the reverse. The PDF also prints a one-line
-// descriptor per publication; the page links to the articles themselves.
+// The page text follows the public resume of 2026-11-10, with ManorOS moved into the work history on 2026-11-17.
+// The PDF is the current general resume without phone or email (career-data output/public-cv/v006, 2026-11-17).
+// The two carry the same jobs, dates and figures; the PDF's wording is newer. A fact changed here must be changed
+// in the PDF too, and the reverse.
 
 export interface ResumeJob {
   org: string;
@@ -38,6 +39,20 @@ export const jobs: ResumeJob[] = [
       "Ratepayer test in the study, on a $10M household program (734 homes): about $169K a year is shifted to other Big Rivers customers if the credit is valued at Virginia's assumed $120 per kW-year; nothing is shifted if it is set at what the grid avoids.",
       "Wrote the Wythe County, Virginia case study (wattshed.co/case-study/wythe-county) in four days, in a market not worked in before: from Appalachian Power's Tariff 28, the SCC's large-load order and Va. Code 56-596.7, priced a $10M home upgrade and battery program near Fluidstack's campus at $5.1M to $8.5M net over 14 years, depending on the credit rule, and named the three terms in Appalachian Power's January 2027 filing that move the net cost most.",
       'Built the program runtime, live in production: funders set terms, households apply, contractors document the work, reviewers clear it, funders pay on verified results. About 2,000 unit tests.',
+    ],
+  },
+  {
+    org: 'ManorOS',
+    role: 'Founder',
+    period: 'June 2025 to present',
+    location: 'Los Angeles',
+    link: { label: 'App Store', href: 'https://apps.apple.com/us/app/manoros/id6759580676' },
+    points: [
+      'Native iOS home energy audit app, live on the App Store since October 2026: LiDAR room scanning (ARKit, RoomPlan), simplified Manual J room load estimates with ASHRAE window solar-gain factors, HVAC nameplate OCR, and upgrade recommendations with payback periods.',
+      "Reads utility bills (demand charges, rate tiers), compares the utility's tariffs on a year of the home's usage, and matches the home to paid demand response and VPP programs.",
+      "Built peak shaving (demand-charge management for homes). The peak-shaving controller is a deterministic state machine: it projects each billing interval's final demand and sheds the fewest loads in priority order (EV charging, water heater, HVAC setback).",
+      "In a simulated July week on Salt River Project's E-16 demand plan, peak shaving cut a home's billed demand from 13.65 kW to 7.65 kW (44%), with the house never above 77.2°F.",
+      "Built a demand-tariff dataset for peak shaving: researched residential demand charges at 165 US utilities and verified 73, each with the governing tariff sentence quoted and linked. Includes a bill check for LADWP's Power Access Charge, in effect a demand ratchet measured in kWh.",
     ],
   },
   {
@@ -99,11 +114,6 @@ export const projects: ResumeItem[] = [
       { label: 'live demo', href: 'https://mrbese.github.io/PowerUp/' },
     ],
     text: "Neighborhood islands for a home-battery fleet, hackathon build, October 2026. Top 20 at USC's InnovateLA Dual-Use Hackathon, on the Energy and Grid Hardening track sponsored by Base Power, in a team of four. Owned the energy design and directed the build with Claude Code: homes behind an SCE line switch run as one island on their batteries, SCE opens the switch and bills, and a utility officer approves the recharge. In the simulated replay at clear-sky solar, the 456-home pilot carries all 16 historical shutoffs.",
-  },
-  {
-    name: 'ManorOS',
-    links: [{ label: 'App Store', href: 'https://apps.apple.com/us/app/manoros/id6759580676' }],
-    text: "Home energy auditor iOS app, live on the App Store. For the peak-shaving release that follows the App Store build, built a demand-tariff dataset of 165 US utilities from NREL, OpenEI URDB and the tariff sheets: 73 verified with the governing sentence quoted and linked, after three research and four verification rounds re-checked 96 claims. Includes a bill check for LADWP's Power Access Charge, in effect a demand ratchet measured in kWh.",
   },
   {
     name: 'Re_Tera',
