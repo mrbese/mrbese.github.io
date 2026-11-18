@@ -35,8 +35,8 @@ export const career: Entry[] = [
     org: 'Bonjuur',
     role: 'Founder',
     period: '2022 - 2025',
-    location: 'NY to LA',
-    note: 'A daily housekeeping service built on short visits. Built a 180-person waitlist by cleaning houses myself for six months. First check from Jason Calacanis. Raised $90K. Wound the service down at the end of 2024, pivoted in 2025 to vision AI for in-home service work, then wound the pivot down in December 2025 and returned to energy.',
+    location: 'New York',
+    note: 'A daily housekeeping service built on short visits. Built a 180-person waitlist by cleaning houses myself for six months. First check from Jason Calacanis. Raised $90K. Wound the service down at the end of 2024, pivoted in 2025 to vision AI for in-home service work, then wound the pivot down in June 2025 and returned to energy.',
   },
   {
     org: 'Tulip Haus',
@@ -46,11 +46,11 @@ export const career: Entry[] = [
     note: 'Artisan home decor from Turkey. Days from a NYC retail lease when COVID hit, pivoted to e-commerce. When a crane hit the first container in Spain and the marine insurer walked away on jurisdiction, I read the fine print and pursued the claim with the shipyard operator directly. B2C failed, survived via B2B.',
   },
   {
-    org: 'SpiroHome',
+    org: 'Spirohome',
     role: 'Business Developer',
     period: '2019',
     location: 'Ankara',
-    note: 'Medical IoT. Oversaw FDA clearance and the Amazon UK and EU launch, coordinating hardware, regulatory, and commercial teams.',
+    note: 'Medical IoT. Oversaw the FDA clearance process and the Amazon UK and EU launch, coordinating hardware, regulatory, and commercial teams.',
   },
   {
     org: 'Istanbul Chamber of Industry',
@@ -60,7 +60,7 @@ export const career: Entry[] = [
     note: 'Managed the development and launch of a program supplying industrial measurement devices to students for factory energy-efficiency analyses, and supervised its first audit. Learned that bureaucracy takes a full year to launch a basic program.',
   },
   {
-    org: 'NULARIS',
+    org: 'Nularis',
     role: 'Energy Efficiency Engineer',
     period: '2016 - 2017',
     location: 'Los Angeles',

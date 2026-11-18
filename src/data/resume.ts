@@ -32,10 +32,10 @@ export const jobs: ResumeJob[] = [
     link: { label: 'wattshed.co', href: 'https://wattshed.co' },
     intro: ['Community energy programs for data centers.'],
     points: [
-      'Published the Hawesville power contract case study (wattshed.co/case-study/hancock-county), an independent reading of the power contract for the 482 MW Hawesville, Kentucky campus that TeraWulf is building and Anthropic has leased, from public filings (Kentucky PSC case 2026-00115): a live model and a 2-page memo. The billing floor starts once a 30-minute peak passes 50 MW, or at a completion notice if earlier, so on an assumed nine-month ramp the campus is billed at least $9.7M for power not yet drawn; a 241 MW start would pay $3.2M of floor charges instead of $9.7M.',
+      'Published the Hawesville power contract case study (wattshed.co/case-study/hancock-county), an independent reading of the power contract for the 482 MW Hawesville, Kentucky campus that TeraWulf is building and Anthropic has leased, from public filings (Kentucky PSC case 2026-00115): a live model and a 2-page memo. The billing floor starts once a 30-minute peak passes 50 MW, or at a completion notice if earlier, so on an assumed nine-month ramp the campus is billed at least $9.7M for power not yet drawn, plus $0.97M for each further month of ramp.',
       "Built Lens (wattshed.co/lens), the model behind the study, as an MCP server. Claude prices any term live, pulls one power assumptions sheet (when power arrives, how much, how reliable, at what cost) and reads the stakeholder record: 10 parties including the PSC and the Attorney General, 10 deciding dates including MISO's answer to FERC's large-load show-cause order (EL26-70) and Kentucky's 2027 session (a possible HB 593 successor), each graded by source, and 7 unknowns.",
-      "Also priced in the study (modeled): the capacity charge sits outside the floor and is set on a seasonal peak the campus names by each 1 October, so naming a summer peak 10% lower and holding to it nets about $1.7M a year. The campus buys MISO energy at the hourly price, and gas set MISO's real-time price in 63% of intervals in 2024, so each $1 per MMBtu adds about $17M a year to its power bill.",
-      "Ratepayer test in the study, on a $10M household program (734 homes): about $123K a year is shifted to other Big Rivers customers if the credit is valued at Virginia's assumed $120 per kW-year; nothing is shifted if it is set at what the grid avoids.",
+      "Also priced in the study (modeled): the capacity charge sits outside the floor and is set on a seasonal peak the campus names by each 1 October, so naming a summer peak 10% lower and holding to it takes about $2.1M a year off the capacity charge. The campus buys MISO energy at the hourly price, and gas set MISO's system-wide price in 63% of intervals in 2024, so each $1 per MMBtu adds about $17M a year to its power bill.",
+      "Ratepayer test in the study, on a $10M household program (734 homes): about $169K a year is shifted to other Big Rivers customers if the credit is valued at Virginia's assumed $120 per kW-year; nothing is shifted if it is set at what the grid avoids.",
       "Wrote the Wythe County, Virginia case study (wattshed.co/case-study/wythe-county) in four days, in a market not worked in before: from Appalachian Power's Tariff 28, the SCC's large-load order and Va. Code 56-596.7, priced a $10M home upgrade and battery program near Fluidstack's campus at $5.1M to $8.5M net over 14 years, depending on the credit rule, and named the three terms in Appalachian Power's January 2027 filing that move the net cost most.",
       'Built the program runtime, live in production: funders set terms, households apply, contractors document the work, reviewers clear it, funders pay on verified results. About 2,000 unit tests.',
     ],
@@ -43,8 +43,8 @@ export const jobs: ResumeJob[] = [
   {
     org: 'Bonjuur',
     role: 'Founder',
-    period: 'April 2022 to December 2025',
-    location: 'New York and Los Angeles',
+    period: 'April 2022 to June 2025',
+    location: 'New York',
     points: [
       'Built a housekeeping service and raised $90,000, $25,000 of it from Jason Calacanis after his pre-accelerator (one of roughly four funded from a cohort of about 150), getting him to break both of his rules: no solo founders, no service businesses.',
       'Cleaned houses personally every weekday for six months, more than 500 visits, to find the bottlenecks firsthand. First customer: Jordan Fliegel, Managing Director of Techstars NYC, right after Techstars rejected Bonjuur.',
@@ -53,7 +53,7 @@ export const jobs: ResumeJob[] = [
   {
     org: 'Tulip Haus',
     role: 'Co-Founder',
-    period: 'March 2020 to October 2025',
+    period: 'March 2020 to June 2025',
     location: 'New York',
     points: [
       'Imported handmade Turkish home goods with a co-founder: sourcing, customs brokerage and tariff classification, ocean freight and fulfillment. Personally handled every invoice and import document.',
@@ -103,7 +103,7 @@ export const projects: ResumeItem[] = [
   {
     name: 'ManorOS',
     links: [{ label: 'App Store', href: 'https://apps.apple.com/us/app/manoros/id6759580676' }],
-    text: "Home energy auditor iOS app, live on the App Store. For the peak-shaving release that follows the App Store build, built a demand-tariff dataset of 165 utilities in 34 states from NREL, OpenEI URDB and the tariff sheets: 73 verified with the governing sentence quoted and linked, after three research and four verification rounds re-checked 96 claims. Includes a bill check for LADWP's Power Access Charge, in effect a demand ratchet measured in kWh.",
+    text: "Home energy auditor iOS app, live on the App Store. For the peak-shaving release that follows the App Store build, built a demand-tariff dataset of 165 US utilities from NREL, OpenEI URDB and the tariff sheets: 73 verified with the governing sentence quoted and linked, after three research and four verification rounds re-checked 96 claims. Includes a bill check for LADWP's Power Access Charge, in effect a demand ratchet measured in kWh.",
   },
   {
     name: 'Re_Tera',
