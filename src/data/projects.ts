@@ -60,7 +60,7 @@ export const projects: Project[] = [
     year: '2026',
     repoUrl: 'https://github.com/mrbese/PowerUp',
     description:
-      'Built in a team of four at the InnovateLA Dual-Use Hackathon (USC, October 2026) on the Base Power track; top 20 and poster day. I owned the energy design: homes that go dark only because their feeder runs through fire country run as one opt-in island behind an existing SCE switch, with a wildfire-shutoff dispatcher replayed on the real October 2026 Malibu shutoff and a guard that checks every order to the fleet.',
+      'Built in a team of four at the InnovateLA Dual-Use Hackathon (USC, October 2026) on the Base Power track; poster presentation on demo day. I owned the energy design: homes that go dark only because their feeder runs through fire country run as one opt-in island behind an existing SCE switch, with a wildfire-shutoff dispatcher replayed on the real October 2026 Malibu shutoff and a guard that checks every order to the fleet.',
     stack: ['JavaScript', 'SCE, CEC and CAISO data', 'ArcGIS open data', 'Dynamic programming dispatch'],
   },
   {
