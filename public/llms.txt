@@ -13,11 +13,11 @@
 
 ## Products
 
-- [WattShed](https://wattshed.co): community energy programs for data centers; software that creates, verifies and pays household efficiency rebates, with a public no-login program designer for all 50 states and DC
+- [WattShed](https://wattshed.co): energy software for data centers, homeowners and commercial energy auditors; for data centers, software that creates, verifies and pays household efficiency rebates, with a public no-login program designer for all 50 states and DC
 - [WattShed engineering notes](https://github.com/mrbese/wattshed-notes): public product and engineering documentation; source code remains private
 - [Re_Tera](https://apps.apple.com/us/app/re-tera-insurance-copilot/id6776045760): AI insurance copilot for homeowners and renters, available on the Apple App Store
 - [Re_Tera engineering notes](https://github.com/mrbese/retera-notes): public product and engineering documentation; source code remains private
-- [ManorOS](https://apps.apple.com/us/app/manoros/id6759580676): home energy auditor for iPhone and iPad, on the Apple App Store
+- [WattShed Home](https://apps.apple.com/us/app/wattshed-home/id6759580676): WattShed's home energy management app for iPhone and iPad, on the Apple App Store, with peak shaving in beta
 - [PowerUP](https://github.com/mrbese/PowerUp): neighborhood islands for a home-battery fleet, InnovateLA Dual-Use Hackathon (USC, October 2026), team of four
 - [CellSense](https://github.com/mrbese/cellsense): home battery payback calculator, web and native iOS
 - [HazShip](https://github.com/mrbese/HazShip): lithium-battery shipping classification under 49 CFR, the IATA DGR and the IMDG Code

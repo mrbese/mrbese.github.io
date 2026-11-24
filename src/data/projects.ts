@@ -14,12 +14,12 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: 'WattShed',
-    tagline: 'Community Energy Programs for Data Centers',
+    tagline: 'Energy Software for Data Centers, Homeowners and Energy Auditors',
     year: '2026',
     // Repo is private; the link points at the live app, wattshed.co.
     repoUrl: 'https://wattshed.co',
     description:
-      'Community energy programs for data centers: software that creates, verifies and pays household efficiency rebates. A public, no-login program designer covers all 50 states and DC, vision AI audits each home from video, and a deterministic engine prices every rebate, so the model never decides the money. 30 of its 40 modules run as public tools, with an MCP server over the pricing engine.',
+      'Energy software for three audiences: WattShed Home for homeowners, WattWalk (in TestFlight) for commercial energy auditors, and for data centers, software that creates, verifies and pays household efficiency rebates. A public, no-login program designer covers all 50 states and DC, vision AI audits each home from video, and a deterministic engine prices every rebate, so the model never decides the money. 30 of its 40 modules run as public tools, with an MCP server over the pricing engine.',
     stack: ['Next.js 16', 'React 19', 'Firebase', 'OpenAI vision', 'Deterministic qualification engine'],
     home: true,
   },
@@ -64,12 +64,12 @@ export const projects: Project[] = [
     stack: ['JavaScript', 'SCE, CEC and CAISO data', 'ArcGIS open data', 'Dynamic programming dispatch'],
   },
   {
-    name: 'ManorOS',
-    tagline: 'iOS Home Energy Auditor',
+    name: 'WattShed Home',
+    tagline: 'iOS Home Energy Management App',
     year: '2026',
-    repoUrl: 'https://apps.apple.com/us/app/manoros/id6759580676',
+    repoUrl: 'https://apps.apple.com/us/app/wattshed-home/id6759580676',
     description:
-      'A home energy auditor on the App Store: LiDAR room scanning via Apple RoomPlan, simplified Manual J room load estimates, HVAC nameplate OCR via Apple Vision, utility-bill and tariff checks, and upgrade recommendations with payback periods. No account; audit data stays on the device.',
+      "WattShed's home energy management app on the App Store: LiDAR room scanning via Apple RoomPlan, simplified Manual J room load estimates, HVAC nameplate OCR via Apple Vision, utility-bill and tariff checks, and upgrade recommendations with payback periods. Peak shaving is in beta and free during the beta, on Apple Home with Home Assistant as a second route. The audit needs no account, and its data stays on the device.",
     stack: ['Swift', 'SwiftUI', 'SwiftData', 'ARKit', 'RoomPlan', 'AVFoundation', 'Vision OCR', 'CoreLocation', 'PDFKit'],
     home: true,
   },
