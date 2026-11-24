@@ -42,7 +42,7 @@ export const jobs: ResumeJob[] = [
       'WattShed Home (wattshed.co/home), the first product (started June 2025): native iOS home energy management app, live on the App Store since October 2026. Its home energy audit uses LiDAR room scanning (ARKit, RoomPlan), simplified Manual J room load estimates with ASHRAE window solar-gain factors, HVAC nameplate OCR, and upgrade recommendations with payback periods.',
       "WattShed Home reads utility bills (demand charges, rate tiers), compares the utility's tariffs on a year of the home's usage, and matches the home to paid demand response and VPP programs.",
       "Built peak shaving in WattShed Home (in beta and free during the beta): the app writes a short list of automations into the household's own Apple Home (HomeKit), timed to the plan's peak hours, and the home hub runs them with the app closed, with no account and no server. Home Assistant is a second route. The peak-shaving controller is a deterministic state machine: it projects each billing interval's final demand and sheds the fewest loads in priority order (EV charging, water heater, HVAC setback).",
-      "In a simulated July week on Salt River Project's E-16 demand plan, WattShed Home's peak-shaving controller (the Home Assistant route) cut a home's billed demand from 13.65 kW to 7.65 kW (44%), with the house never above 77.2°F.",
+      "Modeled a July week on Salt River Project's E-16 demand plan: WattShed Home's peak-shaving controller (the Home Assistant route) cut a home's billed demand from 13.65 kW to 7.65 kW (44%), with the house never above 77.2°F.",
       "Built a demand-tariff dataset for peak shaving: researched residential demand charges at 165 US utilities and verified 73, each with the governing tariff sentence quoted and linked. Includes a bill check for LADWP's Power Access Charge, in effect a demand ratchet measured in kWh.",
     ],
   },
@@ -104,7 +104,7 @@ export const projects: ResumeItem[] = [
       { label: 'GitHub', href: 'https://github.com/mrbese/PowerUp' },
       { label: 'live demo', href: 'https://mrbese.github.io/PowerUp/' },
     ],
-    text: "Neighborhood islands for a home-battery fleet, hackathon build, October 2026. Top 20 at USC's InnovateLA Dual-Use Hackathon, on the Energy and Grid Hardening track sponsored by Base Power, in a team of four. Owned the energy design and directed the build with Claude Code: homes behind an SCE line switch run as one island on their batteries, SCE opens the switch and bills, and a utility officer approves the recharge. In the simulated replay at clear-sky solar, the 456-home pilot carries all 16 historical shutoffs.",
+    text: "Neighborhood islands for a home-battery fleet, hackathon build, October 2026. Built at USC's InnovateLA Dual-Use Hackathon, on the Energy and Grid Hardening track sponsored by Base Power, in a team of four. Owned the energy design and directed the build with Claude Code: homes behind an SCE line switch run as one island on their batteries, SCE opens the switch and bills, and a utility officer approves the recharge. In the simulated replay at clear-sky solar, the 456-home pilot carries all 16 historical shutoffs.",
   },
   {
     name: 'Re_Tera',
